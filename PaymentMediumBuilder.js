@@ -10,9 +10,9 @@ const PAYMENT_MEDIUM_STATES = {
 };
 
 const buildMifarePaymentMedium = (uuid, Idsequence, paymentMediumType, endUser, paymentMediumAcquisition, authToken) => {
-    const { _id: paymentMediumTypeId, code: paymentMediumTypeCode, ephemeral, mappings } = paymentMediumType;
+    const { _id: paymentMediumTypeId, code: paymentMediumTypeCode, ephemeral, specifications } = paymentMediumType;
     const { _id: endUserId, organizationId } = endUser;
-    const mapping = mappings.sort((v1, v2) => v2.version - v1.version).find(v => v.active);
+    const spec = specifications.sort((v1, v2) => v2.version - v1.version).find(v => v.active);
     
     const paymentMedium = {
         _id: `${paymentMediumTypeCode}-${Idsequence}`,
@@ -48,7 +48,7 @@ const buildMifarePaymentMedium = (uuid, Idsequence, paymentMediumType, endUser, 
             blocked: false,
             data: null,
             timestamp: Date.now(),
-            mappingVersion: mapping.version,
+            mappingVersion: spec.version,
             transactionSeq: 0
         },
         expirationTimestamp: Date.now() + (parseInt(process.env.MIFARE_EXPIRATION_DAYS || '1825') * 86400000),

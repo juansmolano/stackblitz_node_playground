@@ -6,7 +6,7 @@ const _ = require('lodash');
 //////////////// SAMPLE DATA   /////////////////////////////////
 ////////////////////////////////////////////////////////////////
 
-const __mapping = {
+const __specification = {
     "t": "AQPM",
     "v": {
         "exp": "$first.fa",
@@ -49,8 +49,8 @@ const valueTransformer = (key, obj, sources) => {
 };
 
 
-const generateQrData = (mapping, sources) => {
-    const data = _.cloneDeep(mapping);
+const generateQrData = (specification, sources) => {
+    const data = _.cloneDeep(specification);
     transformObjectValues(data, valueTransformer, sources);
     return data;
 };
@@ -61,6 +61,6 @@ const generateQrData = (mapping, sources) => {
 ////////////////////////////////////////////////////////////////
 
 
-const qrData = generateQrData(__mapping, __sources);
+const qrData = generateQrData(__specification, __sources);
 console.log(JSON.stringify(qrData, null, 2));
 
