@@ -1,0 +1,18 @@
+{
+    "active": true,
+    "checkedByDefault": true,
+    "id": "31c7c4fe-5bcc-4ca4-bd65-6c0dfb640bac",
+    "maxBalanceValue": 500000,
+    "metadata": {
+        "createdAt": 1626903114133,
+        "createdBy": "sebastian.molano@nebulae.com.co",
+        "updatedAt": 1627499616440,
+        "updatedBy": "leonardo.gutierrez"
+    },
+    "minRechargeValue": 0,
+    "minTimeBetweenValidations": 0,
+    "name": "FRECUENTE",
+    "organizationId": "604812bb-ed5a-4a46-b076-104dbf0dc982",
+    "paymentMediumCode": 1,
+    "prm": true
+}

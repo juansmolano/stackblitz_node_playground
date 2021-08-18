@@ -1,0 +1,44 @@
+{
+    "active": true,
+    "auth": {
+        "authId": "49af667b-9cbd-49e2-b3d2-0265d444cee9",
+        "username": "usuario.final"
+    },
+    "birthDate": 1624942800000,
+    "civilState": "SINGLE",
+    "contactInformation": {
+        "address": "AV 15  #115  - 15 ",
+        "daneLocation": {
+            "cityCode": "05001",
+            "cityName": "MEDELLIN",
+            "countryCode": "169",
+            "countryIdentificationCode": "CO",
+            "countryName": "COLOMBIA",
+            "stateCode": "05",
+            "stateName": "ANTIOQUIA"
+        },
+        "emailAddress": "jhon.doe@domain.com",
+        "mobilePhoneNumber": "+57 301 5033132",
+        "phoneNumber": "+57 4 4445936"
+    },
+    "document": "123456789",
+    "documentType": "CITIZENSHIP_CARD",
+    "externalSystemRelationships": null,
+    "firstName": "JHON",
+    "gender": "MALE",
+    "id": "fdc4408e-13e4-4743-acf5-d067b746371d",
+    "lastName": "DOE",
+    "metadata": {
+        "createdAt": 1625001807911,
+        "createdBy": "sebastian.molano@nebulae.com.co",
+        "updatedAt": 1626903956601,
+        "updatedBy": "leon.garcia@nebulae.com.co"
+    },
+    "organizationId": "604812bb-ed5a-4a46-b076-104dbf0dc982",
+    "preferences": {
+        "locale": "es_CO",
+        "timezone": "America/Mexico_City"
+    },
+    "prm": false,
+    "profileId": "31c7c4fe-5bcc-4ca4-bd65-6c0dfb640bac"
+}
