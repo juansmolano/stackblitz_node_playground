@@ -10,8 +10,10 @@
   "license": "ISC",
   "dependencies": {
     "dateformat": "^4.5.1",
+    "jshint": "^2.13.1",
     "lodash": "^4.17.21",
-    "rxjs": "^7.0.1",
+    "node-aes-cmac": "^0.1.1",
+    "rxjs": "^6.6.7",
     "uuid": "^3.4.0"
   }
 }
