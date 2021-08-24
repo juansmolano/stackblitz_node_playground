@@ -1,6 +1,7 @@
 'use strict';
 
 /* IMPORTED LIBS */
+const _ = require('lodash');
 const { generate, of, from } = require("rxjs");
 const { expand, tap, map, takeUntil, takeWhile, pluck, mergeMap } = require("rxjs/operators");
 const httpRequest = require("./HttpRequest"); // NEEDS ENV ==> NODE_TLS_REJECT_UNAUTHORIZED=0
@@ -18,17 +19,16 @@ const MIFARE_DEFAULT_KEY_B = process.env.MIFARE_DEFAULT_KEY_B || 'FFFFFFFFFFFFFF
 
 
 /* DB ENTITY SIMULATION */
+const endUser = require('./entities/EndUser.json');
+const profile = require('./entities/Profile.json');
+const PaymentMediumMifareTools = require('./PaymentMediumMifareTools');
+const buildMifarePaymentMedium = require('./PaymentMediumBuilder');
 const paymentMediumType = require('./entities/PaymentMediumType.json');
-const paymentMedium = {
-    _id: 'xyz',
-    mediumId: '042D0321780000',
-    emissionSteps: {
-        step: 0,
-        processVars: {
+const paymentMediumAcquisition = require('./entities/PaymentMediumAcquisition.json');
+const paymentMedium = buildMifarePaymentMedium('042D0321780000', 123, paymentMediumType, endUser, paymentMediumAcquisition, { _id: '123123', name: 'jhon doe' });
+paymentMedium.emissionSteps = { step: 0, processVars: {} };
 
-        }
-    }
-};
+
 
 const BLOCK = 1;
 const BLOCK_EXT = 30;
@@ -70,7 +70,8 @@ const serverLogicByStep = {
         const { min: afcMinBlock, max: afcMaxBlock } = getMinMaxBlock(specification.specification.APP_AFC.data);
         const { min: pubMinBlock, max: pubMaxBlock } = getMinMaxBlock(specification.specification.APP_PUB.data);
         const block = Math.min(afcMinBlock, pubMinBlock);
-        const ext = Math.max(afcMaxBlock, pubMaxBlock) - block;
+        let ext = (Math.max(afcMaxBlock, pubMaxBlock) - block);
+        ext = ext - parseInt((ext) / 4) + 1;
         const { apdu, processVars } = MifareTools.generateFirstAuthPhaseIApdu(block, true);
         nextStep.apdus.push(MifareTools.bytesToHex(apdu));
         paymentMedium.emissionSteps.processVars = { step: 0, block, ext, ...processVars };
@@ -135,21 +136,83 @@ const serverLogicByStep = {
         }
         const readResponse = MifareTools.hexToBytes(responseApdu.response.substring(2));
         const { blocks, processVars } = MifareTools.extractDataFromReadResponse(readResponse, paymentMedium.emissionSteps.processVars);
-        paymentMedium.emissionSteps.processVars = { ...paymentMedium.emissionSteps.processVars, ...processVars };        
+        paymentMedium.emissionSteps.processVars = { ...paymentMedium.emissionSteps.processVars, ...processVars };
         const rawDataPrev = {
             mv: specification.version, ...Object.keys(blocks).reduce((acc, key) => {
                 acc[key] = MifareTools.bytesToHex(blocks[key]);
                 return acc;
             }, {})
         };
-        paymentMedium.emissionSteps[currentStep] = {rawDataPrev};
+        paymentMedium.emissionSteps[currentStep] = { rawDataPrev };
         console.log('===== rawDataPrev', rawDataPrev);
 
-        // // /* generating next step apdus */
-        // const apdu = MifareTools.generateReadCmdApdu(BLOCK,BLOCK_EXT,paymentMedium.emissionSteps.processVars);
-        // nextStep.apdus.push(MifareTools.bytesToHex(apdu));
-        // nextStep.nextStep = 3;
+        /* generating next step apdus */
+        const interpreter = new PaymentMediumMifareTools(specification);
+        const dataCardMap = interpreter.paymentMediumToCardDataMap(paymentMedium, endUser, profile);
+        const encodedBinaryData = interpreter.cardDataMapToBinary(dataCardMap);
 
+        Object.entries(encodedBinaryData).forEach(([block, hex], writeSeq) => {
+            const { apdu } = MifareTools.generateWriteCmdApdu(parseInt(block), MifareTools.hexToBytes(hex), { ...paymentMedium.emissionSteps.processVars, writeCounter: paymentMedium.emissionSteps.processVars.writeCounter + writeSeq });
+            nextStep.apdus.push(MifareTools.bytesToHex(apdu));
+        });
+        paymentMedium.emissionSteps.processVars = { ...paymentMedium.emissionSteps.processVars, encodedBinaryData };
+
+        nextStep.nextStep = 4;
+        return nextStep;
+    },
+    4: (paymentMedium, specification, currentStep, responseApdus) => {
+        console.log('=====', { step: currentStep, responseApdus, processVars: paymentMedium.emissionSteps.processVars });
+        const nextStep = { nextStep: null, apdus: [] };
+
+        /* Validate Response:  READ Block */
+        responseApdus.forEach(responseApdu => {
+            if (!responseApdu || !responseApdu.isValid || !responseApdu.response || !responseApdu.response.startsWith('90')) {
+                nextStep.error = { msg: `No fue posible obtener respuesta escritura de bloques.  request=${responseApdu.apdu} response=${responseApdu.response}` };
+                return nextStep;
+            }
+            const writeResponse = MifareTools.hexToBytes(responseApdu.response.substring(2));
+            const { processVars } = MifareTools.verifyDataFromWriteResponse(writeResponse, paymentMedium.emissionSteps.processVars);
+            paymentMedium.emissionSteps.processVars = { ...paymentMedium.emissionSteps.processVars, ...processVars };
+        });
+
+
+        // /* generating next step apdus */
+        const { apdu, processVars } = MifareTools.generateReadCmdApdu(paymentMedium.emissionSteps.processVars);
+        paymentMedium.emissionSteps.processVars = { ...paymentMedium.emissionSteps.processVars, ...processVars };
+        nextStep.apdus.push(MifareTools.bytesToHex(apdu));
+        nextStep.nextStep = 5;
+
+        return nextStep;
+    },
+    5: (paymentMedium, specification, currentStep, responseApdus) => {
+        console.log('=====', { step: currentStep, responseApdus, processVars: paymentMedium.emissionSteps.processVars });
+        const nextStep = { nextStep: null, apdus: [] };
+
+        /* Validate Response:  READ Block */
+        const responseApdu = (responseApdus || [])[0];
+        if (!responseApdu || !responseApdu.isValid || !responseApdu.response || !responseApdu.response.startsWith('90')) {
+            nextStep.error = { msg: `No fue posible obtener respuesta lectura de bloques.  request=${responseApdu.apdu} response=${responseApdu.response}` };
+            return nextStep;
+        }
+        const readResponse = MifareTools.hexToBytes(responseApdu.response.substring(2));
+        const { blocks, processVars } = MifareTools.extractDataFromReadResponse(readResponse, paymentMedium.emissionSteps.processVars);
+        paymentMedium.emissionSteps.processVars = { ...paymentMedium.emissionSteps.processVars, ...processVars };
+        const rawDataAfter = {
+            mv: specification.version, ...Object.keys(blocks).reduce((acc, key) => {
+                acc[key] = MifareTools.bytesToHex(blocks[key]);
+                return acc;
+            }, {})
+        };
+
+        Object.entries(paymentMedium.emissionSteps.processVars.encodedBinaryData).forEach(([block,value])=>{
+            if(value !== rawDataAfter[block]){
+                throw new Error(`Write/Read validation failed. block=${block}, writen=${value}, read=${rawDataAfter[block]}`);
+            }
+        });
+
+        const interpreter = new PaymentMediumMifareTools(specification);
+        const decodedCardData = interpreter.binaryToCardDataMap(rawDataAfter);
+        console.log('===== decodedCardData',decodedCardData);
         return nextStep;
     },
 };

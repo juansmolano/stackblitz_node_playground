@@ -55,22 +55,27 @@ class PaymentMediumMifareTools {
      * @returns {{block:Buffer}}
      */
     cardDataMapToBinary(cardDataMap) {
-        const binaryData = Object.entries(this.specificationVersion.specification.APP_AFC.data).reduce(
-            (binaryData, [fieldName, fieldDetail]) => {
-                const { block, start, type } = fieldDetail;
-                if (cardDataMap[fieldName] || cardDataMap[fieldName] === 0) {
-                    this.setFieldOnBinaryData(
-                        cardDataMap[fieldName],
-                        block,
-                        start,
-                        type,
-                        binaryData
-                    );
-                }
-                return binaryData;
-            },
-            {}
-        );
+        const binaryData =
+            [
+                this.specificationVersion.specification.APP_AFC.data,
+                this.specificationVersion.specification.APP_PUB.data,
+            ].reduce((acc, data) => {
+                const binData = Object.entries(data).reduce(
+                    (binaryData, [fieldName, fieldDetail]) => {
+                        const { block, start, type } = fieldDetail;
+                        if (cardDataMap[fieldName] || cardDataMap[fieldName] === 0) {
+                            this.setFieldOnBinaryData(
+                                cardDataMap[fieldName],
+                                block,
+                                start,
+                                type,
+                                binaryData
+                            );
+                        }
+                        return binaryData;
+                    }, {});
+                return { ...acc, ...binData };
+            }, {});
 
         return Object.entries(binaryData).reduce((acc, [key, value]) => {
             acc[key] =
@@ -94,21 +99,28 @@ class PaymentMediumMifareTools {
                     : Buffer.from(binaryData[block], 'hex');
             return binaryBufferCache[block];
         };
-        return Object.entries(this.specificationVersion.specification.APP_AFC.data).reduce(
-            (cardData, [fieldName, fieldDetail]) => {
-                const { block, start, type } = fieldDetail;
-                if (binaryData[block] || binaryData[block] === 0) {
-                    cardData[fieldName] = this.getDataField(
-                        start,
-                        block,
-                        type,
-                        getBufferFromBinaryDataBlock
-                    );
-                }
-                return cardData;
-            },
-            {}
-        );
+
+        return [
+            this.specificationVersion.specification.APP_AFC.data,
+            this.specificationVersion.specification.APP_PUB.data
+        ].reduce((cardData, dataMap) => {
+            const data = Object.entries(dataMap).reduce(
+                (cardData, [fieldName, fieldDetail]) => {
+                    const { block, start, type } = fieldDetail;
+                    if (binaryData[block] || binaryData[block] === 0) {
+                        cardData[fieldName] = this.getDataField(
+                            start,
+                            block,
+                            type,
+                            getBufferFromBinaryDataBlock
+                        );
+                    }
+                    return cardData;
+                },
+                {}
+            );
+            return {...cardData,...data};
+        }, {});
     }
 
     setFieldOnBinaryData(value, block, offset, type, binaryData) {

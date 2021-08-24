@@ -214,11 +214,11 @@ class MifareTools {
 
 
         //when coping the data to blocks, we have to take into account we have to skip ACL blocks
-        const blocks = {};        
+        const blocks = {};
         let aclBlocksSoFar = 0;
         for (let i = 0; i < ext; i++) {
             const isAcl = (aclBlocksSoFar + bNr + i + 1) % 4 === 0;
-            if (isAcl) console.log('ACL',aclBlocksSoFar + bNr + i );
+            if (isAcl) console.log('ACL', aclBlocksSoFar + bNr + i);
             if (isAcl) aclBlocksSoFar++;
             const blockNumber = bNr + i + aclBlocksSoFar;
             blocks[blockNumber] = data.slice(i * 16, (i * 16) + 16);
@@ -227,16 +227,25 @@ class MifareTools {
         return { blocks, processVars: { readCounter: readCounter + 1 } };
     }
 
-    static generateWriteCmdApdu({ ext, readCounter, ti, keyMac, bNr }) {
-        //Read encrypted, MAC on response, MAC on command
-        const cmd = 0x31;
+    static generateWriteCmdApdu(bNr, data, { readCounter, writeCounter, ti, keyMac, keyEnc }) {
+        //Write encrypted, MAC on response, MAC on command
+        const cmd = 0xA1;
         const [bNB1, bNB2] = this.decomposeNumberInTwoBytes(bNr);
-        const [rCountB1, rCountB2] = this.decomposeNumberInTwoBytes(readCounter);
-        const readCmdCmac = this.calcCmac(keyMac, [cmd, rCountB2, rCountB1, ...ti, bNB2, bNB1, ext]);
-        return { apdu: [cmd, bNB2, bNB1, ext, ...readCmdCmac], processVars: { ext } };
+        const [wCountB1, wCountB2] = this.decomposeNumberInTwoBytes(writeCounter);
+        const encryptedData = this.encryptRequestData(readCounter, writeCounter, keyEnc, ti, data);
+        const writeCmdCmac = this.calcCmac(keyMac, [cmd, wCountB2, wCountB1, ...ti, bNB2, bNB1, ...encryptedData]);
+        return { apdu: [cmd, bNB2, bNB1, ...encryptedData, ...writeCmdCmac], processVars: { bNr, data } };
     }
 
-
+    static verifyDataFromWriteResponse(writeResponse, { keyMac, writeCounter, ti }) {
+        const [wCountB1, wCountB2] = this.decomposeNumberInTwoBytes(writeCounter + 1);
+        const respCmac = writeResponse.slice(-8);
+        const calCmac = this.calcCmac(keyMac, [0x90, wCountB2, wCountB1, ...ti]);
+        if (respCmac.toString() !== calCmac.toString()) {
+            throw new Error(`Error procesando respuesta de lectura de bloque: cmac no coincide.  ${JSON.stringify({ readResponse, calCmac, respCmac })}`);
+        }
+        return { processVars: { writeCounter: writeCounter + 1 } };
+    }
 
     static bytesToHex(bytes = []) {
         return bytes.map(b => ('0' + b.toString(16)).slice(-2)).join('');

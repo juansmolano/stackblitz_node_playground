@@ -19,8 +19,8 @@ const interpreter = new PaymentMediumMifareTools(specificationVersion);
 
 
 const paymentMedium = buildMifarePaymentMedium('ABCD1234',123,paymentMediumType,endUser,paymentMediumAcquisition,{_id:'123123',name:'jhon doe'});
-//const dataCardMap = interpreter.paymentMediumToCardDataMap(paymentMedium,endUser,profile);
-const dataCardMap = sampleCardData;
+const dataCardMap = interpreter.paymentMediumToCardDataMap(paymentMedium,endUser,profile);
+//const dataCardMap = sampleCardData;
 const encodedBinaryData = interpreter.cardDataMapToBinary(dataCardMap);
 encodedBinaryData.mv=1;
 
