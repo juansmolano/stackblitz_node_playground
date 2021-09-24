@@ -39,8 +39,8 @@ const buildMifarePaymentMedium = (uuid, Idsequence, paymentMediumType, endUser, 
         pockets: {
             REGULAR: {
                 type: 'REGULAR',
-                balance: 0,
-                balanceBk: 0,
+                balance: 3000,
+                balanceBk: 3000,
                 timestamp: Date.now(),
             }
         },

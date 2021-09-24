@@ -7,4 +7,4 @@ function getBundleInstanceNumber(deviceId) {
     return deviceIdNumber % totalReplicas;    
 }
 
-console.log(getBundleInstanceNumber('FLO-W7-0057'));
+console.log(getBundleInstanceNumber('FLO-W7-0075'));
