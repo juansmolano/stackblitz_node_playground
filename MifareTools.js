@@ -203,9 +203,9 @@ class MifareTools {
             throw new Error(`Error procesando respuesta de lectura de bloque: cmac no coincide.  ${JSON.stringify({ readResponse, calCmac, respCmac })}`);
         }
         const ivDec = [
-            rCountB2, rCountB1, wCountB2, wCountB1,
-            rCountB2, rCountB1, wCountB2, wCountB1,
-            rCountB2, rCountB1, wCountB2, wCountB1,
+            0, 0, 0, 0,
+            0, 0, 0, 0,
+            0, 0, 0, 0,
             ...ti
         ];
         const fillLen = 16 - (encriptedData.length % 16);

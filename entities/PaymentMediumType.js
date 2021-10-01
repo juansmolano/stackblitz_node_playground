@@ -826,10 +826,12 @@ module.exports = {
             "APP_PUB",
             "APP_AFC"
           ],
-          KEYA: "bad15e15bb8f75b2d8dcb542f1461754",
+          //KEYA: "615a3f21a49801e46c5e8326b35a0bff",// sebastian.molano
+          KEYA: "bad15e15bb8f75b2d8dcb542f1461754",//leonardo.gutierrez
           KEYA_: "00000000000000000000000000000000",
           KEYA__: "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
-          KEYB: "756cc292b4b65f7ef00eca932ef93f2b",
+          //KEYB: "e1331fb5d7f7a8e3ab9da3d3d18011bf",// sebastian.molano
+          KEYB: "756cc292b4b65f7ef00eca932ef93f2b",//leonardo.gutierrez
           KEYB_: "00000000000000000000000000000000",
           KEYB__: "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
           KEY_TO_READ_WRITE: "KEYB",

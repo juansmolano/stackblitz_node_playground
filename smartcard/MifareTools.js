@@ -91,8 +91,8 @@ class MifareTools {
         const ti = firstAuthResultPlain.slice(0, 4);
         const writeCounter = 0;
         const readCounter = 0;
-        const writeCounterServer = 1;
-        const readCounterServer = 1;
+        const writeCounterServer = 0;
+        const readCounterServer = 0;
 
         return { keyEnc, keyMac, ti, readCounter, writeCounter, writeCounterServer, readCounterServer, isEV0 };
     }
@@ -191,11 +191,12 @@ class MifareTools {
         const [bNB1, bNB2] = this.decomposeNumberInTwoBytes(bNr);
         const [rCountB1, rCountB2] = this.decomposeNumberInTwoBytes(readCounter);
         const readCmdCmac = this.calcCmac(keyMac, [cmd, rCountB2, rCountB1, ...ti, bNB2, bNB1, ext]);
-        return { apdu: [cmd, bNB2, bNB1, ext, ...readCmdCmac], processVars: { ext, readCounter: readCounter + 1 } };
+        return { apdu: [cmd, bNB2, bNB1, ext, ...readCmdCmac], processVars: { bNr, ext, readCounter: readCounter + 1 } };
     }
 
 
     static extractDataFromReadResponse(readResponse, { bNr, readCounterServer, writeCounterServer, ti, ext, key, iv, keyMac, keyEnc }) {
+        readCounterServer++;
         const encriptedData = readResponse.slice(0, -8);
         const respCmac = readResponse.slice(-8);
         const [bNB1, bNB2] = this.decomposeNumberInTwoBytes(bNr);
@@ -211,6 +212,7 @@ class MifareTools {
             rCountB2, rCountB1, wCountB2, wCountB1,
             ...ti
         ];
+        console.log('>>> READ', bNr, readCounterServer, writeCounterServer);
         const fillLen = 16 - (encriptedData.length % 16);
         const encriptedDataToDecrypt = fillLen === 16 ? encriptedData : [...encriptedData, 0x80, ...new Array(fillLen - 1).fill(0x00)];
         const data = this.decrypt(encriptedDataToDecrypt, keyEnc, ivDec);
@@ -225,7 +227,7 @@ class MifareTools {
             blocks[blockNumber] = data.slice(i * 16, (i * 16) + 16);
         }
 
-        return { blocks, processVars: { readCounterServer: readCounterServer + 1 } };
+        return { blocks, processVars: { readCounterServer } };
     }
 
     static generateWriteCmdApdu(bNr, data, { readCounter, writeCounter, ti, keyMac, keyEnc }) {
@@ -239,13 +241,14 @@ class MifareTools {
     }
 
     static verifyDataFromWriteResponse(writeResponse, { keyMac, writeCounterServer, ti }) {
+        writeCounterServer++;
         const [wCountB1, wCountB2] = this.decomposeNumberInTwoBytes(writeCounterServer);
         const respCmac = writeResponse.slice(-8);
         const calCmac = this.calcCmac(keyMac, [0x90, wCountB2, wCountB1, ...ti]);
         if (respCmac.toString() !== calCmac.toString()) {
             throw new Error(`Error procesando respuesta de lectura de bloque: cmac no coincide.  ${JSON.stringify({ writeResponse, calCmac, respCmac })}`);
         }
-        return { processVars: { writeCounterServer: writeCounterServer + 1 } };
+        return { processVars: { writeCounterServer } };
     }
 
     static bytesToHex(bytes = []) {
