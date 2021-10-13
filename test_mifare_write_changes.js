@@ -663,6 +663,8 @@ of([paymentMediumSession, paymentMediumType, profile, [], { _id: 'test-user', na
 ).subscribe(
     //evt => console.log(evt),
     ([paymentMediumSession, paymentMediumType, profile, response, authToken]) => {
+        console.log('');
+        console.log('');
         console.log('=======================');
         console.log('========== END ========');
         console.log('=======================');
