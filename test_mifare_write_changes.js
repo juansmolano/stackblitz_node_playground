@@ -2,8 +2,8 @@
 
 /* IMPORTED LIBS */
 const _ = require('lodash');
-const { of, forkJoin, from, iif, throwError, merge, EMPTY, defer } = require("rxjs");
-const { mergeMap, catchError, map, toArray, tap, filter, first, expand, takeWhile } = require('rxjs/operators');
+const { of, forkJoin, from } = require("rxjs");
+const { mergeMap, map, filter, expand, takeWhile, last, tap } = require('rxjs/operators');
 const { error: { CustomError }, log: { ConsoleLogger } } = require("@nebulae/backend-node-tools");
 
 const { MifareTools, PaymentMediumMifareInterpreter } = require('./smartcard');
@@ -50,17 +50,12 @@ const resetPaymentMediumSession = (paymentMediumSession) => {
     };
 };
 
-const buildErrorResponse = (paymentMediumSession, errorDesc) => ({ ...paymentMediumSession, nextStep: { step: null, requestApdus: null, desc: null, error: errorDesc } });
+const buildErrorResponse = (paymentMediumSession, errorDesc) => ({ paymentMediumSession: { ...paymentMediumSession, nextStep: { step: null, requestApdus: null, desc: null, error: errorDesc } } });
 
-// const readCard$ = async (paymentMediumSession, paymentMediumType, profile, responseApdus, authToken) => {
-
-// }
-
-const readCardBeforeMods$ = async (paymentMediumSession, paymentMediumType, profile, responseApdus, authToken) => {
+const readCard$ = async (paymentMediumSession, paymentMediumType, profile, responseApdus, authToken, thisStepNumber) => {
     const { paymentMedium } = paymentMediumSession;
-    const thisStep = STEPS.READ_CARD_BEFORE_MODS;
-    if (!paymentMediumSession.steps[thisStep]) paymentMediumSession.steps[thisStep] = {};
-    paymentMediumSession.step = thisStep;
+    if (!paymentMediumSession.steps[thisStepNumber]) paymentMediumSession.steps[thisStepNumber] = {};
+    paymentMediumSession.step = thisStepNumber;
     paymentMediumSession.nextStep = null;
     const [mapping, mappingVersion, mappingError] = extractPaymentMediumSpecs(paymentMediumSession, paymentMediumType);
     if (mappingError) return mappingError;
@@ -72,18 +67,18 @@ const readCardBeforeMods$ = async (paymentMediumSession, paymentMediumType, prof
     const FINAL_STATES = Object.values(STATES).map(sts => sts[sts.length - 1]);
     const findNextProcessStep = (processStates) => processStates ? processStates.find(reading => !FINAL_STATES.includes(reading.state)) : undefined;
 
-    let processStates = paymentMediumSession.steps[thisStep].processStates;
+    let processStates = paymentMediumSession.steps[thisStepNumber].processStates;
     if (!processStates) {
         //having no processStates means this is the first time the session gets into this step, so we have to build or the inner steps to follow
         paymentMediumSession = resetPaymentMediumSession(paymentMediumSession);// we reset just as a precautions        
-        paymentMediumSession.step = thisStep;
-        paymentMediumSession.steps[thisStep].processStates = processStates = buildReadingProcessSteps(mapping);
+        paymentMediumSession.step = thisStepNumber;
+        paymentMediumSession.steps[thisStepNumber].processStates = processStates = buildReadingProcessSteps(mapping);
     }
 
     let currentProcessState = findNextProcessStep(processStates);//this give us the next step in the process to execute    
     /* EVAL AND PROCESS PREV-REQUEST'S RESPONSES */
-    if (currentProcessState && responseApdus.length > 0) { // eval the response from previous request
-        logStep(paymentMedium, paymentMediumType, thisStep, 'Leyendo tarjeta', 'responseApdus', responseApdus);
+    if (currentProcessState && currentProcessState.state !== 'PENDING' && responseApdus.length > 0) { // eval the response from previous request
+        logStep(paymentMedium, paymentMediumType, thisStepNumber, 'Leyendo tarjeta', 'responseApdus', responseApdus);
         for (let i in responseApdus) {
             const response = responseApdus[i];
             if (!response || !response.isValid || !response.responseApdu || !response.responseApdu.startsWith('90')) {
@@ -94,7 +89,7 @@ const readCardBeforeMods$ = async (paymentMediumSession, paymentMediumType, prof
                         : currentProcessState.state === 'AUTH_PHASE_II_SENT'
                             ? 'Falló segundo paso de autenticación'
                             : '???' + currentProcessState.state + '???';
-                return buildErrorResponse(paymentMedium, `${errMsg}.  request=${response.requestApdu} response=${response.responseApdu}`);
+                return buildErrorResponse(paymentMediumSession, `${errMsg}.  request=${response.requestApdu} response=${response.responseApdu}`);
             }
             if (currentProcessState.state === 'READ_SENT') {
                 const readResponse = MifareTools.hexToBytes(response.responseApdu.substring(2));
@@ -103,7 +98,7 @@ const readCardBeforeMods$ = async (paymentMediumSession, paymentMediumType, prof
                     blocks[block] = MifareTools.bytesToHex(blocks[block]);
                 }
                 paymentMediumSession.processVars = { ...paymentMediumSession.processVars, ...processVars };//update processVars 
-                paymentMediumSession.steps[thisStep].cardBlocks = { ...paymentMediumSession.steps[thisStep].cardBlocks, ...blocks };//append newly read blocks
+                paymentMediumSession.steps[thisStepNumber].cardBlocks = { ...paymentMediumSession.steps[thisStepNumber].cardBlocks, ...blocks };//append newly read blocks
             }
         }
         //The current state was successful. now we need to move to the next state
@@ -118,7 +113,7 @@ const readCardBeforeMods$ = async (paymentMediumSession, paymentMediumType, prof
         switch (currentProcessState.state) {
             case 'PENDING':
                 const { apdu: authPhaseIApdu, processVars: authPhaseIProcessVars } = MifareTools.generateFirstAuthPhaseIApdu(currentProcessState.sector * 4, currentProcessState.key.type === 'KEYB');
-                paymentMediumSession.processVars = { ...paymentMediumSession.processVars, step: thisStep, block: currentProcessState.sector * 4, ext: 1, ...authPhaseIProcessVars };
+                paymentMediumSession.processVars = { ...paymentMediumSession.processVars, step: thisStepNumber, block: currentProcessState.sector * 4, ext: 1, ...authPhaseIProcessVars };
                 requestApdus.push(MifareTools.bytesToHex(authPhaseIApdu));
                 currentProcessState.auth = { authPhaseIApdu };
                 currentProcessState.state = 'AUTH_PHASE_I_SENT';
@@ -158,7 +153,7 @@ const readCardBeforeMods$ = async (paymentMediumSession, paymentMediumType, prof
             case 'PENDING':
                 const { apdu: readBlocksApdu, processVars } = MifareTools.generateReadCmdApdu({ ...paymentMediumSession.processVars, bNr: currentProcessState.block, ext: currentProcessState.numberOfBlocksToRead });
                 paymentMediumSession.processVars = { ...paymentMediumSession.processVars, ...processVars };
-                logStep(paymentMedium, paymentMediumType, thisStep, 'Leyendo tarjeta', 'requestApdus', [readBlocksApdu]);
+                logStep(paymentMedium, paymentMediumType, thisStepNumber, 'Leyendo tarjeta', 'requestApdus', [readBlocksApdu]);
                 requestApdus.push(MifareTools.bytesToHex(readBlocksApdu));
                 currentProcessState.state = 'READ_SENT';
                 nextStepDesc = `Leyendo tarjeta: Lectura, sector  ${currentProcessState.sector}, bloque ${currentProcessState.block}, cant  ${currentProcessState.numberOfBlocksToRead}`;
@@ -167,28 +162,73 @@ const readCardBeforeMods$ = async (paymentMediumSession, paymentMediumType, prof
     }
 
     const areAllBlocksRead = !currentProcessState;
-    paymentMediumSession.nextStep = {
-        step: areAllBlocksRead ? STEPS.APPLY_MODS : thisStep,
-        requestApdus: areAllBlocksRead
-            ? ['FFCA000000']
-            : requestApdus,
-        desc: areAllBlocksRead
-            ? 'Lectura realizada con éxito'
-            : nextStepDesc,
-        error: null,
-        resetReaderSession: areAllBlocksRead,
-    };
-
-
     if (areAllBlocksRead) {
         const interpreter = new PaymentMediumMifareInterpreter(mappingVersion);
-        const cardData = interpreter.binaryToCardDataMap(paymentMediumSession.steps[thisStep].cardBlocks);        
-        paymentMediumSession.steps[thisStep].cardData = cardData;
-        console.log('====>', paymentMediumSession.steps[thisStep].cardBlocks, JSON.stringify(cardData, null, 2))
+        const cardData = interpreter.binaryToCardDataMap(paymentMediumSession.steps[thisStepNumber].cardBlocks);
+        paymentMediumSession.steps[thisStepNumber].cardData = cardData;
+        paymentMediumSession.steps[thisStepNumber].areAllBlocksRead = true;
+    } else {
+        paymentMediumSession.nextStep = {
+            step: thisStepNumber,
+            requestApdus: requestApdus,
+            desc: nextStepDesc,
+            error: null,
+            resetReaderSession: false,
+        };
+        logStep(paymentMedium, paymentMediumType, paymentMediumSession.nextStep.step, paymentMediumSession.nextStep.desc, 'requestApdus', paymentMediumSession.nextStep.requestApdus);
     }
-    logStep(paymentMedium, paymentMediumType, paymentMediumSession.nextStep.step, paymentMediumSession.nextStep.desc, 'requestApdus', paymentMediumSession.nextStep.requestApdus);
-    paymentMediumSession.step = thisStep;
 
+    paymentMediumSession.step = thisStepNumber;
+    return paymentMediumSession;
+};
+
+const readCardBeforeMods$ = async (paymentMediumSession, paymentMediumType, profile, responseApdus, authToken) => {
+    const thisStep = STEPS.READ_CARD_BEFORE_MODS;
+    const nextStep = STEPS.APPLY_MODS;
+
+    paymentMediumSession = await readCard$(paymentMediumSession, paymentMediumType, profile, responseApdus, authToken, thisStep);
+
+    if (paymentMediumSession.steps[thisStep].areAllBlocksRead) {
+        paymentMediumSession.nextStep = {
+            step: nextStep,
+            requestApdus: ['FFCA000000'],
+            desc: 'Lectura realizada con éxito',
+            error: null,
+            resetReaderSession: true,
+        };
+        paymentMediumSession.processVars = {};
+        delete paymentMediumSession.steps[thisStep].processStates;
+        delete paymentMediumSession.steps[thisStep].requestApdus;
+        delete paymentMediumSession.steps[thisStep].responseApdus;
+    }
+    return { paymentMediumSession };
+};
+
+const readCardAfterMods$ = async (paymentMediumSession, paymentMediumType, profile, responseApdus, authToken) => {
+    const thisStep = STEPS.READ_CARD_AFTER_MODS;
+    paymentMediumSession = await readCard$(paymentMediumSession, paymentMediumType, profile, responseApdus, authToken, thisStep);
+    if (paymentMediumSession.steps[thisStep].areAllBlocksRead) {
+        paymentMediumSession.nextStep = null;
+        const { cardBlocks: cardBlocksBefore, cardData: cardDataBefore } = paymentMediumSession.steps[STEPS.READ_CARD_BEFORE_MODS];
+        const { cardBlocks: cardBlocksProjected, cardData: cardDataProjected } = paymentMediumSession.steps[STEPS.APPLY_MODS];
+        const { cardBlocks: cardBlocksAfter, cardData: cardDataAfter } = paymentMediumSession.steps[STEPS.READ_CARD_AFTER_MODS];
+
+        paymentMediumSession.processVars = {};
+        delete paymentMediumSession.steps[thisStep].processStates;
+        delete paymentMediumSession.steps[thisStep].requestApdus;
+        delete paymentMediumSession.steps[thisStep].responseApdus;
+
+        const errors = [];
+        for (const block in cardBlocksProjected) {
+            if (cardBlocksProjected[block] !== cardBlocksAfter[block]) {
+                const hadChanged = cardBlocksBefore[block] !== cardBlocksAfter[block];
+                errors.push(`Bloque ${block} ${hadChanged ? 'fue parcialmente escrito' : 'no fue escrito'}`);
+            }
+        }
+        if (errors.length > 0) {
+            return buildErrorResponse(paymentMediumSession, `${errors.join(', ')}`);
+        }
+    }
     return { paymentMediumSession };
 };
 
@@ -209,7 +249,10 @@ const applyMods$ = async (paymentMediumSession, paymentMediumType, profile, resp
         //having no processStates means this is the first time the session gets into this step, so we have to build or the inner steps to follow
         paymentMediumSession = resetPaymentMediumSession(paymentMediumSession);// we reset just as a precautions        
         paymentMediumSession.step = thisStep;
-        paymentMediumSession.steps[thisStep].modProcesses = modProcesses = buildWritingProcessSteps(paymentMediumSession, paymentMediumType, mappingVersion);
+        const { modificationProcesses, projectedValues } = buildWritingProcessSteps(paymentMediumSession, paymentMediumType, mappingVersion);
+        paymentMediumSession.steps[thisStep].modProcesses = modProcesses = modificationProcesses;
+        paymentMediumSession.steps[thisStep].cardBlocks = projectedValues.cardBlocks;
+        paymentMediumSession.steps[thisStep].cardData = projectedValues.cardData;
     }
 
     let currenModProcess;
@@ -258,7 +301,7 @@ const evalMod$ = async (modProcess, thisStep, paymentMediumSession, paymentMediu
                         : currentStep.state === 'AUTH_PHASE_II_SENT'
                             ? 'Falló segundo paso de autenticación'
                             : '???' + currentStep.state + '???';
-                return buildErrorResponse(paymentMedium, `${errMsg}.  request=${response.requestApdu} response=${response.responseApdu}`);
+                return buildErrorResponse(paymentMediumSession, `${errMsg}.  request=${response.requestApdu} response=${response.responseApdu}`);
             }
         }
         //The current state was successful. now we need to move to the next state
@@ -323,6 +366,12 @@ const evalMod$ = async (modProcess, thisStep, paymentMediumSession, paymentMediu
     }
 
     const isModificationApplied = !currentStep;
+    if (isModificationApplied) {
+        paymentMediumSession.processVars = {};
+        delete paymentMediumSession.steps[thisStep].processStates;
+        delete paymentMediumSession.steps[thisStep].requestApdus;
+        delete paymentMediumSession.steps[thisStep].responseApdus;
+    }
     modProcess.state = isModificationApplied ? 'APPLIED' : 'APPLYING';
     return isModificationApplied
         ? null
@@ -335,27 +384,10 @@ const evalMod$ = async (modProcess, thisStep, paymentMediumSession, paymentMediu
         };
 };
 
-
-
-
-
-
-
-const readCardAfterMods$ = async (paymentMediumSession, paymentMediumType, profile, responseApdus, authToken) => {
-    // /* PREV RESPONSE VALIDATION */
-    // resetSession(paymentMedium);
-    // logStep(paymentMedium, paymentMediumType, responseStep, 'Cliente inicia comunicación', 'responseApdus', responseApdus);
-
-    // /* NEXT REQUEST */
-    // const nextStep = { step: 1, requestApdus: ['FFCA000000'], desc: 'Solicitando UUID', error: null };
-    // logStep(paymentMedium, paymentMediumType, nextStep.step, nextStep.desc, 'requestApdus', nextStep.requestApdus);
-    // return { paymentMedium, nextStep };
-};
-
 const extractPaymentMediumSpecs = ({ paymentMedium }, paymentMediumType) => {
     const mappingVersion = paymentMediumType.mappings.filter(m => m.active).sort((m1, m2) => m1.version - m2.version).pop();
     const mapping = mappingVersion ? mappingVersion.mapping : null;
-    return [mapping, mappingVersion, mapping ? null : buildErrorResponse(paymentMedium, `Mapping activo no encontrado en el tipo de medio de pago ${paymentMediumType.code}`)];
+    return [mapping, mappingVersion, mapping ? null : buildErrorResponse(paymentMediumSession, `Mapping activo no encontrado en el tipo de medio de pago ${paymentMediumType.code}`)];
 };
 
 const generateMifareKeys$ = async (paymentMediumSession, paymentMediumType, productionKeyNameForKeyA, productionKeyNameForKeyB) => {
@@ -381,8 +413,6 @@ const generateMifareKeys$ = async (paymentMediumSession, paymentMediumType, prod
         ])),
         map(([hsmResultA, hsmResultB]) => ({ keyA: hsmResultA.diversifiedKey, keyB: hsmResultB.diversifiedKey }))
     ).toPromise();
-
-    console.log('=== TODO: DELETE THIS LOG ==>>>>', { keyA, keyB, diversifiedData, productionKeyNameForKeyA, productionKeyNameForKeyB });
     return { keyA, keyB, diversifiedData };
 };
 
@@ -522,7 +552,7 @@ const buildWritingProcessSteps = (paymentMediumSession, paymentMediumType, mappi
                 break;
             default: throw new CustomError(`PaymentMediumReadAndWriteHelper.buildWritingProcessSteps: not valid mod.type = ${mod.type}`);
         }
-        
+
         const interpreter = new PaymentMediumMifareInterpreter(mappingVersion);
         const cardBlocks = interpreter.cardDataMapToBinary(cardData);
         const cardBlocksToWrite = Object.entries(cardBlocks).reduce((acc, [bl, value]) => {
@@ -530,7 +560,7 @@ const buildWritingProcessSteps = (paymentMediumSession, paymentMediumType, mappi
                 acc[bl] = value;
             }
             return acc;
-        }, {});        
+        }, {});
 
         return { cardBlocks, cardData, cardBlocksToWrite };
     }
@@ -569,7 +599,7 @@ const buildWritingProcessSteps = (paymentMediumSession, paymentMediumType, mappi
         return steps;
     }
 
-    const { steps: modificationProcesses } = paymentMedium.mods
+    const { steps: modificationProcesses, projectedValues } = paymentMedium.mods
         .filter(mod => !mod.applied)
         .reduce((acc, mod, index, array) => {
             const { cardBlocks, cardData, cardBlocksToWrite } = projectCardModification({
@@ -588,15 +618,10 @@ const buildWritingProcessSteps = (paymentMediumSession, paymentMediumType, mappi
                 cardBlocks: _.cloneDeep(cardBlocks),
                 cardData: _.cloneDeep(cardData),
             }
-        });        
-    return modificationProcesses;
+        });
+    return { modificationProcesses, projectedValues };
 };
 
-const finishSession = (paymentMedium, authToken) => {
-    delete paymentMedium.readWriteSession;
-    console.log('============ finishSession =========');
-    console.log(JSON.stringify(paymentMedium));
-};
 
 const dispatchToStepProcess$ = (paymentMediumSession, paymentMediumType, profile, responseApdus, authToken) => {
     switch (paymentMediumSession.nextStep.step) {
@@ -628,13 +653,22 @@ const simulateClientServerFlow$ = (clientArgs) => {
     );
 };
 
+const initTs = Date.now();
+
 //session , paymentMediumType,  profile,  [response apdus], authToken
 of([paymentMediumSession, paymentMediumType, profile, [], { _id: 'test-user', name: 'test-user' }]).pipe(
     expand(args => simulateClientServerFlow$(args)),
-    takeWhile((nextServerRequest) => nextServerRequest && nextServerRequest !== null)
+    takeWhile((nextServerRequest) => nextServerRequest && nextServerRequest !== null),
+    last()
 ).subscribe(
     //evt => console.log(evt),
-    () => { },
+    ([paymentMediumSession, paymentMediumType, profile, response, authToken]) => {
+        console.log('=======================');
+        console.log('========== END ========');
+        console.log('=======================');
+        console.log(JSON.stringify({ paymentMediumSession }));
+
+    },
     err => console.error(err),
-    () => console.log('Completed!!!!')
+    () => console.log('Completed!!!!  '+(Date.now()-initTs))
 );

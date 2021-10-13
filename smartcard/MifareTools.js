@@ -212,7 +212,6 @@ class MifareTools {
             rCountB2, rCountB1, wCountB2, wCountB1,
             ...ti
         ];
-        console.log('>>> READ', bNr, readCounterServer, writeCounterServer);
         const fillLen = 16 - (encriptedData.length % 16);
         const encriptedDataToDecrypt = fillLen === 16 ? encriptedData : [...encriptedData, 0x80, ...new Array(fillLen - 1).fill(0x00)];
         const data = this.decrypt(encriptedDataToDecrypt, keyEnc, ivDec);
