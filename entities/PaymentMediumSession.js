@@ -1,6 +1,6 @@
 module.exports = {
 	_id: "MIFARE-10_bc4be965-15bf-4921-828d-8ff1618da4c6",
-
+	sequential: 221, // system-wide session sequential
 	timestamp: Date.now(), // should be validated - must be fresh (2 minutes)
 
 	atr: "90fabbc54c6f6d57",
@@ -41,6 +41,51 @@ module.exports = {
 		expirationTimestamp: 1790026160790,
 		expired: false,
 		mods: [
+			{
+				id: '111111',
+				ts: Date.now(),
+				type: 'BALANCE_RECHARGE',
+				payload: {
+					pocket: 'REGULAR',
+					value: '2000'
+				},
+				applied: false,
+				appliedTs: undefined,
+				event: {
+					et: 'SampleEvent',
+					at: 'SampleAggregate',
+					aid: '111111',
+					av: '1',
+				}
+			},
+			{
+				id: '22222',
+				ts: Date.now(),
+				type: 'BLOCK',
+				payload: {},
+				applied: false,
+				appliedTs: undefined,
+				event: {
+					et: 'SampleEvent',
+					at: 'SampleAggregate',
+					aid: '22222',
+					av: '2',
+				}
+			},
+			{
+				id: '333333',
+				ts: Date.now(),
+				type: 'UNBLOCK',
+				payload: {},
+				applied: false,
+				appliedTs: undefined,
+				event: {
+					et: 'SampleEvent',
+					at: 'SampleAggregate',
+					aid: '333333',
+					av: '3',
+				}
+			}
 		],
 	},
 
