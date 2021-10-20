@@ -8,7 +8,11 @@ const { error: { CustomError }, log: { ConsoleLogger } } = require("@nebulae/bac
 
 const { MifareTools, PaymentMediumMifareInterpreter } = require('./smartcard');
 const HSM = require("./hsm/HSM").singleton();
-const SecurityMediumProductionKeys = require('./entities/SecurityMediumProductionKeys');
+const securityMediumProductionKeys = require('./entities/SecurityMediumProductionKeys');
+const securityMediumProductionKeysMap = securityMediumProductionKeys.reduce((map, key) => {
+    map[key.name] = key;
+    return map;
+}, {});
 
 const STEPS = {
     READ_CARD_BEFORE_MODS: 0,
@@ -398,9 +402,9 @@ const generateMifareKeys$ = async (paymentMediumSession, paymentMediumType, prod
     const commonHsmBody = { data: diversifiedData };
 
     let { keyA, keyB } = await forkJoin([
-        of(productionKeyNameForKeyA ? SecurityMediumProductionKeys[productionKeyNameForKeyA] : 'NA'),
-        of(productionKeyNameForKeyB ? SecurityMediumProductionKeys[productionKeyNameForKeyB] : 'NA'),
-    ]).pipe(
+        of(productionKeyNameForKeyA ? securityMediumProductionKeysMap[productionKeyNameForKeyA] : 'NA'),
+        of(productionKeyNameForKeyB ? securityMediumProductionKeysMap[productionKeyNameForKeyB] : 'NA'),
+    ]).pipe(        
         tap(([prodKeyA, prodKeyB]) => {
             if (!prodKeyA) throw new CustomError(`PaymentMediumReadAndWriteHelper.generateMifareKeys: ProductionKey for KeyA(${productionKeyNameForKeyA}) not found`);
             if (prodKeyA !== 'NA' && !prodKeyA.versions.find(v => v.active)) throw new CustomError(`PaymentMediumReadAndWriteHelper.generateMifareKeys: ProductionKey for KeyA(${productionKeyNameForKeyA}) does not have an active version`);
@@ -408,8 +412,8 @@ const generateMifareKeys$ = async (paymentMediumSession, paymentMediumType, prod
             if (prodKeyB !== 'NA' && !prodKeyB.versions.find(v => v.active)) throw new CustomError(`PaymentMediumReadAndWriteHelper.generateMifareKeys: ProductionKey for KeyB(${productionKeyNameForKeyB}) does not have an active version`);
         }),
         mergeMap(([prodKeyA, prodKeyB]) => forkJoin([
-            prodKeyA === 'NA' ? of({ diversifiedKey: null }) : HSM.callHsmRestService$("POST", commonHsmPAth + prodKeyA.id + "/versions/" + prodKeyA.versions.find(v => v.active).id + "/generateDiversifiedKey", 'application/json', commonHsmBody),
-            prodKeyB === 'NA' ? of({ diversifiedKey: null }) : HSM.callHsmRestService$("POST", commonHsmPAth + prodKeyB.id + "/versions/" + prodKeyB.versions.find(v => v.active).id + "/generateDiversifiedKey", 'application/json', commonHsmBody)
+            prodKeyA === 'NA' ? of({ diversifiedKey: null }) : HSM.callHsmRestService$("POST", commonHsmPAth + prodKeyA._id + "/versions/" + prodKeyA.versions.find(v => v.active).id + "/generateDiversifiedKey", 'application/json', commonHsmBody),
+            prodKeyB === 'NA' ? of({ diversifiedKey: null }) : HSM.callHsmRestService$("POST", commonHsmPAth + prodKeyB._id + "/versions/" + prodKeyB.versions.find(v => v.active).id + "/generateDiversifiedKey", 'application/json', commonHsmBody)
         ])),
         map(([hsmResultA, hsmResultB]) => ({ keyA: hsmResultA.diversifiedKey, keyB: hsmResultB.diversifiedKey }))
     ).toPromise();
@@ -541,6 +545,14 @@ const buildWritingProcessSteps = (paymentMediumSession, paymentMediumType, mappi
                     default: throw new CustomError(`PaymentMediumReadAndWriteHelper.buildWritingProcessSteps.BALANCE_RECHARGE: invalid pocket= ${mod.payload.pocket}`);
                 }
                 break;
+            case 'BALANCE_DEBIT':
+                switch (mod.payload.pocket) {
+                    case 'REGULAR':
+                        cardData.ST$ = cardData.STB$ = currentBalance - parseInt(mod.payload.value);
+                        break;
+                    default: throw new CustomError(`PaymentMediumReadAndWriteHelper.buildWritingProcessSteps.BALANCE_DEBIT: invalid pocket= ${mod.payload.pocket}`);
+                }
+                break;
             case 'BLOCK':
                 cardData.B = 1; // Bloqueo temporal
                 break;
@@ -622,7 +634,6 @@ const buildWritingProcessSteps = (paymentMediumSession, paymentMediumType, mappi
     return { modificationProcesses, projectedValues };
 };
 
-
 const dispatchToStepProcess$ = (paymentMediumSession, paymentMediumType, profile, responseApdus, authToken) => {
     switch (paymentMediumSession.nextStep.step) {
         case STEPS.READ_CARD_BEFORE_MODS: return readCardBeforeMods$(paymentMediumSession, paymentMediumType, profile, responseApdus, authToken);
@@ -672,5 +683,5 @@ of([paymentMediumSession, paymentMediumType, profile, [], { _id: 'test-user', na
 
     },
     err => console.error(err),
-    () => console.log('Completed!!!!  '+(Date.now()-initTs))
+    () => console.log('Completed!!!!  ' + (Date.now() - initTs))
 );

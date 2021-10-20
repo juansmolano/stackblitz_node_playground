@@ -1,9 +1,106 @@
-module.exports = {
-    "LLAVE_PRUEBA_QR": { "id": "a1da3026-9abc-48e5-aa9b-7859381d1d6e", "name": "LLAVE_PRUEBA_QR", "organizationId": "3ae750a0-609c-483f-96c2-e27c8018daec", "description": "", "locked": false, "active": true, "qrCodeDefaultCypher": true, "associatedPaymentMediumTypeIds": ["bcc4e63a-b503-41c3-b311-4af28d392b42", "a5442d9b-9c36-480b-9b4a-ae167c3aa667", "22ff57ab-7e18-4b93-9321-dbe806269895"], "metadata": { "createdBy": "sebastian.molano@nebulae.com.co", "createdAt": 1631909641163, "updatedBy": "sebastian.molano@nebulae.com.co", "updatedAt": 1631965605087 }, "versions": [{ "active": true, "description": "Versión 1", "metadata": { "createdAt": 1631909678758, "createdBy": "sebastian.molano@nebulae.com.co", "updatedAt": 1631910380941, "updatedBy": "Sebastian Molano" }, "id": "5d8e9264-d812-4589-b949-4a1e0a3731e4", "versionName": "V01", "versionNum": 1 }] },
-    "CONFIG": { "id": "7236eb3e-1bf7-47b3-bf19-a4696dfd1214", "name": "CONFIG", "organizationId": "3ae750a0-609c-483f-96c2-e27c8018daec", "description": "", "locked": false, "active": true, "qrCodeDefaultCypher": false, "associatedPaymentMediumTypeIds": ["22ff57ab-7e18-4b93-9321-dbe806269895"], "metadata": { "createdBy": "sebastian.molano@nebulae.com.co", "createdAt": 1632157269149, "updatedBy": "sebastian.molano@nebulae.com.co", "updatedAt": 1632157269149 }, "versions": [{ "id": "b19f4f58-d7dd-4f09-9451-4e628d138e67", "versionName": "init", "versionNum": 1, "active": true, "description": "Ver. Inicial", "metadata": { "createdBy": "sebastian.molano@nebulae.com.co", "createdAt": 1632157319034, "updatedBy": "sebastian.molano@nebulae.com.co", "updatedAt": 1632157319034 } }] },
-    "ADMIN": { "id": "7a6cbc6c-8ce1-4bee-a942-322dfe6a7d3f", "name": "ADMIN", "organizationId": "3ae750a0-609c-483f-96c2-e27c8018daec", "description": "", "locked": false, "active": true, "qrCodeDefaultCypher": false, "associatedPaymentMediumTypeIds": ["22ff57ab-7e18-4b93-9321-dbe806269895"], "metadata": { "createdBy": "sebastian.molano@nebulae.com.co", "createdAt": 1632157364893, "updatedBy": "sebastian.molano@nebulae.com.co", "updatedAt": 1632157364893 }, "versions": [{ "id": "6f7b5d20-7931-4d21-8a0c-63bcf550a295", "versionName": "init", "versionNum": 1, "active": true, "description": "Ver. Inicial", "metadata": { "createdBy": "sebastian.molano@nebulae.com.co", "createdAt": 1632157380223, "updatedBy": "sebastian.molano@nebulae.com.co", "updatedAt": 1632157380223 } }] },
-    "DEBITO": { "id": "f9a92df9-7643-424a-8faf-cdae3686dbde", "name": "DEBITO", "organizationId": "3ae750a0-609c-483f-96c2-e27c8018daec", "description": "", "locked": false, "active": true, "qrCodeDefaultCypher": false, "associatedPaymentMediumTypeIds": ["22ff57ab-7e18-4b93-9321-dbe806269895"], "metadata": { "createdBy": "sebastian.molano@nebulae.com.co", "createdAt": 1632157390445, "updatedBy": "sebastian.molano@nebulae.com.co", "updatedAt": 1632157390445 }, "versions": [{ "id": "6668288e-cfb3-47ab-b623-d937fce5f36b", "versionName": "Init", "versionNum": 1, "active": true, "description": "Ver. Inicial", "metadata": { "createdBy": "sebastian.molano@nebulae.com.co", "createdAt": 1632157401679, "updatedBy": "sebastian.molano@nebulae.com.co", "updatedAt": 1632157401679 } }] },
-    "CREDITO": { "id": "cfc8b263-cc7c-4811-84c5-2b6e6268fe34", "name": "CREDITO", "organizationId": "3ae750a0-609c-483f-96c2-e27c8018daec", "description": "", "locked": false, "active": true, "qrCodeDefaultCypher": false, "associatedPaymentMediumTypeIds": ["22ff57ab-7e18-4b93-9321-dbe806269895"], "metadata": { "createdBy": "sebastian.molano@nebulae.com.co", "createdAt": 1632157421646, "updatedBy": "sebastian.molano@nebulae.com.co", "updatedAt": 1632157421646 }, "versions": [{ "id": "fd83e67e-2e1b-41ba-b767-7b2351f38819", "versionName": "Init", "versionNum": 1, "active": true, "description": "Ver. Inicial", "metadata": { "createdBy": "sebastian.molano@nebulae.com.co", "createdAt": 1632157432610, "updatedBy": "sebastian.molano@nebulae.com.co", "updatedAt": 1632157432610 } }] },
-    "MIFAPPDIR": { "id": "ad010549-8621-4b9d-8b6a-e42c9dfc4c66", "name": "MIFAPPDIR", "organizationId": "3ae750a0-609c-483f-96c2-e27c8018daec", "description": "", "locked": false, "active": true, "qrCodeDefaultCypher": false, "associatedPaymentMediumTypeIds": ["22ff57ab-7e18-4b93-9321-dbe806269895"], "metadata": { "createdBy": "sebastian.molano@nebulae.com.co", "createdAt": 1632157518070, "updatedBy": "sebastian.molano@nebulae.com.co", "updatedAt": 1632157518070 }, "versions": [{ "id": "18620343-40d7-4b2b-b360-c35bdc76f800", "versionName": "Init", "versionNum": 1, "active": true, "description": "Ver. Inicial", "metadata": { "createdBy": "sebastian.molano@nebulae.com.co", "createdAt": 1632157529542, "updatedBy": "sebastian.molano@nebulae.com.co", "updatedAt": 1632157529542 } }] },
-    "CIFRADO_QR": { "id": "9640d381-676d-4fa0-aee5-93b54c070f45", "name": "CIFRADO_QR", "organizationId": "3ae750a0-609c-483f-96c2-e27c8018daec", "description": "", "locked": false, "active": true, "qrCodeDefaultCypher": false, "associatedPaymentMediumTypeIds": ["a5442d9b-9c36-480b-9b4a-ae167c3aa667", "bcc4e63a-b503-41c3-b311-4af28d392b42"], "metadata": { "createdBy": "administrador.nebulae", "createdAt": 1632161348660, "updatedBy": "administrador.nebulae", "updatedAt": 1632161348660 }, "versions": [{ "id": "7f93086c-35c6-4364-903d-f6fc0cc8ed63", "versionName": "Init", "versionNum": 1, "active": true, "description": "Ver. Inicial", "metadata": { "createdBy": "administrador.nebulae", "createdAt": 1632161361651, "updatedBy": "administrador.nebulae", "updatedAt": 1632161361651 } }] }
-};
+module.exports = [
+    {
+        "_id": "c1eab46c-83f1-4688-9af1-3885437bb7db",
+        "name": "CIFRADO_QR",
+        "organizationId": "830b9d85-1cad-490a-b376-eb6c6c2c56c2",
+        "description": "",
+        "locked": false,
+        "active": true,
+        "qrCodeDefaultCypher": true,
+        "associatedPaymentMediumTypeIds": [
+            "b6d9af2c-36ed-4215-a9ca-9dcc12ca54ec",
+            "ca652600-9fdf-421a-9dea-7418c8cf9120"
+        ],
+        "metadata": {
+            "createdBy": "admin.recaudo@nebuale.com.co",
+            "createdAt": 1634745094752,
+            "updatedBy": "admin.recaudo@nebuale.com.co",
+            "updatedAt": 1634745094752
+        },
+        "versions": [
+            {
+                "id": "07f658b4-bc59-4928-94b9-239f850f9c89",
+                "versionName": "inicial",
+                "versionNum": 1,
+                "active": true,
+                "description": "Ver. inicial",
+                "metadata": {
+                    "createdBy": "admin.recaudo@nebuale.com.co",
+                    "createdAt": 1634745130317,
+                    "updatedBy": "admin.recaudo@nebuale.com.co",
+                    "updatedAt": 1634745130317
+                }
+            }
+        ]
+    },
+    {
+        "_id": "54fed34c-7c57-4061-8a7a-3a2cce262068",
+        "name": "CREDITO",
+        "organizationId": "830b9d85-1cad-490a-b376-eb6c6c2c56c2",
+        "description": "",
+        "locked": false,
+        "active": true,
+        "qrCodeDefaultCypher": false,
+        "associatedPaymentMediumTypeIds": [
+            "ca652600-9fdf-421a-9dea-7418c8cf9120"
+        ],
+        "metadata": {
+            "createdBy": "admin.recaudo@nebuale.com.co",
+            "createdAt": 1634745254474,
+            "updatedBy": "admin.recaudo@nebuale.com.co",
+            "updatedAt": 1634745254474
+        },
+        "versions": [
+            {
+                "id": "c2b9f7c0-cdb5-4d33-b904-4ceaf27718c7",
+                "versionName": "inicial",
+                "versionNum": 1,
+                "active": true,
+                "description": "Ver. Inicial",
+                "metadata": {
+                    "createdBy": "admin.recaudo@nebuale.com.co",
+                    "createdAt": 1634745274098,
+                    "updatedBy": "admin.recaudo@nebuale.com.co",
+                    "updatedAt": 1634745274098
+                }
+            }
+        ]
+    },
+    {
+        "_id": "21dfb468-f099-47e9-9a93-d2df20bb27ed",
+        "name": "DEBITO",
+        "organizationId": "830b9d85-1cad-490a-b376-eb6c6c2c56c2",
+        "description": "",
+        "locked": false,
+        "active": true,
+        "qrCodeDefaultCypher": false,
+        "associatedPaymentMediumTypeIds": [
+            "ca652600-9fdf-421a-9dea-7418c8cf9120"
+        ],
+        "metadata": {
+            "createdBy": "admin.recaudo@nebuale.com.co",
+            "createdAt": 1634745288357,
+            "updatedBy": "admin.recaudo@nebuale.com.co",
+            "updatedAt": 1634745288357
+        },
+        "versions": [
+            {
+                "id": "20a3affd-c2dd-44ec-bd1a-d530980b450f",
+                "versionName": "Inicial",
+                "versionNum": 1,
+                "active": true,
+                "description": "Ver. Inicial",
+                "metadata": {
+                    "createdBy": "admin.recaudo@nebuale.com.co",
+                    "createdAt": 1634745314095,
+                    "updatedBy": "admin.recaudo@nebuale.com.co",
+                    "updatedAt": 1634745314095
+                }
+            }
+        ]
+    }
+];
+
+
+
+

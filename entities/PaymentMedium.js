@@ -1,48 +1,54 @@
 module.exports = {
-	_id: "MIFARE-10",
-	id: "MIFARE-10",
-	organizationId: "3ae750a0-609c-483f-96c2-e27c8018daec",
-	typeId: "22ff57ab-7e18-4b93-9321-dbe806269895",
-	mediumId: "044E0CF2164F80",
-	ephemeral: false,
-	endUserId: "1c77117d-2f00-4479-9050-dc86934bbd25",
-	profileId: "bc4be965-15bf-4921-828d-8ff1618da4c6",
-	state: "ACQUIRED",
-	stateTimestamp: 1632346160790,
-	stateResponsibleUserId: null,
-	stateResponsibleUserName: "Sebastian Molano",
-	stateHistory: [
+	"_id" : "MIFARE-2",
+	"id" : "MIFARE-2",
+	"organizationId" : "830b9d85-1cad-490a-b376-eb6c6c2c56c2",
+	"typeId" : "ca652600-9fdf-421a-9dea-7418c8cf9120",
+	"mediumId" : "045B05F2164F80",
+	"ephemeral" : false,
+	"endUserId" : "4a2516f9-558d-429f-8aaa-5cb7a248b45a",
+	"profileId" : "be21302b-79bf-40bc-8d1d-0015a3f195bf",
+	"state" : "EMITTED",
+	"stateTimestamp" : 1634748833956,
+	"stateResponsibleUserId" : "04c7a453-3129-4e80-aa83-2f506b368f65",
+	"stateResponsibleUserName" : "ADMIN RECAUDO",
+	"stateHistory" : [
 		{
-			timestamp: 1632345941779,
-			state: "ACQUIRED",
-			responsibleUserId: "",
-			responsibleUserFullname: "LUIS GRAJALES"
+			"timestamp" : 1634748213793,
+			"state" : "ACQUIRED",
+			"responsibleUserId" : "",
+			"responsibleUserFullname" : "JUAN MOLANO"
 		},
+		{
+			"timestamp" : 1634748833956,
+			"state" : "EMITTING",
+			"responsibleUserId" : "04c7a453-3129-4e80-aa83-2f506b368f65",
+			"responsibleUserFullname" : "ADMIN RECAUDO"
+		},
+		{
+			"timestamp" : 1634748844627,
+			"state" : "EMITTED",
+			"responsibleUserId" : "04c7a453-3129-4e80-aa83-2f506b368f65",
+			"responsibleUserFullname" : "ADMIN RECAUDO"
+		}
 	],
-	pockets: {
-		REGULAR: {
-			type: "REGULAR",
-			balance: 0,
-			balanceBk: 0,
-			timestamp: 1632346160790
+	"pockets" : {
+		"REGULAR" : {
+			"type" : "REGULAR",
+			"balance" : 0,
+			"balanceBk" : 0,
+			"timestamp" : 1634748833956
 		}
 	},
-	blocked: false,
-	metadata: {
-		data: null,
-		timestamp: 1632346160790,
-		mappingVersion: 3,
-		transactionSeq: 0,
-		atr: "3B878001C10521300077C165"
+	"blocked" : false,
+	"metadata" : {
+		"data" : null,
+		"timestamp" : 1634748833956,
+		"mappingVersion" : 1,
+		"transactionSeq" : 0,
+		"atr" : "3B878001C10521300077C165"
 	},
-	expirationTimestamp: 1790026160790,
-	expired: false,
-	mods: [
-	],
-	emissionProcess: {
-		step: 0,
-		prevProcesses: [
-		],
-		processVars: {}
-	}
+	"expirationTimestamp" : 1792428833956,
+	"expired" : false,
+	"mods" : [ ],
+	"emissionProcess" : {}
 };

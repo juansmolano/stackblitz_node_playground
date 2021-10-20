@@ -1,11 +1,11 @@
 module.exports = {
-	_id: "MIFARE-10_bc4be965-15bf-4921-828d-8ff1618da4c6",
+	_id: "MIFARE-2_bc4be965-15bf-4921-828d-8ff1618da4c6",
 	sequential: 221, // system-wide session sequential
 	timestamp: Date.now(), // should be validated - must be fresh (2 minutes)
 
 	atr: "90fabbc54c6f6d57",
-	uuid: "a0b1c2d3e4f507",
-	organizationId: "3ae750a0-609c-483f-96c2-e27c8018daec",
+	uuid: "045B05F2164F80",
+	organizationId: "830b9d85-1cad-490a-b376-eb6c6c2c56c2",
 	pointOfSaleId: "2c559ebd-2cee-4c1a-903e-ab848eaf409e",
 	terminalKey: "abc-123",
 
@@ -24,21 +24,21 @@ module.exports = {
 
 
 	paymentMedium: {
-		id: "MIFARE-10",
-		mediumId: "044E0CF2164F80",
-		endUserId: "1c77117d-2f00-4479-9050-dc86934bbd25",
-		state: "EMITTED",
-		stateTimestamp: 1632346160790,
-		pockets: {
-			REGULAR: {
-				type: "REGULAR",
-				balance: 0,
-				balanceBk: 0,
-				timestamp: 1632346160790
+		id: "MIFARE-2",
+		mediumId: "045B05F2164F80",
+		endUserId: "4a2516f9-558d-429f-8aaa-5cb7a248b45a",
+		"state" : "EMITTED",
+		"stateTimestamp" : 1634748833956,
+		"pockets" : {
+			"REGULAR" : {
+				"type" : "REGULAR",
+				"balance" : 0,
+				"balanceBk" : 0,
+				"timestamp" : 1634748833956
 			}
 		},
 		blocked: false,
-		expirationTimestamp: 1790026160790,
+		expirationTimestamp: 1792428833956,
 		expired: false,
 		mods: [
 			{
@@ -85,7 +85,24 @@ module.exports = {
 					aid: '333333',
 					av: '3',
 				}
-			}
+			},
+			{
+				id: '4444444',
+				ts: Date.now(),
+				type: 'BALANCE_DEBIT',
+				payload: {
+					pocket: 'REGULAR',
+					value: '2000'
+				},
+				applied: false,
+				appliedTs: undefined,
+				event: {
+					et: 'SampleEvent',
+					at: 'SampleAggregate',
+					aid: '44444444',
+					av: '4',
+				}
+			},
 		],
 	},
 
