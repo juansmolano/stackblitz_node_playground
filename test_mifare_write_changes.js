@@ -7,6 +7,7 @@ const { mergeMap, map, filter, expand, takeWhile, last, tap } = require('rxjs/op
 const { error: { CustomError }, log: { ConsoleLogger } } = require("@nebulae/backend-node-tools");
 
 const { MifareTools, PaymentMediumMifareInterpreter } = require('./smartcard');
+const { accessObjectPropertyByString, setObjectPropertyByString } = require('./tools/ObjectTools');
 const HSM = require("./hsm/HSM").singleton();
 const securityMediumProductionKeys = require('./entities/SecurityMediumProductionKeys');
 const securityMediumProductionKeysMap = securityMediumProductionKeys.reduce((map, key) => {
@@ -38,23 +39,56 @@ const SMARTCARD_APDUS_END_POINT = READER_END_POINT + '/smartcard/sendApdus';
 let __readerSessionId = Math.random() + '';
 
 
-const logStep = (paymentMedium, paymentMediumType, step, stepName, logType, logData, timestamp = Date.now(), error = null) => {
-    if (!paymentMediumSession.steps[step]) paymentMediumSession.steps[step] = { stepName, createTimestamp: timestamp };
-    if (!paymentMediumSession.steps[step][logType]) paymentMediumSession.steps[step][logType] = {};
-    paymentMediumSession.steps[step][logType] = { logType, data: logData, timestamp, error };
-    //console.log('logStep[', step, '][', logType, '] = ', paymentMediumSession.steps[step][logType]);
+const readCardBeforeMods$ = async (paymentMediumSession, paymentMediumType, profile, responseApdus, authToken) => {
+    const thisStep = STEPS.READ_CARD_BEFORE_MODS;
+    const nextStep = STEPS.APPLY_MODS;
+
+    paymentMediumSession = await readCard$(paymentMediumSession, paymentMediumType, profile, responseApdus, authToken, thisStep);
+
+    if (paymentMediumSession.steps[thisStep].areAllBlocksRead) {
+        paymentMediumSession.nextStep = {
+            step: nextStep,
+            requestApdus: ['FFCA000000'],
+            desc: 'Lectura realizada con éxito',
+            error: null,
+            resetReaderSession: true,
+        };
+        paymentMediumSession.processVars = {};
+        delete paymentMediumSession.steps[thisStep].processStates;
+        delete paymentMediumSession.steps[thisStep].requestApdus;
+        delete paymentMediumSession.steps[thisStep].responseApdus;
+    }
+    return { paymentMediumSession };
 };
 
-const resetPaymentMediumSession = (paymentMediumSession) => {
-    return {
-        ...paymentMediumSession,
-        step: 0,
-        nextStep: null,
-        processVars: {}
-    };
-};
+const readCardAfterMods$ = async (paymentMediumSession, paymentMediumType, profile, responseApdus, authToken) => {
+    const thisStep = STEPS.READ_CARD_AFTER_MODS;
+    const { paymentMedium } = paymentMediumSession;
+    paymentMediumSession = await readCard$(paymentMediumSession, paymentMediumType, profile, responseApdus, authToken, thisStep);
+    if (paymentMediumSession.steps[thisStep].areAllBlocksRead) {
+        paymentMediumSession.nextStep = null;
+        const { cardBlocks: cardBlocksBefore, cardData: cardDataBefore } = paymentMediumSession.steps[STEPS.READ_CARD_BEFORE_MODS];
+        const { cardBlocks: cardBlocksProjected, cardData: cardDataProjected } = paymentMediumSession.steps[STEPS.APPLY_MODS];
+        const { cardBlocks: cardBlocksAfter, cardData: cardDataAfter } = paymentMediumSession.steps[STEPS.READ_CARD_AFTER_MODS];
 
-const buildErrorResponse = (paymentMediumSession, errorDesc) => ({ paymentMediumSession: { ...paymentMediumSession, nextStep: { step: null, requestApdus: null, desc: null, error: errorDesc } } });
+        paymentMediumSession.processVars = {};
+        delete paymentMediumSession.steps[thisStep].processStates;
+        delete paymentMediumSession.steps[thisStep].requestApdus;
+        delete paymentMediumSession.steps[thisStep].responseApdus;
+
+        const errors = [];
+        for (const block in cardBlocksProjected) {
+            if (cardBlocksProjected[block] !== cardBlocksAfter[block]) {
+                const hadChanged = cardBlocksBefore[block] !== cardBlocksAfter[block];
+                errors.push(`Bloque ${block} ${hadChanged ? 'fue parcialmente escrito' : 'no fue escrito'}`);
+            }
+        }
+        if (errors.length > 0) {
+            return buildErrorResponse(paymentMediumSession, `${errors.join(', ')}`);
+        }
+    }
+    return { paymentMediumSession };
+};
 
 const readCard$ = async (paymentMediumSession, paymentMediumType, profile, responseApdus, authToken, thisStepNumber) => {
     const { paymentMedium } = paymentMediumSession;
@@ -186,57 +220,6 @@ const readCard$ = async (paymentMediumSession, paymentMediumType, profile, respo
     return paymentMediumSession;
 };
 
-const readCardBeforeMods$ = async (paymentMediumSession, paymentMediumType, profile, responseApdus, authToken) => {
-    const thisStep = STEPS.READ_CARD_BEFORE_MODS;
-    const nextStep = STEPS.APPLY_MODS;
-
-    paymentMediumSession = await readCard$(paymentMediumSession, paymentMediumType, profile, responseApdus, authToken, thisStep);
-
-    if (paymentMediumSession.steps[thisStep].areAllBlocksRead) {
-        paymentMediumSession.nextStep = {
-            step: nextStep,
-            requestApdus: ['FFCA000000'],
-            desc: 'Lectura realizada con éxito',
-            error: null,
-            resetReaderSession: true,
-        };
-        paymentMediumSession.processVars = {};
-        delete paymentMediumSession.steps[thisStep].processStates;
-        delete paymentMediumSession.steps[thisStep].requestApdus;
-        delete paymentMediumSession.steps[thisStep].responseApdus;
-    }
-    return { paymentMediumSession };
-};
-
-const readCardAfterMods$ = async (paymentMediumSession, paymentMediumType, profile, responseApdus, authToken) => {
-    const thisStep = STEPS.READ_CARD_AFTER_MODS;
-    paymentMediumSession = await readCard$(paymentMediumSession, paymentMediumType, profile, responseApdus, authToken, thisStep);
-    if (paymentMediumSession.steps[thisStep].areAllBlocksRead) {
-        paymentMediumSession.nextStep = null;
-        const { cardBlocks: cardBlocksBefore, cardData: cardDataBefore } = paymentMediumSession.steps[STEPS.READ_CARD_BEFORE_MODS];
-        const { cardBlocks: cardBlocksProjected, cardData: cardDataProjected } = paymentMediumSession.steps[STEPS.APPLY_MODS];
-        const { cardBlocks: cardBlocksAfter, cardData: cardDataAfter } = paymentMediumSession.steps[STEPS.READ_CARD_AFTER_MODS];
-
-        paymentMediumSession.processVars = {};
-        delete paymentMediumSession.steps[thisStep].processStates;
-        delete paymentMediumSession.steps[thisStep].requestApdus;
-        delete paymentMediumSession.steps[thisStep].responseApdus;
-
-        const errors = [];
-        for (const block in cardBlocksProjected) {
-            if (cardBlocksProjected[block] !== cardBlocksAfter[block]) {
-                const hadChanged = cardBlocksBefore[block] !== cardBlocksAfter[block];
-                errors.push(`Bloque ${block} ${hadChanged ? 'fue parcialmente escrito' : 'no fue escrito'}`);
-            }
-        }
-        if (errors.length > 0) {
-            return buildErrorResponse(paymentMediumSession, `${errors.join(', ')}`);
-        }
-    }
-    return { paymentMediumSession };
-};
-
-
 const applyMods$ = async (paymentMediumSession, paymentMediumType, profile, responseApdus, authToken) => {
     const thisStep = STEPS.APPLY_MODS;
     if (!paymentMediumSession.steps[thisStep]) paymentMediumSession.steps[thisStep] = {};
@@ -244,6 +227,7 @@ const applyMods$ = async (paymentMediumSession, paymentMediumType, profile, resp
     paymentMediumSession.nextStep = null;
     const [mapping, mappingVersion, mappingError] = extractPaymentMediumSpecs(paymentMediumSession, paymentMediumType);
     if (mappingError) return mappingError;
+    const appliedMods = [];
 
     const MOD_PROCESS_STATE = ['PENDING', 'APPLYING', 'APPLIED'];
     const findNextModProcessToExecute = (modProcesses) => modProcesses ? modProcesses.find(modProcess => modProcess.state !== 'APPLIED') : undefined;
@@ -265,6 +249,17 @@ const applyMods$ = async (paymentMediumSession, paymentMediumType, profile, resp
         currenModProcess = findNextModProcessToExecute(modProcesses);//this give us the modification process to execute or continue
         if (!currenModProcess) break;
         nextStep = await evalMod$(currenModProcess, thisStep, paymentMediumSession, paymentMediumType, profile, responseApdus, authToken);
+        if (currenModProcess.state === 'APPLIED') {
+            appliedMods.push(currenModProcess.mod);
+            if (currenModProcess.mod.paymentMediumChanges) {
+                const paymentMediumChanges = Object.entries(currenModProcess.mod.paymentMediumChanges);
+                for (let i = 0; i < paymentMediumChanges.length; i++) {
+                    const [fieldPath, fieldChange] = paymentMediumChanges[i];
+                    fieldChange.old = accessObjectPropertyByString(paymentMediumSession.paymentMedium, fieldPath);
+                    setObjectPropertyByString(paymentMediumSession.paymentMedium, fieldPath, fieldChange.new);
+                }
+            }
+        }
     }
 
     const areModificationsApplied = !currenModProcess;
@@ -278,7 +273,8 @@ const applyMods$ = async (paymentMediumSession, paymentMediumType, profile, resp
         }
         : nextStep;
     paymentMediumSession.step = thisStep;
-    return { paymentMediumSession };
+
+    return { paymentMediumSession, appliedMods };
 };
 
 const evalMod$ = async (modProcess, thisStep, paymentMediumSession, paymentMediumType, profile, responseApdus, authToken) => {
@@ -377,6 +373,12 @@ const evalMod$ = async (modProcess, thisStep, paymentMediumSession, paymentMediu
         delete paymentMediumSession.steps[thisStep].responseApdus;
     }
     modProcess.state = isModificationApplied ? 'APPLIED' : 'APPLYING';
+    if (isModificationApplied) {
+        modProcess.mod.applied = true;
+        modProcess.mod.appliedTs = Date.now;
+        modProcess.mod.sessionId = paymentMediumSession._id;
+    }
+
     return isModificationApplied
         ? null
         : {
@@ -387,6 +389,24 @@ const evalMod$ = async (modProcess, thisStep, paymentMediumSession, paymentMediu
             resetReaderSession: false,
         };
 };
+
+const logStep = (paymentMedium, paymentMediumType, step, stepName, logType, logData, timestamp = Date.now(), error = null) => {
+    if (!paymentMediumSession.steps[step]) paymentMediumSession.steps[step] = { stepName, createTimestamp: timestamp };
+    if (!paymentMediumSession.steps[step][logType]) paymentMediumSession.steps[step][logType] = {};
+    paymentMediumSession.steps[step][logType] = { logType, data: logData, timestamp, error };
+    //console.log('logStep[', step, '][', logType, '] = ', paymentMediumSession.steps[step][logType]);
+};
+
+const resetPaymentMediumSession = (paymentMediumSession) => {
+    return {
+        ...paymentMediumSession,
+        step: 0,
+        nextStep: null,
+        processVars: {}
+    };
+};
+
+const buildErrorResponse = (paymentMediumSession, errorDesc) => ({ paymentMediumSession: { ...paymentMediumSession, nextStep: { step: null, requestApdus: null, desc: null, error: errorDesc } } });
 
 const extractPaymentMediumSpecs = ({ paymentMedium }, paymentMediumType) => {
     const mappingVersion = paymentMediumType.mappings.filter(m => m.active).sort((m1, m2) => m1.version - m2.version).pop();
@@ -404,7 +424,7 @@ const generateMifareKeys$ = async (paymentMediumSession, paymentMediumType, prod
     let { keyA, keyB } = await forkJoin([
         of(productionKeyNameForKeyA ? securityMediumProductionKeysMap[productionKeyNameForKeyA] : 'NA'),
         of(productionKeyNameForKeyB ? securityMediumProductionKeysMap[productionKeyNameForKeyB] : 'NA'),
-    ]).pipe(        
+    ]).pipe(
         tap(([prodKeyA, prodKeyB]) => {
             if (!prodKeyA) throw new CustomError(`PaymentMediumReadAndWriteHelper.generateMifareKeys: ProductionKey for KeyA(${productionKeyNameForKeyA}) not found`);
             if (prodKeyA !== 'NA' && !prodKeyA.versions.find(v => v.active)) throw new CustomError(`PaymentMediumReadAndWriteHelper.generateMifareKeys: ProductionKey for KeyA(${productionKeyNameForKeyA}) does not have an active version`);
@@ -527,20 +547,35 @@ const buildWritingProcessSteps = (paymentMediumSession, paymentMediumType, mappi
             return acc;
         }, { minNumber: null, min: Number.MAX_VALUE, maxNumber: null, max: Number.MIN_VALUE });
 
+        const setCardDataField = (cardDataFieldName, value, paymentMediumFieldName, paymentMediumFieldValue) => {
+            if (!mod.paymentMediumChanges) mod.paymentMediumChanges = {};
+            if (!mod.cardDataChanges) mod.cardDataChanges = {};
+            if (paymentMediumFieldName) {
+                mod.paymentMediumChanges[paymentMediumFieldName] = {
+                    old: undefined,
+                    new: paymentMediumFieldValue === undefined ? value : paymentMediumFieldValue
+                };
+            }
+            mod.cardDataChanges[cardDataFieldName] = { old: cardData[cardDataFieldName], new: value };
+            cardData[cardDataFieldName] = value;
+        };
+
         switch (mod.type) {
             case 'BALANCE_RECHARGE':
                 switch (mod.payload.pocket) {
                     case 'REGULAR':
                         if ((paymentMediumType.specs || {}).validityPeriodExtension > 0) {
-                            cardData.FV = parseInt(Date.now() / 1000) + paymentMediumType.specs.validityPeriodExtension;// Fecha de validez del medio de pago
+                            const newFV = parseInt(Date.now() / 1000) + paymentMediumType.specs.validityPeriodExtension;// Fecha de validez del medio de pago
+                            setCardDataField('FV', newFV, 'expirationTimestamp', newFV * 1000);
                         }
-                        cardData.ST$ = cardData.STB$ = currentBalance + parseInt(mod.payload.value);
-                        cardData[`HISTR_FT_${oldestRechargeHistoryNumber}`] = parseInt(Date.now() / 1000);//Marca de tiempo (timeStamp sec)
-                        cardData[`HISTR_CT_${oldestRechargeHistoryNumber}`] = paymentMediumSession.sequential; //Consecutivo Transaccion
-                        cardData[`HISTR_VT_${oldestRechargeHistoryNumber}`] = parseInt(mod.payload.value); //Monto de la transacción 
-                        cardData[`HISTR_IDV_${oldestRechargeHistoryNumber}`] = 1; //Id del dispositivo // 1 => read/write widget
-                        cardData[`HISTR_TT_${oldestRechargeHistoryNumber}`] = 1; //Tipo de transacción
-                        cardData[`HISTR_CK_${oldestRechargeHistoryNumber}`] = 0; //CheckSum
+                        setCardDataField('ST$', currentBalance + parseInt(mod.payload.value), 'pockets.REGULAR.balance');//saldo
+                        setCardDataField('STB$', currentBalance + parseInt(mod.payload.value), 'pockets.REGULAR.balanceBk');//saldo bk
+                        setCardDataField(`HISTR_FT_${oldestRechargeHistoryNumber}`, parseInt(Date.now() / 1000));//Marca de tiempo (timeStamp sec)
+                        setCardDataField(`HISTR_CT_${oldestRechargeHistoryNumber}`, paymentMediumSession.sequential); //Consecutivo Transaccion
+                        setCardDataField(`HISTR_VT_${oldestRechargeHistoryNumber}`, parseInt(mod.payload.value));//Monto de la transacción 
+                        setCardDataField(`HISTR_IDV_${oldestRechargeHistoryNumber}`, 1);//Id del dispositivo // 1 => read/write widget
+                        setCardDataField(`HISTR_TT_${oldestRechargeHistoryNumber}`, 1);//Tipo de transacción
+                        setCardDataField(`HISTR_CK_${oldestRechargeHistoryNumber}`, 0);//CheckSum
                         break;
                     default: throw new CustomError(`PaymentMediumReadAndWriteHelper.buildWritingProcessSteps.BALANCE_RECHARGE: invalid pocket= ${mod.payload.pocket}`);
                 }
@@ -548,19 +583,21 @@ const buildWritingProcessSteps = (paymentMediumSession, paymentMediumType, mappi
             case 'BALANCE_DEBIT':
                 switch (mod.payload.pocket) {
                     case 'REGULAR':
-                        cardData.ST$ = cardData.STB$ = currentBalance - parseInt(mod.payload.value);
+                        setCardDataField('ST$', currentBalance - parseInt(mod.payload.value), 'pockets.REGULAR.balance');//saldo
+                        setCardDataField('STB$', currentBalance - parseInt(mod.payload.value), 'pockets.REGULAR.balanceBk');//saldo bk
                         break;
                     default: throw new CustomError(`PaymentMediumReadAndWriteHelper.buildWritingProcessSteps.BALANCE_DEBIT: invalid pocket= ${mod.payload.pocket}`);
                 }
                 break;
             case 'BLOCK':
-                cardData.B = 1; // Bloqueo temporal
+                setCardDataField('B', 1, 'blocked', true);// Bloqueo temporal
                 break;
             case 'UNBLOCK':
                 if ((paymentMediumType.specs || {}).validityPeriodExtension > 0) {
-                    cardData.FV = parseInt(Date.now() / 1000) + paymentMediumType.specs.validityPeriodExtension;// Fecha de validez del medio de pago
+                    const newFV = parseInt(Date.now() / 1000) + paymentMediumType.specs.validityPeriodExtension;// Fecha de validez del medio de pago
+                    setCardDataField('FV', newFV);
                 }
-                cardData.B = 0; // Bloqueo temporal
+                setCardDataField('B', 0, 'blocked', false);// Bloqueo temporal
                 break;
             default: throw new CustomError(`PaymentMediumReadAndWriteHelper.buildWritingProcessSteps: not valid mod.type = ${mod.type}`);
         }
@@ -648,7 +685,7 @@ const simulateClientServerFlow$ = (clientArgs) => {
     if (paymentMediumSession.nextStep === null) return of(null);
     console.log('========== Reporting to server step #', paymentMediumSession.step, '============');
     return from(dispatchToStepProcess$(...clientArgs)).pipe(
-        tap(({ paymentMediumSession: { nextStep } }) => console.log('Server returned nextStep', nextStep)),
+        tap(({ paymentMediumSession: { nextStep }, appliedMods }) => console.log('Server returned', JSON.stringify({ nextStep, appliedMods }, null, 1))),
         filter(({ paymentMediumSession }) => paymentMediumSession.nextStep),
         tap(({ paymentMediumSession }) => { if (paymentMediumSession.nextStep.error) throw new Error(paymentMediumSession.nextStep.error); }),
         mergeMap(({ paymentMediumSession }) => {

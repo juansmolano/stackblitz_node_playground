@@ -242,7 +242,7 @@ class MifareTools {
         const respCmac = writeResponse.slice(-8);
         const calCmac = this.calcCmac(keyMac, [0x90, wCountB2, wCountB1, ...ti]);
         if (respCmac.toString() !== calCmac.toString()) {
-            throw new Error(`Error procesando respuesta de lectura de bloque: cmac no coincide.  ${JSON.stringify({ readResponse, calCmac, respCmac })}`);
+            throw new Error(`Error procesando respuesta de lectura de bloque: cmac no coincide.  ${JSON.stringify({ writeResponse, calCmac, respCmac })}`);
         }
         return { processVars: { writeCounter: writeCounter + 1 } };
     }

@@ -7,6 +7,9 @@ module.exports = {
   idField: "muuid",
   idRegex: "(\\b[0-9A-F]{8}$\\b)|(\\b[0-9A-F]{14}$\\b)",
   flagRegex: "i",
+  specs: {
+    validityPeriodExtension: 31556952
+  },
   mappings: [
     {
       version: 3,
