@@ -744,6 +744,7 @@ func (d *Desfire) WriteRecord(fileNo int, targetSecondaryApp SecondAppIndicator,
 				apdu = append(apdu, data...)
 				apdu = append(apdu, cmacT...)
 			case PLAIN:
+				apdu = append(apdu, data...)
 			default:
 			}
 		case EV1:

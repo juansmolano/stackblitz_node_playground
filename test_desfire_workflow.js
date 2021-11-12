@@ -6,7 +6,7 @@ const { of, forkJoin, from, iif, throwError, merge, EMPTY, defer, timer } = requ
 const { mergeMap, catchError, map, toArray, tap, filter, first, expand, takeWhile, pluck, mergeMapTo, mapTo } = require('rxjs/operators');
 const { error: { CustomError }, log: { ConsoleLogger } } = require("@nebulae/backend-node-tools");
 
-const { DesfireTools: { DesfireTools, EV_MODES, KEY_TYPES, APP_TARGETS, ACCESS_RIGHTS }, MifareTools } = require('./smartcard');
+const { DesfireTools: { DesfireTools, EV_MODES, KEY_TYPES, APP_TARGETS, ACCESS_RIGHTS, COMM_MODES }, MifareTools } = require('./smartcard');
 const HSM = require("./hsm/HSM").singleton();
 const SecurityMediumProductionKeys = require('./entities/SecurityMediumProductionKeys');
 
@@ -19,6 +19,11 @@ const READER_END_POINT = PCSC_DAEMON_END_POINT + '/readers/5C5C3F5C5357442353634
 const SMARTCARD_END_POINT = READER_END_POINT + '/smartcard';
 const SMARTCARD_APDUS_END_POINT = READER_END_POINT + '/smartcard/sendApdus';
 let __readerSessionId = Math.random() + '';
+
+const publicDebito = ACCESS_RIGHTS.KeyID_0x01;
+const keyDebito = ACCESS_RIGHTS.KeyID_0x02;
+const keyCredito = ACCESS_RIGHTS.KeyID_0x03;
+const keyOperation = ACCESS_RIGHTS.KeyID_0x04;
 
 const sendApdus$ = (requestApdus) => {
     const readerCommand = { sessionId: __readerSessionId, closeSession: false, requests: requestApdus };
@@ -51,21 +56,16 @@ const selectPicc$ = (runtime) => sendApdu$(DesfireTools.gerenteSelectPiccApdu())
     map(() => ({ ...runtime, selectedApp: 'PICC' })),
 );
 
-const selectApp$ = (runtime) => sendApdu$(DesfireTools.generateSelectApplicationApdu('000001')).pipe(
+const selectApp$ = (runtime) => sendApdu$(DesfireTools.generateSelectApplicationApdu('010000')).pipe(
     map(() => ({ ...runtime, selectedApp: '000001' })),
 );
 
 
-const authenticate$ = (runtime) => {
-
+const authenticate$ = (key) => (runtime) => {
     const keyVersion = "00";
     const keyDefault = "3ED6B7C6823D442D7783F8B3A0B1C9C659E7D8BDDF7FCD6A" + keyVersion;
-    const publicDebito = ACCESS_RIGHTS.KeyID_0x01;
-    const keyDebito = ACCESS_RIGHTS.KeyID_0x02;
-    const keyCredito = ACCESS_RIGHTS.KeyID_0x03;
-    const keyOperation = ACCESS_RIGHTS.KeyID_0x04;
 
-    const { apdu: authIApdu, processVars: authIProcessVars } = DesfireTools.generateAuthenticateEV2FirstApdu(APP_TARGETS.PRIMARY_APP, keyOperation);
+    const { apdu: authIApdu, processVars: authIProcessVars } = DesfireTools.generateAuthenticateEV2FirstApdu(APP_TARGETS.PRIMARY_APP, key);
 
     return sendApdu$(authIApdu).pipe(
         map(({ responseApdu }) => ({ ...runtime, processVars: { ...authIProcessVars, AuthenticateEV2FirstResponse: responseApdu } })),
@@ -79,9 +79,103 @@ const authenticate$ = (runtime) => {
                         AuthenticateEV2FirstPart2Response: responseApdu,
                     }
                 })),
-                map(runtime => ({ ...runtime, processVars: { ...runtime.processVars, ...DesfireTools.processAuthenticateEV2FirstPart2Response(runtime.processVars.AuthenticateEV2FirstPart2Response, runtime.processVars) } })),
+                map(runtime => ({ ...runtime, processVars: { ...runtime.processVars, ...DesfireTools.processAuthenticateEV2FirstPart2Response(runtime.processVars.AuthenticateEV2FirstPart2Response, runtime.processVars).processVars } })),
             );
         })
+    );
+};
+
+const writeDataOnStdDataFile$ = (runtime) => {
+    const fileNo = 1;
+    const offset = 0;
+    const data = `TimeStamp:${Date.now()}, ascci:${Array(97).fill().map((_, i) => String.fromCharCode((i + 32) < 127 ? (i + 32) : (i + 64 - 126))).join('')}`;
+
+    const { apdu } = DesfireTools.generateWriteDataApdu(fileNo, APP_TARGETS.PRIMARY_APP, offset, data, COMM_MODES.MAC, runtime.processVars);
+    return sendApdu$(apdu).pipe(
+        map(({ responseApdu }) => ({ ...runtime, processVars: { ...runtime.processVars, ...DesfireTools.processWriteDataResponse(responseApdu, runtime.processVars).processVars } })),
+    );
+};
+
+const writeDataOnStdBackupFile$ = (runtime) => {
+    const fileNo = 2;
+    const offset = 0;
+    const data = `TimeStamp:${Date.now()}, ascci:${Array(31).fill().map((_, i) => String.fromCharCode((i + 32) < 127 ? (i + 32) : (i + 64 - 126))).join('')}`;
+
+    const { apdu } = DesfireTools.generateWriteDataApdu(fileNo, APP_TARGETS.PRIMARY_APP, offset, data, COMM_MODES.FULL, runtime.processVars);
+    return sendApdu$(apdu).pipe(
+        map(({ responseApdu }) => ({ ...runtime, processVars: { ...runtime.processVars, ...DesfireTools.processWriteDataResponse(responseApdu, runtime.processVars).processVars } })),
+    );
+};
+
+const writeDataOnCyclicRecorFile$ = (runtime) => {
+    const fileNo = 5;
+    const offset = 0;
+    const data = `TimeStamp:${Date.now()}, ascci:${Array(31).fill().map((_, i) => String.fromCharCode(i + 49)).join('')}`;
+
+    const { apdu } = DesfireTools.generateWriteRecordApdu(fileNo, APP_TARGETS.PRIMARY_APP, offset, data, COMM_MODES.FULL, runtime.processVars);
+    return sendApdu$(apdu).pipe(
+        map(({ responseApdu }) => ({ ...runtime, processVars: { ...runtime.processVars, ...DesfireTools.processWriteRecordResponse(responseApdu, runtime.processVars).processVars } })),
+    );
+};
+
+const debitValue$ = (runtime) => {
+    const fileNo = 4;
+    const value = 1000;
+
+    const { apdu } = DesfireTools.generateDebitApdu(fileNo, APP_TARGETS.PRIMARY_APP, value, COMM_MODES.FULL, runtime.processVars);
+    return sendApdu$(apdu).pipe(
+        map(({ responseApdu }) => ({ ...runtime, processVars: { ...runtime.processVars, ...DesfireTools.processDebitResponse(responseApdu, runtime.processVars).processVars } })),
+    );
+};
+
+const commitTransaction$ = (runtime) => {
+    const { apdu } = DesfireTools.generateCommitTransactionApdu(true, runtime.processVars);
+    return sendApdu$(apdu).pipe(
+        map(({ responseApdu }) => ({ ...runtime, processVars: { ...runtime.processVars, ...DesfireTools.processCommitTransactionResponse(responseApdu, runtime.processVars).processVars } })),
+    );
+};
+
+const readDataOnStdDataFile$ = (runtime) => {
+    const fileNo = 1;
+    const offset = 0;
+    const lengthToRead = 0;
+
+    const { apdu } = DesfireTools.generateReadDataApdu(fileNo, APP_TARGETS.PRIMARY_APP, offset, lengthToRead, COMM_MODES.MAC, runtime.processVars);
+    return sendApdu$(apdu).pipe(
+        map(({ responseApdu }) => {
+            const { processVars, responseData, areMoreFramesAvailable } = DesfireTools.processReadDataResponse(responseApdu, COMM_MODES.MAC, runtime.processVars);
+            console.log('readDataOnStdDataFile$', { fileNo, offset, lengthToRead, responseData, areMoreFramesAvailable, decoded: Buffer.from(responseData, 'hex').toString('utf-8') });
+            return { ...runtime, processVars: { ...runtime.processVars, ...processVars } };
+        }),
+    );
+};
+
+const readDataOnCyclicRecorFile$ = (runtime) => {
+    const fileNo = 5;
+    const offset = 0;
+    const lengthToRead = 0;
+
+    const { apdu } = DesfireTools.generateReadRecordApdu(fileNo, APP_TARGETS.PRIMARY_APP, offset, lengthToRead, COMM_MODES.FULL, runtime.processVars);
+    return sendApdu$(apdu).pipe(
+        map(({ responseApdu }) => {
+            const { processVars, responseData, areMoreFramesAvailable } = DesfireTools.processReadRecordResponse(responseApdu, COMM_MODES.FULL, runtime.processVars);
+            console.log('readDataOnCyclicRecorFile$', { fileNo, offset, lengthToRead, responseData, areMoreFramesAvailable, decoded: Buffer.from(responseData, 'hex').toString('utf-8') });
+            return { ...runtime, processVars: { ...runtime.processVars, ...processVars } };
+        }),
+    );
+};
+
+
+const readValue$ = (runtime) => {
+    const fileNo = 4;
+
+    const { apdu } = DesfireTools.generateReadValueApdu(fileNo, APP_TARGETS.PRIMARY_APP, COMM_MODES.FULL, runtime.processVars);
+    return sendApdu$(apdu).pipe(
+        map(({ responseApdu }) => {
+            const { processVars, responseData, areMoreFramesAvailable, value } = DesfireTools.processReadValueResponse(responseApdu, COMM_MODES.FULL, runtime.processVars);
+            console.log('readValue$', { fileNo, responseData, areMoreFramesAvailable, value });
+            return { ...runtime, processVars: { ...runtime.processVars, ...processVars } };
+        }),
     );
 };
 
@@ -90,9 +184,16 @@ timer(0, 1000).pipe(
     first(),
     mergeMap(selectPicc$),
     mergeMap(selectApp$),
-    mergeMap(authenticate$),
-
-
+    mergeMap(authenticate$(keyOperation)),
+    mergeMap(writeDataOnStdDataFile$),
+    mergeMap(writeDataOnStdBackupFile$),
+    mergeMap(authenticate$(keyDebito)),
+    mergeMap(writeDataOnCyclicRecorFile$),
+    mergeMap(debitValue$),
+    mergeMap(commitTransaction$),
+    mergeMap(readDataOnStdDataFile$),
+    mergeMap(readDataOnCyclicRecorFile$),
+    mergeMap(readValue$),
 ).subscribe(
     runtime => {
         console.log("runtime", runtime);

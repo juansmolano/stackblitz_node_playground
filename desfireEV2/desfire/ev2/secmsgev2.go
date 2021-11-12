@@ -149,13 +149,33 @@ func getDataOnFullModeResponseEV2(block cipher.Block, iv []byte,
 	dest := make([]byte, len(reponse[1:len(reponse)-8]))
 	mode.CryptBlocks(dest, reponse[1:len(reponse)-8])
 	log.Printf("palindata EV2: [% X], len: %d", dest, len(dest))
+
+	for i := range dest {
+		if dest[len(dest)-1-i] == 0x00 {
+			continue
+		}
+		if i != 0 && dest[len(dest)-1-i] == 0x80 {
+			return dest[:len(dest)-i-1]
+		}
+		break
+	}
 	return dest
 }
 
 func calcCryptogramEV2(block cipher.Block, plaindata, iv []byte) []byte {
-	if len(plaindata)%block.BlockSize() != 0 {
-		plaindata = append(plaindata, 0x80)
-		plaindata = append(plaindata, make([]byte, block.BlockSize()-len(plaindata)%block.BlockSize())...)
+	switch {
+
+		case len(plaindata)%block.BlockSize() == 0:
+			plaindata = append(plaindata, 0x80)
+			plaindata = append(plaindata, make([]byte, block.BlockSize()-len(plaindata)%block.BlockSize())...)
+		case len(plaindata)%block.BlockSize() == block.BlockSize()-1:
+			plaindata = append(plaindata, []byte{0x80, 0x00}...)
+			plaindata = append(plaindata, make([]byte, block.BlockSize()-len(plaindata)%block.BlockSize())...)
+		case len(plaindata)%block.BlockSize() != 0 &&
+		     len(plaindata)%block.BlockSize() != block.BlockSize()-1:
+			plaindata = append(plaindata, 0x80)
+			plaindata = append(plaindata, make([]byte, block.BlockSize()-len(plaindata)%block.BlockSize())...)
+
 	}
 	mode := cipher.NewCBCEncrypter(block, iv)
 	dest := make([]byte, len(plaindata))
