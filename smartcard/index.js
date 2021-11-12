@@ -3,6 +3,7 @@
 const MifareTools = require("./MifareTools");
 const DesfireTools = require("./DesfireTools");
 const PaymentMediumMifareInterpreter = require("./PaymentMediumMifareInterpreter");
+const PaymentMediumDesfireInterpreter = require("./PaymentMediumDesfireInterpreter");
 
 module.exports = {
   /**
@@ -17,4 +18,8 @@ module.exports = {
    * @returns {PaymentMediumMifareInterpreter}
    */
    PaymentMediumMifareInterpreter,
+  /**
+   * @returns {PaymentMediumDesfireInterpreter}
+   */
+   PaymentMediumDesfireInterpreter,
 };

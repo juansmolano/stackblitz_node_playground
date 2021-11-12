@@ -1,7 +1,7 @@
 module.exports = {
   "NT": 1234567890, // Numero (seq) tarjeta
   "VL": 1, // VersionLayout (Mapping)
-  "B": 10100, // Bloqueo temporal (TimeStamp sec)  
+  "B": 1, // Bloqueo temporal (TimeStamp sec)  
   "FV": 1627927978, // Fecha de validez del medio de pago
   "CT$": 100, // Consecutivo Transaccion Medio de Pago  
   "ST$": 200200, // Saldo Tarjeta
