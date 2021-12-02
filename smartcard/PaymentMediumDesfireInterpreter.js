@@ -1,6 +1,7 @@
 'use strict';
 
 const { Buffer } = require('buffer');
+const { Console } = require('console');
 
 const documentTypeOrder = [
     '',
@@ -58,7 +59,7 @@ class PaymentMediumMifareInterpreter {
      * @returns {{appId:{fileId: hexStr | [hexStr] }}}
      */
     cardDataMapToBinary(cardDataMap, areCardDataArraysFoldedUp = false) {
-        if (!areCardDataArraysFoldedUp) cardDataMap = this.foldUpCardDataArrays({...cardDataMap});
+        if (!areCardDataArraysFoldedUp) cardDataMap = this.foldUpCardDataArrays({ ...cardDataMap });
         const binaryDesfire = {};
         const apps = Object.entries(this.mappingVersion.mapping);
         for (let [appName, app] of apps) {
@@ -84,10 +85,21 @@ class PaymentMediumMifareInterpreter {
                     Object.entries(this.mappingVersion.mapping[appName].data)
                         .filter(([fieldName, dataSpec]) => parseInt(dataSpec.fileID) === parseInt(fileId));
                 for (let [fieldName, { fileID, offset, type }] of dataSpecifications) {
-                    if (cardDataMap[fieldName] === undefined) continue;
-                    binaryApp[fileID] = Array.isArray(binaryApp[fileID])
-                        ? this.writeFieldOnBinaryHexStringArray(cardDataMap[fieldName], binaryApp[fileID], { offset, type })
-                        : this.writeFieldOnBinaryHexString(cardDataMap[fieldName], binaryApp[fileID], { offset, type });
+                    const isArray = Array.isArray(binaryApp[fileID]);
+                    const isCompositeArray = isArray && fieldName.includes('_');
+                    if (isCompositeArray) {                        
+                        const [compositeKey, compositeSubKey] = fieldName.split('_');                                                
+                        for (let recordIndex = 0; recordIndex < binaryApp[fileID].length; recordIndex++) {   
+                            if ((cardDataMap[compositeKey][recordIndex]||{})[compositeSubKey] === undefined) continue;                            
+                            binaryApp[fileID][recordIndex] = this.writeFieldOnBinaryHexString(cardDataMap[compositeKey][recordIndex][compositeSubKey],binaryApp[fileID][recordIndex], { offset, type });
+                        }                        
+                    } else {
+                        if (cardDataMap[fieldName] === undefined) continue;
+                        binaryApp[fileID] = isArray
+                            ? this.writeFieldOnBinaryHexStringArray(cardDataMap[fieldName], binaryApp[fileID], { offset, type })
+                            : this.writeFieldOnBinaryHexString(cardDataMap[fieldName], binaryApp[fileID], { offset, type });
+                    }
+
                 }
             }
         }
@@ -99,7 +111,7 @@ class PaymentMediumMifareInterpreter {
      */
     binaryToCardDataMap(binaryDesfire, spreadCardDataArrays = true) {
         const cardDataMap = {};
-        const apps = Object.entries(this.mappingVersion.mapping);
+        const apps = Object.entries(this.mappingVersion.mapping).filter(([appName, app]) => appName.startsWith('APP_'));
         for (let [appName, app] of apps) {
             const appId = app.appId;
             let binaryApp = binaryDesfire[appId];
@@ -110,13 +122,28 @@ class PaymentMediumMifareInterpreter {
                         .filter(([fieldName, dataSpec]) => parseInt(dataSpec.fileID) === parseInt(fileId));
                 for (let [fieldName, { fileID, offset, type }] of dataSpecifications) {
                     if (binaryApp[fileID] === undefined) continue;
-                    cardDataMap[fieldName] = Array.isArray(binaryApp[fileID])
-                        ? this.readValueFromHexStringArray(binaryApp[fileID], { offset, type })
-                        : this.readValueFromHexString(binaryApp[fileID], { offset, type });
+                    const isArray = Array.isArray(binaryApp[fileID]);
+                    const isCompositeArray = isArray && fieldName.includes('_');
+                    if (isCompositeArray) {
+                        const [compositeKey, compositeSubKey] = fieldName.split('_');
+                        if (!cardDataMap[compositeKey]) cardDataMap[compositeKey] = Array(binaryApp[fileID].length).fill().map(() => ({}));
+                        const compositeSubValues = this.readValueFromHexStringArray(binaryApp[fileID], { offset, type });
+                        let i = 0;
+                        for (let compositeSubValue of compositeSubValues) {
+                            cardDataMap[compositeKey][i++][compositeSubKey] = compositeSubValue;
+                        }
+                    } else {
+                        cardDataMap[fieldName] = isArray
+                            ? this.readValueFromHexStringArray(binaryApp[fileID], { offset, type })
+                            : this.readValueFromHexString(binaryApp[fileID], { offset, type });
+                    }
                 }
             }
         }
-        return spreadCardDataArrays ? this.spreadCardDataArrays({...cardDataMap}) : cardDataMap;
+
+
+
+        return spreadCardDataArrays ? this.spreadCardDataArrays({ ...cardDataMap }) : cardDataMap;
     }
 
     writeFieldOnBinaryHexStringArray(dataToSetArray, binaryHexStringArray, { offset, type }) {
@@ -233,8 +260,17 @@ class PaymentMediumMifareInterpreter {
         for (let [key, values] of entries) {
             if (Array.isArray(values)) {
                 delete cardData[key];
-                for (let valueIndex in values) {
-                    cardData[`${key}_${parseInt(valueIndex) + 1}`] = values[valueIndex];
+                const isCompositeArray = typeof values.find(u => u) === 'object';
+                if (isCompositeArray) {
+                    for (let valueIndex in values) {
+                        for (let [compositeSubKey, compositeSubValue] of Object.entries(values[valueIndex])) {
+                            cardData[`${key}_${compositeSubKey}_${parseInt(valueIndex) + 1}`] = values[valueIndex][compositeSubKey];
+                        }
+                    }
+                } else {
+                    for (let valueIndex in values) {
+                        cardData[`${key}_${parseInt(valueIndex) + 1}`] = values[valueIndex];
+                    }
                 }
             }
         }
@@ -244,11 +280,22 @@ class PaymentMediumMifareInterpreter {
     foldUpCardDataArrays(cardData) {
         const firstEntries = Object.entries(cardData).filter(([key, value]) => key.endsWith('_1'));
         for (let [firstKey, firstValue] of firstEntries) {
-            const key = firstKey.replace('_1', '');
-            const keyValueArray = Array(100).fill(0).map((_, i) => ({ spreadKey: `${key}_${i + 1}`, value: cardData[`${key}_${i + 1}`] })).filter(d => d.value !== undefined);
-            cardData[key] = keyValueArray.map(({ value }) => value);
-            for (let { spreadKey } of keyValueArray) {
-                delete cardData[spreadKey];
+            const fieldName = firstKey.replace('_1', '');
+            const fieldSize = Object.keys(cardData).filter(k => k.startsWith(fieldName)).length;
+            const isCompositeArray = fieldName.includes('_');
+
+            if (isCompositeArray) {
+                const [compositeKey, compositeSubKey] = fieldName.split('_');
+                if (!cardData[compositeKey]) cardData[compositeKey] = Array(fieldSize).fill().map(() => ({}));// cardDate.HISTU = [ {}, {}, {}]
+                for (let i = 0; i < fieldSize; i++) {
+                    cardData[compositeKey][i][compositeSubKey] = cardData[`${fieldName}_${i + 1}`];
+                }
+            } else {
+                const keyValueArray = Array(fieldSize).fill(0).map((_, i) => ({ spreadKey: `${fieldName}_${i + 1}`, value: cardData[`${fieldName}_${i + 1}`] })).filter(d => d.value !== undefined);
+                cardData[fieldName] = keyValueArray.map(({ value }) => value);
+            }
+            for (let i = 0; i < fieldSize; i++) {
+                delete cardData[`${fieldName}_${i + 1}`];
             }
         }
         return cardData;

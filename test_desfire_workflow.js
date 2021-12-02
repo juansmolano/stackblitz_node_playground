@@ -63,7 +63,8 @@ const selectApp$ = (runtime) => sendApdu$(DesfireTools.generateSelectApplication
 
 const authenticate$ = (key) => (runtime) => {
     const keyVersion = "00";
-    const keyDefault = "3ED6B7C6823D442D7783F8B3A0B1C9C659E7D8BDDF7FCD6A" + keyVersion;
+    //const keyDefault = "3ED6B7C6823D442D7783F8B3A0B1C9C659E7D8BDDF7FCD6A" + keyVersion;
+    const keyDefault = "b20281f368d82ea6fac5d5a9daa553ef" + keyVersion;
 
     const { apdu: authIApdu, processVars: authIProcessVars } = DesfireTools.generateAuthenticateEV2FirstApdu(APP_TARGETS.PRIMARY_APP, key);
 
