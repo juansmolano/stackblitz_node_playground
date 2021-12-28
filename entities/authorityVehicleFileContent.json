@@ -161,13 +161,13 @@
             {
               "estado": 1,
               "idPuerta": 0,
-              "ingresos": 0,
-              "salidas": 0
+              "ingresos": 23,
+              "salidas": 0 
             },
             {
               "estado": 1,
               "idPuerta": 1,
-              "ingresos": 0,
+              "ingresos": 10,
               "salidas": 0
             }
           ]
@@ -176,19 +176,19 @@
           "fecha": "20211228",
           "hora": "080549",
           "dop": "1,0",
-          "longitud": "-75,5880372",
+          "longitud": "-75,58803",
           "latitud": "6,1758798",
           "velocidad": 0,
           "puerta": [
             {
               "idPuerta": 0,
-              "estado": 1,
+              "estado": 0,
               "ingresos": 44,
               "salidas": 24
             },
             {
               "idPuerta": 1,
-              "estado": 1,
+              "estado": 0,
               "ingresos": 6,
               "salidas": 2
             }
@@ -364,6 +364,28 @@
             {
               "estado": 0,
               "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        },
+        {
+          "fecha": "20211228",
+          "hora": "080552",
+          "dop": "1,0",
+          "longitud": "-75,5880372",
+          "latitud": "6,1758798",
+          "velocidad": 0,
+          "puerta": [
+            {
+              "idPuerta": 0,
+              "estado": 0,
+              "ingresos": 0,
+              "salidas": 0
+            },
+            {
+              "idPuerta": 1,
+              "estado": 0,
               "ingresos": 0,
               "salidas": 0
             }

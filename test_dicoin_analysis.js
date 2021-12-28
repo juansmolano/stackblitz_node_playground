@@ -30,15 +30,19 @@ const formatEventData = (event)=>{
 const findCounterpartEvent = (authorityPayload,event,permissibleError, counterpartFileContent) => {
     const {distance,backDoorEntrance,backDoorExit,frontDoorEntrance,frontDoorExit,times} = permissibleError;
     let result = {};
+    if(event.hora === '080552'){
+        console.log('=========');
+    }
     for(let counterpartPayload of counterpartFileContent) {
         for(let counterpartEvent of counterpartPayload.eventos){
+            if(counterpartEvent.__taken)continue;
             formatEventData(counterpartEvent);     
             const backDoor = event.puerta.find(({idPuerta}) => idPuerta === 1);
             const frontDoor = event.puerta.find(({idPuerta}) => idPuerta === 0);
             const counterpartBackDoor = counterpartEvent.puerta.find(({idPuerta}) => idPuerta === 1);
             const counterpartFrontDoor = counterpartEvent.puerta.find(({idPuerta}) => idPuerta === 0);            
 
-            const timeDiff = Math.abs(event.timestamp - counterpartEvent.timestamp);
+            const timeDiff = parseInt(Math.abs(event.timestamp - counterpartEvent.timestamp)/1000);
             const applyTime = timeDiff <= times;
         
             if(!applyTime) continue;       
@@ -52,11 +56,103 @@ const findCounterpartEvent = (authorityPayload,event,permissibleError, counterpa
             const applyBackDoorExit = backDoor && counterpartBackDoor && Math.abs(backDoor.salidas - counterpartBackDoor.salidas) <= backDoorExit;
             const applyFrontDoorEntrance = frontDoor && counterpartFrontDoor && Math.abs(frontDoor.ingresos - counterpartFrontDoor.ingresos) <= frontDoorEntrance;
             const applyFrontDoorExit = frontDoor && counterpartFrontDoor && Math.abs(frontDoor.salidas - counterpartFrontDoor.salidas) <= frontDoorExit;
+            const applyFrontDoorState = frontDoor && counterpartFrontDoor && frontDoor.estado === counterpartFrontDoor.estado;
+            const applyBackDoorState = backDoor && counterpartBackDoor && backDoor.estado === counterpartBackDoor.estado;
+
             const ranking = timeDiff+distanceDiff+applyBackDoorEntrance+applyBackDoorExit+applyFrontDoorEntrance+applyFrontDoorExit;            
-            if(!result.counterpartEvent || ranking < result.match.ranking ) result = {counterpartEvent, match:{ranking,applyTime,applyDistance,applyBackDoorEntrance,applyBackDoorExit,applyFrontDoorEntrance,applyFrontDoorExit}};             
+
+            if(!result.counterpartEvent || ranking < result.match.ranking ) {
+                result = {
+                    counterpartEvent, 
+                    match:{
+                        timeDiff,
+                        distanceDiff,
+                        ranking,
+                        backDoor,
+                        counterpartFrontDoor,
+                        counterpartBackDoor,
+                        frontDoor,
+                        applyTime,
+                        applyDistance,
+                        applyBackDoorEntrance,
+                        applyBackDoorExit,
+                        applyFrontDoorEntrance,
+                        applyFrontDoorExit,
+                        applyFrontDoorState,
+                        applyBackDoorState     
+                    }
+                };
+
+            }
         }        
     }
+    if(result.counterpartEvent)result.counterpartEvent.__taken = true;
     return result;
+};
+
+const generateFlagCell = (event,counterpartEvent,match) => {
+    return !match
+        ? '🔴' 
+        : (
+            match.applyBackDoorEntrance && 
+            match.applyBackDoorExit && 
+            match.applyFrontDoorEntrance && 
+            match.applyFrontDoorExit &&
+            match.applyFrontDoorState &&
+            match.applyBackDoorState 
+            )
+            ? '🟢'
+            : '🟠';
+};
+
+const generateDateTimeCell = (event,counterpartEvent,match) => {
+    const dateTime = new Date(event.timestamp).toLocaleString();
+    if(!match){
+        return dateTime;
+    }
+    return `${dateTime} dif:${match.timeDiff}s`;
+};
+
+const generateLocationCell = (event,counterpartEvent,match) => {
+    if(!match){
+        return `${event.latitud},${event.longitud}`;
+    }
+    return `${event.latitud},${event.longitud} dif:${match.distanceDiff}m`;
+};
+
+const generateDoorStateCell = (event,counterpartEvent,match) => {
+    if(!match || (match.applyFrontDoorState && match.applyBackDoorState)){
+        const backDoor = event.puerta.find(({idPuerta}) => idPuerta === 1);
+        const frontDoor = event.puerta.find(({idPuerta}) => idPuerta === 0);
+        return `D${frontDoor.estado?'C':'A'}T${backDoor.estado?'C':'A'}`;
+    }
+    return `D${match.frontDoor.estado?'C':'A'}T${match.backDoor.estado?'C':'A'} aut: D${match.counterpartFrontDoor.estado?'C':'A'}T${match.counterpartBackDoor.estado?'C':'A'} `;
+};
+
+const generateDoorPassengerCell = (event,counterpartEvent,match, isFront, isEntrance) => {
+    if(!match || (match[`apply${isFront?'Front':'back'}Door${isEntrance?'Entrance':'Exit'}`])){  
+        const door = event.puerta.find(({idPuerta}) => idPuerta === (isFront ? 0 :1));      
+        return `${door[isEntrance?'ingresos':'salidas']}`;
+    }
+    return `${match[isFront?'frontDoor':'backDoor'][isEntrance?'ingresos':'salidas']} aut:${match[isFront?'counterpartFrontDoor':'counterpartBackDoor'][isEntrance?'ingresos':'salidas']}`;
+};
+
+const generateReportTableRow = (event,counterpartEvent,match) => {
+    const dateTime = new Date(event.timestamp).toLocaleString();
+    return {
+        flag : generateFlagCell(event,counterpartEvent,match),
+        dateTime: generateDateTimeCell(event,counterpartEvent,match),
+        location: generateLocationCell(event,counterpartEvent,match),
+        doorState: generateDoorStateCell(event,counterpartEvent,match),
+        //frontDoorPassengerEntrance
+        fdpentr: generateDoorPassengerCell(event,counterpartEvent,match,true,true),
+        //frontDoorPassengerExit
+        fdpexit: generateDoorPassengerCell(event,counterpartEvent,match,true,false),
+        //backDoorPassengerEntrance
+        bdpentr: generateDoorPassengerCell(event,counterpartEvent,match,false,true),
+        //backDoorPassengerExit
+        bdpexit: generateDoorPassengerCell(event,counterpartEvent,match,false,false),
+    };
 };
 
 const buildReportTable = (appFileContent, authorityVehicleFileContent,analysisParameter)=>{
@@ -67,12 +163,13 @@ const buildReportTable = (appFileContent, authorityVehicleFileContent,analysisPa
     const reportTable = []; // final result => output
     for(let appRow of appFileContent) {
         const authorityPayload = appRow.authorityPayload;
+        if(!authorityPayload) continue; //ignores text-notes
         for(let event of authorityPayload.eventos){
             formatEventData(event);
             const radioPermissibleError = findRadioPermissibleError(event.dop,analysisParameter.dopDistancePermissibleErrors);
             const permissibleError = {...analysisParameter.permissibleErrors, distance:radioPermissibleError};
             const {counterpartEvent, match} = findCounterpartEvent(authorityPayload,event,permissibleError,authorityVehicleFileContent);
-            reportTable.push({event,counterpartEvent,match: match ? JSON.stringify(match) : undefined});
+            reportTable.push(generateReportTableRow(event,counterpartEvent,match));
         }        
     }
     return reportTable;
