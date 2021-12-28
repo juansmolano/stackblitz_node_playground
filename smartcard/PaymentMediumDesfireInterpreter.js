@@ -1,7 +1,7 @@
 'use strict';
 
+const { ConsoleLogger } = require('@nebulae/backend-node-tools/lib/log');
 const { Buffer } = require('buffer');
-const { Console } = require('console');
 
 const documentTypeOrder = [
     '',
@@ -12,7 +12,7 @@ const documentTypeOrder = [
     'NIP', //5
     'NIUP' //6
 ];
-class PaymentMediumMifareInterpreter {
+class PaymentMediumDesfireInterpreter {
 
     constructor(mappingVersion) {
         this.mappingVersion = mappingVersion;
@@ -61,7 +61,7 @@ class PaymentMediumMifareInterpreter {
     cardDataMapToBinary(cardDataMap, areCardDataArraysFoldedUp = false) {
         if (!areCardDataArraysFoldedUp) cardDataMap = this.foldUpCardDataArrays({ ...cardDataMap });
         const binaryDesfire = {};
-        const apps = Object.entries(this.mappingVersion.mapping);
+        const apps = Object.entries(this.mappingVersion.mapping).filter(([appName, app]) => appName.startsWith('APP_'));
         for (let [appName, app] of apps) {
             const appId = app.appId;
             binaryDesfire[appId] = {};
@@ -87,19 +87,18 @@ class PaymentMediumMifareInterpreter {
                 for (let [fieldName, { fileID, offset, type }] of dataSpecifications) {
                     const isArray = Array.isArray(binaryApp[fileID]);
                     const isCompositeArray = isArray && fieldName.includes('_');
-                    if (isCompositeArray) {                        
-                        const [compositeKey, compositeSubKey] = fieldName.split('_');                                                
-                        for (let recordIndex = 0; recordIndex < binaryApp[fileID].length; recordIndex++) {   
-                            if ((cardDataMap[compositeKey][recordIndex]||{})[compositeSubKey] === undefined) continue;                            
-                            binaryApp[fileID][recordIndex] = this.writeFieldOnBinaryHexString(cardDataMap[compositeKey][recordIndex][compositeSubKey],binaryApp[fileID][recordIndex], { offset, type });
-                        }                        
+                    if (isCompositeArray) {
+                        const [compositeKey, compositeSubKey] = fieldName.split('_');
+                        for (let recordIndex = 0; recordIndex < binaryApp[fileID].length; recordIndex++) {
+                            if ((cardDataMap[compositeKey][recordIndex] || {})[compositeSubKey] === undefined) continue;
+                            binaryApp[fileID][recordIndex] = this.writeFieldOnBinaryHexString(cardDataMap[compositeKey][recordIndex][compositeSubKey], binaryApp[fileID][recordIndex], { offset, type });
+                        }
                     } else {
                         if (cardDataMap[fieldName] === undefined) continue;
                         binaryApp[fileID] = isArray
                             ? this.writeFieldOnBinaryHexStringArray(cardDataMap[fieldName], binaryApp[fileID], { offset, type })
                             : this.writeFieldOnBinaryHexString(cardDataMap[fieldName], binaryApp[fileID], { offset, type });
                     }
-
                 }
             }
         }
@@ -140,9 +139,6 @@ class PaymentMediumMifareInterpreter {
                 }
             }
         }
-
-
-
         return spreadCardDataArrays ? this.spreadCardDataArrays({ ...cardDataMap }) : cardDataMap;
     }
 
@@ -152,7 +148,7 @@ class PaymentMediumMifareInterpreter {
 
     writeFieldOnBinaryHexString(dataToSet, binaryHexString, { offset, type }) {
         let buffer;
-        //console.log('MifareInterpreter.setBinaryField:', { type, value, offset });
+        //console.log('DesfireInterpreter.setBinaryField:', { type, value, offset });
         switch (type) {
             case 'STRING16':
             case 'STRING32':
@@ -189,7 +185,7 @@ class PaymentMediumMifareInterpreter {
             case 'VALUE':
                 return this.formatAsValueBlock(dataToSet);
             default:
-                console.log('MifareInterpreter.setBinaryField: Invalid type:', {
+                ConsoleLogger.w('DesfireInterpreter.setBinaryField: Invalid type:', {
                     dataToSet, binaryHexString, offset, type
                 });
         }
@@ -237,7 +233,7 @@ class PaymentMediumMifareInterpreter {
             case 'VALUE':
                 return Buffer.from(binaryHexString.substring(0, 8), 'hex').readIntLE(0, 4);
             default:
-                console.log('MifareInterpreter.setBinaryField: Invalid type:', {
+                ConsoleLogger.w('DesfireInterpreter.setBinaryField: Invalid type:', {
                     offset,
                     type
                 });
@@ -245,13 +241,13 @@ class PaymentMediumMifareInterpreter {
     }
 
     formatAsValueBlock(value) {
-        const buffer = Buffer.alloc(16);
+        const buffer = Buffer.alloc(4);
         buffer.writeIntLE(value, 0, 4);
-        [0, 1, 2, 3].forEach(i =>
-            buffer.write((~buffer[i] & 0xff).toString(16), 4 + i, 'hex')
-        );
-        buffer.writeIntLE(value, 8, 4);
-        buffer.write('FF00FF00', 12, 'hex');
+        // [0, 1, 2, 3].forEach(i =>
+        //     buffer.write((~buffer[i] & 0xff).toString(16), 4 + i, 'hex')
+        // );
+        // buffer.writeIntLE(value, 8, 4);
+        // buffer.write('FF00FF00', 12, 'hex');
         return buffer.toString('hex');
     }
 
@@ -303,6 +299,6 @@ class PaymentMediumMifareInterpreter {
 }
 
 /**
- * @type {PaymentMediumMifareInterpreter}
+ * @type {PaymentMediumDesfireInterpreter}
  */
-module.exports = PaymentMediumMifareInterpreter;
+module.exports = PaymentMediumDesfireInterpreter;
