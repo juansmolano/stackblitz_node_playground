@@ -103,14 +103,14 @@ const generateFlagCell = (event,counterpartEvent,match) => {
 
 const generateDateTimeCell = (event,counterpartEvent,match) => {
     const dateTime = new Date(event.timestamp).toLocaleString();
-    if(!match){
+    if(!match || match.timeDiff === 0 ){
         return dateTime;
     }
     return `${dateTime} dif:${match.timeDiff}s`;
 };
 
 const generateLocationCell = (event,counterpartEvent,match) => {
-    if(!match){
+    if(!match || match.distanceDiff === 0 ){
         return `${event.latitud},${event.longitud}`;
     }
     return `${event.latitud},${event.longitud} dif:${match.distanceDiff}m`;
@@ -126,7 +126,7 @@ const generateDoorStateCell = (event,counterpartEvent,match) => {
 };
 
 const generateDoorPassengerCell = (event,counterpartEvent,match, isFront, isEntrance) => {
-    if(!match || (match[`apply${isFront?'Front':'back'}Door${isEntrance?'Entrance':'Exit'}`])){  
+    if(!match || (match[`apply${isFront?'Front':'Back'}Door${isEntrance?'Entrance':'Exit'}`])){  
         const door = event.puerta.find(({idPuerta}) => idPuerta === (isFront ? 0 :1));      
         return `${door[isEntrance?'ingresos':'salidas']}`;
     }
