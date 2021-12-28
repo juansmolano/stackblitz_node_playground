@@ -1,0 +1,3174 @@
+[
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "140442",
+          "dop": "1,40",
+          "longitud": "-75,594971",
+          "latitud": "6,270982",
+          "velocidad": 13,
+          "puerta": [
+            {
+              "estado": 0,
+              "idPuerta": 0,
+              "ingresos": 0,
+              "salidas": 0
+            },
+            {
+              "estado": 0,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "140825",
+          "dop": "1,10",
+          "longitud": "-75,591293",
+          "latitud": "6,260961",
+          "velocidad": 40,
+          "puerta": [
+            {
+              "estado": 0,
+              "idPuerta": 0,
+              "ingresos": 0,
+              "salidas": 0
+            },
+            {
+              "estado": 1,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "140319",
+          "dop": "1,40",
+          "longitud": "-75,590622",
+          "latitud": "6,274330",
+          "velocidad": 46,
+          "puerta": [
+            {
+              "estado": 1,
+              "idPuerta": 0,
+              "ingresos": 0,
+              "salidas": 0
+            },
+            {
+              "estado": 1,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "140828",
+          "dop": "1,10",
+          "longitud": "-75,591072",
+          "latitud": "6,260842",
+          "velocidad": 30,
+          "puerta": [
+            {
+              "estado": 1,
+              "idPuerta": 0,
+              "ingresos": 0,
+              "salidas": 0
+            },
+            {
+              "estado": 0,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "140349",
+          "dop": "1,40",
+          "longitud": "-75,592934",
+          "latitud": "6,273765",
+          "velocidad": 31,
+          "puerta": [
+            {
+              "estado": 1,
+              "idPuerta": 0,
+              "ingresos": 0,
+              "salidas": 0
+            },
+            {
+              "estado": 1,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        },
+        {
+          "fecha": "20211228",
+          "hora": "080549",
+          "dop": "1,0",
+          "longitud": "-75,5880372",
+          "latitud": "6,1758798",
+          "velocidad": 0,
+          "puerta": [
+            {
+              "idPuerta": 0,
+              "estado": 1,
+              "ingresos": 44,
+              "salidas": 24
+            },
+            {
+              "idPuerta": 1,
+              "estado": 1,
+              "ingresos": 6,
+              "salidas": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "140249",
+          "dop": "1,40",
+          "longitud": "-75,590149",
+          "latitud": "6,276412",
+          "velocidad": 4,
+          "puerta": [
+            {
+              "estado": 1,
+              "idPuerta": 0,
+              "ingresos": 0,
+              "salidas": 0
+            },
+            {
+              "estado": 1,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "140149",
+          "dop": "1,20",
+          "longitud": "-75,590027",
+          "latitud": "6,276645",
+          "velocidad": 0,
+          "puerta": [
+            {
+              "estado": 1,
+              "idPuerta": 0,
+              "ingresos": 0,
+              "salidas": 0
+            },
+            {
+              "estado": 1,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "140419",
+          "dop": "1,40",
+          "longitud": "-75,593742",
+          "latitud": "6,272237",
+          "velocidad": 42,
+          "puerta": [
+            {
+              "estado": 1,
+              "idPuerta": 0,
+              "ingresos": 0,
+              "salidas": 0
+            },
+            {
+              "estado": 1,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "140512",
+          "dop": "1,10",
+          "longitud": "-75,595612",
+          "latitud": "6,268401",
+          "velocidad": 0,
+          "puerta": [
+            {
+              "estado": 1,
+              "idPuerta": 0,
+              "ingresos": 0,
+              "salidas": 0
+            },
+            {
+              "estado": 0,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "140625",
+          "dop": "1,10",
+          "longitud": "-75,596527",
+          "latitud": "6,264266",
+          "velocidad": 35,
+          "puerta": [
+            {
+              "estado": 0,
+              "idPuerta": 0,
+              "ingresos": 1,
+              "salidas": 0
+            },
+            {
+              "estado": 0,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "140626",
+          "dop": "1,10",
+          "longitud": "-75,596565",
+          "latitud": "6,264102",
+          "velocidad": 31,
+          "puerta": [
+            {
+              "estado": 0,
+              "idPuerta": 0,
+              "ingresos": 0,
+              "salidas": 0
+            },
+            {
+              "estado": 1,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "140019",
+          "dop": "1,10",
+          "longitud": "-75,589661",
+          "latitud": "6,277105",
+          "velocidad": 8,
+          "puerta": [
+            {
+              "estado": 1,
+              "idPuerta": 0,
+              "ingresos": 0,
+              "salidas": 0
+            },
+            {
+              "estado": 0,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "140836",
+          "dop": "1,20",
+          "longitud": "-75,590897",
+          "latitud": "6,260713",
+          "velocidad": 14,
+          "puerta": [
+            {
+              "estado": 0,
+              "idPuerta": 0,
+              "ingresos": 0,
+              "salidas": 0
+            },
+            {
+              "estado": 0,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "140219",
+          "dop": "1,10",
+          "longitud": "-75,590088",
+          "latitud": "6,276531",
+          "velocidad": 0,
+          "puerta": [
+            {
+              "estado": 1,
+              "idPuerta": 0,
+              "ingresos": 1,
+              "salidas": 0
+            },
+            {
+              "estado": 1,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "140542",
+          "dop": "1,10",
+          "longitud": "-75,596107",
+          "latitud": "6,266086",
+          "velocidad": 13,
+          "puerta": [
+            {
+              "estado": 1,
+              "idPuerta": 0,
+              "ingresos": 1,
+              "salidas": 0
+            },
+            {
+              "estado": 0,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "140555",
+          "dop": "1,10",
+          "longitud": "-75,596176",
+          "latitud": "6,265797",
+          "velocidad": 17,
+          "puerta": [
+            {
+              "estado": 0,
+              "idPuerta": 0,
+              "ingresos": 0,
+              "salidas": 0
+            },
+            {
+              "estado": 0,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "134658",
+          "dop": "1,20",
+          "longitud": "-75,619400",
+          "latitud": "6,276583",
+          "velocidad": 0,
+          "puerta": [
+            {
+              "estado": 1,
+              "idPuerta": 0,
+              "ingresos": 0,
+              "salidas": 0
+            },
+            {
+              "estado": 0,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "134930",
+          "dop": "1,20",
+          "longitud": "-75,606995",
+          "latitud": "6,279752",
+          "velocidad": 28,
+          "puerta": [
+            {
+              "estado": 1,
+              "idPuerta": 0,
+              "ingresos": 0,
+              "salidas": 0
+            },
+            {
+              "estado": 0,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "135402",
+          "dop": "1,20",
+          "longitud": "-75,595551",
+          "latitud": "6,278290",
+          "velocidad": 11,
+          "puerta": [
+            {
+              "estado": 0,
+              "idPuerta": 0,
+              "ingresos": 0,
+              "salidas": 0
+            },
+            {
+              "estado": 1,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "135030",
+          "dop": "1,20",
+          "longitud": "-75,604492",
+          "latitud": "6,278436",
+          "velocidad": 23,
+          "puerta": [
+            {
+              "estado": 1,
+              "idPuerta": 0,
+              "ingresos": 1,
+              "salidas": 0
+            },
+            {
+              "estado": 0,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "134848",
+          "dop": "1,20",
+          "longitud": "-75,610481",
+          "latitud": "6,278214",
+          "velocidad": 47,
+          "puerta": [
+            {
+              "estado": 0,
+              "idPuerta": 0,
+              "ingresos": 0,
+              "salidas": 0
+            },
+            {
+              "estado": 0,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "135702",
+          "dop": "1,30",
+          "longitud": "-75,593941",
+          "latitud": "6,278171",
+          "velocidad": 0,
+          "puerta": [
+            {
+              "estado": 0,
+              "idPuerta": 0,
+              "ingresos": 0,
+              "salidas": 0
+            },
+            {
+              "estado": 1,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "134120",
+          "dop": "1,10",
+          "longitud": "-75,631851",
+          "latitud": "6,279159",
+          "velocidad": 7,
+          "puerta": [
+            {
+              "estado": 0,
+              "idPuerta": 0,
+              "ingresos": 0,
+              "salidas": 0
+            },
+            {
+              "estado": 0,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "134018",
+          "dop": "1,10",
+          "longitud": "-75,634270",
+          "latitud": "6,278394",
+          "velocidad": 17,
+          "puerta": [
+            {
+              "estado": 0,
+              "idPuerta": 0,
+              "ingresos": 0,
+              "salidas": 0
+            },
+            {
+              "estado": 0,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "134050",
+          "dop": "1,10",
+          "longitud": "-75,633545",
+          "latitud": "6,278732",
+          "velocidad": 15,
+          "puerta": [
+            {
+              "estado": 0,
+              "idPuerta": 0,
+              "ingresos": 0,
+              "salidas": 0
+            },
+            {
+              "estado": 0,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "140845",
+          "dop": "1,20",
+          "longitud": "-75,590302",
+          "latitud": "6,260440",
+          "velocidad": 39,
+          "puerta": [
+            {
+              "estado": 0,
+              "idPuerta": 0,
+              "ingresos": 0,
+              "salidas": 0
+            },
+            {
+              "estado": 1,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "140049",
+          "dop": "1,10",
+          "longitud": "-75,589737",
+          "latitud": "6,277049",
+          "velocidad": 0,
+          "puerta": [
+            {
+              "estado": 1,
+              "idPuerta": 0,
+              "ingresos": 1,
+              "salidas": 0
+            },
+            {
+              "estado": 1,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "134228",
+          "dop": "1,10",
+          "longitud": "-75,630684",
+          "latitud": "6,278808",
+          "velocidad": 14,
+          "puerta": [
+            {
+              "estado": 1,
+              "idPuerta": 0,
+              "ingresos": 0,
+              "salidas": 0
+            },
+            {
+              "estado": 0,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "134150",
+          "dop": "1,10",
+          "longitud": "-75,631058",
+          "latitud": "6,279593",
+          "velocidad": 15,
+          "puerta": [
+            {
+              "estado": 0,
+              "idPuerta": 0,
+              "ingresos": 1,
+              "salidas": 0
+            },
+            {
+              "estado": 0,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "135802",
+          "dop": "1,30",
+          "longitud": "-75,593361",
+          "latitud": "6,278277",
+          "velocidad": 0,
+          "puerta": [
+            {
+              "estado": 0,
+              "idPuerta": 0,
+              "ingresos": 0,
+              "salidas": 0
+            },
+            {
+              "estado": 1,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "141045",
+          "dop": "1,10",
+          "longitud": "-75,583046",
+          "latitud": "6,256971",
+          "velocidad": 19,
+          "puerta": [
+            {
+              "estado": 0,
+              "idPuerta": 0,
+              "ingresos": 0,
+              "salidas": 0
+            },
+            {
+              "estado": 1,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "135304",
+          "dop": "1,20",
+          "longitud": "-75,596634",
+          "latitud": "6,279153",
+          "velocidad": 26,
+          "puerta": [
+            {
+              "estado": 1,
+              "idPuerta": 0,
+              "ingresos": 0,
+              "salidas": 0
+            },
+            {
+              "estado": 1,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "135134",
+          "dop": "1,20",
+          "longitud": "-75,600456",
+          "latitud": "6,279193",
+          "velocidad": 37,
+          "puerta": [
+            {
+              "estado": 1,
+              "idPuerta": 0,
+              "ingresos": 0,
+              "salidas": 0
+            },
+            {
+              "estado": 1,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "140119",
+          "dop": "1,20",
+          "longitud": "-75,589882",
+          "latitud": "6,276835",
+          "velocidad": 5,
+          "puerta": [
+            {
+              "estado": 1,
+              "idPuerta": 0,
+              "ingresos": 0,
+              "salidas": 0
+            },
+            {
+              "estado": 1,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "09/03/2020 14:17:20",
+      "estado": "1",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "141720",
+          "dop": "1,10",
+          "longitud": "-75,570709",
+          "latitud": "6,249806",
+          "velocidad": 4,
+          "puerta": [
+            {
+              "estado": 0,
+              "idPuerta": 0,
+              "ingresos": 0,
+              "salidas": 0
+            },
+            {
+              "estado": 0,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "141546",
+          "dop": "1,10",
+          "longitud": "-75,571739",
+          "latitud": "6,250013",
+          "velocidad": 22,
+          "puerta": [
+            {
+              "estado": 0,
+              "idPuerta": 0,
+              "ingresos": 0,
+              "salidas": 0
+            },
+            {
+              "estado": 1,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "141452",
+          "dop": "1,10",
+          "longitud": "-75,572792",
+          "latitud": "6,250527",
+          "velocidad": 0,
+          "puerta": [
+            {
+              "estado": 0,
+              "idPuerta": 0,
+              "ingresos": 0,
+              "salidas": 0
+            },
+            {
+              "estado": 0,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "135502",
+          "dop": "1,20",
+          "longitud": "-75,595009",
+          "latitud": "6,278281",
+          "velocidad": 0,
+          "puerta": [
+            {
+              "estado": 0,
+              "idPuerta": 0,
+              "ingresos": 0,
+              "salidas": 0
+            },
+            {
+              "estado": 1,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "135602",
+          "dop": "1,20",
+          "longitud": "-75,594971",
+          "latitud": "6,278317",
+          "velocidad": 2,
+          "puerta": [
+            {
+              "estado": 0,
+              "idPuerta": 0,
+              "ingresos": 0,
+              "salidas": 0
+            },
+            {
+              "estado": 1,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "140634",
+          "dop": "1,10",
+          "longitud": "-75,596649",
+          "latitud": "6,263928",
+          "velocidad": 3,
+          "puerta": [
+            {
+              "estado": 0,
+              "idPuerta": 0,
+              "ingresos": 0,
+              "salidas": 0
+            },
+            {
+              "estado": 0,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "141115",
+          "dop": "1,10",
+          "longitud": "-75,581764",
+          "latitud": "6,256351",
+          "velocidad": 43,
+          "puerta": [
+            {
+              "estado": 1,
+              "idPuerta": 0,
+              "ingresos": 0,
+              "salidas": 0
+            },
+            {
+              "estado": 1,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "135732",
+          "dop": "1,30",
+          "longitud": "-75,593559",
+          "latitud": "6,278153",
+          "velocidad": 12,
+          "puerta": [
+            {
+              "estado": 0,
+              "idPuerta": 0,
+              "ingresos": 0,
+              "salidas": 0
+            },
+            {
+              "estado": 1,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "134748",
+          "dop": "1,20",
+          "longitud": "-75,616737",
+          "latitud": "6,277524",
+          "velocidad": 40,
+          "puerta": [
+            {
+              "estado": 0,
+              "idPuerta": 0,
+              "ingresos": 0,
+              "salidas": 0
+            },
+            {
+              "estado": 0,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "135332",
+          "dop": "1,20",
+          "longitud": "-75,595894",
+          "latitud": "6,278435",
+          "velocidad": 0,
+          "puerta": [
+            {
+              "estado": 0,
+              "idPuerta": 0,
+              "ingresos": 0,
+              "salidas": 0
+            },
+            {
+              "estado": 0,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "141522",
+          "dop": "1,10",
+          "longitud": "-75,572563",
+          "latitud": "6,250404",
+          "velocidad": 11,
+          "puerta": [
+            {
+              "estado": 0,
+              "idPuerta": 0,
+              "ingresos": 0,
+              "salidas": 0
+            },
+            {
+              "estado": 0,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "134328",
+          "dop": "1,10",
+          "longitud": "-75,629128",
+          "latitud": "6,278637",
+          "velocidad": 25,
+          "puerta": [
+            {
+              "estado": 1,
+              "idPuerta": 0,
+              "ingresos": 0,
+              "salidas": 0
+            },
+            {
+              "estado": 0,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "133948",
+          "dop": "1,00",
+          "longitud": "-75,635284",
+          "latitud": "6,277860",
+          "velocidad": 13,
+          "puerta": [
+            {
+              "estado": 0,
+              "idPuerta": 0,
+              "ingresos": 1,
+              "salidas": 0
+            },
+            {
+              "estado": 0,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "135902",
+          "dop": "1,20",
+          "longitud": "-75,592354",
+          "latitud": "6,278074",
+          "velocidad": 28,
+          "puerta": [
+            {
+              "estado": 0,
+              "idPuerta": 0,
+              "ingresos": 0,
+              "salidas": 0
+            },
+            {
+              "estado": 1,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "135632",
+          "dop": "1,30",
+          "longitud": "-75,594391",
+          "latitud": "6,278163",
+          "velocidad": 12,
+          "puerta": [
+            {
+              "estado": 0,
+              "idPuerta": 0,
+              "ingresos": 0,
+              "salidas": 0
+            },
+            {
+              "estado": 1,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "135034",
+          "dop": "1,20",
+          "longitud": "-75,604309",
+          "latitud": "6,278307",
+          "velocidad": 14,
+          "puerta": [
+            {
+              "estado": 0,
+              "idPuerta": 0,
+              "ingresos": 0,
+              "salidas": 0
+            },
+            {
+              "estado": 1,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "134818",
+          "dop": "1,20",
+          "longitud": "-75,613609",
+          "latitud": "6,277524",
+          "velocidad": 48,
+          "puerta": [
+            {
+              "estado": 0,
+              "idPuerta": 0,
+              "ingresos": 0,
+              "salidas": 0
+            },
+            {
+              "estado": 0,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "141146",
+          "dop": "1,30",
+          "longitud": "-75,580284",
+          "latitud": "6,255633",
+          "velocidad": 19,
+          "puerta": [
+            {
+              "estado": 1,
+              "idPuerta": 0,
+              "ingresos": 0,
+              "salidas": 0
+            },
+            {
+              "estado": 1,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "134918",
+          "dop": "1,20",
+          "longitud": "-75,607933",
+          "latitud": "6,279557",
+          "velocidad": 38,
+          "puerta": [
+            {
+              "estado": 0,
+              "idPuerta": 0,
+              "ingresos": 0,
+              "salidas": 0
+            },
+            {
+              "estado": 0,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "140002",
+          "dop": "1,10",
+          "longitud": "-75,589813",
+          "latitud": "6,277474",
+          "velocidad": 13,
+          "puerta": [
+            {
+              "estado": 0,
+              "idPuerta": 0,
+              "ingresos": 0,
+              "salidas": 0
+            },
+            {
+              "estado": 1,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "141616",
+          "dop": "1,30",
+          "longitud": "-75,571136",
+          "latitud": "6,249782",
+          "velocidad": 0,
+          "puerta": [
+            {
+              "estado": 0,
+              "idPuerta": 0,
+              "ingresos": 0,
+              "salidas": 0
+            },
+            {
+              "estado": 1,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "135104",
+          "dop": "1,20",
+          "longitud": "-75,602356",
+          "latitud": "6,278434",
+          "velocidad": 45,
+          "puerta": [
+            {
+              "estado": 1,
+              "idPuerta": 0,
+              "ingresos": 0,
+              "salidas": 0
+            },
+            {
+              "estado": 1,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "141030",
+          "dop": "1,40",
+          "longitud": "-75,583641",
+          "latitud": "6,257323",
+          "velocidad": 0,
+          "puerta": [
+            {
+              "estado": 1,
+              "idPuerta": 0,
+              "ingresos": 0,
+              "salidas": 0
+            },
+            {
+              "estado": 0,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "135204",
+          "dop": "1,10",
+          "longitud": "-75,599586",
+          "latitud": "6,279765",
+          "velocidad": 16,
+          "puerta": [
+            {
+              "estado": 1,
+              "idPuerta": 0,
+              "ingresos": 1,
+              "salidas": 0
+            },
+            {
+              "estado": 1,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "140930",
+          "dop": "1,20",
+          "longitud": "-75,586388",
+          "latitud": "6,258574",
+          "velocidad": 42,
+          "puerta": [
+            {
+              "estado": 0,
+              "idPuerta": 0,
+              "ingresos": 0,
+              "salidas": 0
+            },
+            {
+              "estado": 0,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "141646",
+          "dop": "1,10",
+          "longitud": "-75,571136",
+          "latitud": "6,249793",
+          "velocidad": 0,
+          "puerta": [
+            {
+              "estado": 0,
+              "idPuerta": 0,
+              "ingresos": 0,
+              "salidas": 0
+            },
+            {
+              "estado": 1,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "134048",
+          "dop": "1,10",
+          "longitud": "-75,633644",
+          "latitud": "6,278716",
+          "velocidad": 11,
+          "puerta": [
+            {
+              "estado": 0,
+              "idPuerta": 0,
+              "ingresos": 0,
+              "salidas": 0
+            },
+            {
+              "estado": 0,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "140755",
+          "dop": "1,10",
+          "longitud": "-75,594543",
+          "latitud": "6,262462",
+          "velocidad": 45,
+          "puerta": [
+            {
+              "estado": 0,
+              "idPuerta": 0,
+              "ingresos": 0,
+              "salidas": 0
+            },
+            {
+              "estado": 1,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "134458",
+          "dop": "1,20",
+          "longitud": "-75,624588",
+          "latitud": "6,279570",
+          "velocidad": 18,
+          "puerta": [
+            {
+              "estado": 1,
+              "idPuerta": 0,
+              "ingresos": 0,
+              "salidas": 0
+            },
+            {
+              "estado": 0,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "140725",
+          "dop": "1,10",
+          "longitud": "-75,596176",
+          "latitud": "6,263207",
+          "velocidad": 22,
+          "puerta": [
+            {
+              "estado": 0,
+              "idPuerta": 0,
+              "ingresos": 0,
+              "salidas": 0
+            },
+            {
+              "estado": 1,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "134558",
+          "dop": "1,20",
+          "longitud": "-75,622604",
+          "latitud": "6,277716",
+          "velocidad": 27,
+          "puerta": [
+            {
+              "estado": 1,
+              "idPuerta": 0,
+              "ingresos": 1,
+              "salidas": 0
+            },
+            {
+              "estado": 0,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "140704",
+          "dop": "1,10",
+          "longitud": "-75,596916",
+          "latitud": "6,263635",
+          "velocidad": 0,
+          "puerta": [
+            {
+              "estado": 0,
+              "idPuerta": 0,
+              "ingresos": 0,
+              "salidas": 0
+            },
+            {
+              "estado": 0,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "141232",
+          "dop": "1,10",
+          "longitud": "-75,576233",
+          "latitud": "6,253617",
+          "velocidad": 8,
+          "puerta": [
+            {
+              "estado": 0,
+              "idPuerta": 0,
+              "ingresos": 0,
+              "salidas": 0
+            },
+            {
+              "estado": 0,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "141216",
+          "dop": "1,80",
+          "longitud": "-75,577507",
+          "latitud": "6,254289",
+          "velocidad": 45,
+          "puerta": [
+            {
+              "estado": 1,
+              "idPuerta": 0,
+              "ingresos": 0,
+              "salidas": 0
+            },
+            {
+              "estado": 1,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "140915",
+          "dop": "1,20",
+          "longitud": "-75,587837",
+          "latitud": "6,259275",
+          "velocidad": 50,
+          "puerta": [
+            {
+              "estado": 1,
+              "idPuerta": 0,
+              "ingresos": 0,
+              "salidas": 0
+            },
+            {
+              "estado": 1,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "141716",
+          "dop": "1,30",
+          "longitud": "-75,570747",
+          "latitud": "6,249733",
+          "velocidad": 13,
+          "puerta": [
+            {
+              "estado": 0,
+              "idPuerta": 0,
+              "ingresos": 0,
+              "salidas": 0
+            },
+            {
+              "estado": 1,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "135000",
+          "dop": "1,20",
+          "longitud": "-75,606239",
+          "latitud": "6,279395",
+          "velocidad": 8,
+          "puerta": [
+            {
+              "estado": 1,
+              "idPuerta": 0,
+              "ingresos": 2,
+              "salidas": 0
+            },
+            {
+              "estado": 0,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "135932",
+          "dop": "1,30",
+          "longitud": "-75,590393",
+          "latitud": "6,277083",
+          "velocidad": 30,
+          "puerta": [
+            {
+              "estado": 0,
+              "idPuerta": 0,
+              "ingresos": 0,
+              "salidas": 0
+            },
+            {
+              "estado": 1,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "135832",
+          "dop": "1,10",
+          "longitud": "-75,593361",
+          "latitud": "6,278278",
+          "velocidad": 0,
+          "puerta": [
+            {
+              "estado": 0,
+              "idPuerta": 0,
+              "ingresos": 0,
+              "salidas": 0
+            },
+            {
+              "estado": 1,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "134528",
+          "dop": "1,20",
+          "longitud": "-75,623650",
+          "latitud": "6,278993",
+          "velocidad": 28,
+          "puerta": [
+            {
+              "estado": 1,
+              "idPuerta": 0,
+              "ingresos": 0,
+              "salidas": 0
+            },
+            {
+              "estado": 0,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "141306",
+          "dop": "1,10",
+          "longitud": "-75,573982",
+          "latitud": "6,252398",
+          "velocidad": 3,
+          "puerta": [
+            {
+              "estado": 0,
+              "idPuerta": 0,
+              "ingresos": 0,
+              "salidas": 0
+            },
+            {
+              "estado": 1,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "141340",
+          "dop": "1,20",
+          "longitud": "-75,574348",
+          "latitud": "6,251240",
+          "velocidad": 22,
+          "puerta": [
+            {
+              "estado": 0,
+              "idPuerta": 0,
+              "ingresos": 0,
+              "salidas": 0
+            },
+            {
+              "estado": 0,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "141000",
+          "dop": "1,10",
+          "longitud": "-75,583794",
+          "latitud": "6,257340",
+          "velocidad": 22,
+          "puerta": [
+            {
+              "estado": 1,
+              "idPuerta": 0,
+              "ingresos": 0,
+              "salidas": 0
+            },
+            {
+              "estado": 0,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "141302",
+          "dop": "1,10",
+          "longitud": "-75,573990",
+          "latitud": "6,252420",
+          "velocidad": 0,
+          "puerta": [
+            {
+              "estado": 1,
+              "idPuerta": 0,
+              "ingresos": 0,
+              "salidas": 0
+            },
+            {
+              "estado": 0,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "135532",
+          "dop": "1,20",
+          "longitud": "-75,595009",
+          "latitud": "6,278278",
+          "velocidad": 0,
+          "puerta": [
+            {
+              "estado": 0,
+              "idPuerta": 0,
+              "ingresos": 0,
+              "salidas": 0
+            },
+            {
+              "estado": 1,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "134258",
+          "dop": "1,10",
+          "longitud": "-75,630531",
+          "latitud": "6,278672",
+          "velocidad": 6,
+          "puerta": [
+            {
+              "estado": 1,
+              "idPuerta": 0,
+              "ingresos": 2,
+              "salidas": 0
+            },
+            {
+              "estado": 0,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "134358",
+          "dop": "1,10",
+          "longitud": "-75,627647",
+          "latitud": "6,278855",
+          "velocidad": 26,
+          "puerta": [
+            {
+              "estado": 1,
+              "idPuerta": 0,
+              "ingresos": 0,
+              "salidas": 0
+            },
+            {
+              "estado": 0,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "141422",
+          "dop": "1,20",
+          "longitud": "-75,572800",
+          "latitud": "6,250525",
+          "velocidad": 0,
+          "puerta": [
+            {
+              "estado": 0,
+              "idPuerta": 0,
+              "ingresos": 0,
+              "salidas": 0
+            },
+            {
+              "estado": 0,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "135234",
+          "dop": "1,20",
+          "longitud": "-75,598305",
+          "latitud": "6,277703",
+          "velocidad": 34,
+          "puerta": [
+            {
+              "estado": 1,
+              "idPuerta": 0,
+              "ingresos": 0,
+              "salidas": 0
+            },
+            {
+              "estado": 1,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "141336",
+          "dop": "1,10",
+          "longitud": "-75,574280",
+          "latitud": "6,251465",
+          "velocidad": 27,
+          "puerta": [
+            {
+              "estado": 1,
+              "idPuerta": 0,
+              "ingresos": 0,
+              "salidas": 0
+            },
+            {
+              "estado": 1,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "134428",
+          "dop": "1,20",
+          "longitud": "-75,626053",
+          "latitud": "6,279157",
+          "velocidad": 30,
+          "puerta": [
+            {
+              "estado": 1,
+              "idPuerta": 0,
+              "ingresos": 1,
+              "salidas": 0
+            },
+            {
+              "estado": 0,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "141410",
+          "dop": "1,30",
+          "longitud": "-75,573227",
+          "latitud": "6,250671",
+          "velocidad": 20,
+          "puerta": [
+            {
+              "estado": 1,
+              "idPuerta": 0,
+              "ingresos": 0,
+              "salidas": 0
+            },
+            {
+              "estado": 0,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "134220",
+          "dop": "1,10",
+          "longitud": "-75,630692",
+          "latitud": "6,279121",
+          "velocidad": 7,
+          "puerta": [
+            {
+              "estado": 0,
+              "idPuerta": 0,
+              "ingresos": 0,
+              "salidas": 0
+            },
+            {
+              "estado": 0,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "134628",
+          "dop": "1,20",
+          "longitud": "-75,621117",
+          "latitud": "6,277305",
+          "velocidad": 35,
+          "puerta": [
+            {
+              "estado": 1,
+              "idPuerta": 0,
+              "ingresos": 0,
+              "salidas": 0
+            },
+            {
+              "estado": 0,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "134718",
+          "dop": "1,20",
+          "longitud": "-75,619118",
+          "latitud": "6,276685",
+          "velocidad": 25,
+          "puerta": [
+            {
+              "estado": 0,
+              "idPuerta": 0,
+              "ingresos": 0,
+              "salidas": 0
+            },
+            {
+              "estado": 0,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idViaje": "0-8298380-09032020-133948-8138",
+      "cedula": "8298380",
+      "codigoRuta": "05001110065",
+      "ruta": "255",
+      "nit": "8909014331",
+      "placa": "TSJ352",
+      "inicio_viaje": "09/03/2020 13:39:48",
+      "fin_viaje": "",
+      "estado": "0",
+      "eventos": [
+        {
+          "fecha": "20200309",
+          "hora": "135432",
+          "dop": "1,20",
+          "longitud": "-75,595123",
+          "latitud": "6,278275",
+          "velocidad": 5,
+          "puerta": [
+            {
+              "estado": 0,
+              "idPuerta": 0,
+              "ingresos": 0,
+              "salidas": 0
+            },
+            {
+              "estado": 1,
+              "idPuerta": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        }
+      ]
+    }
+  ]

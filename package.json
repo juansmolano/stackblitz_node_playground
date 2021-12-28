@@ -12,6 +12,7 @@
     "@nebulae/backend-node-tools": "^0.2.6",
     "@nebulae/keycloak-admin-client": "^1.1.0",
     "dateformat": "^4.5.1",
+    "geolib": "^3.3.3",
     "jshint": "^2.13.1",
     "lodash": "^4.17.21",
     "node-aes-cmac": "^0.1.1",

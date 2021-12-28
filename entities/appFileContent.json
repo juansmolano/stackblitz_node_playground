@@ -1,0 +1,913 @@
+[
+    {
+      "_id": "8909050050TPW99428122021080518",
+      "serviceId": "0-8909050050-28122021-080518-00819",
+      "state": "PERSISTED",
+      "type": "RECORD",
+      "timestamp": 1640696718819,
+      "recordSeq": 1,
+      "tripState": {
+        "traveledDistance": 60,
+        "tempStateTraveledDistance": 60,
+        "tempStateTimestamp": 1640696718818
+      },
+      "payload": {
+        "geolocationPosition": {
+          "timestamp": 1640696716275,
+          "coords": {
+            "accuracy": 1287.6724633741921,
+            "dop": "1,0",
+            "latitude": 6.1758798,
+            "longitude": -75.5880372,
+            "speed": 0
+          }
+        },
+        "frontDoorInput": 0,
+        "frontDoorOutput": 0,
+        "backDoorInput": 0,
+        "backDoorOutput": 0,
+        "frontDoorOpen": null,
+        "backDoorOpen": null
+      },
+      "authorityPayload": {
+        "idViaje": "0-8909050050-28122021-080518-00819",
+        "cedula": "10172424557",
+        "codigoRuta": "050016004",
+        "ruta": "5001",
+        "nit": "8909050050",
+        "placa": "TPW994",
+        "inicio_viaje": "28/12/2021 08:05:18",
+        "fin_viaje": "",
+        "estado": "0",
+        "eventos": [
+          {
+            "fecha": "20211228",
+            "hora": "080518",
+            "dop": "1,0",
+            "longitud": "-75,5880372",
+            "latitud": "6,1758798",
+            "velocidad": 0,
+            "puerta": [
+              {
+                "idPuerta": 0,
+                "estado": 1,
+                "ingresos": 0,
+                "salidas": 0
+              },
+              {
+                "idPuerta": 1,
+                "estado": 1,
+                "ingresos": 0,
+                "salidas": 0
+              }
+            ]
+          }
+        ]
+      },
+      "stats": {
+        "retryAttempt": 0,
+        "attempts": []
+      }
+    },
+    {
+      "_id": "8909050050TPW99428122021080528",
+      "serviceId": "0-8909050050-28122021-080518-00819",
+      "state": "PERSISTED",
+      "type": "RECORD",
+      "timestamp": 1640696728839,
+      "recordSeq": 2,
+      "tripState": {
+        "traveledDistance": 60,
+        "tempStateTraveledDistance": 0,
+        "tempStateTimestamp": 1640696723839
+      },
+      "payload": {
+        "geolocationPosition": {
+          "timestamp": 1640696716275,
+          "coords": {
+            "accuracy": 1287.6724633741921,
+            "dop": "1,0",
+            "latitude": 6.1758798,
+            "longitude": -75.5880372,
+            "speed": 0
+          }
+        },
+        "frontDoorInput": 0,
+        "frontDoorOutput": 0,
+        "backDoorInput": 0,
+        "backDoorOutput": 0,
+        "frontDoorOpen": null,
+        "backDoorOpen": null
+      },
+      "authorityPayload": {
+        "idViaje": "0-8909050050-28122021-080518-00819",
+        "cedula": "10172424557",
+        "codigoRuta": "050016004",
+        "ruta": "5001",
+        "nit": "8909050050",
+        "placa": "TPW994",
+        "inicio_viaje": "28/12/2021 08:05:18",
+        "fin_viaje": "",
+        "estado": "0",
+        "eventos": [
+          {
+            "fecha": "20211228",
+            "hora": "080528",
+            "dop": "1,0",
+            "longitud": "-75,5880372",
+            "latitud": "6,1758798",
+            "velocidad": 0,
+            "puerta": [
+              {
+                "idPuerta": 0,
+                "estado": 1,
+                "ingresos": 0,
+                "salidas": 0
+              },
+              {
+                "idPuerta": 1,
+                "estado": 1,
+                "ingresos": 0,
+                "salidas": 0
+              }
+            ]
+          }
+        ]
+      },
+      "stats": {
+        "retryAttempt": 0,
+        "attempts": []
+      }
+    },
+    {
+      "_id": "8909050050TPW99428122021080533",
+      "serviceId": "0-8909050050-28122021-080518-00819",
+      "state": "PERSISTED",
+      "type": "RECORD",
+      "timestamp": 1640696733192,
+      "recordSeq": 3,
+      "tripState": {
+        "traveledDistance": 60,
+        "tempStateTraveledDistance": 0,
+        "tempStateTimestamp": 1640696728839
+      },
+      "payload": {
+        "geolocationPosition": {
+          "timestamp": 1640696716275,
+          "coords": {
+            "accuracy": 1287.6724633741921,
+            "dop": "1,0",
+            "latitude": 6.1758798,
+            "longitude": -75.5880372,
+            "speed": 0
+          }
+        },
+        "frontDoorInput": 10,
+        "frontDoorOutput": 7,
+        "backDoorInput": 9,
+        "backDoorOutput": 8,
+        "frontDoorOpen": false,
+        "backDoorOpen": true
+      },
+      "authorityPayload": {
+        "idViaje": "0-8909050050-28122021-080518-00819",
+        "cedula": "10172424557",
+        "codigoRuta": "050016004",
+        "ruta": "5001",
+        "nit": "8909050050",
+        "placa": "TPW994",
+        "inicio_viaje": "28/12/2021 08:05:18",
+        "fin_viaje": "",
+        "estado": "0",
+        "eventos": [
+          {
+            "fecha": "20211228",
+            "hora": "080533",
+            "dop": "1,0",
+            "longitud": "-75,5880372",
+            "latitud": "6,1758798",
+            "velocidad": 0,
+            "puerta": [
+              {
+                "idPuerta": 0,
+                "estado": 1,
+                "ingresos": 10,
+                "salidas": 7
+              },
+              {
+                "idPuerta": 1,
+                "estado": 0,
+                "ingresos": 9,
+                "salidas": 8
+              }
+            ]
+          }
+        ]
+      },
+      "stats": {
+        "retryAttempt": 0,
+        "attempts": []
+      }
+    },
+    {
+      "_id": "8909050050TPW99428122021080538",
+      "serviceId": "0-8909050050-28122021-080518-00819",
+      "state": "PERSISTED",
+      "type": "RECORD",
+      "timestamp": 1640696738839,
+      "recordSeq": 4,
+      "tripState": {
+        "traveledDistance": 60,
+        "tempStateTraveledDistance": 0,
+        "tempStateTimestamp": 1640696733192
+      },
+      "payload": {
+        "geolocationPosition": {
+          "timestamp": 1640696716275,
+          "coords": {
+            "accuracy": 1287.6724633741921,
+            "dop": "1,0",
+            "latitude": 6.1758798,
+            "longitude": -75.5880372,
+            "speed": 0
+          }
+        },
+        "frontDoorInput": 0,
+        "frontDoorOutput": 0,
+        "backDoorInput": 0,
+        "backDoorOutput": 0,
+        "frontDoorOpen": false,
+        "backDoorOpen": true
+      },
+      "authorityPayload": {
+        "idViaje": "0-8909050050-28122021-080518-00819",
+        "cedula": "10172424557",
+        "codigoRuta": "050016004",
+        "ruta": "5001",
+        "nit": "8909050050",
+        "placa": "TPW994",
+        "inicio_viaje": "28/12/2021 08:05:18",
+        "fin_viaje": "",
+        "estado": "0",
+        "eventos": [
+          {
+            "fecha": "20211228",
+            "hora": "080538",
+            "dop": "1,0",
+            "longitud": "-75,5880372",
+            "latitud": "6,1758798",
+            "velocidad": 0,
+            "puerta": [
+              {
+                "idPuerta": 0,
+                "estado": 1,
+                "ingresos": 0,
+                "salidas": 0
+              },
+              {
+                "idPuerta": 1,
+                "estado": 0,
+                "ingresos": 0,
+                "salidas": 0
+              }
+            ]
+          }
+        ]
+      },
+      "stats": {
+        "retryAttempt": 0,
+        "attempts": []
+      }
+    },
+    {
+      "_id": "8909050050TPW99428122021080543",
+      "serviceId": "0-8909050050-28122021-080518-00819",
+      "state": "PERSISTED",
+      "type": "RECORD",
+      "timestamp": 1640696743931,
+      "recordSeq": 5,
+      "tripState": {
+        "traveledDistance": 60,
+        "tempStateTraveledDistance": 0,
+        "tempStateTimestamp": 1640696738839
+      },
+      "payload": {
+        "geolocationPosition": {
+          "timestamp": 1640696716275,
+          "coords": {
+            "accuracy": 1287.6724633741921,
+            "dop": "1,0",
+            "latitude": 6.1758798,
+            "longitude": -75.5880372,
+            "speed": 0
+          }
+        },
+        "frontDoorInput": 0,
+        "frontDoorOutput": 0,
+        "backDoorInput": 0,
+        "backDoorOutput": 0,
+        "frontDoorOpen": false,
+        "backDoorOpen": true
+      },
+      "authorityPayload": {
+        "idViaje": "0-8909050050-28122021-080518-00819",
+        "cedula": "10172424557",
+        "codigoRuta": "050016004",
+        "ruta": "5001",
+        "nit": "8909050050",
+        "placa": "TPW994",
+        "inicio_viaje": "28/12/2021 08:05:18",
+        "fin_viaje": "",
+        "estado": "0",
+        "eventos": [
+          {
+            "fecha": "20211228",
+            "hora": "080543",
+            "dop": "1,0",
+            "longitud": "-75,5880372",
+            "latitud": "6,1758798",
+            "velocidad": 0,
+            "puerta": [
+              {
+                "idPuerta": 0,
+                "estado": 1,
+                "ingresos": 0,
+                "salidas": 0
+              },
+              {
+                "idPuerta": 1,
+                "estado": 0,
+                "ingresos": 0,
+                "salidas": 0
+              }
+            ]
+          }
+        ]
+      },
+      "stats": {
+        "retryAttempt": 0,
+        "attempts": []
+      }
+    },
+    {
+      "_id": "8909050050TPW99428122021080549",
+      "serviceId": "0-8909050050-28122021-080518-00819",
+      "state": "PERSISTED",
+      "type": "RECORD",
+      "timestamp": 1640696749686,
+      "recordSeq": 6,
+      "tripState": {
+        "traveledDistance": 60,
+        "tempStateTraveledDistance": 0,
+        "tempStateTimestamp": 1640696743930
+      },
+      "payload": {
+        "geolocationPosition": {
+          "timestamp": 1640696716275,
+          "coords": {
+            "accuracy": 1287.6724633741921,
+            "dop": "1,0",
+            "latitude": 6.1758798,
+            "longitude": -75.5880372,
+            "speed": 0
+          }
+        },
+        "frontDoorInput": 44,
+        "frontDoorOutput": 24,
+        "backDoorInput": 6,
+        "backDoorOutput": 2,
+        "frontDoorOpen": false,
+        "backDoorOpen": false
+      },
+      "authorityPayload": {
+        "idViaje": "0-8909050050-28122021-080518-00819",
+        "cedula": "10172424557",
+        "codigoRuta": "050016004",
+        "ruta": "5001",
+        "nit": "8909050050",
+        "placa": "TPW994",
+        "inicio_viaje": "28/12/2021 08:05:18",
+        "fin_viaje": "",
+        "estado": "0",
+        "eventos": [
+          {
+            "fecha": "20211228",
+            "hora": "080549",
+            "dop": "1,0",
+            "longitud": "-75,5880372",
+            "latitud": "6,1758798",
+            "velocidad": 0,
+            "puerta": [
+              {
+                "idPuerta": 0,
+                "estado": 1,
+                "ingresos": 44,
+                "salidas": 24
+              },
+              {
+                "idPuerta": 1,
+                "estado": 1,
+                "ingresos": 6,
+                "salidas": 2
+              }
+            ]
+          }
+        ]
+      },
+      "stats": {
+        "retryAttempt": 0,
+        "attempts": []
+      }
+    },
+    {
+      "_id": "8909050050TPW99428122021080550",
+      "serviceId": "0-8909050050-28122021-080518-00819",
+      "state": "PERSISTED",
+      "type": "RECORD",
+      "timestamp": 1640696750585,
+      "recordSeq": 7,
+      "tripState": {
+        "traveledDistance": 60,
+        "tempStateTraveledDistance": 0,
+        "tempStateTimestamp": 1640696749686
+      },
+      "payload": {
+        "geolocationPosition": {
+          "timestamp": 1640696716275,
+          "coords": {
+            "accuracy": 1287.6724633741921,
+            "dop": "1,0",
+            "latitude": 6.1758798,
+            "longitude": -75.5880372,
+            "speed": 0
+          }
+        },
+        "frontDoorInput": 0,
+        "frontDoorOutput": 0,
+        "backDoorInput": 0,
+        "backDoorOutput": 0,
+        "frontDoorOpen": false,
+        "backDoorOpen": true
+      },
+      "authorityPayload": {
+        "idViaje": "0-8909050050-28122021-080518-00819",
+        "cedula": "10172424557",
+        "codigoRuta": "050016004",
+        "ruta": "5001",
+        "nit": "8909050050",
+        "placa": "TPW994",
+        "inicio_viaje": "28/12/2021 08:05:18",
+        "fin_viaje": "",
+        "estado": "0",
+        "eventos": [
+          {
+            "fecha": "20211228",
+            "hora": "080550",
+            "dop": "1,0",
+            "longitud": "-75,5880372",
+            "latitud": "6,1758798",
+            "velocidad": 0,
+            "puerta": [
+              {
+                "idPuerta": 0,
+                "estado": 1,
+                "ingresos": 0,
+                "salidas": 0
+              },
+              {
+                "idPuerta": 1,
+                "estado": 0,
+                "ingresos": 0,
+                "salidas": 0
+              }
+            ]
+          }
+        ]
+      },
+      "stats": {
+        "retryAttempt": 0,
+        "attempts": []
+      }
+    },
+    {
+      "_id": "8909050050TPW99428122021080552",
+      "serviceId": "0-8909050050-28122021-080518-00819",
+      "state": "PERSISTED",
+      "type": "RECORD",
+      "timestamp": 1640696752915,
+      "recordSeq": 8,
+      "tripState": {
+        "traveledDistance": 60,
+        "tempStateTraveledDistance": 0,
+        "tempStateTimestamp": 1640696750585
+      },
+      "payload": {
+        "geolocationPosition": {
+          "timestamp": 1640696716275,
+          "coords": {
+            "accuracy": 1287.6724633741921,
+            "dop": "1,0",
+            "latitude": 6.1758798,
+            "longitude": -75.5880372,
+            "speed": 0
+          }
+        },
+        "frontDoorInput": 0,
+        "frontDoorOutput": 0,
+        "backDoorInput": 0,
+        "backDoorOutput": 0,
+        "frontDoorOpen": true,
+        "backDoorOpen": true
+      },
+      "authorityPayload": {
+        "idViaje": "0-8909050050-28122021-080518-00819",
+        "cedula": "10172424557",
+        "codigoRuta": "050016004",
+        "ruta": "5001",
+        "nit": "8909050050",
+        "placa": "TPW994",
+        "inicio_viaje": "28/12/2021 08:05:18",
+        "fin_viaje": "",
+        "estado": "0",
+        "eventos": [
+          {
+            "fecha": "20211228",
+            "hora": "080552",
+            "dop": "1,0",
+            "longitud": "-75,5880372",
+            "latitud": "6,1758798",
+            "velocidad": 0,
+            "puerta": [
+              {
+                "idPuerta": 0,
+                "estado": 0,
+                "ingresos": 0,
+                "salidas": 0
+              },
+              {
+                "idPuerta": 1,
+                "estado": 0,
+                "ingresos": 0,
+                "salidas": 0
+              }
+            ]
+          }
+        ]
+      },
+      "stats": {
+        "retryAttempt": 0,
+        "attempts": []
+      }
+    },
+    {
+      "_id": "8909050050TPW99428122021080558",
+      "serviceId": "0-8909050050-28122021-080518-00819",
+      "state": "PERSISTED",
+      "type": "RECORD",
+      "timestamp": 1640696758850,
+      "recordSeq": 9,
+      "tripState": {
+        "traveledDistance": 60,
+        "tempStateTraveledDistance": 0,
+        "tempStateTimestamp": 1640696752915
+      },
+      "payload": {
+        "geolocationPosition": {
+          "timestamp": 1640696716275,
+          "coords": {
+            "accuracy": 1287.6724633741921,
+            "dop": "1,0",
+            "latitude": 6.1758798,
+            "longitude": -75.5880372,
+            "speed": 0
+          }
+        },
+        "frontDoorInput": 0,
+        "frontDoorOutput": 0,
+        "backDoorInput": 0,
+        "backDoorOutput": 0,
+        "frontDoorOpen": true,
+        "backDoorOpen": true
+      },
+      "authorityPayload": {
+        "idViaje": "0-8909050050-28122021-080518-00819",
+        "cedula": "10172424557",
+        "codigoRuta": "050016004",
+        "ruta": "5001",
+        "nit": "8909050050",
+        "placa": "TPW994",
+        "inicio_viaje": "28/12/2021 08:05:18",
+        "fin_viaje": "",
+        "estado": "0",
+        "eventos": [
+          {
+            "fecha": "20211228",
+            "hora": "080558",
+            "dop": "1,0",
+            "longitud": "-75,5880372",
+            "latitud": "6,1758798",
+            "velocidad": 0,
+            "puerta": [
+              {
+                "idPuerta": 0,
+                "estado": 0,
+                "ingresos": 0,
+                "salidas": 0
+              },
+              {
+                "idPuerta": 1,
+                "estado": 0,
+                "ingresos": 0,
+                "salidas": 0
+              }
+            ]
+          }
+        ]
+      },
+      "stats": {
+        "retryAttempt": 0,
+        "attempts": []
+      }
+    },
+    {
+      "_id": "8909050050TPW99428122021080604",
+      "serviceId": "0-8909050050-28122021-080518-00819",
+      "state": "PERSISTED",
+      "type": "RECORD",
+      "timestamp": 1640696764887,
+      "recordSeq": 10,
+      "tripState": {
+        "traveledDistance": 60,
+        "tempStateTraveledDistance": 0,
+        "tempStateTimestamp": 1640696758850
+      },
+      "payload": {
+        "geolocationPosition": {
+          "timestamp": 1640696716275,
+          "coords": {
+            "accuracy": 1287.6724633741921,
+            "dop": "1,0",
+            "latitude": 6.1758798,
+            "longitude": -75.5880372,
+            "speed": 0
+          }
+        },
+        "frontDoorInput": 0,
+        "frontDoorOutput": 0,
+        "backDoorInput": 0,
+        "backDoorOutput": 0,
+        "frontDoorOpen": true,
+        "backDoorOpen": true
+      },
+      "authorityPayload": {
+        "idViaje": "0-8909050050-28122021-080518-00819",
+        "cedula": "10172424557",
+        "codigoRuta": "050016004",
+        "ruta": "5001",
+        "nit": "8909050050",
+        "placa": "TPW994",
+        "inicio_viaje": "28/12/2021 08:05:18",
+        "fin_viaje": "",
+        "estado": "0",
+        "eventos": [
+          {
+            "fecha": "20211228",
+            "hora": "080604",
+            "dop": "1,0",
+            "longitud": "-75,5880372",
+            "latitud": "6,1758798",
+            "velocidad": 0,
+            "puerta": [
+              {
+                "idPuerta": 0,
+                "estado": 0,
+                "ingresos": 0,
+                "salidas": 0
+              },
+              {
+                "idPuerta": 1,
+                "estado": 0,
+                "ingresos": 0,
+                "salidas": 0
+              }
+            ]
+          }
+        ]
+      },
+      "stats": {
+        "retryAttempt": 0,
+        "attempts": []
+      }
+    },
+    {
+      "_id": "8909050050TPW99428122021080608",
+      "serviceId": "0-8909050050-28122021-080518-00819",
+      "state": "PERSISTED",
+      "type": "RECORD",
+      "timestamp": 1640696768406,
+      "recordSeq": 11,
+      "tripState": {
+        "traveledDistance": 60,
+        "tempStateTraveledDistance": 0,
+        "tempStateTimestamp": 1640696764887
+      },
+      "payload": {
+        "geolocationPosition": {
+          "timestamp": 1640696716275,
+          "coords": {
+            "accuracy": 1287.6724633741921,
+            "dop": "1,0",
+            "latitude": 6.1758798,
+            "longitude": -75.5880372,
+            "speed": 0
+          }
+        },
+        "frontDoorInput": 15,
+        "frontDoorOutput": 0,
+        "backDoorInput": 25,
+        "backDoorOutput": 12,
+        "frontDoorOpen": true,
+        "backDoorOpen": false
+      },
+      "authorityPayload": {
+        "idViaje": "0-8909050050-28122021-080518-00819",
+        "cedula": "10172424557",
+        "codigoRuta": "050016004",
+        "ruta": "5001",
+        "nit": "8909050050",
+        "placa": "TPW994",
+        "inicio_viaje": "28/12/2021 08:05:18",
+        "fin_viaje": "",
+        "estado": "0",
+        "eventos": [
+          {
+            "fecha": "20211228",
+            "hora": "080608",
+            "dop": "1,0",
+            "longitud": "-75,5880372",
+            "latitud": "6,1758798",
+            "velocidad": 0,
+            "puerta": [
+              {
+                "idPuerta": 0,
+                "estado": 0,
+                "ingresos": 15,
+                "salidas": 0
+              },
+              {
+                "idPuerta": 1,
+                "estado": 1,
+                "ingresos": 25,
+                "salidas": 12
+              }
+            ]
+          }
+        ]
+      },
+      "stats": {
+        "retryAttempt": 0,
+        "attempts": []
+      }
+    },
+    {
+      "_id": "8909050050TPW99428122021080613",
+      "serviceId": "0-8909050050-28122021-080518-00819",
+      "state": "PERSISTED",
+      "type": "RECORD",
+      "timestamp": 1640696773839,
+      "recordSeq": 12,
+      "tripState": {
+        "traveledDistance": 60,
+        "tempStateTraveledDistance": 0,
+        "tempStateTimestamp": 1640696768406
+      },
+      "payload": {
+        "geolocationPosition": {
+          "timestamp": 1640696716275,
+          "coords": {
+            "accuracy": 1287.6724633741921,
+            "dop": "1,0",
+            "latitude": 6.1758798,
+            "longitude": -75.5880372,
+            "speed": 0
+          }
+        },
+        "frontDoorInput": 0,
+        "frontDoorOutput": 0,
+        "backDoorInput": 0,
+        "backDoorOutput": 0,
+        "frontDoorOpen": true,
+        "backDoorOpen": false
+      },
+      "authorityPayload": {
+        "idViaje": "0-8909050050-28122021-080518-00819",
+        "cedula": "10172424557",
+        "codigoRuta": "050016004",
+        "ruta": "5001",
+        "nit": "8909050050",
+        "placa": "TPW994",
+        "inicio_viaje": "28/12/2021 08:05:18",
+        "fin_viaje": "",
+        "estado": "0",
+        "eventos": [
+          {
+            "fecha": "20211228",
+            "hora": "080613",
+            "dop": "1,0",
+            "longitud": "-75,5880372",
+            "latitud": "6,1758798",
+            "velocidad": 0,
+            "puerta": [
+              {
+                "idPuerta": 0,
+                "estado": 0,
+                "ingresos": 0,
+                "salidas": 0
+              },
+              {
+                "idPuerta": 1,
+                "estado": 1,
+                "ingresos": 0,
+                "salidas": 0
+              }
+            ]
+          }
+        ]
+      },
+      "stats": {
+        "retryAttempt": 0,
+        "attempts": []
+      }
+    },
+    {
+      "_id": "8909050050TPW99428122021080615",
+      "serviceId": "0-8909050050-28122021-080518-00819",
+      "state": "PERSISTED",
+      "type": "RECORD",
+      "timestamp": 1640696775718,
+      "recordSeq": 13,
+      "tripState": {
+        "endTimestamp": 1640696775718,
+        "traveledDistance": 60,
+        "tempStateTraveledDistance": 0,
+        "tempStateTimestamp": 1640696773839
+      },
+      "payload": {
+        "geolocationPosition": {
+          "timestamp": 1640696716275,
+          "coords": {
+            "accuracy": 1287.6724633741921,
+            "dop": "1,0",
+            "latitude": 6.1758798,
+            "longitude": -75.5880372,
+            "speed": 0
+          }
+        },
+        "frontDoorInput": 0,
+        "frontDoorOutput": 0,
+        "backDoorInput": 0,
+        "backDoorOutput": 0,
+        "frontDoorOpen": true,
+        "backDoorOpen": false
+      },
+      "authorityPayload": {
+        "idViaje": "0-8909050050-28122021-080518-00819",
+        "cedula": "10172424557",
+        "codigoRuta": "050016004",
+        "ruta": "5001",
+        "nit": "8909050050",
+        "placa": "TPW994",
+        "inicio_viaje": "28/12/2021 08:05:18",
+        "fin_viaje": "28/12/2021 08:06:15",
+        "estado": "1",
+        "eventos": [
+          {
+            "fecha": "20211228",
+            "hora": "080615",
+            "dop": "1,0",
+            "longitud": "-75,5880372",
+            "latitud": "6,1758798",
+            "velocidad": 0,
+            "puerta": [
+              {
+                "idPuerta": 0,
+                "estado": 0,
+                "ingresos": 0,
+                "salidas": 0
+              },
+              {
+                "idPuerta": 1,
+                "estado": 1,
+                "ingresos": 0,
+                "salidas": 0
+              }
+            ]
+          }
+        ]
+      },
+      "stats": {
+        "retryAttempt": 0,
+        "attempts": []
+      }
+    }
+  ]

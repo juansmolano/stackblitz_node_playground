@@ -1,0 +1,41 @@
+{
+    "permissibleErrors": {
+        "frontDoorEntrance": 3,
+        "frontDoorExit": 3,
+        "backDoorEntrance": 3,
+        "backDoorExit": 3,
+        "times": 15
+    },
+    "dopDistancePermissibleErrors": [
+        {
+            "dopInitial": 0,
+            "dopFinal": 1,
+            "radio": 3
+        },
+        {
+            "dopInitial": 1,
+            "dopFinal": 2,
+            "radio": 10
+        },
+        {
+            "dopInitial": 2,
+            "dopFinal": 5,
+            "radio": 50
+        },
+        {
+            "dopInitial": 5,
+            "dopFinal": 10,
+            "radio": 100
+        },
+        {
+            "dopInitial": 10,
+            "dopFinal": 20,
+            "radio": 300
+        },
+        {
+            "dopInitial": 20,
+            "dopFinal": 100,
+            "radio": 500
+        }
+    ]
+}
