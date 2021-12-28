@@ -46,6 +46,28 @@
       "estado": "0",
       "eventos": [
         {
+          "fecha": "20211228",
+          "hora": "080518",
+          "dop": "1,0",
+          "longitud": "-75,5880372",
+          "latitud": "6,1758798",
+          "velocidad": 0,
+          "puerta": [
+            {
+              "idPuerta": 0,
+              "estado": 1,
+              "ingresos": 0,
+              "salidas": 0
+            },
+            {
+              "idPuerta": 1,
+              "estado": 1,
+              "ingresos": 0,
+              "salidas": 0
+            }
+          ]
+        },
+        {
           "fecha": "20200309",
           "hora": "140825",
           "dop": "1,10",

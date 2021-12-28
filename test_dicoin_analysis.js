@@ -29,10 +29,7 @@ const formatEventData = (event)=>{
 
 const findCounterpartEvent = (authorityPayload,event,permissibleError, counterpartFileContent) => {
     const {distance,backDoorEntrance,backDoorExit,frontDoorEntrance,frontDoorExit,times} = permissibleError;
-    let result = {};
-    if(event.hora === '080552'){
-        console.log('=========');
-    }
+    let result = {};    
     for(let counterpartPayload of counterpartFileContent) {
         for(let counterpartEvent of counterpartPayload.eventos){
             if(counterpartEvent.__taken)continue;
@@ -43,8 +40,7 @@ const findCounterpartEvent = (authorityPayload,event,permissibleError, counterpa
             const counterpartFrontDoor = counterpartEvent.puerta.find(({idPuerta}) => idPuerta === 0);            
 
             const timeDiff = parseInt(Math.abs(event.timestamp - counterpartEvent.timestamp)/1000);
-            const applyTime = timeDiff <= times;
-        
+            const applyTime = timeDiff <= times;            
             if(!applyTime) continue;       
             const distanceDiff = getDistance(
                 {latitude:event.latitud,longitude:event.longitud}, 
