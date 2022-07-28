@@ -513,6 +513,45 @@
           "count": 41
         }
       ]
+    },
+    "SCHEDULING_ASSERTIVENESS": {
+      "SCHEMA": [
+        {
+          "semantics": {
+            "semanticType": "TEXT",
+            "conceptType": "DIMENSION"
+          },
+          "name": "type",
+          "dataType": "STRING"
+        },
+        {
+          "dataType": "NUMBER",
+          "semantics": {
+            "isReaggregatable": true,
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC"
+          },
+          "name": "count"
+        }
+      ],
+      "DATA": [
+        {
+          "type": "Completados",
+          "count": 680
+        },
+        {
+          "type": "Cancelados",
+          "count": 84
+        },
+        {
+          "type": "Abortados",
+          "count": 60
+        },
+        {
+          "type": "No Ejecutados",
+          "count": 40
+        }
+      ]
     }
   }
 }
