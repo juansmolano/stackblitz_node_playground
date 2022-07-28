@@ -2285,7 +2285,7 @@
     "SUMMARY": {
       "SCHEMA": [
         {
-          "name": "vehicle",
+          "name": "driver",
           "semantics": {
             "conceptType": "DIMENSION",
             "semanticType": "TEXT"
@@ -2465,7 +2465,7 @@
       ],
       "DATA": [
         {
-          "vehicle": "ABBC123 - 1023",
+          "driver": "Jhon Doe",
           "itineraryName": "MIRAMAR",
           "fromDate": "20220718",
           "toDate": "20220718",
