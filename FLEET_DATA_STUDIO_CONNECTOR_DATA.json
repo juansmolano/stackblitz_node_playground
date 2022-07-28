@@ -1,262 +1,264 @@
 {
   "RouteOperationReport": {
-    "SCHEMA": [
-      {
-        "semantics": {
-          "conceptType": "DIMENSION",
-          "semanticType": "TEXT"
+    "SERVICE_TABLE": {
+      "SCHEMA": [
+        {
+          "semantics": {
+            "conceptType": "DIMENSION",
+            "semanticType": "TEXT"
+          },
+          "dataType": "STRING",
+          "name": "serviceId"
         },
-        "dataType": "STRING",
-        "name": "serviceId"
-      },
-      {
-        "semantics": {
-          "semanticType": "TEXT",
-          "conceptType": "DIMENSION"
+        {
+          "semantics": {
+            "semanticType": "TEXT",
+            "conceptType": "DIMENSION"
+          },
+          "name": "vehicle",
+          "dataType": "STRING"
         },
-        "name": "vehicle",
-        "dataType": "STRING"
-      },
-      {
-        "dataType": "STRING",
-        "semantics": {
-          "semanticType": "YEAR_MONTH_DAY_MINUTE",
-          "conceptType": "METRIC",
-          "isReaggregatable": true
+        {
+          "dataType": "STRING",
+          "semantics": {
+            "semanticType": "YEAR_MONTH_DAY_MINUTE",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "name": "scheduleDateTime"
         },
-        "name": "scheduleDateTime"
-      },
-      {
-        "dataType": "STRING",
-        "semantics": {
-          "isReaggregatable": true,
-          "semanticType": "YEAR_MONTH_DAY_MINUTE",
-          "conceptType": "METRIC"
+        {
+          "dataType": "STRING",
+          "semantics": {
+            "isReaggregatable": true,
+            "semanticType": "YEAR_MONTH_DAY_MINUTE",
+            "conceptType": "METRIC"
+          },
+          "name": "startDateTime"
         },
-        "name": "startDateTime"
-      },
-      {
-        "name": "serviceInterval",
-        "semantics": {
-          "semanticType": "NUMBER",
-          "conceptType": "METRIC",
-          "isReaggregatable": true
+        {
+          "name": "serviceInterval",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "dataType": "NUMBER"
         },
-        "dataType": "NUMBER"
-      },
-      {
-        "semantics": {
-          "semanticType": "TEXT",
-          "conceptType": "DIMENSION"
+        {
+          "semantics": {
+            "semanticType": "TEXT",
+            "conceptType": "DIMENSION"
+          },
+          "dataType": "STRING",
+          "name": "type"
         },
-        "dataType": "STRING",
-        "name": "type"
-      },
-      {
-        "name": "state",
-        "dataType": "STRING",
-        "semantics": {
-          "semanticType": "TEXT",
-          "conceptType": "DIMENSION"
+        {
+          "name": "state",
+          "dataType": "STRING",
+          "semantics": {
+            "semanticType": "TEXT",
+            "conceptType": "DIMENSION"
+          }
+        },
+        {
+          "name": "scheduledDistance",
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          }
+        },
+        {
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "name": "traveledDistance"
+        },
+        {
+          "name": "averageSpeed",
+          "semantics": {
+            "conceptType": "METRIC",
+            "isReaggregatable": true,
+            "semanticType": "NUMBER"
+          },
+          "dataType": "NUMBER"
+        },
+        {
+          "name": "scheduledDuration",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "dataType": "NUMBER"
+        },
+        {
+          "name": "serviceDuration",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "dataType": "NUMBER"
         }
-      },
-      {
-        "name": "scheduledDistance",
-        "dataType": "NUMBER",
-        "semantics": {
-          "semanticType": "NUMBER",
-          "conceptType": "METRIC",
-          "isReaggregatable": true
+      ],
+      "DATA": [
+        {
+          "serviceId": "serv_id_0",
+          "vehicle": "ABC000-00",
+          "internalNumber": "0",
+          "scheduleDateTime": "202207180000",
+          "startDateTime": "202207180000",
+          "serviceInterval": "0",
+          "type": "Manual",
+          "state": "Terminado",
+          "scheduledDistance": 0,
+          "traveledDistance": 0,
+          "averageSpeed": 15,
+          "scheduledDuration": 10,
+          "serviceDuration": 10
+        },
+        {
+          "serviceId": "serv_id_1",
+          "vehicle": "ABC111-01",
+          "internalNumber": "1",
+          "scheduleDateTime": "202207180100",
+          "startDateTime": "202207180100",
+          "serviceInterval": "1",
+          "type": "Programado",
+          "state": "Abortado",
+          "scheduledDistance": 3,
+          "traveledDistance": 3,
+          "averageSpeed": 16,
+          "scheduledDuration": 20,
+          "serviceDuration": 20
+        },
+        {
+          "serviceId": "serv_id_2",
+          "vehicle": "ABC222-02",
+          "internalNumber": "2",
+          "scheduleDateTime": "202207180200",
+          "startDateTime": "202207180200",
+          "serviceInterval": "2",
+          "type": "Programado",
+          "state": "Cancelado",
+          "scheduledDistance": 6,
+          "traveledDistance": 6,
+          "averageSpeed": 17,
+          "scheduledDuration": 30,
+          "serviceDuration": 30
+        },
+        {
+          "serviceId": "serv_id_3",
+          "vehicle": "ABC333-03",
+          "internalNumber": "3",
+          "scheduleDateTime": "202207180300",
+          "startDateTime": "202207180300",
+          "serviceInterval": "3",
+          "type": "Programado",
+          "state": "Terminado Forzado",
+          "scheduledDistance": 9,
+          "traveledDistance": 9,
+          "averageSpeed": 18,
+          "scheduledDuration": 40,
+          "serviceDuration": 40
+        },
+        {
+          "serviceId": "serv_id_4",
+          "vehicle": "ABC444-04",
+          "internalNumber": "4",
+          "scheduleDateTime": "202207180400",
+          "startDateTime": "202207180400",
+          "serviceInterval": "4",
+          "type": "Manual",
+          "state": "Terminado",
+          "scheduledDistance": 12,
+          "traveledDistance": 12,
+          "averageSpeed": 19,
+          "scheduledDuration": 50,
+          "serviceDuration": 50
+        },
+        {
+          "serviceId": "serv_id_5",
+          "vehicle": "ABC555-05",
+          "internalNumber": "5",
+          "scheduleDateTime": "202207180500",
+          "startDateTime": "202207180500",
+          "serviceInterval": "5",
+          "type": "Programado",
+          "state": "Abortado",
+          "scheduledDistance": 15,
+          "traveledDistance": 15,
+          "averageSpeed": 20,
+          "scheduledDuration": 60,
+          "serviceDuration": 60
+        },
+        {
+          "serviceId": "serv_id_6",
+          "vehicle": "ABC666-06",
+          "internalNumber": "6",
+          "scheduleDateTime": "202207180600",
+          "startDateTime": "202207180600",
+          "serviceInterval": "6",
+          "type": "Programado",
+          "state": "Cancelado",
+          "scheduledDistance": 18,
+          "traveledDistance": 18,
+          "averageSpeed": 21,
+          "scheduledDuration": 70,
+          "serviceDuration": 70
+        },
+        {
+          "serviceId": "serv_id_7",
+          "vehicle": "ABC777-07",
+          "internalNumber": "7",
+          "scheduleDateTime": "202207180700",
+          "startDateTime": "202207180700",
+          "serviceInterval": "7",
+          "type": "Programado",
+          "state": "Terminado Forzado",
+          "scheduledDistance": 21,
+          "traveledDistance": 21,
+          "averageSpeed": 22,
+          "scheduledDuration": 80,
+          "serviceDuration": 80
+        },
+        {
+          "serviceId": "serv_id_8",
+          "vehicle": "ABC888-08",
+          "internalNumber": "8",
+          "scheduleDateTime": "202207180800",
+          "startDateTime": "202207180800",
+          "serviceInterval": "8",
+          "type": "Manual",
+          "state": "Terminado",
+          "scheduledDistance": 24,
+          "traveledDistance": 24,
+          "averageSpeed": 23,
+          "scheduledDuration": 90,
+          "serviceDuration": 90
+        },
+        {
+          "serviceId": "serv_id_9",
+          "vehicle": "ABC999-09",
+          "internalNumber": "9",
+          "scheduleDateTime": "202207180900",
+          "startDateTime": "202207180900",
+          "serviceInterval": "9",
+          "type": "Programado",
+          "state": "Abortado",
+          "scheduledDistance": 27,
+          "traveledDistance": 27,
+          "averageSpeed": 24,
+          "scheduledDuration": 100,
+          "serviceDuration": 100
         }
-      },
-      {
-        "dataType": "NUMBER",
-        "semantics": {
-          "semanticType": "NUMBER",
-          "conceptType": "METRIC",
-          "isReaggregatable": true
-        },
-        "name": "traveledDistance"
-      },
-      {
-        "name": "averageSpeed",
-        "semantics": {
-          "conceptType": "METRIC",
-          "isReaggregatable": true,
-          "semanticType": "NUMBER"
-        },
-        "dataType": "NUMBER"
-      },
-      {
-        "name": "scheduledDuration",
-        "semantics": {
-          "semanticType": "NUMBER",
-          "conceptType": "METRIC",
-          "isReaggregatable": true
-        },
-        "dataType": "NUMBER"
-      },
-      {
-        "name": "serviceDuration",
-        "semantics": {
-          "semanticType": "NUMBER",
-          "conceptType": "METRIC",
-          "isReaggregatable": true
-        },
-        "dataType": "NUMBER"
-      }
-    ],
-    "DATA": [
-      {
-        "serviceId": "serv_id_0",
-        "vehicle": "ABC000-00",
-        "internalNumber": "0",
-        "scheduleDateTime": "202207180000",
-        "startDateTime": "202207180000",
-        "serviceInterval": "0",
-        "type": "Manual",
-        "state": "Terminado",
-        "scheduledDistance": 0,
-        "traveledDistance": 0,
-        "averageSpeed": 15,
-        "scheduledDuration": 10,
-        "serviceDuration": 10
-      },
-      {
-        "serviceId": "serv_id_1",
-        "vehicle": "ABC111-01",
-        "internalNumber": "1",
-        "scheduleDateTime": "202207180100",
-        "startDateTime": "202207180100",
-        "serviceInterval": "1",
-        "type": "Programado",
-        "state": "Abortado",
-        "scheduledDistance": 3,
-        "traveledDistance": 3,
-        "averageSpeed": 16,
-        "scheduledDuration": 20,
-        "serviceDuration": 20
-      },
-      {
-        "serviceId": "serv_id_2",
-        "vehicle": "ABC222-02",
-        "internalNumber": "2",
-        "scheduleDateTime": "202207180200",
-        "startDateTime": "202207180200",
-        "serviceInterval": "2",
-        "type": "Programado",
-        "state": "Cancelado",
-        "scheduledDistance": 6,
-        "traveledDistance": 6,
-        "averageSpeed": 17,
-        "scheduledDuration": 30,
-        "serviceDuration": 30
-      },
-      {
-        "serviceId": "serv_id_3",
-        "vehicle": "ABC333-03",
-        "internalNumber": "3",
-        "scheduleDateTime": "202207180300",
-        "startDateTime": "202207180300",
-        "serviceInterval": "3",
-        "type": "Programado",
-        "state": "Terminado Forzado",
-        "scheduledDistance": 9,
-        "traveledDistance": 9,
-        "averageSpeed": 18,
-        "scheduledDuration": 40,
-        "serviceDuration": 40
-      },
-      {
-        "serviceId": "serv_id_4",
-        "vehicle": "ABC444-04",
-        "internalNumber": "4",
-        "scheduleDateTime": "202207180400",
-        "startDateTime": "202207180400",
-        "serviceInterval": "4",
-        "type": "Manual",
-        "state": "Terminado",
-        "scheduledDistance": 12,
-        "traveledDistance": 12,
-        "averageSpeed": 19,
-        "scheduledDuration": 50,
-        "serviceDuration": 50
-      },
-      {
-        "serviceId": "serv_id_5",
-        "vehicle": "ABC555-05",
-        "internalNumber": "5",
-        "scheduleDateTime": "202207180500",
-        "startDateTime": "202207180500",
-        "serviceInterval": "5",
-        "type": "Programado",
-        "state": "Abortado",
-        "scheduledDistance": 15,
-        "traveledDistance": 15,
-        "averageSpeed": 20,
-        "scheduledDuration": 60,
-        "serviceDuration": 60
-      },
-      {
-        "serviceId": "serv_id_6",
-        "vehicle": "ABC666-06",
-        "internalNumber": "6",
-        "scheduleDateTime": "202207180600",
-        "startDateTime": "202207180600",
-        "serviceInterval": "6",
-        "type": "Programado",
-        "state": "Cancelado",
-        "scheduledDistance": 18,
-        "traveledDistance": 18,
-        "averageSpeed": 21,
-        "scheduledDuration": 70,
-        "serviceDuration": 70
-      },
-      {
-        "serviceId": "serv_id_7",
-        "vehicle": "ABC777-07",
-        "internalNumber": "7",
-        "scheduleDateTime": "202207180700",
-        "startDateTime": "202207180700",
-        "serviceInterval": "7",
-        "type": "Programado",
-        "state": "Terminado Forzado",
-        "scheduledDistance": 21,
-        "traveledDistance": 21,
-        "averageSpeed": 22,
-        "scheduledDuration": 80,
-        "serviceDuration": 80
-      },
-      {
-        "serviceId": "serv_id_8",
-        "vehicle": "ABC888-08",
-        "internalNumber": "8",
-        "scheduleDateTime": "202207180800",
-        "startDateTime": "202207180800",
-        "serviceInterval": "8",
-        "type": "Manual",
-        "state": "Terminado",
-        "scheduledDistance": 24,
-        "traveledDistance": 24,
-        "averageSpeed": 23,
-        "scheduledDuration": 90,
-        "serviceDuration": 90
-      },
-      {
-        "serviceId": "serv_id_9",
-        "vehicle": "ABC999-09",
-        "internalNumber": "9",
-        "scheduleDateTime": "202207180900",
-        "startDateTime": "202207180900",
-        "serviceInterval": "9",
-        "type": "Programado",
-        "state": "Abortado",
-        "scheduledDistance": 27,
-        "traveledDistance": 27,
-        "averageSpeed": 24,
-        "scheduledDuration": 100,
-        "serviceDuration": 100
-      }
-    ]
+      ]
+    }
   }
 }
