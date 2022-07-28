@@ -259,6 +259,221 @@
           "serviceDuration": 100
         }
       ]
+    },
+    "SUMMARY": {
+      "SCHEMA": [
+        {
+          "name": "routeName",
+          "semantics": {
+            "conceptType": "DIMENSION",
+            "semanticType": "TEXT"
+          },
+          "dataType": "STRING"
+        },
+        {
+          "semantics": {
+            "conceptType": "DIMENSION",
+            "semanticType": "TEXT"
+          },
+          "dataType": "STRING",
+          "name": "itineraryName"
+        },
+        {
+          "dataType": "STRING",
+          "semantics": {
+            "isReaggregatable": true,
+            "conceptType": "METRIC",
+            "semanticType": "YEAR_MONTH_DAY"
+          },
+          "name": "fromDate"
+        },
+        {
+          "dataType": "STRING",
+          "semantics": {
+            "conceptType": "METRIC",
+            "semanticType": "YEAR_MONTH_DAY",
+            "isReaggregatable": true
+          },
+          "name": "toDate"
+        },
+        {
+          "semantics": {
+            "conceptType": "DIMENSION",
+            "semanticType": "TEXT"
+          },
+          "name": "userFullName",
+          "dataType": "STRING"
+        },
+        {
+          "name": "reportDateTime",
+          "dataType": "STRING",
+          "semantics": {
+            "conceptType": "METRIC",
+            "semanticType": "YEAR_MONTH_DAY_MINUTE",
+            "isReaggregatable": true
+          }
+        },
+        {
+          "semantics": {
+            "isReaggregatable": true,
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC"
+          },
+          "name": "totalScheduledServicesCount",
+          "dataType": "NUMBER"
+        },
+        {
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "dataType": "NUMBER",
+          "name": "totalExecutedServicesCount"
+        },
+        {
+          "semantics": {
+            "isReaggregatable": true,
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC"
+          },
+          "dataType": "NUMBER",
+          "name": "totalManualExecutedServicesCount"
+        },
+        {
+          "name": "totalScheduledServicesKilometers",
+          "dataType": "NUMBER",
+          "semantics": {
+            "isReaggregatable": true,
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC"
+          }
+        },
+        {
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "dataType": "NUMBER",
+          "name": "totalExecutedServicesKilometers"
+        },
+        {
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "name": "totalScheduledServicesHours"
+        },
+        {
+          "name": "totalExecutedServicesHours",
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          }
+        },
+        {
+          "name": "serviceSchedulingAssertivenessPercentage",
+          "semantics": {
+            "semanticType": "PERCENT",
+            "isReaggregatable": true,
+            "conceptType": "METRIC"
+          },
+          "dataType": "NUMBER"
+        },
+        {
+          "name": "serviceSchedulingSubstitutionsCount",
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "isReaggregatable": true,
+            "conceptType": "METRIC"
+          }
+        },
+        {
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "dataType": "NUMBER",
+          "name": "serviceSchedulingNonExecutedCount"
+        },
+        {
+          "name": "serviceSchedulingCompletedCount",
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          }
+        },
+        {
+          "semantics": {
+            "conceptType": "METRIC",
+            "semanticType": "PERCENT",
+            "isReaggregatable": true
+          },
+          "name": "serviceAccomplishmentPercentage",
+          "dataType": "NUMBER"
+        },
+        {
+          "semantics": {
+            "isReaggregatable": true,
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC"
+          },
+          "dataType": "NUMBER",
+          "name": "serviceForcedStartCount"
+        },
+        {
+          "semantics": {
+            "isReaggregatable": true,
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC"
+          },
+          "name": "serviceAbortedCount",
+          "dataType": "NUMBER"
+        },
+        {
+          "name": "serviceCancelledCount",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "isReaggregatable": true,
+            "conceptType": "METRIC"
+          },
+          "dataType": "NUMBER"
+        }
+      ],
+      "DATA": [
+        {
+          "routeName": "A7-4112 - MIRAMAR",
+          "itineraryName": "MIRAMAR",
+          "fromDate": "20220718",
+          "toDate": "20220718",
+          "userFullName": "Jhon Doe",
+          "reportDateTime": "202207181430",
+          "totalScheduledServicesCount": 1200,
+          "totalExecutedServicesCount": 1000,
+          "totalManualExecutedServicesCount": 50,
+          "totalScheduledServicesKilometers": 1255,
+          "totalExecutedServicesKilometers": 1100,
+          "totalScheduledServicesHours": 2500,
+          "totalExecutedServicesHours": 2400,
+          "serviceSchedulingAssertivenessPercentage": 0.854,
+          "serviceSchedulingSubstitutionsCount": 210,
+          "serviceSchedulingNonExecutedCount": 87,
+          "serviceSchedulingCompletedCount": 1098,
+          "serviceAccomplishmentPercentage": 0.9045,
+          "serviceForcedStartCount": 58,
+          "serviceAbortedCount": 70,
+          "serviceCancelledCount": 88
+        }
+      ]
     }
   }
 }
