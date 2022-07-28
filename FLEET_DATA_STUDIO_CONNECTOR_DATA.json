@@ -474,6 +474,45 @@
           "serviceCancelledCount": 88
         }
       ]
+    },
+    "SERVICE_COMPLIANCE": {
+      "SCHEMA": [
+        {
+          "name": "type",
+          "dataType": "STRING",
+          "semantics": {
+            "semanticType": "TEXT",
+            "conceptType": "DIMENSION"
+          }
+        },
+        {
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "name": "count",
+          "dataType": "NUMBER"
+        }
+      ],
+      "DATA": [
+        {
+          "type": "Completados",
+          "count": 850
+        },
+        {
+          "type": "Cancelados",
+          "count": 90
+        },
+        {
+          "type": "Abortados",
+          "count": 71
+        },
+        {
+          "type": "No Ejecutados",
+          "count": 41
+        }
+      ]
     }
   }
 }
