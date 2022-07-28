@@ -2012,5 +2012,1012 @@
         }
       ]
     }
+  },
+  "DriverOperationReport": {
+    "SERVICE_TABLE": {
+      "SCHEMA": [
+        {
+          "semantics": {
+            "conceptType": "DIMENSION",
+            "semanticType": "TEXT"
+          },
+          "dataType": "STRING",
+          "name": "serviceId"
+        },
+        {
+          "semantics": {
+            "semanticType": "TEXT",
+            "conceptType": "DIMENSION"
+          },
+          "name": "vehicle",
+          "dataType": "STRING"
+        },
+        {
+          "dataType": "STRING",
+          "semantics": {
+            "semanticType": "YEAR_MONTH_DAY_MINUTE",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "name": "scheduleDateTime"
+        },
+        {
+          "dataType": "STRING",
+          "semantics": {
+            "isReaggregatable": true,
+            "semanticType": "YEAR_MONTH_DAY",
+            "conceptType": "METRIC"
+          },
+          "name": "startDate"
+        },
+        {
+          "dataType": "STRING",
+          "semantics": {
+            "isReaggregatable": true,
+            "semanticType": "YEAR_MONTH_DAY_MINUTE",
+            "conceptType": "METRIC"
+          },
+          "name": "startDateTime"
+        },
+        {
+          "name": "itinerary",
+          "semantics": {
+            "semanticType": "TEXT",
+            "conceptType": "DIMENSION"
+          },
+          "dataType": "STRING"
+        },
+        {
+          "semantics": {
+            "semanticType": "TEXT",
+            "conceptType": "DIMENSION"
+          },
+          "dataType": "STRING",
+          "name": "type"
+        },
+        {
+          "name": "state",
+          "dataType": "STRING",
+          "semantics": {
+            "semanticType": "TEXT",
+            "conceptType": "DIMENSION"
+          }
+        },
+        {
+          "name": "scheduledDistance",
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          }
+        },
+        {
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "name": "traveledDistance"
+        },
+        {
+          "name": "averageSpeed",
+          "semantics": {
+            "conceptType": "METRIC",
+            "isReaggregatable": true,
+            "semanticType": "NUMBER"
+          },
+          "dataType": "NUMBER"
+        },
+        {
+          "name": "scheduledDuration",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "dataType": "NUMBER"
+        },
+        {
+          "name": "serviceDuration",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "dataType": "NUMBER"
+        }
+      ],
+      "DATA": [
+        {
+          "serviceId": "serv_id_0",
+          "vehicle": " ABC000 -  01}",
+          "scheduleDateTime": "202207180000",
+          "startDateTime": "202207180000",
+          "startDate": "20220701",
+          "itinerary": "Itinerario 0",
+          "type": "Manual",
+          "state": "Terminado",
+          "scheduledDistance": 0,
+          "traveledDistance": 0,
+          "averageSpeed": 15,
+          "scheduledDuration": 10,
+          "serviceDuration": 10
+        },
+        {
+          "serviceId": "serv_id_1",
+          "vehicle": " ABC111 -  02}",
+          "scheduleDateTime": "202207180100",
+          "startDateTime": "202207180100",
+          "startDate": "20220702",
+          "itinerary": "Itinerario 1",
+          "type": "Programado",
+          "state": "Abortado",
+          "scheduledDistance": 3,
+          "traveledDistance": 3,
+          "averageSpeed": 16,
+          "scheduledDuration": 20,
+          "serviceDuration": 20
+        },
+        {
+          "serviceId": "serv_id_2",
+          "vehicle": " ABC222 -  03}",
+          "scheduleDateTime": "202207180200",
+          "startDateTime": "202207180200",
+          "startDate": "20220703",
+          "itinerary": "Itinerario 2",
+          "type": "Programado",
+          "state": "Cancelado",
+          "scheduledDistance": 6,
+          "traveledDistance": 6,
+          "averageSpeed": 17,
+          "scheduledDuration": 30,
+          "serviceDuration": 30
+        },
+        {
+          "serviceId": "serv_id_3",
+          "vehicle": " ABC333 -  01}",
+          "scheduleDateTime": "202207180300",
+          "startDateTime": "202207180300",
+          "startDate": "20220701",
+          "itinerary": "Itinerario 3",
+          "type": "Programado",
+          "state": "Terminado Forzado",
+          "scheduledDistance": 9,
+          "traveledDistance": 9,
+          "averageSpeed": 18,
+          "scheduledDuration": 40,
+          "serviceDuration": 40
+        },
+        {
+          "serviceId": "serv_id_4",
+          "vehicle": " ABC444 -  02}",
+          "scheduleDateTime": "202207180400",
+          "startDateTime": "202207180400",
+          "startDate": "20220702",
+          "itinerary": "Itinerario 4",
+          "type": "Manual",
+          "state": "Terminado",
+          "scheduledDistance": 12,
+          "traveledDistance": 12,
+          "averageSpeed": 19,
+          "scheduledDuration": 50,
+          "serviceDuration": 50
+        },
+        {
+          "serviceId": "serv_id_5",
+          "vehicle": " ABC555 -  03}",
+          "scheduleDateTime": "202207180500",
+          "startDateTime": "202207180500",
+          "startDate": "20220703",
+          "itinerary": "Itinerario 5",
+          "type": "Programado",
+          "state": "Abortado",
+          "scheduledDistance": 15,
+          "traveledDistance": 15,
+          "averageSpeed": 20,
+          "scheduledDuration": 60,
+          "serviceDuration": 60
+        },
+        {
+          "serviceId": "serv_id_6",
+          "vehicle": " ABC666 -  01}",
+          "scheduleDateTime": "202207180600",
+          "startDateTime": "202207180600",
+          "startDate": "20220701",
+          "itinerary": "Itinerario 6",
+          "type": "Programado",
+          "state": "Cancelado",
+          "scheduledDistance": 18,
+          "traveledDistance": 18,
+          "averageSpeed": 21,
+          "scheduledDuration": 70,
+          "serviceDuration": 70
+        },
+        {
+          "serviceId": "serv_id_7",
+          "vehicle": " ABC777 -  02}",
+          "scheduleDateTime": "202207180700",
+          "startDateTime": "202207180700",
+          "startDate": "20220702",
+          "itinerary": "Itinerario 7",
+          "type": "Programado",
+          "state": "Terminado Forzado",
+          "scheduledDistance": 21,
+          "traveledDistance": 21,
+          "averageSpeed": 22,
+          "scheduledDuration": 80,
+          "serviceDuration": 80
+        },
+        {
+          "serviceId": "serv_id_8",
+          "vehicle": " ABC888 -  03}",
+          "scheduleDateTime": "202207180800",
+          "startDateTime": "202207180800",
+          "startDate": "20220703",
+          "itinerary": "Itinerario 8",
+          "type": "Manual",
+          "state": "Terminado",
+          "scheduledDistance": 24,
+          "traveledDistance": 24,
+          "averageSpeed": 23,
+          "scheduledDuration": 90,
+          "serviceDuration": 90
+        },
+        {
+          "serviceId": "serv_id_9",
+          "vehicle": " ABC999 -  01}",
+          "scheduleDateTime": "202207180900",
+          "startDateTime": "202207180900",
+          "startDate": "20220701",
+          "itinerary": "Itinerario 9",
+          "type": "Programado",
+          "state": "Abortado",
+          "scheduledDistance": 27,
+          "traveledDistance": 27,
+          "averageSpeed": 24,
+          "scheduledDuration": 100,
+          "serviceDuration": 100
+        }
+      ]
+    },
+    "SUMMARY": {
+      "SCHEMA": [
+        {
+          "name": "vehicle",
+          "semantics": {
+            "conceptType": "DIMENSION",
+            "semanticType": "TEXT"
+          },
+          "dataType": "STRING"
+        },
+        {
+          "dataType": "STRING",
+          "semantics": {
+            "isReaggregatable": true,
+            "conceptType": "METRIC",
+            "semanticType": "YEAR_MONTH_DAY"
+          },
+          "name": "fromDate"
+        },
+        {
+          "dataType": "STRING",
+          "semantics": {
+            "conceptType": "METRIC",
+            "semanticType": "YEAR_MONTH_DAY",
+            "isReaggregatable": true
+          },
+          "name": "toDate"
+        },
+        {
+          "semantics": {
+            "conceptType": "DIMENSION",
+            "semanticType": "TEXT"
+          },
+          "name": "userFullName",
+          "dataType": "STRING"
+        },
+        {
+          "name": "reportDateTime",
+          "dataType": "STRING",
+          "semantics": {
+            "conceptType": "METRIC",
+            "semanticType": "YEAR_MONTH_DAY_MINUTE",
+            "isReaggregatable": true
+          }
+        },
+        {
+          "semantics": {
+            "isReaggregatable": true,
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC"
+          },
+          "name": "totalScheduledServicesCount",
+          "dataType": "NUMBER"
+        },
+        {
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "dataType": "NUMBER",
+          "name": "totalExecutedServicesCount"
+        },
+        {
+          "semantics": {
+            "isReaggregatable": true,
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC"
+          },
+          "dataType": "NUMBER",
+          "name": "totalManualExecutedServicesCount"
+        },
+        {
+          "name": "totalScheduledServicesKilometers",
+          "dataType": "NUMBER",
+          "semantics": {
+            "isReaggregatable": true,
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC"
+          }
+        },
+        {
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "dataType": "NUMBER",
+          "name": "totalExecutedServicesKilometers"
+        },
+        {
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "name": "totalScheduledServicesHours"
+        },
+        {
+          "name": "totalExecutedServicesHours",
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          }
+        },
+        {
+          "name": "serviceSchedulingAssertivenessPercentage",
+          "semantics": {
+            "semanticType": "PERCENT",
+            "isReaggregatable": true,
+            "conceptType": "METRIC"
+          },
+          "dataType": "NUMBER"
+        },
+        {
+          "name": "serviceSchedulingSubstitutionsCount",
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "isReaggregatable": true,
+            "conceptType": "METRIC"
+          }
+        },
+        {
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "dataType": "NUMBER",
+          "name": "serviceSchedulingNonExecutedCount"
+        },
+        {
+          "name": "serviceSchedulingCompletedCount",
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          }
+        },
+        {
+          "semantics": {
+            "conceptType": "METRIC",
+            "semanticType": "PERCENT",
+            "isReaggregatable": true
+          },
+          "name": "serviceAccomplishmentPercentage",
+          "dataType": "NUMBER"
+        },
+        {
+          "semantics": {
+            "isReaggregatable": true,
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC"
+          },
+          "dataType": "NUMBER",
+          "name": "serviceForcedStartCount"
+        },
+        {
+          "semantics": {
+            "isReaggregatable": true,
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC"
+          },
+          "name": "serviceAbortedCount",
+          "dataType": "NUMBER"
+        },
+        {
+          "name": "serviceCancelledCount",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "isReaggregatable": true,
+            "conceptType": "METRIC"
+          },
+          "dataType": "NUMBER"
+        }
+      ],
+      "DATA": [
+        {
+          "vehicle": "ABBC123 - 1023",
+          "itineraryName": "MIRAMAR",
+          "fromDate": "20220718",
+          "toDate": "20220718",
+          "userFullName": "Jhon Doe",
+          "reportDateTime": "202207181430",
+          "totalScheduledServicesCount": 1200,
+          "totalExecutedServicesCount": 1000,
+          "totalManualExecutedServicesCount": 50,
+          "totalScheduledServicesKilometers": 1255,
+          "totalExecutedServicesKilometers": 1100,
+          "totalScheduledServicesHours": 2500,
+          "totalExecutedServicesHours": 2400,
+          "serviceSchedulingAssertivenessPercentage": 0.854,
+          "serviceSchedulingSubstitutionsCount": 210,
+          "serviceSchedulingNonExecutedCount": 87,
+          "serviceSchedulingCompletedCount": 1098,
+          "serviceAccomplishmentPercentage": 0.9045,
+          "serviceForcedStartCount": 58,
+          "serviceAbortedCount": 70,
+          "serviceCancelledCount": 88
+        }
+      ]
+    },
+    "SERVICE_COMPLIANCE": {
+      "SCHEMA": [
+        {
+          "name": "type",
+          "dataType": "STRING",
+          "semantics": {
+            "semanticType": "TEXT",
+            "conceptType": "DIMENSION"
+          }
+        },
+        {
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "name": "count",
+          "dataType": "NUMBER"
+        }
+      ],
+      "DATA": [
+        {
+          "type": "Completados",
+          "count": 850
+        },
+        {
+          "type": "Cancelados",
+          "count": 90
+        },
+        {
+          "type": "Abortados",
+          "count": 71
+        },
+        {
+          "type": "No Ejecutados",
+          "count": 41
+        }
+      ]
+    },
+    "SCHEDULING_ASSERTIVENESS": {
+      "SCHEMA": [
+        {
+          "semantics": {
+            "semanticType": "TEXT",
+            "conceptType": "DIMENSION"
+          },
+          "name": "type",
+          "dataType": "STRING"
+        },
+        {
+          "dataType": "NUMBER",
+          "semantics": {
+            "isReaggregatable": true,
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC"
+          },
+          "name": "count"
+        }
+      ],
+      "DATA": [
+        {
+          "type": "Completados",
+          "count": 680
+        },
+        {
+          "type": "Cancelados",
+          "count": 84
+        },
+        {
+          "type": "Abortados",
+          "count": 60
+        },
+        {
+          "type": "No Ejecutados",
+          "count": 40
+        }
+      ]
+    },
+    "STOP_STATS": {
+      "SCHEMA": [
+        {
+          "name": "itineraryId",
+          "dataType": "STRING",
+          "semantics": {
+            "conceptType": "DIMENSION",
+            "semanticType": "TEXT"
+          }
+        },
+        {
+          "name": "itineraryName",
+          "dataType": "STRING",
+          "semantics": {
+            "semanticType": "TEXT",
+            "conceptType": "DIMENSION"
+          }
+        },
+        {
+          "semantics": {
+            "conceptType": "DIMENSION",
+            "semanticType": "NUMBER"
+          },
+          "name": "stopIndex",
+          "dataType": "NUMBER"
+        },
+        {
+          "name": "stop",
+          "dataType": "STRING",
+          "semantics": {
+            "semanticType": "TEXT",
+            "conceptType": "DIMENSION"
+          }
+        },
+        {
+          "semantics": {
+            "isReaggregatable": true,
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC"
+          },
+          "dataType": "NUMBER",
+          "name": "minTimeSpan"
+        },
+        {
+          "semantics": {
+            "conceptType": "METRIC",
+            "semanticType": "NUMBER",
+            "isReaggregatable": true
+          },
+          "dataType": "NUMBER",
+          "name": "avgTimeSpan"
+        },
+        {
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "dataType": "NUMBER",
+          "name": "maxTimeSpan"
+        },
+        {
+          "semantics": {
+            "isReaggregatable": true,
+            "conceptType": "METRIC",
+            "semanticType": "NUMBER"
+          },
+          "name": "minSpeed",
+          "dataType": "NUMBER"
+        },
+        {
+          "semantics": {
+            "conceptType": "METRIC",
+            "isReaggregatable": true,
+            "semanticType": "NUMBER"
+          },
+          "dataType": "NUMBER",
+          "name": "avgSpeed"
+        },
+        {
+          "semantics": {
+            "isReaggregatable": true,
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC"
+          },
+          "name": "maxSpeed",
+          "dataType": "NUMBER"
+        }
+      ],
+      "DATA": [
+        {
+          "itineraryId": "it01",
+          "itineraryName": "Itinerary 01",
+          "stopIndex": 0,
+          "stop": "Paradero 01",
+          "minTimeSpan": 0,
+          "avgTimeSpan": 0,
+          "maxTimeSpan": 0,
+          "minSpeed": 0,
+          "avgSpeed": 0,
+          "maxSpeed": 0
+        },
+        {
+          "itineraryId": "it01",
+          "itineraryName": "Itinerary 01",
+          "stopIndex": 1,
+          "stop": "Paradero 02",
+          "minTimeSpan": 2,
+          "avgTimeSpan": 5,
+          "maxTimeSpan": 7,
+          "minSpeed": 12,
+          "avgSpeed": 17,
+          "maxSpeed": 30
+        },
+        {
+          "itineraryId": "it01",
+          "itineraryName": "Itinerary 01",
+          "stopIndex": 2,
+          "stop": "Paradero 03",
+          "minTimeSpan": 10,
+          "avgTimeSpan": 20,
+          "maxTimeSpan": 30,
+          "minSpeed": 50,
+          "avgSpeed": 70,
+          "maxSpeed": 120
+        },
+        {
+          "itineraryId": "it01",
+          "itineraryName": "Itinerary 01",
+          "stopIndex": 3,
+          "stop": "Paradero 04",
+          "minTimeSpan": 9,
+          "avgTimeSpan": 18,
+          "maxTimeSpan": 27,
+          "minSpeed": 45,
+          "avgSpeed": 63,
+          "maxSpeed": 108
+        },
+        {
+          "itineraryId": "it01",
+          "itineraryName": "Itinerary 01",
+          "stopIndex": 4,
+          "stop": "Paradero 05",
+          "minTimeSpan": 7,
+          "avgTimeSpan": 14,
+          "maxTimeSpan": 21,
+          "minSpeed": 35,
+          "avgSpeed": 49,
+          "maxSpeed": 84
+        },
+        {
+          "itineraryId": "it01",
+          "itineraryName": "Itinerary 01",
+          "stopIndex": 5,
+          "stop": "Paradero 06",
+          "minTimeSpan": 5,
+          "avgTimeSpan": 11,
+          "maxTimeSpan": 16,
+          "minSpeed": 27,
+          "avgSpeed": 38,
+          "maxSpeed": 66
+        },
+        {
+          "itineraryId": "it01",
+          "itineraryName": "Itinerary 01",
+          "stopIndex": 6,
+          "stop": "Paradero 07",
+          "minTimeSpan": 1,
+          "avgTimeSpan": 3,
+          "maxTimeSpan": 4,
+          "minSpeed": 7,
+          "avgSpeed": 10,
+          "maxSpeed": 18
+        },
+        {
+          "itineraryId": "it01",
+          "itineraryName": "Itinerary 01",
+          "stopIndex": 7,
+          "stop": "Paradero 08",
+          "minTimeSpan": 4,
+          "avgTimeSpan": 8,
+          "maxTimeSpan": 12,
+          "minSpeed": 20,
+          "avgSpeed": 28,
+          "maxSpeed": 48
+        },
+        {
+          "itineraryId": "it01",
+          "itineraryName": "Itinerary 01",
+          "stopIndex": 8,
+          "stop": "Paradero 09",
+          "minTimeSpan": 6,
+          "avgTimeSpan": 12,
+          "maxTimeSpan": 18,
+          "minSpeed": 30,
+          "avgSpeed": 42,
+          "maxSpeed": 72
+        },
+        {
+          "itineraryId": "it01",
+          "itineraryName": "Itinerary 01",
+          "stopIndex": 9,
+          "stop": "Paradero 10",
+          "minTimeSpan": 6,
+          "avgTimeSpan": 12,
+          "maxTimeSpan": 18,
+          "minSpeed": 31,
+          "avgSpeed": 43,
+          "maxSpeed": 75
+        },
+        {
+          "itineraryId": "it02",
+          "itineraryName": "Itinerary 02",
+          "stopIndex": 10,
+          "stop": "Paradero 01",
+          "minTimeSpan": 0,
+          "avgTimeSpan": 0,
+          "maxTimeSpan": 0,
+          "minSpeed": 0,
+          "avgSpeed": 0,
+          "maxSpeed": 0
+        },
+        {
+          "itineraryId": "it02",
+          "itineraryName": "Itinerary 02",
+          "stopIndex": 11,
+          "stop": "Paradero 02",
+          "minTimeSpan": 1,
+          "avgTimeSpan": 3,
+          "maxTimeSpan": 4,
+          "minSpeed": 7,
+          "avgSpeed": 10,
+          "maxSpeed": 18
+        },
+        {
+          "itineraryId": "it02",
+          "itineraryName": "Itinerary 02",
+          "stopIndex": 12,
+          "stop": "Paradero 03",
+          "minTimeSpan": 25,
+          "avgTimeSpan": 50,
+          "maxTimeSpan": 75,
+          "minSpeed": 125,
+          "avgSpeed": 175,
+          "maxSpeed": 300
+        },
+        {
+          "itineraryId": "it02",
+          "itineraryName": "Itinerary 02",
+          "stopIndex": 13,
+          "stop": "Paradero 04",
+          "minTimeSpan": 6,
+          "avgTimeSpan": 12,
+          "maxTimeSpan": 18,
+          "minSpeed": 30,
+          "avgSpeed": 42,
+          "maxSpeed": 72
+        },
+        {
+          "itineraryId": "it02",
+          "itineraryName": "Itinerary 02",
+          "stopIndex": 14,
+          "stop": "Paradero 05",
+          "minTimeSpan": 8,
+          "avgTimeSpan": 17,
+          "maxTimeSpan": 25,
+          "minSpeed": 42,
+          "avgSpeed": 59,
+          "maxSpeed": 102
+        },
+        {
+          "itineraryId": "it02",
+          "itineraryName": "Itinerary 02",
+          "stopIndex": 15,
+          "stop": "Paradero 06",
+          "minTimeSpan": 5,
+          "avgTimeSpan": 10,
+          "maxTimeSpan": 15,
+          "minSpeed": 25,
+          "avgSpeed": 35,
+          "maxSpeed": 60
+        },
+        {
+          "itineraryId": "it02",
+          "itineraryName": "Itinerary 02",
+          "stopIndex": 16,
+          "stop": "Paradero 07",
+          "minTimeSpan": 4,
+          "avgTimeSpan": 8,
+          "maxTimeSpan": 12,
+          "minSpeed": 20,
+          "avgSpeed": 28,
+          "maxSpeed": 48
+        },
+        {
+          "itineraryId": "it02",
+          "itineraryName": "Itinerary 02",
+          "stopIndex": 17,
+          "stop": "Paradero 08",
+          "minTimeSpan": 1,
+          "avgTimeSpan": 2,
+          "maxTimeSpan": 3,
+          "minSpeed": 5,
+          "avgSpeed": 7,
+          "maxSpeed": 12
+        },
+        {
+          "itineraryId": "it02",
+          "itineraryName": "Itinerary 02",
+          "stopIndex": 18,
+          "stop": "Paradero 09",
+          "minTimeSpan": 9,
+          "avgTimeSpan": 18,
+          "maxTimeSpan": 27,
+          "minSpeed": 45,
+          "avgSpeed": 63,
+          "maxSpeed": 108
+        },
+        {
+          "itineraryId": "it02",
+          "itineraryName": "Itinerary 02",
+          "stopIndex": 19,
+          "stop": "Paradero 10",
+          "minTimeSpan": 6,
+          "avgTimeSpan": 13,
+          "maxTimeSpan": 20,
+          "minSpeed": 33,
+          "avgSpeed": 46,
+          "maxSpeed": 80
+        },
+        {
+          "itineraryId": "it03",
+          "itineraryName": "Itinerary 03",
+          "stopIndex": 20,
+          "stop": "Paradero 01",
+          "minTimeSpan": 0,
+          "avgTimeSpan": 0,
+          "maxTimeSpan": 0,
+          "minSpeed": 0,
+          "avgSpeed": 0,
+          "maxSpeed": 0
+        },
+        {
+          "itineraryId": "it03",
+          "itineraryName": "Itinerary 03",
+          "stopIndex": 21,
+          "stop": "Paradero 02",
+          "minTimeSpan": 4,
+          "avgTimeSpan": 9,
+          "maxTimeSpan": 13,
+          "minSpeed": 22,
+          "avgSpeed": 31,
+          "maxSpeed": 54
+        },
+        {
+          "itineraryId": "it03",
+          "itineraryName": "Itinerary 03",
+          "stopIndex": 22,
+          "stop": "Paradero 03",
+          "minTimeSpan": 11,
+          "avgTimeSpan": 22,
+          "maxTimeSpan": 33,
+          "minSpeed": 55,
+          "avgSpeed": 77,
+          "maxSpeed": 132
+        },
+        {
+          "itineraryId": "it03",
+          "itineraryName": "Itinerary 03",
+          "stopIndex": 23,
+          "stop": "Paradero 04",
+          "minTimeSpan": 5,
+          "avgTimeSpan": 11,
+          "maxTimeSpan": 16,
+          "minSpeed": 27,
+          "avgSpeed": 38,
+          "maxSpeed": 66
+        },
+        {
+          "itineraryId": "it03",
+          "itineraryName": "Itinerary 03",
+          "stopIndex": 24,
+          "stop": "Paradero 05",
+          "minTimeSpan": 9,
+          "avgTimeSpan": 19,
+          "maxTimeSpan": 28,
+          "minSpeed": 47,
+          "avgSpeed": 66,
+          "maxSpeed": 114
+        },
+        {
+          "itineraryId": "it03",
+          "itineraryName": "Itinerary 03",
+          "stopIndex": 25,
+          "stop": "Paradero 06",
+          "minTimeSpan": 8,
+          "avgTimeSpan": 17,
+          "maxTimeSpan": 25,
+          "minSpeed": 42,
+          "avgSpeed": 59,
+          "maxSpeed": 102
+        },
+        {
+          "itineraryId": "it03",
+          "itineraryName": "Itinerary 03",
+          "stopIndex": 26,
+          "stop": "Paradero 07",
+          "minTimeSpan": 2,
+          "avgTimeSpan": 5,
+          "maxTimeSpan": 7,
+          "minSpeed": 12,
+          "avgSpeed": 17,
+          "maxSpeed": 30
+        },
+        {
+          "itineraryId": "it03",
+          "itineraryName": "Itinerary 03",
+          "stopIndex": 27,
+          "stop": "Paradero 08",
+          "minTimeSpan": 3,
+          "avgTimeSpan": 7,
+          "maxTimeSpan": 10,
+          "minSpeed": 17,
+          "avgSpeed": 24,
+          "maxSpeed": 42
+        },
+        {
+          "itineraryId": "it03",
+          "itineraryName": "Itinerary 03",
+          "stopIndex": 28,
+          "stop": "Paradero 09",
+          "minTimeSpan": 5,
+          "avgTimeSpan": 11,
+          "maxTimeSpan": 16,
+          "minSpeed": 27,
+          "avgSpeed": 38,
+          "maxSpeed": 66
+        },
+        {
+          "itineraryId": "it03",
+          "itineraryName": "Itinerary 03",
+          "stopIndex": 29,
+          "stop": "Paradero 10",
+          "minTimeSpan": 9,
+          "avgTimeSpan": 18,
+          "maxTimeSpan": 28,
+          "minSpeed": 47,
+          "avgSpeed": 66,
+          "maxSpeed": 113
+        }
+      ]
+    }
   }
 }
