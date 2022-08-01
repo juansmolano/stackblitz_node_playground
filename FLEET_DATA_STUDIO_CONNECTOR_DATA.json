@@ -3019,5 +3019,411 @@
         }
       ]
     }
+  },
+  "RouteStopsReport":{
+    "SERVICE_TABLE": {
+      "SCHEMA": [
+        {
+          "semantics": {
+            "conceptType": "DIMENSION",
+            "semanticType": "TEXT"
+          },
+          "dataType": "STRING",
+          "name": "stopId"
+        },
+        {
+          "semantics": {
+            "semanticType": "TEXT",
+            "conceptType": "DIMENSION"
+          },
+          "name": "stopName",
+          "dataType": "STRING"
+        },
+        {
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "name": "stopTimeTotalSeconds"
+        },
+        {
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "name": "stopTimeAvgSeconds"
+        },
+        {
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "name": "stopCounts"
+        },
+        {
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "name": "executedElapsedTimeBetweenStopsAvgSeconds"
+        },
+        {
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "name": "executedAvgSpeedBetweenStopsKmh"
+        },
+        {
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "name": "scheduledElapsedTimeBetweenStopsAvgSeconds"
+        },
+        {
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "name": "scheduledAvgSpeedBetweenStopsKmh"
+        }
+      ],
+      "DATA": [
+        {
+         "stopId": "0",
+         "stopName": "Parada CR 00 #0-0",
+         "stopTimeTotalSeconds": 5403,
+         "stopTimeAvgSeconds": 223,
+         "stopCounts": 99,
+         "executedElapsedTimeBetweenStopsAvgSeconds": 45,
+         "executedAvgSpeedBetweenStopsKmh": 96,
+         "scheduledElapsedTimeBetweenStopsAvgSeconds": 84,
+         "scheduledAvgSpeedBetweenStopsKmh": 88
+        },
+        {
+         "stopId": "1",
+         "stopName": "Parada CR 13 #7-1",
+         "stopTimeTotalSeconds": 1742,
+         "stopTimeAvgSeconds": 125,
+         "stopCounts": 113,
+         "executedElapsedTimeBetweenStopsAvgSeconds": 79,
+         "executedAvgSpeedBetweenStopsKmh": 3,
+         "scheduledElapsedTimeBetweenStopsAvgSeconds": 10,
+         "scheduledAvgSpeedBetweenStopsKmh": 9
+        },
+        {
+         "stopId": "2",
+         "stopName": "Parada CR 26 #14-4",
+         "stopTimeTotalSeconds": 3680,
+         "stopTimeAvgSeconds": 270,
+         "stopCounts": 84,
+         "executedElapsedTimeBetweenStopsAvgSeconds": 67,
+         "executedAvgSpeedBetweenStopsKmh": 27,
+         "scheduledElapsedTimeBetweenStopsAvgSeconds": 50,
+         "scheduledAvgSpeedBetweenStopsKmh": 33
+        },
+        {
+         "stopId": "3",
+         "stopName": "Parada CR 39 #21-9",
+         "stopTimeTotalSeconds": 9117,
+         "stopTimeAvgSeconds": 413,
+         "stopCounts": 51,
+         "executedElapsedTimeBetweenStopsAvgSeconds": 106,
+         "executedAvgSpeedBetweenStopsKmh": 12,
+         "scheduledElapsedTimeBetweenStopsAvgSeconds": 93,
+         "scheduledAvgSpeedBetweenStopsKmh": 16
+        },
+        {
+         "stopId": "4",
+         "stopName": "Parada CR 412 #28-16",
+         "stopTimeTotalSeconds": 7948,
+         "stopTimeAvgSeconds": 197,
+         "stopCounts": 74,
+         "executedElapsedTimeBetweenStopsAvgSeconds": 16,
+         "executedAvgSpeedBetweenStopsKmh": 50,
+         "scheduledElapsedTimeBetweenStopsAvgSeconds": 14,
+         "scheduledAvgSpeedBetweenStopsKmh": 71
+        },
+        {
+         "stopId": "5",
+         "stopName": "Parada CR 515 #35-25",
+         "stopTimeTotalSeconds": 5497,
+         "stopTimeAvgSeconds": 548,
+         "stopCounts": 58,
+         "executedElapsedTimeBetweenStopsAvgSeconds": 92,
+         "executedAvgSpeedBetweenStopsKmh": 87,
+         "scheduledElapsedTimeBetweenStopsAvgSeconds": 92,
+         "scheduledAvgSpeedBetweenStopsKmh": 16
+        },
+        {
+         "stopId": "6",
+         "stopName": "Parada CR 618 #42-36",
+         "stopTimeTotalSeconds": 4483,
+         "stopTimeAvgSeconds": 105,
+         "stopCounts": 104,
+         "executedElapsedTimeBetweenStopsAvgSeconds": 77,
+         "executedAvgSpeedBetweenStopsKmh": 71,
+         "scheduledElapsedTimeBetweenStopsAvgSeconds": 67,
+         "scheduledAvgSpeedBetweenStopsKmh": 21
+        },
+        {
+         "stopId": "7",
+         "stopName": "Parada CR 721 #49-49",
+         "stopTimeTotalSeconds": 6313,
+         "stopTimeAvgSeconds": 204,
+         "stopCounts": 42,
+         "executedElapsedTimeBetweenStopsAvgSeconds": 101,
+         "executedAvgSpeedBetweenStopsKmh": 39,
+         "scheduledElapsedTimeBetweenStopsAvgSeconds": 74,
+         "scheduledAvgSpeedBetweenStopsKmh": 3
+        },
+        {
+         "stopId": "8",
+         "stopName": "Parada CR 824 #56-64",
+         "stopTimeTotalSeconds": 2520,
+         "stopTimeAvgSeconds": 194,
+         "stopCounts": 96,
+         "executedElapsedTimeBetweenStopsAvgSeconds": 24,
+         "executedAvgSpeedBetweenStopsKmh": 62,
+         "scheduledElapsedTimeBetweenStopsAvgSeconds": 105,
+         "scheduledAvgSpeedBetweenStopsKmh": 44
+        },
+        {
+         "stopId": "9",
+         "stopName": "Parada CR 927 #63-81",
+         "stopTimeTotalSeconds": 3285,
+         "stopTimeAvgSeconds": 300,
+         "stopCounts": 15,
+         "executedElapsedTimeBetweenStopsAvgSeconds": 86,
+         "executedAvgSpeedBetweenStopsKmh": 24,
+         "scheduledElapsedTimeBetweenStopsAvgSeconds": 26,
+         "scheduledAvgSpeedBetweenStopsKmh": 86
+        }
+       ]
+    },
+    "SUMMARY": {
+      "SCHEMA": [
+        {
+          "name": "routeName",
+          "semantics": {
+            "conceptType": "DIMENSION",
+            "semanticType": "TEXT"
+          },
+          "dataType": "STRING"
+        },
+        {
+          "dataType": "STRING",
+          "semantics": {
+            "isReaggregatable": true,
+            "conceptType": "METRIC",
+            "semanticType": "YEAR_MONTH_DAY"
+          },
+          "name": "fromDate"
+        },
+        {
+          "dataType": "STRING",
+          "semantics": {
+            "conceptType": "METRIC",
+            "semanticType": "YEAR_MONTH_DAY",
+            "isReaggregatable": true
+          },
+          "name": "toDate"
+        },
+        {
+          "semantics": {
+            "conceptType": "DIMENSION",
+            "semanticType": "TEXT"
+          },
+          "name": "userFullName",
+          "dataType": "STRING"
+        },
+        {
+          "name": "reportDateTime",
+          "dataType": "STRING",
+          "semantics": {
+            "conceptType": "METRIC",
+            "semanticType": "YEAR_MONTH_DAY_MINUTE",
+            "isReaggregatable": true
+          }
+        },
+        {
+          "semantics": {
+            "isReaggregatable": true,
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC"
+          },
+          "name": "totalScheduledServicesCount",
+          "dataType": "NUMBER"
+        },
+
+
+        {
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "dataType": "NUMBER",
+          "name": "totalExecutedServicesCount"
+        },
+        {
+          "semantics": {
+            "isReaggregatable": true,
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC"
+          },
+          "dataType": "NUMBER",
+          "name": "totalManualExecutedServicesCount"
+        },
+        {
+          "name": "totalScheduledServicesKilometers",
+          "dataType": "NUMBER",
+          "semantics": {
+            "isReaggregatable": true,
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC"
+          }
+        },
+        {
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "dataType": "NUMBER",
+          "name": "totalExecutedServicesKilometers"
+        },
+        {
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "name": "totalScheduledServicesHours"
+        },
+        {
+          "name": "totalExecutedServicesHours",
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          }
+        },
+        {
+          "name": "serviceSchedulingAssertivenessPercentage",
+          "semantics": {
+            "semanticType": "PERCENT",
+            "isReaggregatable": true,
+            "conceptType": "METRIC"
+          },
+          "dataType": "NUMBER"
+        },
+        {
+          "name": "serviceSchedulingSubstitutionsCount",
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "isReaggregatable": true,
+            "conceptType": "METRIC"
+          }
+        },
+        {
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "dataType": "NUMBER",
+          "name": "serviceSchedulingNonExecutedCount"
+        },
+        {
+          "name": "serviceSchedulingCompletedCount",
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          }
+        },
+        {
+          "semantics": {
+            "conceptType": "METRIC",
+            "semanticType": "PERCENT",
+            "isReaggregatable": true
+          },
+          "name": "serviceAccomplishmentPercentage",
+          "dataType": "NUMBER"
+        },
+        {
+          "semantics": {
+            "isReaggregatable": true,
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC"
+          },
+          "dataType": "NUMBER",
+          "name": "serviceForcedStartCount"
+        },
+        {
+          "semantics": {
+            "isReaggregatable": true,
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC"
+          },
+          "name": "serviceAbortedCount",
+          "dataType": "NUMBER"
+        },
+        {
+          "name": "serviceCancelledCount",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "isReaggregatable": true,
+            "conceptType": "METRIC"
+          },
+          "dataType": "NUMBER"
+        }
+      ],
+      "DATA": [
+        {
+          "routeName": "A7-41112 - MIRAMAR",
+          "itineraryName": "MIRAMAR",
+          "fromDate": "20220718",
+          "toDate": "20220718",
+          "userFullName": "Jhon Doe",
+          "reportDateTime": "202207181430",          
+          "totalScheduledServicesCount": 1200,
+          "totalExecutedServicesCount": 1000,
+          "totalManualExecutedServicesCount": 50,
+          "totalScheduledServicesKilometers": 1255,
+          "totalExecutedServicesKilometers": 1100,
+          "totalScheduledServicesHours": 2500,
+          "totalExecutedServicesHours": 2400,
+          "serviceSchedulingAssertivenessPercentage": 0.854,
+          "serviceSchedulingSubstitutionsCount": 210,
+          "serviceSchedulingNonExecutedCount": 87,
+          "serviceSchedulingCompletedCount": 1098,
+          "serviceAccomplishmentPercentage": 0.9045,
+          "serviceForcedStartCount": 58,
+          "serviceAbortedCount": 70,
+          "serviceCancelledCount": 88
+        }
+      ]
+    }
   }
 }
