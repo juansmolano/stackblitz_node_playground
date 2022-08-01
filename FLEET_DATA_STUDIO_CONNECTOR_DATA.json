@@ -3020,9 +3020,33 @@
       ]
     }
   },
-  "RouteStopsReport":{
+  "RouteStopsReport": {
     "STOPS_TABLE": {
       "SCHEMA": [
+        {
+          "semantics": {
+            "conceptType": "DIMENSION",
+            "semanticType": "TEXT"
+          },
+          "dataType": "STRING",
+          "name": "itineraryId"
+        },
+        {
+          "semantics": {
+            "semanticType": "TEXT",
+            "conceptType": "DIMENSION"
+          },
+          "name": "itineraryName",
+          "dataType": "STRING"
+        },
+        {
+          "name": "stopIndex",
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "DIMENSION"
+          }
+        },
         {
           "semantics": {
             "conceptType": "DIMENSION",
@@ -3103,118 +3127,7 @@
           "name": "scheduledAvgSpeedBetweenStopsKmh"
         }
       ],
-      "DATA": [
-        {
-         "stopId": "0",
-         "stopName": "Parada CR 00 #0-0",
-         "stopTimeTotalSeconds": 5403,
-         "stopTimeAvgSeconds": 223,
-         "stopCounts": 99,
-         "executedElapsedTimeBetweenStopsAvgSeconds": 45,
-         "executedAvgSpeedBetweenStopsKmh": 96,
-         "scheduledElapsedTimeBetweenStopsAvgSeconds": 84,
-         "scheduledAvgSpeedBetweenStopsKmh": 88
-        },
-        {
-         "stopId": "1",
-         "stopName": "Parada CR 13 #7-1",
-         "stopTimeTotalSeconds": 1742,
-         "stopTimeAvgSeconds": 125,
-         "stopCounts": 113,
-         "executedElapsedTimeBetweenStopsAvgSeconds": 79,
-         "executedAvgSpeedBetweenStopsKmh": 3,
-         "scheduledElapsedTimeBetweenStopsAvgSeconds": 10,
-         "scheduledAvgSpeedBetweenStopsKmh": 9
-        },
-        {
-         "stopId": "2",
-         "stopName": "Parada CR 26 #14-4",
-         "stopTimeTotalSeconds": 3680,
-         "stopTimeAvgSeconds": 270,
-         "stopCounts": 84,
-         "executedElapsedTimeBetweenStopsAvgSeconds": 67,
-         "executedAvgSpeedBetweenStopsKmh": 27,
-         "scheduledElapsedTimeBetweenStopsAvgSeconds": 50,
-         "scheduledAvgSpeedBetweenStopsKmh": 33
-        },
-        {
-         "stopId": "3",
-         "stopName": "Parada CR 39 #21-9",
-         "stopTimeTotalSeconds": 9117,
-         "stopTimeAvgSeconds": 413,
-         "stopCounts": 51,
-         "executedElapsedTimeBetweenStopsAvgSeconds": 106,
-         "executedAvgSpeedBetweenStopsKmh": 12,
-         "scheduledElapsedTimeBetweenStopsAvgSeconds": 93,
-         "scheduledAvgSpeedBetweenStopsKmh": 16
-        },
-        {
-         "stopId": "4",
-         "stopName": "Parada CR 412 #28-16",
-         "stopTimeTotalSeconds": 7948,
-         "stopTimeAvgSeconds": 197,
-         "stopCounts": 74,
-         "executedElapsedTimeBetweenStopsAvgSeconds": 16,
-         "executedAvgSpeedBetweenStopsKmh": 50,
-         "scheduledElapsedTimeBetweenStopsAvgSeconds": 14,
-         "scheduledAvgSpeedBetweenStopsKmh": 71
-        },
-        {
-         "stopId": "5",
-         "stopName": "Parada CR 515 #35-25",
-         "stopTimeTotalSeconds": 5497,
-         "stopTimeAvgSeconds": 548,
-         "stopCounts": 58,
-         "executedElapsedTimeBetweenStopsAvgSeconds": 92,
-         "executedAvgSpeedBetweenStopsKmh": 87,
-         "scheduledElapsedTimeBetweenStopsAvgSeconds": 92,
-         "scheduledAvgSpeedBetweenStopsKmh": 16
-        },
-        {
-         "stopId": "6",
-         "stopName": "Parada CR 618 #42-36",
-         "stopTimeTotalSeconds": 4483,
-         "stopTimeAvgSeconds": 105,
-         "stopCounts": 104,
-         "executedElapsedTimeBetweenStopsAvgSeconds": 77,
-         "executedAvgSpeedBetweenStopsKmh": 71,
-         "scheduledElapsedTimeBetweenStopsAvgSeconds": 67,
-         "scheduledAvgSpeedBetweenStopsKmh": 21
-        },
-        {
-         "stopId": "7",
-         "stopName": "Parada CR 721 #49-49",
-         "stopTimeTotalSeconds": 6313,
-         "stopTimeAvgSeconds": 204,
-         "stopCounts": 42,
-         "executedElapsedTimeBetweenStopsAvgSeconds": 101,
-         "executedAvgSpeedBetweenStopsKmh": 39,
-         "scheduledElapsedTimeBetweenStopsAvgSeconds": 74,
-         "scheduledAvgSpeedBetweenStopsKmh": 3
-        },
-        {
-         "stopId": "8",
-         "stopName": "Parada CR 824 #56-64",
-         "stopTimeTotalSeconds": 2520,
-         "stopTimeAvgSeconds": 194,
-         "stopCounts": 96,
-         "executedElapsedTimeBetweenStopsAvgSeconds": 24,
-         "executedAvgSpeedBetweenStopsKmh": 62,
-         "scheduledElapsedTimeBetweenStopsAvgSeconds": 105,
-         "scheduledAvgSpeedBetweenStopsKmh": 44
-        },
-        {
-         "stopId": "9",
-         "stopName": "Parada CR 927 #63-81",
-         "stopTimeTotalSeconds": 3285,
-         "stopTimeAvgSeconds": 300,
-         "stopCounts": 15,
-         "executedElapsedTimeBetweenStopsAvgSeconds": 86,
-         "executedAvgSpeedBetweenStopsKmh": 24,
-         "scheduledElapsedTimeBetweenStopsAvgSeconds": 26,
-         "scheduledAvgSpeedBetweenStopsKmh": 86
-        }
-       ]
+      "DATA":[{"itineraryId":"0","itineraryName":"Itinerary 0","stopIndex":0,"stopId":"0","stopName":"Parada CR 00 #0-0","stopTimeTotalSeconds":5403,"stopTimeAvgSeconds":501,"stopCounts":45,"executedElapsedTimeBetweenStopsAvgSeconds":97,"executedAvgSpeedBetweenStopsKmh":76,"scheduledElapsedTimeBetweenStopsAvgSeconds":23,"scheduledAvgSpeedBetweenStopsKmh":19},{"itineraryId":"0","itineraryName":"Itinerary 0","stopIndex":1,"stopId":"1","stopName":"Parada CR 13 #7-1","stopTimeTotalSeconds":1742,"stopTimeAvgSeconds":48,"stopCounts":39,"executedElapsedTimeBetweenStopsAvgSeconds":47,"executedAvgSpeedBetweenStopsKmh":69,"scheduledElapsedTimeBetweenStopsAvgSeconds":86,"scheduledAvgSpeedBetweenStopsKmh":12},{"itineraryId":"0","itineraryName":"Itinerary 0","stopIndex":2,"stopId":"2","stopName":"Parada CR 26 #14-4","stopTimeTotalSeconds":3680,"stopTimeAvgSeconds":185,"stopCounts":71,"executedElapsedTimeBetweenStopsAvgSeconds":50,"executedAvgSpeedBetweenStopsKmh":30,"scheduledElapsedTimeBetweenStopsAvgSeconds":13,"scheduledAvgSpeedBetweenStopsKmh":13},{"itineraryId":"0","itineraryName":"Itinerary 0","stopIndex":3,"stopId":"3","stopName":"Parada CR 39 #21-9","stopTimeTotalSeconds":9117,"stopTimeAvgSeconds":642,"stopCounts":31,"executedElapsedTimeBetweenStopsAvgSeconds":91,"executedAvgSpeedBetweenStopsKmh":4,"scheduledElapsedTimeBetweenStopsAvgSeconds":68,"scheduledAvgSpeedBetweenStopsKmh":97},{"itineraryId":"0","itineraryName":"Itinerary 0","stopIndex":4,"stopId":"4","stopName":"Parada CR 412 #28-16","stopTimeTotalSeconds":7948,"stopTimeAvgSeconds":482,"stopCounts":48,"executedElapsedTimeBetweenStopsAvgSeconds":54,"executedAvgSpeedBetweenStopsKmh":51,"scheduledElapsedTimeBetweenStopsAvgSeconds":92,"scheduledAvgSpeedBetweenStopsKmh":81},{"itineraryId":"0","itineraryName":"Itinerary 0","stopIndex":5,"stopId":"5","stopName":"Parada CR 515 #35-25","stopTimeTotalSeconds":5497,"stopTimeAvgSeconds":100,"stopCounts":112,"executedElapsedTimeBetweenStopsAvgSeconds":79,"executedAvgSpeedBetweenStopsKmh":96,"scheduledElapsedTimeBetweenStopsAvgSeconds":28,"scheduledAvgSpeedBetweenStopsKmh":97},{"itineraryId":"0","itineraryName":"Itinerary 0","stopIndex":6,"stopId":"6","stopName":"Parada CR 618 #42-36","stopTimeTotalSeconds":4483,"stopTimeAvgSeconds":210,"stopCounts":18,"executedElapsedTimeBetweenStopsAvgSeconds":47,"executedAvgSpeedBetweenStopsKmh":20,"scheduledElapsedTimeBetweenStopsAvgSeconds":12,"scheduledAvgSpeedBetweenStopsKmh":55},{"itineraryId":"0","itineraryName":"Itinerary 0","stopIndex":7,"stopId":"7","stopName":"Parada CR 721 #49-49","stopTimeTotalSeconds":6313,"stopTimeAvgSeconds":116,"stopCounts":87,"executedElapsedTimeBetweenStopsAvgSeconds":77,"executedAvgSpeedBetweenStopsKmh":96,"scheduledElapsedTimeBetweenStopsAvgSeconds":62,"scheduledAvgSpeedBetweenStopsKmh":55},{"itineraryId":"0","itineraryName":"Itinerary 0","stopIndex":8,"stopId":"8","stopName":"Parada CR 824 #56-64","stopTimeTotalSeconds":2520,"stopTimeAvgSeconds":145,"stopCounts":29,"executedElapsedTimeBetweenStopsAvgSeconds":95,"executedAvgSpeedBetweenStopsKmh":89,"scheduledElapsedTimeBetweenStopsAvgSeconds":28,"scheduledAvgSpeedBetweenStopsKmh":41},{"itineraryId":"0","itineraryName":"Itinerary 0","stopIndex":9,"stopId":"9","stopName":"Parada CR 927 #63-81","stopTimeTotalSeconds":3285,"stopTimeAvgSeconds":214,"stopCounts":23,"executedElapsedTimeBetweenStopsAvgSeconds":79,"executedAvgSpeedBetweenStopsKmh":93,"scheduledElapsedTimeBetweenStopsAvgSeconds":77,"scheduledAvgSpeedBetweenStopsKmh":3},{"itineraryId":"1","itineraryName":"Itinerary 1","stopIndex":0,"stopId":"0","stopName":"Parada CR 00 #0-0","stopTimeTotalSeconds":5403,"stopTimeAvgSeconds":501,"stopCounts":45,"executedElapsedTimeBetweenStopsAvgSeconds":97,"executedAvgSpeedBetweenStopsKmh":76,"scheduledElapsedTimeBetweenStopsAvgSeconds":23,"scheduledAvgSpeedBetweenStopsKmh":19},{"itineraryId":"1","itineraryName":"Itinerary 1","stopIndex":1,"stopId":"1","stopName":"Parada CR 13 #7-1","stopTimeTotalSeconds":1742,"stopTimeAvgSeconds":48,"stopCounts":39,"executedElapsedTimeBetweenStopsAvgSeconds":47,"executedAvgSpeedBetweenStopsKmh":69,"scheduledElapsedTimeBetweenStopsAvgSeconds":86,"scheduledAvgSpeedBetweenStopsKmh":12},{"itineraryId":"1","itineraryName":"Itinerary 1","stopIndex":2,"stopId":"2","stopName":"Parada CR 26 #14-4","stopTimeTotalSeconds":3680,"stopTimeAvgSeconds":185,"stopCounts":71,"executedElapsedTimeBetweenStopsAvgSeconds":50,"executedAvgSpeedBetweenStopsKmh":30,"scheduledElapsedTimeBetweenStopsAvgSeconds":13,"scheduledAvgSpeedBetweenStopsKmh":13},{"itineraryId":"1","itineraryName":"Itinerary 1","stopIndex":3,"stopId":"3","stopName":"Parada CR 39 #21-9","stopTimeTotalSeconds":9117,"stopTimeAvgSeconds":642,"stopCounts":31,"executedElapsedTimeBetweenStopsAvgSeconds":91,"executedAvgSpeedBetweenStopsKmh":4,"scheduledElapsedTimeBetweenStopsAvgSeconds":68,"scheduledAvgSpeedBetweenStopsKmh":97},{"itineraryId":"1","itineraryName":"Itinerary 1","stopIndex":4,"stopId":"4","stopName":"Parada CR 412 #28-16","stopTimeTotalSeconds":7948,"stopTimeAvgSeconds":482,"stopCounts":48,"executedElapsedTimeBetweenStopsAvgSeconds":54,"executedAvgSpeedBetweenStopsKmh":51,"scheduledElapsedTimeBetweenStopsAvgSeconds":92,"scheduledAvgSpeedBetweenStopsKmh":81},{"itineraryId":"1","itineraryName":"Itinerary 1","stopIndex":5,"stopId":"5","stopName":"Parada CR 515 #35-25","stopTimeTotalSeconds":5497,"stopTimeAvgSeconds":100,"stopCounts":112,"executedElapsedTimeBetweenStopsAvgSeconds":79,"executedAvgSpeedBetweenStopsKmh":96,"scheduledElapsedTimeBetweenStopsAvgSeconds":28,"scheduledAvgSpeedBetweenStopsKmh":97},{"itineraryId":"1","itineraryName":"Itinerary 1","stopIndex":6,"stopId":"6","stopName":"Parada CR 618 #42-36","stopTimeTotalSeconds":4483,"stopTimeAvgSeconds":210,"stopCounts":18,"executedElapsedTimeBetweenStopsAvgSeconds":47,"executedAvgSpeedBetweenStopsKmh":20,"scheduledElapsedTimeBetweenStopsAvgSeconds":12,"scheduledAvgSpeedBetweenStopsKmh":55},{"itineraryId":"1","itineraryName":"Itinerary 1","stopIndex":7,"stopId":"7","stopName":"Parada CR 721 #49-49","stopTimeTotalSeconds":6313,"stopTimeAvgSeconds":116,"stopCounts":87,"executedElapsedTimeBetweenStopsAvgSeconds":77,"executedAvgSpeedBetweenStopsKmh":96,"scheduledElapsedTimeBetweenStopsAvgSeconds":62,"scheduledAvgSpeedBetweenStopsKmh":55},{"itineraryId":"1","itineraryName":"Itinerary 1","stopIndex":8,"stopId":"8","stopName":"Parada CR 824 #56-64","stopTimeTotalSeconds":2520,"stopTimeAvgSeconds":145,"stopCounts":29,"executedElapsedTimeBetweenStopsAvgSeconds":95,"executedAvgSpeedBetweenStopsKmh":89,"scheduledElapsedTimeBetweenStopsAvgSeconds":28,"scheduledAvgSpeedBetweenStopsKmh":41},{"itineraryId":"1","itineraryName":"Itinerary 1","stopIndex":9,"stopId":"9","stopName":"Parada CR 927 #63-81","stopTimeTotalSeconds":3285,"stopTimeAvgSeconds":214,"stopCounts":23,"executedElapsedTimeBetweenStopsAvgSeconds":79,"executedAvgSpeedBetweenStopsKmh":93,"scheduledElapsedTimeBetweenStopsAvgSeconds":77,"scheduledAvgSpeedBetweenStopsKmh":3},{"itineraryId":"2","itineraryName":"Itinerary 2","stopIndex":0,"stopId":"0","stopName":"Parada CR 00 #0-0","stopTimeTotalSeconds":5403,"stopTimeAvgSeconds":501,"stopCounts":45,"executedElapsedTimeBetweenStopsAvgSeconds":97,"executedAvgSpeedBetweenStopsKmh":76,"scheduledElapsedTimeBetweenStopsAvgSeconds":23,"scheduledAvgSpeedBetweenStopsKmh":19},{"itineraryId":"2","itineraryName":"Itinerary 2","stopIndex":1,"stopId":"1","stopName":"Parada CR 13 #7-1","stopTimeTotalSeconds":1742,"stopTimeAvgSeconds":48,"stopCounts":39,"executedElapsedTimeBetweenStopsAvgSeconds":47,"executedAvgSpeedBetweenStopsKmh":69,"scheduledElapsedTimeBetweenStopsAvgSeconds":86,"scheduledAvgSpeedBetweenStopsKmh":12},{"itineraryId":"2","itineraryName":"Itinerary 2","stopIndex":2,"stopId":"2","stopName":"Parada CR 26 #14-4","stopTimeTotalSeconds":3680,"stopTimeAvgSeconds":185,"stopCounts":71,"executedElapsedTimeBetweenStopsAvgSeconds":50,"executedAvgSpeedBetweenStopsKmh":30,"scheduledElapsedTimeBetweenStopsAvgSeconds":13,"scheduledAvgSpeedBetweenStopsKmh":13},{"itineraryId":"2","itineraryName":"Itinerary 2","stopIndex":3,"stopId":"3","stopName":"Parada CR 39 #21-9","stopTimeTotalSeconds":9117,"stopTimeAvgSeconds":642,"stopCounts":31,"executedElapsedTimeBetweenStopsAvgSeconds":91,"executedAvgSpeedBetweenStopsKmh":4,"scheduledElapsedTimeBetweenStopsAvgSeconds":68,"scheduledAvgSpeedBetweenStopsKmh":97},{"itineraryId":"2","itineraryName":"Itinerary 2","stopIndex":4,"stopId":"4","stopName":"Parada CR 412 #28-16","stopTimeTotalSeconds":7948,"stopTimeAvgSeconds":482,"stopCounts":48,"executedElapsedTimeBetweenStopsAvgSeconds":54,"executedAvgSpeedBetweenStopsKmh":51,"scheduledElapsedTimeBetweenStopsAvgSeconds":92,"scheduledAvgSpeedBetweenStopsKmh":81},{"itineraryId":"2","itineraryName":"Itinerary 2","stopIndex":5,"stopId":"5","stopName":"Parada CR 515 #35-25","stopTimeTotalSeconds":5497,"stopTimeAvgSeconds":100,"stopCounts":112,"executedElapsedTimeBetweenStopsAvgSeconds":79,"executedAvgSpeedBetweenStopsKmh":96,"scheduledElapsedTimeBetweenStopsAvgSeconds":28,"scheduledAvgSpeedBetweenStopsKmh":97},{"itineraryId":"2","itineraryName":"Itinerary 2","stopIndex":6,"stopId":"6","stopName":"Parada CR 618 #42-36","stopTimeTotalSeconds":4483,"stopTimeAvgSeconds":210,"stopCounts":18,"executedElapsedTimeBetweenStopsAvgSeconds":47,"executedAvgSpeedBetweenStopsKmh":20,"scheduledElapsedTimeBetweenStopsAvgSeconds":12,"scheduledAvgSpeedBetweenStopsKmh":55},{"itineraryId":"2","itineraryName":"Itinerary 2","stopIndex":7,"stopId":"7","stopName":"Parada CR 721 #49-49","stopTimeTotalSeconds":6313,"stopTimeAvgSeconds":116,"stopCounts":87,"executedElapsedTimeBetweenStopsAvgSeconds":77,"executedAvgSpeedBetweenStopsKmh":96,"scheduledElapsedTimeBetweenStopsAvgSeconds":62,"scheduledAvgSpeedBetweenStopsKmh":55},{"itineraryId":"2","itineraryName":"Itinerary 2","stopIndex":8,"stopId":"8","stopName":"Parada CR 824 #56-64","stopTimeTotalSeconds":2520,"stopTimeAvgSeconds":145,"stopCounts":29,"executedElapsedTimeBetweenStopsAvgSeconds":95,"executedAvgSpeedBetweenStopsKmh":89,"scheduledElapsedTimeBetweenStopsAvgSeconds":28,"scheduledAvgSpeedBetweenStopsKmh":41},{"itineraryId":"2","itineraryName":"Itinerary 2","stopIndex":9,"stopId":"9","stopName":"Parada CR 927 #63-81","stopTimeTotalSeconds":3285,"stopTimeAvgSeconds":214,"stopCounts":23,"executedElapsedTimeBetweenStopsAvgSeconds":79,"executedAvgSpeedBetweenStopsKmh":93,"scheduledElapsedTimeBetweenStopsAvgSeconds":77,"scheduledAvgSpeedBetweenStopsKmh":3}]
     },
     "SUMMARY": {
       "SCHEMA": [
@@ -3270,8 +3183,6 @@
           "name": "totalScheduledServicesCount",
           "dataType": "NUMBER"
         },
-
-
         {
           "semantics": {
             "semanticType": "NUMBER",
@@ -3405,7 +3316,7 @@
           "fromDate": "20220718",
           "toDate": "20220718",
           "userFullName": "Jhon Doe",
-          "reportDateTime": "202207181430",          
+          "reportDateTime": "202207181430",
           "totalScheduledServicesCount": 1200,
           "totalExecutedServicesCount": 1000,
           "totalManualExecutedServicesCount": 50,
