@@ -4361,5 +4361,2707 @@
         }
       ]
     }
+  },
+  "VehicleStopsReport": {
+    "STOPS_TABLE": {
+      "SCHEMA": [
+        {
+          "semantics": {
+            "conceptType": "DIMENSION",
+            "semanticType": "TEXT"
+          },
+          "dataType": "STRING",
+          "name": "itineraryId"
+        },
+        {
+          "semantics": {
+            "semanticType": "TEXT",
+            "conceptType": "DIMENSION"
+          },
+          "name": "itineraryName",
+          "dataType": "STRING"
+        },
+        {
+          "name": "stopIndex",
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "DIMENSION"
+          }
+        },
+        {
+          "semantics": {
+            "conceptType": "DIMENSION",
+            "semanticType": "TEXT"
+          },
+          "dataType": "STRING",
+          "name": "stopId"
+        },
+        {
+          "semantics": {
+            "semanticType": "TEXT",
+            "conceptType": "DIMENSION"
+          },
+          "name": "stopName",
+          "dataType": "STRING"
+        },
+        {
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "name": "stopTimeTotalMinutes"
+        },
+        {
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "name": "stopTimeAvgMinutes"
+        },
+        {
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "name": "stopCounts"
+        },
+        {
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "name": "executedElapsedTimeBetweenStopsAvgMinutes"
+        },
+        {
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "name": "executedAvgSpeedBetweenStopsKmh"
+        },
+        {
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "name": "scheduledElapsedTimeBetweenStopsAvgMinutes"
+        },
+        {
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "name": "scheduledAvgSpeedBetweenStopsKmh"
+        }
+      ],
+      "DATA": [
+        {
+          "itineraryId": "0",
+          "itineraryName": "Itinerary 0",
+          "stopIndex": 0,
+          "stopId": "0",
+          "stopName": "Parada CR 00 #0-0",
+          "stopTimeTotalMinutes": 90.05,
+          "stopTimeAvgMinutes": 5.42,
+          "stopCounts": 87,
+          "executedElapsedTimeBetweenStopsAvgMinutes": 1.1,
+          "executedAvgSpeedBetweenStopsKmh": 18,
+          "scheduledElapsedTimeBetweenStopsAvgMinutes": 1.2,
+          "scheduledAvgSpeedBetweenStopsKmh": 67
+        },
+        {
+          "itineraryId": "0",
+          "itineraryName": "Itinerary 0",
+          "stopIndex": 1,
+          "stopId": "1",
+          "stopName": "Parada CR 13 #7-1",
+          "stopTimeTotalMinutes": 29.03,
+          "stopTimeAvgMinutes": 0.67,
+          "stopCounts": 29,
+          "executedElapsedTimeBetweenStopsAvgMinutes": 1.63,
+          "executedAvgSpeedBetweenStopsKmh": 12,
+          "scheduledElapsedTimeBetweenStopsAvgMinutes": 0.77,
+          "scheduledAvgSpeedBetweenStopsKmh": 94
+        },
+        {
+          "itineraryId": "0",
+          "itineraryName": "Itinerary 0",
+          "stopIndex": 2,
+          "stopId": "2",
+          "stopName": "Parada CR 26 #14-4",
+          "stopTimeTotalMinutes": 61.33,
+          "stopTimeAvgMinutes": 5.86,
+          "stopCounts": 19,
+          "executedElapsedTimeBetweenStopsAvgMinutes": 1.42,
+          "executedAvgSpeedBetweenStopsKmh": 26,
+          "scheduledElapsedTimeBetweenStopsAvgMinutes": 0.88,
+          "scheduledAvgSpeedBetweenStopsKmh": 37
+        },
+        {
+          "itineraryId": "0",
+          "itineraryName": "Itinerary 0",
+          "stopIndex": 3,
+          "stopId": "3",
+          "stopName": "Parada CR 39 #21-9",
+          "stopTimeTotalMinutes": 151.95,
+          "stopTimeAvgMinutes": 9.71,
+          "stopCounts": 53,
+          "executedElapsedTimeBetweenStopsAvgMinutes": 0.97,
+          "executedAvgSpeedBetweenStopsKmh": 72,
+          "scheduledElapsedTimeBetweenStopsAvgMinutes": 1.43,
+          "scheduledAvgSpeedBetweenStopsKmh": 86
+        },
+        {
+          "itineraryId": "0",
+          "itineraryName": "Itinerary 0",
+          "stopIndex": 4,
+          "stopId": "4",
+          "stopName": "Parada CR 412 #28-16",
+          "stopTimeTotalMinutes": 132.47,
+          "stopTimeAvgMinutes": 6.89,
+          "stopCounts": 72,
+          "executedElapsedTimeBetweenStopsAvgMinutes": 0.9,
+          "executedAvgSpeedBetweenStopsKmh": 51,
+          "scheduledElapsedTimeBetweenStopsAvgMinutes": 1,
+          "scheduledAvgSpeedBetweenStopsKmh": 36
+        },
+        {
+          "itineraryId": "0",
+          "itineraryName": "Itinerary 0",
+          "stopIndex": 5,
+          "stopId": "5",
+          "stopName": "Parada CR 515 #35-25",
+          "stopTimeTotalMinutes": 91.62,
+          "stopTimeAvgMinutes": 6.15,
+          "stopCounts": 62,
+          "executedElapsedTimeBetweenStopsAvgMinutes": 0.9,
+          "executedAvgSpeedBetweenStopsKmh": 43,
+          "scheduledElapsedTimeBetweenStopsAvgMinutes": 1.5,
+          "scheduledAvgSpeedBetweenStopsKmh": 47
+        },
+        {
+          "itineraryId": "0",
+          "itineraryName": "Itinerary 0",
+          "stopIndex": 6,
+          "stopId": "6",
+          "stopName": "Parada CR 618 #42-36",
+          "stopTimeTotalMinutes": 74.72,
+          "stopTimeAvgMinutes": 0.78,
+          "stopCounts": 67,
+          "executedElapsedTimeBetweenStopsAvgMinutes": 1.33,
+          "executedAvgSpeedBetweenStopsKmh": 48,
+          "scheduledElapsedTimeBetweenStopsAvgMinutes": 0.5,
+          "scheduledAvgSpeedBetweenStopsKmh": 94
+        },
+        {
+          "itineraryId": "0",
+          "itineraryName": "Itinerary 0",
+          "stopIndex": 7,
+          "stopId": "7",
+          "stopName": "Parada CR 721 #49-49",
+          "stopTimeTotalMinutes": 105.22,
+          "stopTimeAvgMinutes": 8.99,
+          "stopCounts": 112,
+          "executedElapsedTimeBetweenStopsAvgMinutes": 0.55,
+          "executedAvgSpeedBetweenStopsKmh": 82,
+          "scheduledElapsedTimeBetweenStopsAvgMinutes": 1.15,
+          "scheduledAvgSpeedBetweenStopsKmh": 20
+        },
+        {
+          "itineraryId": "0",
+          "itineraryName": "Itinerary 0",
+          "stopIndex": 8,
+          "stopId": "8",
+          "stopName": "Parada CR 824 #56-64",
+          "stopTimeTotalMinutes": 42,
+          "stopTimeAvgMinutes": 3.53,
+          "stopCounts": 74,
+          "executedElapsedTimeBetweenStopsAvgMinutes": 1.28,
+          "executedAvgSpeedBetweenStopsKmh": 48,
+          "scheduledElapsedTimeBetweenStopsAvgMinutes": 0.2,
+          "scheduledAvgSpeedBetweenStopsKmh": 26
+        },
+        {
+          "itineraryId": "0",
+          "itineraryName": "Itinerary 0",
+          "stopIndex": 9,
+          "stopId": "9",
+          "stopName": "Parada CR 927 #63-81",
+          "stopTimeTotalMinutes": 54.75,
+          "stopTimeAvgMinutes": 5.29,
+          "stopCounts": 60,
+          "executedElapsedTimeBetweenStopsAvgMinutes": 0.38,
+          "executedAvgSpeedBetweenStopsKmh": 41,
+          "scheduledElapsedTimeBetweenStopsAvgMinutes": 1.2,
+          "scheduledAvgSpeedBetweenStopsKmh": 1
+        },
+        {
+          "itineraryId": "1",
+          "itineraryName": "Itinerary 1",
+          "stopIndex": 0,
+          "stopId": "0",
+          "stopName": "Parada CR 00 #0-0",
+          "stopTimeTotalMinutes": 90.05,
+          "stopTimeAvgMinutes": 5.42,
+          "stopCounts": 87,
+          "executedElapsedTimeBetweenStopsAvgMinutes": 1.1,
+          "executedAvgSpeedBetweenStopsKmh": 18,
+          "scheduledElapsedTimeBetweenStopsAvgMinutes": 1.2,
+          "scheduledAvgSpeedBetweenStopsKmh": 67
+        },
+        {
+          "itineraryId": "1",
+          "itineraryName": "Itinerary 1",
+          "stopIndex": 1,
+          "stopId": "1",
+          "stopName": "Parada CR 13 #7-1",
+          "stopTimeTotalMinutes": 29.03,
+          "stopTimeAvgMinutes": 0.67,
+          "stopCounts": 29,
+          "executedElapsedTimeBetweenStopsAvgMinutes": 1.63,
+          "executedAvgSpeedBetweenStopsKmh": 12,
+          "scheduledElapsedTimeBetweenStopsAvgMinutes": 0.77,
+          "scheduledAvgSpeedBetweenStopsKmh": 94
+        },
+        {
+          "itineraryId": "1",
+          "itineraryName": "Itinerary 1",
+          "stopIndex": 2,
+          "stopId": "2",
+          "stopName": "Parada CR 26 #14-4",
+          "stopTimeTotalMinutes": 61.33,
+          "stopTimeAvgMinutes": 5.86,
+          "stopCounts": 19,
+          "executedElapsedTimeBetweenStopsAvgMinutes": 1.42,
+          "executedAvgSpeedBetweenStopsKmh": 26,
+          "scheduledElapsedTimeBetweenStopsAvgMinutes": 0.88,
+          "scheduledAvgSpeedBetweenStopsKmh": 37
+        },
+        {
+          "itineraryId": "1",
+          "itineraryName": "Itinerary 1",
+          "stopIndex": 3,
+          "stopId": "3",
+          "stopName": "Parada CR 39 #21-9",
+          "stopTimeTotalMinutes": 151.95,
+          "stopTimeAvgMinutes": 9.71,
+          "stopCounts": 53,
+          "executedElapsedTimeBetweenStopsAvgMinutes": 0.97,
+          "executedAvgSpeedBetweenStopsKmh": 72,
+          "scheduledElapsedTimeBetweenStopsAvgMinutes": 1.43,
+          "scheduledAvgSpeedBetweenStopsKmh": 86
+        },
+        {
+          "itineraryId": "1",
+          "itineraryName": "Itinerary 1",
+          "stopIndex": 4,
+          "stopId": "4",
+          "stopName": "Parada CR 412 #28-16",
+          "stopTimeTotalMinutes": 132.47,
+          "stopTimeAvgMinutes": 6.89,
+          "stopCounts": 72,
+          "executedElapsedTimeBetweenStopsAvgMinutes": 0.9,
+          "executedAvgSpeedBetweenStopsKmh": 51,
+          "scheduledElapsedTimeBetweenStopsAvgMinutes": 1,
+          "scheduledAvgSpeedBetweenStopsKmh": 36
+        },
+        {
+          "itineraryId": "1",
+          "itineraryName": "Itinerary 1",
+          "stopIndex": 5,
+          "stopId": "5",
+          "stopName": "Parada CR 515 #35-25",
+          "stopTimeTotalMinutes": 91.62,
+          "stopTimeAvgMinutes": 6.15,
+          "stopCounts": 62,
+          "executedElapsedTimeBetweenStopsAvgMinutes": 0.9,
+          "executedAvgSpeedBetweenStopsKmh": 43,
+          "scheduledElapsedTimeBetweenStopsAvgMinutes": 1.5,
+          "scheduledAvgSpeedBetweenStopsKmh": 47
+        },
+        {
+          "itineraryId": "1",
+          "itineraryName": "Itinerary 1",
+          "stopIndex": 6,
+          "stopId": "6",
+          "stopName": "Parada CR 618 #42-36",
+          "stopTimeTotalMinutes": 74.72,
+          "stopTimeAvgMinutes": 0.78,
+          "stopCounts": 67,
+          "executedElapsedTimeBetweenStopsAvgMinutes": 1.33,
+          "executedAvgSpeedBetweenStopsKmh": 48,
+          "scheduledElapsedTimeBetweenStopsAvgMinutes": 0.5,
+          "scheduledAvgSpeedBetweenStopsKmh": 94
+        },
+        {
+          "itineraryId": "1",
+          "itineraryName": "Itinerary 1",
+          "stopIndex": 7,
+          "stopId": "7",
+          "stopName": "Parada CR 721 #49-49",
+          "stopTimeTotalMinutes": 105.22,
+          "stopTimeAvgMinutes": 8.99,
+          "stopCounts": 112,
+          "executedElapsedTimeBetweenStopsAvgMinutes": 0.55,
+          "executedAvgSpeedBetweenStopsKmh": 82,
+          "scheduledElapsedTimeBetweenStopsAvgMinutes": 1.15,
+          "scheduledAvgSpeedBetweenStopsKmh": 20
+        },
+        {
+          "itineraryId": "1",
+          "itineraryName": "Itinerary 1",
+          "stopIndex": 8,
+          "stopId": "8",
+          "stopName": "Parada CR 824 #56-64",
+          "stopTimeTotalMinutes": 42,
+          "stopTimeAvgMinutes": 3.53,
+          "stopCounts": 74,
+          "executedElapsedTimeBetweenStopsAvgMinutes": 1.28,
+          "executedAvgSpeedBetweenStopsKmh": 48,
+          "scheduledElapsedTimeBetweenStopsAvgMinutes": 0.2,
+          "scheduledAvgSpeedBetweenStopsKmh": 26
+        },
+        {
+          "itineraryId": "1",
+          "itineraryName": "Itinerary 1",
+          "stopIndex": 9,
+          "stopId": "9",
+          "stopName": "Parada CR 927 #63-81",
+          "stopTimeTotalMinutes": 54.75,
+          "stopTimeAvgMinutes": 5.29,
+          "stopCounts": 60,
+          "executedElapsedTimeBetweenStopsAvgMinutes": 0.38,
+          "executedAvgSpeedBetweenStopsKmh": 41,
+          "scheduledElapsedTimeBetweenStopsAvgMinutes": 1.2,
+          "scheduledAvgSpeedBetweenStopsKmh": 1
+        },
+        {
+          "itineraryId": "2",
+          "itineraryName": "Itinerary 2",
+          "stopIndex": 0,
+          "stopId": "0",
+          "stopName": "Parada CR 00 #0-0",
+          "stopTimeTotalMinutes": 90.05,
+          "stopTimeAvgMinutes": 5.42,
+          "stopCounts": 87,
+          "executedElapsedTimeBetweenStopsAvgMinutes": 1.1,
+          "executedAvgSpeedBetweenStopsKmh": 18,
+          "scheduledElapsedTimeBetweenStopsAvgMinutes": 1.2,
+          "scheduledAvgSpeedBetweenStopsKmh": 67
+        },
+        {
+          "itineraryId": "2",
+          "itineraryName": "Itinerary 2",
+          "stopIndex": 1,
+          "stopId": "1",
+          "stopName": "Parada CR 13 #7-1",
+          "stopTimeTotalMinutes": 29.03,
+          "stopTimeAvgMinutes": 0.67,
+          "stopCounts": 29,
+          "executedElapsedTimeBetweenStopsAvgMinutes": 1.63,
+          "executedAvgSpeedBetweenStopsKmh": 12,
+          "scheduledElapsedTimeBetweenStopsAvgMinutes": 0.77,
+          "scheduledAvgSpeedBetweenStopsKmh": 94
+        },
+        {
+          "itineraryId": "2",
+          "itineraryName": "Itinerary 2",
+          "stopIndex": 2,
+          "stopId": "2",
+          "stopName": "Parada CR 26 #14-4",
+          "stopTimeTotalMinutes": 61.33,
+          "stopTimeAvgMinutes": 5.86,
+          "stopCounts": 19,
+          "executedElapsedTimeBetweenStopsAvgMinutes": 1.42,
+          "executedAvgSpeedBetweenStopsKmh": 26,
+          "scheduledElapsedTimeBetweenStopsAvgMinutes": 0.88,
+          "scheduledAvgSpeedBetweenStopsKmh": 37
+        },
+        {
+          "itineraryId": "2",
+          "itineraryName": "Itinerary 2",
+          "stopIndex": 3,
+          "stopId": "3",
+          "stopName": "Parada CR 39 #21-9",
+          "stopTimeTotalMinutes": 151.95,
+          "stopTimeAvgMinutes": 9.71,
+          "stopCounts": 53,
+          "executedElapsedTimeBetweenStopsAvgMinutes": 0.97,
+          "executedAvgSpeedBetweenStopsKmh": 72,
+          "scheduledElapsedTimeBetweenStopsAvgMinutes": 1.43,
+          "scheduledAvgSpeedBetweenStopsKmh": 86
+        },
+        {
+          "itineraryId": "2",
+          "itineraryName": "Itinerary 2",
+          "stopIndex": 4,
+          "stopId": "4",
+          "stopName": "Parada CR 412 #28-16",
+          "stopTimeTotalMinutes": 132.47,
+          "stopTimeAvgMinutes": 6.89,
+          "stopCounts": 72,
+          "executedElapsedTimeBetweenStopsAvgMinutes": 0.9,
+          "executedAvgSpeedBetweenStopsKmh": 51,
+          "scheduledElapsedTimeBetweenStopsAvgMinutes": 1,
+          "scheduledAvgSpeedBetweenStopsKmh": 36
+        },
+        {
+          "itineraryId": "2",
+          "itineraryName": "Itinerary 2",
+          "stopIndex": 5,
+          "stopId": "5",
+          "stopName": "Parada CR 515 #35-25",
+          "stopTimeTotalMinutes": 91.62,
+          "stopTimeAvgMinutes": 6.15,
+          "stopCounts": 62,
+          "executedElapsedTimeBetweenStopsAvgMinutes": 0.9,
+          "executedAvgSpeedBetweenStopsKmh": 43,
+          "scheduledElapsedTimeBetweenStopsAvgMinutes": 1.5,
+          "scheduledAvgSpeedBetweenStopsKmh": 47
+        },
+        {
+          "itineraryId": "2",
+          "itineraryName": "Itinerary 2",
+          "stopIndex": 6,
+          "stopId": "6",
+          "stopName": "Parada CR 618 #42-36",
+          "stopTimeTotalMinutes": 74.72,
+          "stopTimeAvgMinutes": 0.78,
+          "stopCounts": 67,
+          "executedElapsedTimeBetweenStopsAvgMinutes": 1.33,
+          "executedAvgSpeedBetweenStopsKmh": 48,
+          "scheduledElapsedTimeBetweenStopsAvgMinutes": 0.5,
+          "scheduledAvgSpeedBetweenStopsKmh": 94
+        },
+        {
+          "itineraryId": "2",
+          "itineraryName": "Itinerary 2",
+          "stopIndex": 7,
+          "stopId": "7",
+          "stopName": "Parada CR 721 #49-49",
+          "stopTimeTotalMinutes": 105.22,
+          "stopTimeAvgMinutes": 8.99,
+          "stopCounts": 112,
+          "executedElapsedTimeBetweenStopsAvgMinutes": 0.55,
+          "executedAvgSpeedBetweenStopsKmh": 82,
+          "scheduledElapsedTimeBetweenStopsAvgMinutes": 1.15,
+          "scheduledAvgSpeedBetweenStopsKmh": 20
+        },
+        {
+          "itineraryId": "2",
+          "itineraryName": "Itinerary 2",
+          "stopIndex": 8,
+          "stopId": "8",
+          "stopName": "Parada CR 824 #56-64",
+          "stopTimeTotalMinutes": 42,
+          "stopTimeAvgMinutes": 3.53,
+          "stopCounts": 74,
+          "executedElapsedTimeBetweenStopsAvgMinutes": 1.28,
+          "executedAvgSpeedBetweenStopsKmh": 48,
+          "scheduledElapsedTimeBetweenStopsAvgMinutes": 0.2,
+          "scheduledAvgSpeedBetweenStopsKmh": 26
+        },
+        {
+          "itineraryId": "2",
+          "itineraryName": "Itinerary 2",
+          "stopIndex": 9,
+          "stopId": "9",
+          "stopName": "Parada CR 927 #63-81",
+          "stopTimeTotalMinutes": 54.75,
+          "stopTimeAvgMinutes": 5.29,
+          "stopCounts": 60,
+          "executedElapsedTimeBetweenStopsAvgMinutes": 0.38,
+          "executedAvgSpeedBetweenStopsKmh": 41,
+          "scheduledElapsedTimeBetweenStopsAvgMinutes": 1.2,
+          "scheduledAvgSpeedBetweenStopsKmh": 1
+        }
+      ]
+    },
+    "SUMMARY": {
+      "SCHEMA": [
+        {
+          "name": "routeName",
+          "semantics": {
+            "conceptType": "DIMENSION",
+            "semanticType": "TEXT"
+          },
+          "dataType": "STRING"
+        },
+        {
+          "name": "vehicle",
+          "semantics": {
+            "conceptType": "DIMENSION",
+            "semanticType": "TEXT"
+          },
+          "dataType": "STRING"
+        },
+        {
+          "dataType": "STRING",
+          "semantics": {
+            "isReaggregatable": true,
+            "conceptType": "METRIC",
+            "semanticType": "YEAR_MONTH_DAY"
+          },
+          "name": "fromDate"
+        },
+        {
+          "dataType": "STRING",
+          "semantics": {
+            "conceptType": "METRIC",
+            "semanticType": "YEAR_MONTH_DAY",
+            "isReaggregatable": true
+          },
+          "name": "toDate"
+        },
+        {
+          "semantics": {
+            "conceptType": "DIMENSION",
+            "semanticType": "TEXT"
+          },
+          "name": "userFullName",
+          "dataType": "STRING"
+        },
+        {
+          "name": "reportDateTime",
+          "dataType": "STRING",
+          "semantics": {
+            "conceptType": "METRIC",
+            "semanticType": "YEAR_MONTH_DAY_MINUTE",
+            "isReaggregatable": true
+          }
+        },
+        {
+          "semantics": {
+            "isReaggregatable": true,
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC"
+          },
+          "name": "totalScheduledServicesCount",
+          "dataType": "NUMBER"
+        },
+        {
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "dataType": "NUMBER",
+          "name": "totalExecutedServicesCount"
+        },
+        {
+          "semantics": {
+            "isReaggregatable": true,
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC"
+          },
+          "dataType": "NUMBER",
+          "name": "totalManualExecutedServicesCount"
+        }
+      ],
+      "DATA": [
+        {
+          "routeName": "A7-41112 - MIRAMAR",
+          "vehicle": "ABBC123 - 1023",
+          "fromDate": "20220718",
+          "toDate": "20220718",
+          "userFullName": "Jhon Doe",
+          "reportDateTime": "202207181430",
+          "totalScheduledServicesCount": 1200,
+          "totalExecutedServicesCount": 1000,
+          "totalManualExecutedServicesCount": 50
+        }
+      ]
+    },
+    "STOP_STATS": {
+      "SCHEMA": [
+        {
+          "name": "itineraryId",
+          "dataType": "STRING",
+          "semantics": {
+            "conceptType": "DIMENSION",
+            "semanticType": "TEXT"
+          }
+        },
+        {
+          "name": "itineraryName",
+          "dataType": "STRING",
+          "semantics": {
+            "semanticType": "TEXT",
+            "conceptType": "DIMENSION"
+          }
+        },
+        {
+          "semantics": {
+            "conceptType": "DIMENSION",
+            "semanticType": "NUMBER"
+          },
+          "name": "stopIndex",
+          "dataType": "NUMBER"
+        },
+        {
+          "name": "stop",
+          "dataType": "STRING",
+          "semantics": {
+            "semanticType": "TEXT",
+            "conceptType": "DIMENSION"
+          }
+        },
+        {
+          "semantics": {
+            "isReaggregatable": true,
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC"
+          },
+          "dataType": "NUMBER",
+          "name": "minTimeBeetweenStops"
+        },
+        {
+          "semantics": {
+            "conceptType": "METRIC",
+            "semanticType": "NUMBER",
+            "isReaggregatable": true
+          },
+          "dataType": "NUMBER",
+          "name": "avgTimeBeetweenStops"
+        },
+        {
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "dataType": "NUMBER",
+          "name": "maxTimeBeetweenStops"
+        },
+        {
+          "semantics": {
+            "conceptType": "METRIC",
+            "semanticType": "NUMBER",
+            "isReaggregatable": true
+          },
+          "dataType": "NUMBER",
+          "name": "scheduledAvgTimeBeetweenStops"
+        },
+        {
+          "semantics": {
+            "isReaggregatable": true,
+            "conceptType": "METRIC",
+            "semanticType": "NUMBER"
+          },
+          "name": "minSpeed",
+          "dataType": "NUMBER"
+        },
+        {
+          "semantics": {
+            "conceptType": "METRIC",
+            "isReaggregatable": true,
+            "semanticType": "NUMBER"
+          },
+          "dataType": "NUMBER",
+          "name": "avgSpeed"
+        },
+        {
+          "semantics": {
+            "isReaggregatable": true,
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC"
+          },
+          "name": "maxSpeed",
+          "dataType": "NUMBER"
+        },
+        {
+          "semantics": {
+            "conceptType": "METRIC",
+            "isReaggregatable": true,
+            "semanticType": "NUMBER"
+          },
+          "dataType": "NUMBER",
+          "name": "scheduledAvgSpeed"
+        },
+        {
+          "semantics": {
+            "conceptType": "METRIC",
+            "isReaggregatable": true,
+            "semanticType": "NUMBER"
+          },
+          "dataType": "NUMBER",
+          "name": "vehicleStopCount"
+        },
+        {
+          "semantics": {
+            "conceptType": "METRIC",
+            "isReaggregatable": true,
+            "semanticType": "NUMBER"
+          },
+          "dataType": "NUMBER",
+          "name": "scheduledVehicleStopCount"
+        },
+        {
+          "semantics": {
+            "isReaggregatable": true,
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC"
+          },
+          "dataType": "NUMBER",
+          "name": "minStopTime"
+        },
+        {
+          "semantics": {
+            "conceptType": "METRIC",
+            "semanticType": "NUMBER",
+            "isReaggregatable": true
+          },
+          "dataType": "NUMBER",
+          "name": "avgStopTime"
+        },
+        {
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "dataType": "NUMBER",
+          "name": "maxStopTime"
+        }
+      ],
+      "DATA": [
+        {
+          "itineraryId": "it01",
+          "itineraryName": "Itinerary 01",
+          "stopIndex": 0,
+          "stop": "Paradero 01",
+          "minTimeBeetweenStops": 0,
+          "avgTimeBeetweenStops": 0,
+          "maxTimeBeetweenStops": 0,
+          "scheduledAvgTimeBeetweenStops":0,
+          "minSpeed": 0,
+          "avgSpeed": 0,
+          "maxSpeed": 0,
+          "scheduledAvgSpeed":0,
+          "vehicleStopCount":1050,
+          "scheduledVehicleStopCount":1050,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8
+        },
+        {
+          "itineraryId": "it01",
+          "itineraryName": "Itinerary 01",
+          "stopIndex": 1,
+          "stop": "Paradero 02",
+          "minTimeBeetweenStops": 2,
+          "avgTimeBeetweenStops": 5,
+          "maxTimeBeetweenStops": 7,
+          "scheduledAvgTimeBeetweenStops":15,
+          "minSpeed": 12,
+          "avgSpeed": 17,
+          "maxSpeed": 30,
+          "scheduledAvgSpeed":60,
+          "vehicleStopCount":900,
+          "scheduledVehicleStopCount":1050,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8   
+        },
+        {
+          "itineraryId": "it01",
+          "itineraryName": "Itinerary 01",
+          "stopIndex": 2,
+          "stop": "Paradero 03",
+          "minTimeBeetweenStops": 10,
+          "avgTimeBeetweenStops": 20,
+          "maxTimeBeetweenStops": 30,
+          "scheduledAvgTimeBeetweenStops":15,
+          "minSpeed": 50,
+          "avgSpeed": 70,
+          "maxSpeed": 120,
+          "scheduledAvgSpeed":60,
+          "vehicleStopCount":800,
+          "scheduledVehicleStopCount":1050,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8   
+        },
+        {
+          "itineraryId": "it01",
+          "itineraryName": "Itinerary 01",
+          "stopIndex": 3,
+          "stop": "Paradero 04",
+          "minTimeBeetweenStops": 9,
+          "avgTimeBeetweenStops": 18,
+          "maxTimeBeetweenStops": 27,
+          "scheduledAvgTimeBeetweenStops":15,
+          "minSpeed": 45,
+          "avgSpeed": 63,
+          "maxSpeed": 108,
+          "scheduledAvgSpeed":60,
+          "vehicleStopCount":1000,
+          "scheduledVehicleStopCount":1050,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8   
+        },
+        {
+          "itineraryId": "it01",
+          "itineraryName": "Itinerary 01",
+          "stopIndex": 4,
+          "stop": "Paradero 05",
+          "minTimeBeetweenStops": 7,
+          "avgTimeBeetweenStops": 14,
+          "maxTimeBeetweenStops": 21,
+          "scheduledAvgTimeBeetweenStops":15,
+          "minSpeed": 35,
+          "avgSpeed": 49,
+          "maxSpeed": 84,
+          "scheduledAvgSpeed":60,
+          "vehicleStopCount":1050,
+          "scheduledVehicleStopCount":1050,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8   
+        },
+        {
+          "itineraryId": "it01",
+          "itineraryName": "Itinerary 01",
+          "stopIndex": 5,
+          "stop": "Paradero 06",
+          "minTimeBeetweenStops": 5,
+          "avgTimeBeetweenStops": 11,
+          "maxTimeBeetweenStops": 16,
+          "scheduledAvgTimeBeetweenStops":15,
+          "minSpeed": 27,
+          "avgSpeed": 38,
+          "maxSpeed": 66,
+          "scheduledAvgSpeed":60,
+          "vehicleStopCount":1050,
+          "scheduledVehicleStopCount":1050,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8   
+        },
+        {
+          "itineraryId": "it01",
+          "itineraryName": "Itinerary 01",
+          "stopIndex": 6,
+          "stop": "Paradero 07",
+          "minTimeBeetweenStops": 1,
+          "avgTimeBeetweenStops": 3,
+          "maxTimeBeetweenStops": 4,
+          "scheduledAvgTimeBeetweenStops":15,
+          "minSpeed": 7,
+          "avgSpeed": 10,
+          "maxSpeed": 18,
+          "scheduledAvgSpeed":60,
+          "vehicleStopCount":900,
+          "scheduledVehicleStopCount":1050,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8   
+        },
+        {
+          "itineraryId": "it01",
+          "itineraryName": "Itinerary 01",
+          "stopIndex": 7,
+          "stop": "Paradero 08",
+          "minTimeBeetweenStops": 4,
+          "avgTimeBeetweenStops": 8,
+          "maxTimeBeetweenStops": 12,
+          "scheduledAvgTimeBeetweenStops":15,
+          "minSpeed": 20,
+          "avgSpeed": 28,
+          "maxSpeed": 48,
+          "scheduledAvgSpeed":60,
+          "vehicleStopCount":800,
+          "scheduledVehicleStopCount":1050,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8   
+        },
+        {
+          "itineraryId": "it01",
+          "itineraryName": "Itinerary 01",
+          "stopIndex": 8,
+          "stop": "Paradero 09",
+          "minTimeBeetweenStops": 6,
+          "avgTimeBeetweenStops": 12,
+          "maxTimeBeetweenStops": 18,
+          "scheduledAvgTimeBeetweenStops":15,
+          "minSpeed": 30,
+          "avgSpeed": 42,
+          "maxSpeed": 72,
+          "scheduledAvgSpeed":60,
+          "vehicleStopCount":500,
+          "scheduledVehicleStopCount":1050,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8   
+        },
+        {
+          "itineraryId": "it01",
+          "itineraryName": "Itinerary 01",
+          "stopIndex": 9,
+          "stop": "Paradero 10",
+          "minTimeBeetweenStops": 6,
+          "avgTimeBeetweenStops": 12,
+          "maxTimeBeetweenStops": 18,
+          "scheduledAvgTimeBeetweenStops":15,
+          "minSpeed": 31,
+          "avgSpeed": 43,
+          "maxSpeed": 75,
+          "scheduledAvgSpeed":60,
+          "vehicleStopCount":1050,
+          "scheduledVehicleStopCount":1050,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8   
+        },
+        {
+          "itineraryId": "it02",
+          "itineraryName": "Itinerary 02",
+          "stopIndex": 10,
+          "stop": "Paradero A01",
+          "minTimeBeetweenStops": 0,
+          "avgTimeBeetweenStops": 0,
+          "maxTimeBeetweenStops": 0,
+          "scheduledAvgTimeBeetweenStops":15,
+          "minSpeed": 0,
+          "avgSpeed": 0,
+          "maxSpeed": 0,
+          "scheduledAvgSpeed":60,
+          "vehicleStopCount":1050,
+          "scheduledVehicleStopCount":1050,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8   
+        },
+        {
+          "itineraryId": "it02",
+          "itineraryName": "Itinerary 02",
+          "stopIndex": 11,
+          "stop": "Paradero A02",
+          "minTimeBeetweenStops": 1,
+          "avgTimeBeetweenStops": 3,
+          "maxTimeBeetweenStops": 4,
+          "scheduledAvgTimeBeetweenStops":15,
+          "minSpeed": 7,
+          "avgSpeed": 10,
+          "maxSpeed": 18,
+          "scheduledAvgSpeed":60,
+          "vehicleStopCount":1050,
+          "scheduledVehicleStopCount":1050,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8   
+        },
+        {
+          "itineraryId": "it02",
+          "itineraryName": "Itinerary 02",
+          "stopIndex": 12,
+          "stop": "Paradero A03",
+          "minTimeBeetweenStops": 25,
+          "avgTimeBeetweenStops": 50,
+          "maxTimeBeetweenStops": 75,
+          "scheduledAvgTimeBeetweenStops":15,
+          "minSpeed": 125,
+          "avgSpeed": 175,
+          "maxSpeed": 300,
+          "scheduledAvgSpeed":60,
+          "vehicleStopCount":200,
+          "scheduledVehicleStopCount":1050,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8   
+        },
+        {
+          "itineraryId": "it02",
+          "itineraryName": "Itinerary 02",
+          "stopIndex": 13,
+          "stop": "Paradero A04",
+          "minTimeBeetweenStops": 6,
+          "avgTimeBeetweenStops": 12,
+          "maxTimeBeetweenStops": 18,
+          "scheduledAvgTimeBeetweenStops":15,
+          "minSpeed": 30,
+          "avgSpeed": 42,
+          "maxSpeed": 72,
+          "scheduledAvgSpeed":60,
+          "vehicleStopCount":700,
+          "scheduledVehicleStopCount":1050,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8   
+        },
+        {
+          "itineraryId": "it02",
+          "itineraryName": "Itinerary 02",
+          "stopIndex": 14,
+          "stop": "Paradero A05",
+          "minTimeBeetweenStops": 8,
+          "avgTimeBeetweenStops": 17,
+          "maxTimeBeetweenStops": 25,
+          "scheduledAvgTimeBeetweenStops":15,
+          "minSpeed": 42,
+          "avgSpeed": 59,
+          "maxSpeed": 102,
+          "scheduledAvgSpeed":60,
+          "vehicleStopCount":1050,
+          "scheduledVehicleStopCount":1050,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8   
+        },
+        {
+          "itineraryId": "it02",
+          "itineraryName": "Itinerary 02",
+          "stopIndex": 15,
+          "stop": "Paradero A06",
+          "minTimeBeetweenStops": 5,
+          "avgTimeBeetweenStops": 10,
+          "maxTimeBeetweenStops": 15,
+          "scheduledAvgTimeBeetweenStops":15,
+          "minSpeed": 25,
+          "avgSpeed": 35,
+          "maxSpeed": 60,
+          "scheduledAvgSpeed":60,
+          "vehicleStopCount":1050,
+          "scheduledVehicleStopCount":1050 ,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8  
+        },
+        {
+          "itineraryId": "it02",
+          "itineraryName": "Itinerary 02",
+          "stopIndex": 16,
+          "stop": "Paradero A07",
+          "minTimeBeetweenStops": 4,
+          "avgTimeBeetweenStops": 8,
+          "maxTimeBeetweenStops": 12,
+          "scheduledAvgTimeBeetweenStops":15,
+          "minSpeed": 20,
+          "avgSpeed": 28,
+          "maxSpeed": 48,
+          "scheduledAvgSpeed":60,
+          "vehicleStopCount":1050,
+          "scheduledVehicleStopCount":1050,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8  
+        },
+        {
+          "itineraryId": "it02",
+          "itineraryName": "Itinerary 02",
+          "stopIndex": 17,
+          "stop": "Paradero A08",
+          "minTimeBeetweenStops": 1,
+          "avgTimeBeetweenStops": 2,
+          "maxTimeBeetweenStops": 3,
+          "scheduledAvgTimeBeetweenStops":15,
+          "minSpeed": 5,
+          "avgSpeed": 7,
+          "maxSpeed": 12,
+          "scheduledAvgSpeed":60,
+          "vehicleStopCount":1050,
+          "scheduledVehicleStopCount":1050 ,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8  
+        },
+        {
+          "itineraryId": "it02",
+          "itineraryName": "Itinerary 02",
+          "stopIndex": 18,
+          "stop": "Paradero A09",
+          "minTimeBeetweenStops": 9,
+          "avgTimeBeetweenStops": 18,
+          "maxTimeBeetweenStops": 27,
+          "scheduledAvgTimeBeetweenStops":15,
+          "minSpeed": 45,
+          "avgSpeed": 63,
+          "maxSpeed": 108,
+          "scheduledAvgSpeed":60,
+          "vehicleStopCount":100,
+          "scheduledVehicleStopCount":1050 ,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8  
+        },
+        {
+          "itineraryId": "it02",
+          "itineraryName": "Itinerary 02",
+          "stopIndex": 19,
+          "stop": "Paradero A10",
+          "minTimeBeetweenStops": 6,
+          "avgTimeBeetweenStops": 13,
+          "maxTimeBeetweenStops": 20,
+          "scheduledAvgTimeBeetweenStops":15,
+          "minSpeed": 33,
+          "avgSpeed": 46,
+          "maxSpeed": 80,
+          "scheduledAvgSpeed":60,
+          "vehicleStopCount":1050,
+          "scheduledVehicleStopCount":1050  ,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8 
+        },
+        {
+          "itineraryId": "it03",
+          "itineraryName": "Itinerary 03",
+          "stopIndex": 20,
+          "stop": "Paradero B01",
+          "minTimeBeetweenStops": 0,
+          "avgTimeBeetweenStops": 0,
+          "maxTimeBeetweenStops": 0,
+          "scheduledAvgTimeBeetweenStops":0,
+          "minSpeed": 0,
+          "avgSpeed": 0,
+          "maxSpeed": 0,
+          "scheduledAvgSpeed":0,
+          "vehicleStopCount":1050,
+          "scheduledVehicleStopCount":1050  ,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8 
+        },
+        {
+          "itineraryId": "it03",
+          "itineraryName": "Itinerary 03",
+          "stopIndex": 21,
+          "stop": "Paradero B02",
+          "minTimeBeetweenStops": 4,
+          "avgTimeBeetweenStops": 9,
+          "maxTimeBeetweenStops": 13,
+          "scheduledAvgTimeBeetweenStops":15,
+          "minSpeed": 22,
+          "avgSpeed": 31,
+          "maxSpeed": 54,
+          "scheduledAvgSpeed":60,
+          "vehicleStopCount":800,
+          "scheduledVehicleStopCount":1050 ,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8  
+        },
+        {
+          "itineraryId": "it03",
+          "itineraryName": "Itinerary 03",
+          "stopIndex": 22,
+          "stop": "Paradero B03",
+          "minTimeBeetweenStops": 11,
+          "avgTimeBeetweenStops": 22,
+          "maxTimeBeetweenStops": 33,
+          "scheduledAvgTimeBeetweenStops":15,
+          "minSpeed": 55,
+          "avgSpeed": 77,
+          "maxSpeed": 132,
+          "scheduledAvgSpeed":60,
+          "vehicleStopCount":800,
+          "scheduledVehicleStopCount":1050 ,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8  
+        },
+        {
+          "itineraryId": "it03",
+          "itineraryName": "Itinerary 03",
+          "stopIndex": 23,
+          "stop": "Paradero B04",
+          "minTimeBeetweenStops": 5,
+          "avgTimeBeetweenStops": 11,
+          "maxTimeBeetweenStops": 16,
+          "scheduledAvgTimeBeetweenStops":15,
+          "minSpeed": 27,
+          "avgSpeed": 38,
+          "maxSpeed": 66,
+          "scheduledAvgSpeed":60,
+          "vehicleStopCount":1050,
+          "scheduledVehicleStopCount":1050  ,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8 
+        },
+        {
+          "itineraryId": "it03",
+          "itineraryName": "Itinerary 03",
+          "stopIndex": 24,
+          "stop": "Paradero B05",
+          "minTimeBeetweenStops": 9,
+          "avgTimeBeetweenStops": 19,
+          "maxTimeBeetweenStops": 28,
+          "scheduledAvgTimeBeetweenStops":15,
+          "minSpeed": 47,
+          "avgSpeed": 66,
+          "maxSpeed": 114,
+          "scheduledAvgSpeed":60,
+          "vehicleStopCount":1050,
+          "scheduledVehicleStopCount":1050,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8   
+        },
+        {
+          "itineraryId": "it03",
+          "itineraryName": "Itinerary 03",
+          "stopIndex": 25,
+          "stop": "Paradero B06",
+          "minTimeBeetweenStops": 8,
+          "avgTimeBeetweenStops": 17,
+          "maxTimeBeetweenStops": 25,
+          "scheduledAvgTimeBeetweenStops":15,
+          "minSpeed": 42,
+          "avgSpeed": 59,
+          "maxSpeed": 102,
+          "scheduledAvgSpeed":60,
+          "vehicleStopCount":500,
+          "scheduledVehicleStopCount":1050 ,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8  
+        },
+        {
+          "itineraryId": "it03",
+          "itineraryName": "Itinerary 03",
+          "stopIndex": 26,
+          "stop": "Paradero B07",
+          "minTimeBeetweenStops": 2,
+          "avgTimeBeetweenStops": 5,
+          "maxTimeBeetweenStops": 7,
+          "scheduledAvgTimeBeetweenStops":15,
+          "minSpeed": 12,
+          "avgSpeed": 17,
+          "maxSpeed": 30,
+          "scheduledAvgSpeed":60,
+          "vehicleStopCount":1050,
+          "scheduledVehicleStopCount":1050 ,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8  
+        },
+        {
+          "itineraryId": "it03",
+          "itineraryName": "Itinerary 03",
+          "stopIndex": 27,
+          "stop": "Paradero B08",
+          "minTimeBeetweenStops": 3,
+          "avgTimeBeetweenStops": 7,
+          "maxTimeBeetweenStops": 10,
+          "scheduledAvgTimeBeetweenStops":15,
+          "minSpeed": 17,
+          "avgSpeed": 24,
+          "maxSpeed": 42,
+          "scheduledAvgSpeed":60,
+          "vehicleStopCount":100,
+          "scheduledVehicleStopCount":1050 ,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8  
+        },
+        {
+          "itineraryId": "it03",
+          "itineraryName": "Itinerary 03",
+          "stopIndex": 28,
+          "stop": "Paradero B09",
+          "minTimeBeetweenStops": 5,
+          "avgTimeBeetweenStops": 11,
+          "maxTimeBeetweenStops": 16,
+          "scheduledAvgTimeBeetweenStops":15,
+          "minSpeed": 27,
+          "avgSpeed": 38,
+          "maxSpeed": 66,
+          "scheduledAvgSpeed":60,
+          "vehicleStopCount":1050,
+          "scheduledVehicleStopCount":1050 ,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8  
+        },
+        {
+          "itineraryId": "it03",
+          "itineraryName": "Itinerary 03",
+          "stopIndex": 29,
+          "stop": "Paradero B10",
+          "minTimeBeetweenStops": 9,
+          "avgTimeBeetweenStops": 18,
+          "maxTimeBeetweenStops": 28,
+          "scheduledAvgTimeBeetweenStops":15,
+          "minSpeed": 47,
+          "avgSpeed": 66,
+          "maxSpeed": 113,
+          "scheduledAvgSpeed":60,
+          "vehicleStopCount":1050,
+          "scheduledVehicleStopCount":1050 ,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8  
+        }
+      ]
+    }
+  },
+  "DriverStopsReport": {
+    "STOPS_TABLE": {
+      "SCHEMA": [
+        {
+          "semantics": {
+            "conceptType": "DIMENSION",
+            "semanticType": "TEXT"
+          },
+          "dataType": "STRING",
+          "name": "itineraryId"
+        },
+        {
+          "semantics": {
+            "semanticType": "TEXT",
+            "conceptType": "DIMENSION"
+          },
+          "name": "itineraryName",
+          "dataType": "STRING"
+        },
+        {
+          "name": "stopIndex",
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "DIMENSION"
+          }
+        },
+        {
+          "semantics": {
+            "conceptType": "DIMENSION",
+            "semanticType": "TEXT"
+          },
+          "dataType": "STRING",
+          "name": "stopId"
+        },
+        {
+          "semantics": {
+            "semanticType": "TEXT",
+            "conceptType": "DIMENSION"
+          },
+          "name": "stopName",
+          "dataType": "STRING"
+        },
+        {
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "name": "stopTimeTotalMinutes"
+        },
+        {
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "name": "stopTimeAvgMinutes"
+        },
+        {
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "name": "stopCounts"
+        },
+        {
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "name": "executedElapsedTimeBetweenStopsAvgMinutes"
+        },
+        {
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "name": "executedAvgSpeedBetweenStopsKmh"
+        },
+        {
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "name": "scheduledElapsedTimeBetweenStopsAvgMinutes"
+        },
+        {
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "name": "scheduledAvgSpeedBetweenStopsKmh"
+        }
+      ],
+      "DATA": [
+        {
+          "itineraryId": "0",
+          "itineraryName": "Itinerary 0",
+          "stopIndex": 0,
+          "stopId": "0",
+          "stopName": "Parada CR 00 #0-0",
+          "stopTimeTotalMinutes": 90.05,
+          "stopTimeAvgMinutes": 5.42,
+          "stopCounts": 87,
+          "executedElapsedTimeBetweenStopsAvgMinutes": 1.1,
+          "executedAvgSpeedBetweenStopsKmh": 18,
+          "scheduledElapsedTimeBetweenStopsAvgMinutes": 1.2,
+          "scheduledAvgSpeedBetweenStopsKmh": 67
+        },
+        {
+          "itineraryId": "0",
+          "itineraryName": "Itinerary 0",
+          "stopIndex": 1,
+          "stopId": "1",
+          "stopName": "Parada CR 13 #7-1",
+          "stopTimeTotalMinutes": 29.03,
+          "stopTimeAvgMinutes": 0.67,
+          "stopCounts": 29,
+          "executedElapsedTimeBetweenStopsAvgMinutes": 1.63,
+          "executedAvgSpeedBetweenStopsKmh": 12,
+          "scheduledElapsedTimeBetweenStopsAvgMinutes": 0.77,
+          "scheduledAvgSpeedBetweenStopsKmh": 94
+        },
+        {
+          "itineraryId": "0",
+          "itineraryName": "Itinerary 0",
+          "stopIndex": 2,
+          "stopId": "2",
+          "stopName": "Parada CR 26 #14-4",
+          "stopTimeTotalMinutes": 61.33,
+          "stopTimeAvgMinutes": 5.86,
+          "stopCounts": 19,
+          "executedElapsedTimeBetweenStopsAvgMinutes": 1.42,
+          "executedAvgSpeedBetweenStopsKmh": 26,
+          "scheduledElapsedTimeBetweenStopsAvgMinutes": 0.88,
+          "scheduledAvgSpeedBetweenStopsKmh": 37
+        },
+        {
+          "itineraryId": "0",
+          "itineraryName": "Itinerary 0",
+          "stopIndex": 3,
+          "stopId": "3",
+          "stopName": "Parada CR 39 #21-9",
+          "stopTimeTotalMinutes": 151.95,
+          "stopTimeAvgMinutes": 9.71,
+          "stopCounts": 53,
+          "executedElapsedTimeBetweenStopsAvgMinutes": 0.97,
+          "executedAvgSpeedBetweenStopsKmh": 72,
+          "scheduledElapsedTimeBetweenStopsAvgMinutes": 1.43,
+          "scheduledAvgSpeedBetweenStopsKmh": 86
+        },
+        {
+          "itineraryId": "0",
+          "itineraryName": "Itinerary 0",
+          "stopIndex": 4,
+          "stopId": "4",
+          "stopName": "Parada CR 412 #28-16",
+          "stopTimeTotalMinutes": 132.47,
+          "stopTimeAvgMinutes": 6.89,
+          "stopCounts": 72,
+          "executedElapsedTimeBetweenStopsAvgMinutes": 0.9,
+          "executedAvgSpeedBetweenStopsKmh": 51,
+          "scheduledElapsedTimeBetweenStopsAvgMinutes": 1,
+          "scheduledAvgSpeedBetweenStopsKmh": 36
+        },
+        {
+          "itineraryId": "0",
+          "itineraryName": "Itinerary 0",
+          "stopIndex": 5,
+          "stopId": "5",
+          "stopName": "Parada CR 515 #35-25",
+          "stopTimeTotalMinutes": 91.62,
+          "stopTimeAvgMinutes": 6.15,
+          "stopCounts": 62,
+          "executedElapsedTimeBetweenStopsAvgMinutes": 0.9,
+          "executedAvgSpeedBetweenStopsKmh": 43,
+          "scheduledElapsedTimeBetweenStopsAvgMinutes": 1.5,
+          "scheduledAvgSpeedBetweenStopsKmh": 47
+        },
+        {
+          "itineraryId": "0",
+          "itineraryName": "Itinerary 0",
+          "stopIndex": 6,
+          "stopId": "6",
+          "stopName": "Parada CR 618 #42-36",
+          "stopTimeTotalMinutes": 74.72,
+          "stopTimeAvgMinutes": 0.78,
+          "stopCounts": 67,
+          "executedElapsedTimeBetweenStopsAvgMinutes": 1.33,
+          "executedAvgSpeedBetweenStopsKmh": 48,
+          "scheduledElapsedTimeBetweenStopsAvgMinutes": 0.5,
+          "scheduledAvgSpeedBetweenStopsKmh": 94
+        },
+        {
+          "itineraryId": "0",
+          "itineraryName": "Itinerary 0",
+          "stopIndex": 7,
+          "stopId": "7",
+          "stopName": "Parada CR 721 #49-49",
+          "stopTimeTotalMinutes": 105.22,
+          "stopTimeAvgMinutes": 8.99,
+          "stopCounts": 112,
+          "executedElapsedTimeBetweenStopsAvgMinutes": 0.55,
+          "executedAvgSpeedBetweenStopsKmh": 82,
+          "scheduledElapsedTimeBetweenStopsAvgMinutes": 1.15,
+          "scheduledAvgSpeedBetweenStopsKmh": 20
+        },
+        {
+          "itineraryId": "0",
+          "itineraryName": "Itinerary 0",
+          "stopIndex": 8,
+          "stopId": "8",
+          "stopName": "Parada CR 824 #56-64",
+          "stopTimeTotalMinutes": 42,
+          "stopTimeAvgMinutes": 3.53,
+          "stopCounts": 74,
+          "executedElapsedTimeBetweenStopsAvgMinutes": 1.28,
+          "executedAvgSpeedBetweenStopsKmh": 48,
+          "scheduledElapsedTimeBetweenStopsAvgMinutes": 0.2,
+          "scheduledAvgSpeedBetweenStopsKmh": 26
+        },
+        {
+          "itineraryId": "0",
+          "itineraryName": "Itinerary 0",
+          "stopIndex": 9,
+          "stopId": "9",
+          "stopName": "Parada CR 927 #63-81",
+          "stopTimeTotalMinutes": 54.75,
+          "stopTimeAvgMinutes": 5.29,
+          "stopCounts": 60,
+          "executedElapsedTimeBetweenStopsAvgMinutes": 0.38,
+          "executedAvgSpeedBetweenStopsKmh": 41,
+          "scheduledElapsedTimeBetweenStopsAvgMinutes": 1.2,
+          "scheduledAvgSpeedBetweenStopsKmh": 1
+        },
+        {
+          "itineraryId": "1",
+          "itineraryName": "Itinerary 1",
+          "stopIndex": 0,
+          "stopId": "0",
+          "stopName": "Parada CR 00 #0-0",
+          "stopTimeTotalMinutes": 90.05,
+          "stopTimeAvgMinutes": 5.42,
+          "stopCounts": 87,
+          "executedElapsedTimeBetweenStopsAvgMinutes": 1.1,
+          "executedAvgSpeedBetweenStopsKmh": 18,
+          "scheduledElapsedTimeBetweenStopsAvgMinutes": 1.2,
+          "scheduledAvgSpeedBetweenStopsKmh": 67
+        },
+        {
+          "itineraryId": "1",
+          "itineraryName": "Itinerary 1",
+          "stopIndex": 1,
+          "stopId": "1",
+          "stopName": "Parada CR 13 #7-1",
+          "stopTimeTotalMinutes": 29.03,
+          "stopTimeAvgMinutes": 0.67,
+          "stopCounts": 29,
+          "executedElapsedTimeBetweenStopsAvgMinutes": 1.63,
+          "executedAvgSpeedBetweenStopsKmh": 12,
+          "scheduledElapsedTimeBetweenStopsAvgMinutes": 0.77,
+          "scheduledAvgSpeedBetweenStopsKmh": 94
+        },
+        {
+          "itineraryId": "1",
+          "itineraryName": "Itinerary 1",
+          "stopIndex": 2,
+          "stopId": "2",
+          "stopName": "Parada CR 26 #14-4",
+          "stopTimeTotalMinutes": 61.33,
+          "stopTimeAvgMinutes": 5.86,
+          "stopCounts": 19,
+          "executedElapsedTimeBetweenStopsAvgMinutes": 1.42,
+          "executedAvgSpeedBetweenStopsKmh": 26,
+          "scheduledElapsedTimeBetweenStopsAvgMinutes": 0.88,
+          "scheduledAvgSpeedBetweenStopsKmh": 37
+        },
+        {
+          "itineraryId": "1",
+          "itineraryName": "Itinerary 1",
+          "stopIndex": 3,
+          "stopId": "3",
+          "stopName": "Parada CR 39 #21-9",
+          "stopTimeTotalMinutes": 151.95,
+          "stopTimeAvgMinutes": 9.71,
+          "stopCounts": 53,
+          "executedElapsedTimeBetweenStopsAvgMinutes": 0.97,
+          "executedAvgSpeedBetweenStopsKmh": 72,
+          "scheduledElapsedTimeBetweenStopsAvgMinutes": 1.43,
+          "scheduledAvgSpeedBetweenStopsKmh": 86
+        },
+        {
+          "itineraryId": "1",
+          "itineraryName": "Itinerary 1",
+          "stopIndex": 4,
+          "stopId": "4",
+          "stopName": "Parada CR 412 #28-16",
+          "stopTimeTotalMinutes": 132.47,
+          "stopTimeAvgMinutes": 6.89,
+          "stopCounts": 72,
+          "executedElapsedTimeBetweenStopsAvgMinutes": 0.9,
+          "executedAvgSpeedBetweenStopsKmh": 51,
+          "scheduledElapsedTimeBetweenStopsAvgMinutes": 1,
+          "scheduledAvgSpeedBetweenStopsKmh": 36
+        },
+        {
+          "itineraryId": "1",
+          "itineraryName": "Itinerary 1",
+          "stopIndex": 5,
+          "stopId": "5",
+          "stopName": "Parada CR 515 #35-25",
+          "stopTimeTotalMinutes": 91.62,
+          "stopTimeAvgMinutes": 6.15,
+          "stopCounts": 62,
+          "executedElapsedTimeBetweenStopsAvgMinutes": 0.9,
+          "executedAvgSpeedBetweenStopsKmh": 43,
+          "scheduledElapsedTimeBetweenStopsAvgMinutes": 1.5,
+          "scheduledAvgSpeedBetweenStopsKmh": 47
+        },
+        {
+          "itineraryId": "1",
+          "itineraryName": "Itinerary 1",
+          "stopIndex": 6,
+          "stopId": "6",
+          "stopName": "Parada CR 618 #42-36",
+          "stopTimeTotalMinutes": 74.72,
+          "stopTimeAvgMinutes": 0.78,
+          "stopCounts": 67,
+          "executedElapsedTimeBetweenStopsAvgMinutes": 1.33,
+          "executedAvgSpeedBetweenStopsKmh": 48,
+          "scheduledElapsedTimeBetweenStopsAvgMinutes": 0.5,
+          "scheduledAvgSpeedBetweenStopsKmh": 94
+        },
+        {
+          "itineraryId": "1",
+          "itineraryName": "Itinerary 1",
+          "stopIndex": 7,
+          "stopId": "7",
+          "stopName": "Parada CR 721 #49-49",
+          "stopTimeTotalMinutes": 105.22,
+          "stopTimeAvgMinutes": 8.99,
+          "stopCounts": 112,
+          "executedElapsedTimeBetweenStopsAvgMinutes": 0.55,
+          "executedAvgSpeedBetweenStopsKmh": 82,
+          "scheduledElapsedTimeBetweenStopsAvgMinutes": 1.15,
+          "scheduledAvgSpeedBetweenStopsKmh": 20
+        },
+        {
+          "itineraryId": "1",
+          "itineraryName": "Itinerary 1",
+          "stopIndex": 8,
+          "stopId": "8",
+          "stopName": "Parada CR 824 #56-64",
+          "stopTimeTotalMinutes": 42,
+          "stopTimeAvgMinutes": 3.53,
+          "stopCounts": 74,
+          "executedElapsedTimeBetweenStopsAvgMinutes": 1.28,
+          "executedAvgSpeedBetweenStopsKmh": 48,
+          "scheduledElapsedTimeBetweenStopsAvgMinutes": 0.2,
+          "scheduledAvgSpeedBetweenStopsKmh": 26
+        },
+        {
+          "itineraryId": "1",
+          "itineraryName": "Itinerary 1",
+          "stopIndex": 9,
+          "stopId": "9",
+          "stopName": "Parada CR 927 #63-81",
+          "stopTimeTotalMinutes": 54.75,
+          "stopTimeAvgMinutes": 5.29,
+          "stopCounts": 60,
+          "executedElapsedTimeBetweenStopsAvgMinutes": 0.38,
+          "executedAvgSpeedBetweenStopsKmh": 41,
+          "scheduledElapsedTimeBetweenStopsAvgMinutes": 1.2,
+          "scheduledAvgSpeedBetweenStopsKmh": 1
+        },
+        {
+          "itineraryId": "2",
+          "itineraryName": "Itinerary 2",
+          "stopIndex": 0,
+          "stopId": "0",
+          "stopName": "Parada CR 00 #0-0",
+          "stopTimeTotalMinutes": 90.05,
+          "stopTimeAvgMinutes": 5.42,
+          "stopCounts": 87,
+          "executedElapsedTimeBetweenStopsAvgMinutes": 1.1,
+          "executedAvgSpeedBetweenStopsKmh": 18,
+          "scheduledElapsedTimeBetweenStopsAvgMinutes": 1.2,
+          "scheduledAvgSpeedBetweenStopsKmh": 67
+        },
+        {
+          "itineraryId": "2",
+          "itineraryName": "Itinerary 2",
+          "stopIndex": 1,
+          "stopId": "1",
+          "stopName": "Parada CR 13 #7-1",
+          "stopTimeTotalMinutes": 29.03,
+          "stopTimeAvgMinutes": 0.67,
+          "stopCounts": 29,
+          "executedElapsedTimeBetweenStopsAvgMinutes": 1.63,
+          "executedAvgSpeedBetweenStopsKmh": 12,
+          "scheduledElapsedTimeBetweenStopsAvgMinutes": 0.77,
+          "scheduledAvgSpeedBetweenStopsKmh": 94
+        },
+        {
+          "itineraryId": "2",
+          "itineraryName": "Itinerary 2",
+          "stopIndex": 2,
+          "stopId": "2",
+          "stopName": "Parada CR 26 #14-4",
+          "stopTimeTotalMinutes": 61.33,
+          "stopTimeAvgMinutes": 5.86,
+          "stopCounts": 19,
+          "executedElapsedTimeBetweenStopsAvgMinutes": 1.42,
+          "executedAvgSpeedBetweenStopsKmh": 26,
+          "scheduledElapsedTimeBetweenStopsAvgMinutes": 0.88,
+          "scheduledAvgSpeedBetweenStopsKmh": 37
+        },
+        {
+          "itineraryId": "2",
+          "itineraryName": "Itinerary 2",
+          "stopIndex": 3,
+          "stopId": "3",
+          "stopName": "Parada CR 39 #21-9",
+          "stopTimeTotalMinutes": 151.95,
+          "stopTimeAvgMinutes": 9.71,
+          "stopCounts": 53,
+          "executedElapsedTimeBetweenStopsAvgMinutes": 0.97,
+          "executedAvgSpeedBetweenStopsKmh": 72,
+          "scheduledElapsedTimeBetweenStopsAvgMinutes": 1.43,
+          "scheduledAvgSpeedBetweenStopsKmh": 86
+        },
+        {
+          "itineraryId": "2",
+          "itineraryName": "Itinerary 2",
+          "stopIndex": 4,
+          "stopId": "4",
+          "stopName": "Parada CR 412 #28-16",
+          "stopTimeTotalMinutes": 132.47,
+          "stopTimeAvgMinutes": 6.89,
+          "stopCounts": 72,
+          "executedElapsedTimeBetweenStopsAvgMinutes": 0.9,
+          "executedAvgSpeedBetweenStopsKmh": 51,
+          "scheduledElapsedTimeBetweenStopsAvgMinutes": 1,
+          "scheduledAvgSpeedBetweenStopsKmh": 36
+        },
+        {
+          "itineraryId": "2",
+          "itineraryName": "Itinerary 2",
+          "stopIndex": 5,
+          "stopId": "5",
+          "stopName": "Parada CR 515 #35-25",
+          "stopTimeTotalMinutes": 91.62,
+          "stopTimeAvgMinutes": 6.15,
+          "stopCounts": 62,
+          "executedElapsedTimeBetweenStopsAvgMinutes": 0.9,
+          "executedAvgSpeedBetweenStopsKmh": 43,
+          "scheduledElapsedTimeBetweenStopsAvgMinutes": 1.5,
+          "scheduledAvgSpeedBetweenStopsKmh": 47
+        },
+        {
+          "itineraryId": "2",
+          "itineraryName": "Itinerary 2",
+          "stopIndex": 6,
+          "stopId": "6",
+          "stopName": "Parada CR 618 #42-36",
+          "stopTimeTotalMinutes": 74.72,
+          "stopTimeAvgMinutes": 0.78,
+          "stopCounts": 67,
+          "executedElapsedTimeBetweenStopsAvgMinutes": 1.33,
+          "executedAvgSpeedBetweenStopsKmh": 48,
+          "scheduledElapsedTimeBetweenStopsAvgMinutes": 0.5,
+          "scheduledAvgSpeedBetweenStopsKmh": 94
+        },
+        {
+          "itineraryId": "2",
+          "itineraryName": "Itinerary 2",
+          "stopIndex": 7,
+          "stopId": "7",
+          "stopName": "Parada CR 721 #49-49",
+          "stopTimeTotalMinutes": 105.22,
+          "stopTimeAvgMinutes": 8.99,
+          "stopCounts": 112,
+          "executedElapsedTimeBetweenStopsAvgMinutes": 0.55,
+          "executedAvgSpeedBetweenStopsKmh": 82,
+          "scheduledElapsedTimeBetweenStopsAvgMinutes": 1.15,
+          "scheduledAvgSpeedBetweenStopsKmh": 20
+        },
+        {
+          "itineraryId": "2",
+          "itineraryName": "Itinerary 2",
+          "stopIndex": 8,
+          "stopId": "8",
+          "stopName": "Parada CR 824 #56-64",
+          "stopTimeTotalMinutes": 42,
+          "stopTimeAvgMinutes": 3.53,
+          "stopCounts": 74,
+          "executedElapsedTimeBetweenStopsAvgMinutes": 1.28,
+          "executedAvgSpeedBetweenStopsKmh": 48,
+          "scheduledElapsedTimeBetweenStopsAvgMinutes": 0.2,
+          "scheduledAvgSpeedBetweenStopsKmh": 26
+        },
+        {
+          "itineraryId": "2",
+          "itineraryName": "Itinerary 2",
+          "stopIndex": 9,
+          "stopId": "9",
+          "stopName": "Parada CR 927 #63-81",
+          "stopTimeTotalMinutes": 54.75,
+          "stopTimeAvgMinutes": 5.29,
+          "stopCounts": 60,
+          "executedElapsedTimeBetweenStopsAvgMinutes": 0.38,
+          "executedAvgSpeedBetweenStopsKmh": 41,
+          "scheduledElapsedTimeBetweenStopsAvgMinutes": 1.2,
+          "scheduledAvgSpeedBetweenStopsKmh": 1
+        }
+      ]
+    },
+    "SUMMARY": {
+      "SCHEMA": [
+        {
+          "name": "routeName",
+          "semantics": {
+            "conceptType": "DIMENSION",
+            "semanticType": "TEXT"
+          },
+          "dataType": "STRING"
+        },
+        {
+          "name": "driver",
+          "semantics": {
+            "conceptType": "DIMENSION",
+            "semanticType": "TEXT"
+          },
+          "dataType": "STRING"
+        },
+        {
+          "dataType": "STRING",
+          "semantics": {
+            "isReaggregatable": true,
+            "conceptType": "METRIC",
+            "semanticType": "YEAR_MONTH_DAY"
+          },
+          "name": "fromDate"
+        },
+        {
+          "dataType": "STRING",
+          "semantics": {
+            "conceptType": "METRIC",
+            "semanticType": "YEAR_MONTH_DAY",
+            "isReaggregatable": true
+          },
+          "name": "toDate"
+        },
+        {
+          "semantics": {
+            "conceptType": "DIMENSION",
+            "semanticType": "TEXT"
+          },
+          "name": "userFullName",
+          "dataType": "STRING"
+        },
+        {
+          "name": "reportDateTime",
+          "dataType": "STRING",
+          "semantics": {
+            "conceptType": "METRIC",
+            "semanticType": "YEAR_MONTH_DAY_MINUTE",
+            "isReaggregatable": true
+          }
+        },
+        {
+          "semantics": {
+            "isReaggregatable": true,
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC"
+          },
+          "name": "totalScheduledServicesCount",
+          "dataType": "NUMBER"
+        },
+        {
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "dataType": "NUMBER",
+          "name": "totalExecutedServicesCount"
+        },
+        {
+          "semantics": {
+            "isReaggregatable": true,
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC"
+          },
+          "dataType": "NUMBER",
+          "name": "totalManualExecutedServicesCount"
+        }
+      ],
+      "DATA": [
+        {
+          "routeName": "A7-41112 - MIRAMAR",
+          "driver": "Jhon Doe",
+          "fromDate": "20220718",
+          "toDate": "20220718",
+          "userFullName": "Jhon Doe",
+          "reportDateTime": "202207181430",
+          "totalScheduledServicesCount": 1200,
+          "totalExecutedServicesCount": 1000,
+          "totalManualExecutedServicesCount": 50
+        }
+      ]
+    },
+    "STOP_STATS": {
+      "SCHEMA": [
+        {
+          "name": "itineraryId",
+          "dataType": "STRING",
+          "semantics": {
+            "conceptType": "DIMENSION",
+            "semanticType": "TEXT"
+          }
+        },
+        {
+          "name": "itineraryName",
+          "dataType": "STRING",
+          "semantics": {
+            "semanticType": "TEXT",
+            "conceptType": "DIMENSION"
+          }
+        },
+        {
+          "semantics": {
+            "conceptType": "DIMENSION",
+            "semanticType": "NUMBER"
+          },
+          "name": "stopIndex",
+          "dataType": "NUMBER"
+        },
+        {
+          "name": "stop",
+          "dataType": "STRING",
+          "semantics": {
+            "semanticType": "TEXT",
+            "conceptType": "DIMENSION"
+          }
+        },
+        {
+          "semantics": {
+            "isReaggregatable": true,
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC"
+          },
+          "dataType": "NUMBER",
+          "name": "minTimeBeetweenStops"
+        },
+        {
+          "semantics": {
+            "conceptType": "METRIC",
+            "semanticType": "NUMBER",
+            "isReaggregatable": true
+          },
+          "dataType": "NUMBER",
+          "name": "avgTimeBeetweenStops"
+        },
+        {
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "dataType": "NUMBER",
+          "name": "maxTimeBeetweenStops"
+        },
+        {
+          "semantics": {
+            "conceptType": "METRIC",
+            "semanticType": "NUMBER",
+            "isReaggregatable": true
+          },
+          "dataType": "NUMBER",
+          "name": "scheduledAvgTimeBeetweenStops"
+        },
+        {
+          "semantics": {
+            "isReaggregatable": true,
+            "conceptType": "METRIC",
+            "semanticType": "NUMBER"
+          },
+          "name": "minSpeed",
+          "dataType": "NUMBER"
+        },
+        {
+          "semantics": {
+            "conceptType": "METRIC",
+            "isReaggregatable": true,
+            "semanticType": "NUMBER"
+          },
+          "dataType": "NUMBER",
+          "name": "avgSpeed"
+        },
+        {
+          "semantics": {
+            "isReaggregatable": true,
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC"
+          },
+          "name": "maxSpeed",
+          "dataType": "NUMBER"
+        },
+        {
+          "semantics": {
+            "conceptType": "METRIC",
+            "isReaggregatable": true,
+            "semanticType": "NUMBER"
+          },
+          "dataType": "NUMBER",
+          "name": "scheduledAvgSpeed"
+        },
+        {
+          "semantics": {
+            "conceptType": "METRIC",
+            "isReaggregatable": true,
+            "semanticType": "NUMBER"
+          },
+          "dataType": "NUMBER",
+          "name": "vehicleStopCount"
+        },
+        {
+          "semantics": {
+            "conceptType": "METRIC",
+            "isReaggregatable": true,
+            "semanticType": "NUMBER"
+          },
+          "dataType": "NUMBER",
+          "name": "scheduledVehicleStopCount"
+        },
+        {
+          "semantics": {
+            "isReaggregatable": true,
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC"
+          },
+          "dataType": "NUMBER",
+          "name": "minStopTime"
+        },
+        {
+          "semantics": {
+            "conceptType": "METRIC",
+            "semanticType": "NUMBER",
+            "isReaggregatable": true
+          },
+          "dataType": "NUMBER",
+          "name": "avgStopTime"
+        },
+        {
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "dataType": "NUMBER",
+          "name": "maxStopTime"
+        }
+      ],
+      "DATA": [
+        {
+          "itineraryId": "it01",
+          "itineraryName": "Itinerary 01",
+          "stopIndex": 0,
+          "stop": "Paradero 01",
+          "minTimeBeetweenStops": 0,
+          "avgTimeBeetweenStops": 0,
+          "maxTimeBeetweenStops": 0,
+          "scheduledAvgTimeBeetweenStops":0,
+          "minSpeed": 0,
+          "avgSpeed": 0,
+          "maxSpeed": 0,
+          "scheduledAvgSpeed":0,
+          "vehicleStopCount":1050,
+          "scheduledVehicleStopCount":1050,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8
+        },
+        {
+          "itineraryId": "it01",
+          "itineraryName": "Itinerary 01",
+          "stopIndex": 1,
+          "stop": "Paradero 02",
+          "minTimeBeetweenStops": 2,
+          "avgTimeBeetweenStops": 5,
+          "maxTimeBeetweenStops": 7,
+          "scheduledAvgTimeBeetweenStops":15,
+          "minSpeed": 12,
+          "avgSpeed": 17,
+          "maxSpeed": 30,
+          "scheduledAvgSpeed":60,
+          "vehicleStopCount":900,
+          "scheduledVehicleStopCount":1050,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8   
+        },
+        {
+          "itineraryId": "it01",
+          "itineraryName": "Itinerary 01",
+          "stopIndex": 2,
+          "stop": "Paradero 03",
+          "minTimeBeetweenStops": 10,
+          "avgTimeBeetweenStops": 20,
+          "maxTimeBeetweenStops": 30,
+          "scheduledAvgTimeBeetweenStops":15,
+          "minSpeed": 50,
+          "avgSpeed": 70,
+          "maxSpeed": 120,
+          "scheduledAvgSpeed":60,
+          "vehicleStopCount":800,
+          "scheduledVehicleStopCount":1050,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8   
+        },
+        {
+          "itineraryId": "it01",
+          "itineraryName": "Itinerary 01",
+          "stopIndex": 3,
+          "stop": "Paradero 04",
+          "minTimeBeetweenStops": 9,
+          "avgTimeBeetweenStops": 18,
+          "maxTimeBeetweenStops": 27,
+          "scheduledAvgTimeBeetweenStops":15,
+          "minSpeed": 45,
+          "avgSpeed": 63,
+          "maxSpeed": 108,
+          "scheduledAvgSpeed":60,
+          "vehicleStopCount":1000,
+          "scheduledVehicleStopCount":1050,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8   
+        },
+        {
+          "itineraryId": "it01",
+          "itineraryName": "Itinerary 01",
+          "stopIndex": 4,
+          "stop": "Paradero 05",
+          "minTimeBeetweenStops": 7,
+          "avgTimeBeetweenStops": 14,
+          "maxTimeBeetweenStops": 21,
+          "scheduledAvgTimeBeetweenStops":15,
+          "minSpeed": 35,
+          "avgSpeed": 49,
+          "maxSpeed": 84,
+          "scheduledAvgSpeed":60,
+          "vehicleStopCount":1050,
+          "scheduledVehicleStopCount":1050,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8   
+        },
+        {
+          "itineraryId": "it01",
+          "itineraryName": "Itinerary 01",
+          "stopIndex": 5,
+          "stop": "Paradero 06",
+          "minTimeBeetweenStops": 5,
+          "avgTimeBeetweenStops": 11,
+          "maxTimeBeetweenStops": 16,
+          "scheduledAvgTimeBeetweenStops":15,
+          "minSpeed": 27,
+          "avgSpeed": 38,
+          "maxSpeed": 66,
+          "scheduledAvgSpeed":60,
+          "vehicleStopCount":1050,
+          "scheduledVehicleStopCount":1050,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8   
+        },
+        {
+          "itineraryId": "it01",
+          "itineraryName": "Itinerary 01",
+          "stopIndex": 6,
+          "stop": "Paradero 07",
+          "minTimeBeetweenStops": 1,
+          "avgTimeBeetweenStops": 3,
+          "maxTimeBeetweenStops": 4,
+          "scheduledAvgTimeBeetweenStops":15,
+          "minSpeed": 7,
+          "avgSpeed": 10,
+          "maxSpeed": 18,
+          "scheduledAvgSpeed":60,
+          "vehicleStopCount":900,
+          "scheduledVehicleStopCount":1050,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8   
+        },
+        {
+          "itineraryId": "it01",
+          "itineraryName": "Itinerary 01",
+          "stopIndex": 7,
+          "stop": "Paradero 08",
+          "minTimeBeetweenStops": 4,
+          "avgTimeBeetweenStops": 8,
+          "maxTimeBeetweenStops": 12,
+          "scheduledAvgTimeBeetweenStops":15,
+          "minSpeed": 20,
+          "avgSpeed": 28,
+          "maxSpeed": 48,
+          "scheduledAvgSpeed":60,
+          "vehicleStopCount":800,
+          "scheduledVehicleStopCount":1050,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8   
+        },
+        {
+          "itineraryId": "it01",
+          "itineraryName": "Itinerary 01",
+          "stopIndex": 8,
+          "stop": "Paradero 09",
+          "minTimeBeetweenStops": 6,
+          "avgTimeBeetweenStops": 12,
+          "maxTimeBeetweenStops": 18,
+          "scheduledAvgTimeBeetweenStops":15,
+          "minSpeed": 30,
+          "avgSpeed": 42,
+          "maxSpeed": 72,
+          "scheduledAvgSpeed":60,
+          "vehicleStopCount":500,
+          "scheduledVehicleStopCount":1050,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8   
+        },
+        {
+          "itineraryId": "it01",
+          "itineraryName": "Itinerary 01",
+          "stopIndex": 9,
+          "stop": "Paradero 10",
+          "minTimeBeetweenStops": 6,
+          "avgTimeBeetweenStops": 12,
+          "maxTimeBeetweenStops": 18,
+          "scheduledAvgTimeBeetweenStops":15,
+          "minSpeed": 31,
+          "avgSpeed": 43,
+          "maxSpeed": 75,
+          "scheduledAvgSpeed":60,
+          "vehicleStopCount":1050,
+          "scheduledVehicleStopCount":1050,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8   
+        },
+        {
+          "itineraryId": "it02",
+          "itineraryName": "Itinerary 02",
+          "stopIndex": 10,
+          "stop": "Paradero A01",
+          "minTimeBeetweenStops": 0,
+          "avgTimeBeetweenStops": 0,
+          "maxTimeBeetweenStops": 0,
+          "scheduledAvgTimeBeetweenStops":15,
+          "minSpeed": 0,
+          "avgSpeed": 0,
+          "maxSpeed": 0,
+          "scheduledAvgSpeed":60,
+          "vehicleStopCount":1050,
+          "scheduledVehicleStopCount":1050,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8   
+        },
+        {
+          "itineraryId": "it02",
+          "itineraryName": "Itinerary 02",
+          "stopIndex": 11,
+          "stop": "Paradero A02",
+          "minTimeBeetweenStops": 1,
+          "avgTimeBeetweenStops": 3,
+          "maxTimeBeetweenStops": 4,
+          "scheduledAvgTimeBeetweenStops":15,
+          "minSpeed": 7,
+          "avgSpeed": 10,
+          "maxSpeed": 18,
+          "scheduledAvgSpeed":60,
+          "vehicleStopCount":1050,
+          "scheduledVehicleStopCount":1050,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8   
+        },
+        {
+          "itineraryId": "it02",
+          "itineraryName": "Itinerary 02",
+          "stopIndex": 12,
+          "stop": "Paradero A03",
+          "minTimeBeetweenStops": 25,
+          "avgTimeBeetweenStops": 50,
+          "maxTimeBeetweenStops": 75,
+          "scheduledAvgTimeBeetweenStops":15,
+          "minSpeed": 125,
+          "avgSpeed": 175,
+          "maxSpeed": 300,
+          "scheduledAvgSpeed":60,
+          "vehicleStopCount":200,
+          "scheduledVehicleStopCount":1050,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8   
+        },
+        {
+          "itineraryId": "it02",
+          "itineraryName": "Itinerary 02",
+          "stopIndex": 13,
+          "stop": "Paradero A04",
+          "minTimeBeetweenStops": 6,
+          "avgTimeBeetweenStops": 12,
+          "maxTimeBeetweenStops": 18,
+          "scheduledAvgTimeBeetweenStops":15,
+          "minSpeed": 30,
+          "avgSpeed": 42,
+          "maxSpeed": 72,
+          "scheduledAvgSpeed":60,
+          "vehicleStopCount":700,
+          "scheduledVehicleStopCount":1050,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8   
+        },
+        {
+          "itineraryId": "it02",
+          "itineraryName": "Itinerary 02",
+          "stopIndex": 14,
+          "stop": "Paradero A05",
+          "minTimeBeetweenStops": 8,
+          "avgTimeBeetweenStops": 17,
+          "maxTimeBeetweenStops": 25,
+          "scheduledAvgTimeBeetweenStops":15,
+          "minSpeed": 42,
+          "avgSpeed": 59,
+          "maxSpeed": 102,
+          "scheduledAvgSpeed":60,
+          "vehicleStopCount":1050,
+          "scheduledVehicleStopCount":1050,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8   
+        },
+        {
+          "itineraryId": "it02",
+          "itineraryName": "Itinerary 02",
+          "stopIndex": 15,
+          "stop": "Paradero A06",
+          "minTimeBeetweenStops": 5,
+          "avgTimeBeetweenStops": 10,
+          "maxTimeBeetweenStops": 15,
+          "scheduledAvgTimeBeetweenStops":15,
+          "minSpeed": 25,
+          "avgSpeed": 35,
+          "maxSpeed": 60,
+          "scheduledAvgSpeed":60,
+          "vehicleStopCount":1050,
+          "scheduledVehicleStopCount":1050 ,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8  
+        },
+        {
+          "itineraryId": "it02",
+          "itineraryName": "Itinerary 02",
+          "stopIndex": 16,
+          "stop": "Paradero A07",
+          "minTimeBeetweenStops": 4,
+          "avgTimeBeetweenStops": 8,
+          "maxTimeBeetweenStops": 12,
+          "scheduledAvgTimeBeetweenStops":15,
+          "minSpeed": 20,
+          "avgSpeed": 28,
+          "maxSpeed": 48,
+          "scheduledAvgSpeed":60,
+          "vehicleStopCount":1050,
+          "scheduledVehicleStopCount":1050,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8  
+        },
+        {
+          "itineraryId": "it02",
+          "itineraryName": "Itinerary 02",
+          "stopIndex": 17,
+          "stop": "Paradero A08",
+          "minTimeBeetweenStops": 1,
+          "avgTimeBeetweenStops": 2,
+          "maxTimeBeetweenStops": 3,
+          "scheduledAvgTimeBeetweenStops":15,
+          "minSpeed": 5,
+          "avgSpeed": 7,
+          "maxSpeed": 12,
+          "scheduledAvgSpeed":60,
+          "vehicleStopCount":1050,
+          "scheduledVehicleStopCount":1050 ,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8  
+        },
+        {
+          "itineraryId": "it02",
+          "itineraryName": "Itinerary 02",
+          "stopIndex": 18,
+          "stop": "Paradero A09",
+          "minTimeBeetweenStops": 9,
+          "avgTimeBeetweenStops": 18,
+          "maxTimeBeetweenStops": 27,
+          "scheduledAvgTimeBeetweenStops":15,
+          "minSpeed": 45,
+          "avgSpeed": 63,
+          "maxSpeed": 108,
+          "scheduledAvgSpeed":60,
+          "vehicleStopCount":100,
+          "scheduledVehicleStopCount":1050 ,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8  
+        },
+        {
+          "itineraryId": "it02",
+          "itineraryName": "Itinerary 02",
+          "stopIndex": 19,
+          "stop": "Paradero A10",
+          "minTimeBeetweenStops": 6,
+          "avgTimeBeetweenStops": 13,
+          "maxTimeBeetweenStops": 20,
+          "scheduledAvgTimeBeetweenStops":15,
+          "minSpeed": 33,
+          "avgSpeed": 46,
+          "maxSpeed": 80,
+          "scheduledAvgSpeed":60,
+          "vehicleStopCount":1050,
+          "scheduledVehicleStopCount":1050  ,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8 
+        },
+        {
+          "itineraryId": "it03",
+          "itineraryName": "Itinerary 03",
+          "stopIndex": 20,
+          "stop": "Paradero B01",
+          "minTimeBeetweenStops": 0,
+          "avgTimeBeetweenStops": 0,
+          "maxTimeBeetweenStops": 0,
+          "scheduledAvgTimeBeetweenStops":0,
+          "minSpeed": 0,
+          "avgSpeed": 0,
+          "maxSpeed": 0,
+          "scheduledAvgSpeed":0,
+          "vehicleStopCount":1050,
+          "scheduledVehicleStopCount":1050  ,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8 
+        },
+        {
+          "itineraryId": "it03",
+          "itineraryName": "Itinerary 03",
+          "stopIndex": 21,
+          "stop": "Paradero B02",
+          "minTimeBeetweenStops": 4,
+          "avgTimeBeetweenStops": 9,
+          "maxTimeBeetweenStops": 13,
+          "scheduledAvgTimeBeetweenStops":15,
+          "minSpeed": 22,
+          "avgSpeed": 31,
+          "maxSpeed": 54,
+          "scheduledAvgSpeed":60,
+          "vehicleStopCount":800,
+          "scheduledVehicleStopCount":1050 ,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8  
+        },
+        {
+          "itineraryId": "it03",
+          "itineraryName": "Itinerary 03",
+          "stopIndex": 22,
+          "stop": "Paradero B03",
+          "minTimeBeetweenStops": 11,
+          "avgTimeBeetweenStops": 22,
+          "maxTimeBeetweenStops": 33,
+          "scheduledAvgTimeBeetweenStops":15,
+          "minSpeed": 55,
+          "avgSpeed": 77,
+          "maxSpeed": 132,
+          "scheduledAvgSpeed":60,
+          "vehicleStopCount":800,
+          "scheduledVehicleStopCount":1050 ,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8  
+        },
+        {
+          "itineraryId": "it03",
+          "itineraryName": "Itinerary 03",
+          "stopIndex": 23,
+          "stop": "Paradero B04",
+          "minTimeBeetweenStops": 5,
+          "avgTimeBeetweenStops": 11,
+          "maxTimeBeetweenStops": 16,
+          "scheduledAvgTimeBeetweenStops":15,
+          "minSpeed": 27,
+          "avgSpeed": 38,
+          "maxSpeed": 66,
+          "scheduledAvgSpeed":60,
+          "vehicleStopCount":1050,
+          "scheduledVehicleStopCount":1050  ,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8 
+        },
+        {
+          "itineraryId": "it03",
+          "itineraryName": "Itinerary 03",
+          "stopIndex": 24,
+          "stop": "Paradero B05",
+          "minTimeBeetweenStops": 9,
+          "avgTimeBeetweenStops": 19,
+          "maxTimeBeetweenStops": 28,
+          "scheduledAvgTimeBeetweenStops":15,
+          "minSpeed": 47,
+          "avgSpeed": 66,
+          "maxSpeed": 114,
+          "scheduledAvgSpeed":60,
+          "vehicleStopCount":1050,
+          "scheduledVehicleStopCount":1050,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8   
+        },
+        {
+          "itineraryId": "it03",
+          "itineraryName": "Itinerary 03",
+          "stopIndex": 25,
+          "stop": "Paradero B06",
+          "minTimeBeetweenStops": 8,
+          "avgTimeBeetweenStops": 17,
+          "maxTimeBeetweenStops": 25,
+          "scheduledAvgTimeBeetweenStops":15,
+          "minSpeed": 42,
+          "avgSpeed": 59,
+          "maxSpeed": 102,
+          "scheduledAvgSpeed":60,
+          "vehicleStopCount":500,
+          "scheduledVehicleStopCount":1050 ,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8  
+        },
+        {
+          "itineraryId": "it03",
+          "itineraryName": "Itinerary 03",
+          "stopIndex": 26,
+          "stop": "Paradero B07",
+          "minTimeBeetweenStops": 2,
+          "avgTimeBeetweenStops": 5,
+          "maxTimeBeetweenStops": 7,
+          "scheduledAvgTimeBeetweenStops":15,
+          "minSpeed": 12,
+          "avgSpeed": 17,
+          "maxSpeed": 30,
+          "scheduledAvgSpeed":60,
+          "vehicleStopCount":1050,
+          "scheduledVehicleStopCount":1050 ,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8  
+        },
+        {
+          "itineraryId": "it03",
+          "itineraryName": "Itinerary 03",
+          "stopIndex": 27,
+          "stop": "Paradero B08",
+          "minTimeBeetweenStops": 3,
+          "avgTimeBeetweenStops": 7,
+          "maxTimeBeetweenStops": 10,
+          "scheduledAvgTimeBeetweenStops":15,
+          "minSpeed": 17,
+          "avgSpeed": 24,
+          "maxSpeed": 42,
+          "scheduledAvgSpeed":60,
+          "vehicleStopCount":100,
+          "scheduledVehicleStopCount":1050 ,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8  
+        },
+        {
+          "itineraryId": "it03",
+          "itineraryName": "Itinerary 03",
+          "stopIndex": 28,
+          "stop": "Paradero B09",
+          "minTimeBeetweenStops": 5,
+          "avgTimeBeetweenStops": 11,
+          "maxTimeBeetweenStops": 16,
+          "scheduledAvgTimeBeetweenStops":15,
+          "minSpeed": 27,
+          "avgSpeed": 38,
+          "maxSpeed": 66,
+          "scheduledAvgSpeed":60,
+          "vehicleStopCount":1050,
+          "scheduledVehicleStopCount":1050 ,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8  
+        },
+        {
+          "itineraryId": "it03",
+          "itineraryName": "Itinerary 03",
+          "stopIndex": 29,
+          "stop": "Paradero B10",
+          "minTimeBeetweenStops": 9,
+          "avgTimeBeetweenStops": 18,
+          "maxTimeBeetweenStops": 28,
+          "scheduledAvgTimeBeetweenStops":15,
+          "minSpeed": 47,
+          "avgSpeed": 66,
+          "maxSpeed": 113,
+          "scheduledAvgSpeed":60,
+          "vehicleStopCount":1050,
+          "scheduledVehicleStopCount":1050 ,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8  
+        }
+      ]
+    }
   }
 }
