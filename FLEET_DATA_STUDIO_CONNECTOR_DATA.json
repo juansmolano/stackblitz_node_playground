@@ -640,33 +640,6 @@
           },
           "name": "maxSpeed",
           "dataType": "NUMBER"
-        },
-        {
-          "semantics": {
-            "isReaggregatable": true,
-            "semanticType": "NUMBER",
-            "conceptType": "METRIC"
-          },
-          "dataType": "NUMBER",
-          "name": "minStopTime"
-        },
-        {
-          "semantics": {
-            "conceptType": "METRIC",
-            "semanticType": "NUMBER",
-            "isReaggregatable": true
-          },
-          "dataType": "NUMBER",
-          "name": "avgStopTime"
-        },
-        {
-          "semantics": {
-            "semanticType": "NUMBER",
-            "conceptType": "METRIC",
-            "isReaggregatable": true
-          },
-          "dataType": "NUMBER",
-          "name": "maxStopTime"
         }
       ],
       "DATA": [
@@ -680,10 +653,7 @@
           "maxTimeSpan": 0,
           "minSpeed": 0,
           "avgSpeed": 0,
-          "maxSpeed": 0,
-          "minStopTime":1,
-          "avgStopTime":3,
-          "maxStopTime":8
+          "maxSpeed": 0
         },
         {
           "itineraryId": "it01",
@@ -695,10 +665,7 @@
           "maxTimeSpan": 7,
           "minSpeed": 12,
           "avgSpeed": 17,
-          "maxSpeed": 30,
-          "minStopTime":0,
-          "avgStopTime":2,
-          "maxStopTime":5
+          "maxSpeed": 30
         },
         {
           "itineraryId": "it01",
@@ -710,10 +677,7 @@
           "maxTimeSpan": 30,
           "minSpeed": 50,
           "avgSpeed": 70,
-          "maxSpeed": 120,
-          "minStopTime":1,
-          "avgStopTime":3,
-          "maxStopTime":8
+          "maxSpeed": 120
         },
         {
           "itineraryId": "it01",
@@ -725,10 +689,7 @@
           "maxTimeSpan": 27,
           "minSpeed": 45,
           "avgSpeed": 63,
-          "maxSpeed": 108,
-          "minStopTime":1,
-          "avgStopTime":3,
-          "maxStopTime":8
+          "maxSpeed": 108
         },
         {
           "itineraryId": "it01",
@@ -740,10 +701,7 @@
           "maxTimeSpan": 21,
           "minSpeed": 35,
           "avgSpeed": 49,
-          "maxSpeed": 84,
-          "minStopTime":1,
-          "avgStopTime":3,
-          "maxStopTime":8
+          "maxSpeed": 84
         },
         {
           "itineraryId": "it01",
@@ -755,10 +713,7 @@
           "maxTimeSpan": 16,
           "minSpeed": 27,
           "avgSpeed": 38,
-          "maxSpeed": 66,
-          "minStopTime":1,
-          "avgStopTime":3,
-          "maxStopTime":8
+          "maxSpeed": 66
         },
         {
           "itineraryId": "it01",
@@ -770,10 +725,7 @@
           "maxTimeSpan": 4,
           "minSpeed": 7,
           "avgSpeed": 10,
-          "maxSpeed": 18,
-          "minStopTime":1,
-          "avgStopTime":3,
-          "maxStopTime":8
+          "maxSpeed": 18
         },
         {
           "itineraryId": "it01",
@@ -785,10 +737,7 @@
           "maxTimeSpan": 12,
           "minSpeed": 20,
           "avgSpeed": 28,
-          "maxSpeed": 48,
-          "minStopTime":1,
-          "avgStopTime":3,
-          "maxStopTime":8
+          "maxSpeed": 48
         },
         {
           "itineraryId": "it01",
@@ -800,10 +749,7 @@
           "maxTimeSpan": 18,
           "minSpeed": 30,
           "avgSpeed": 42,
-          "maxSpeed": 72,
-          "minStopTime":1,
-          "avgStopTime":3,
-          "maxStopTime":8
+          "maxSpeed": 72
         },
         {
           "itineraryId": "it01",
@@ -815,10 +761,7 @@
           "maxTimeSpan": 18,
           "minSpeed": 31,
           "avgSpeed": 43,
-          "maxSpeed": 75,
-          "minStopTime":1,
-          "avgStopTime":3,
-          "maxStopTime":8
+          "maxSpeed": 75
         },
         {
           "itineraryId": "it02",
@@ -830,10 +773,7 @@
           "maxTimeSpan": 0,
           "minSpeed": 0,
           "avgSpeed": 0,
-          "maxSpeed": 0,
-          "minStopTime":1,
-          "avgStopTime":3,
-          "maxStopTime":8
+          "maxSpeed": 0
         },
         {
           "itineraryId": "it02",
@@ -845,10 +785,7 @@
           "maxTimeSpan": 4,
           "minSpeed": 7,
           "avgSpeed": 10,
-          "maxSpeed": 18,
-          "minStopTime":1,
-          "avgStopTime":3,
-          "maxStopTime":8
+          "maxSpeed": 18
         },
         {
           "itineraryId": "it02",
@@ -860,10 +797,7 @@
           "maxTimeSpan": 75,
           "minSpeed": 125,
           "avgSpeed": 175,
-          "maxSpeed": 300,
-          "minStopTime":1,
-          "avgStopTime":3,
-          "maxStopTime":8
+          "maxSpeed": 300
         },
         {
           "itineraryId": "it02",
@@ -875,10 +809,7 @@
           "maxTimeSpan": 18,
           "minSpeed": 30,
           "avgSpeed": 42,
-          "maxSpeed": 72,
-          "minStopTime":1,
-          "avgStopTime":3,
-          "maxStopTime":8
+          "maxSpeed": 72
         },
         {
           "itineraryId": "it02",
@@ -890,10 +821,7 @@
           "maxTimeSpan": 25,
           "minSpeed": 42,
           "avgSpeed": 59,
-          "maxSpeed": 102,
-          "minStopTime":1,
-          "avgStopTime":3,
-          "maxStopTime":8
+          "maxSpeed": 102
         },
         {
           "itineraryId": "it02",
@@ -905,10 +833,7 @@
           "maxTimeSpan": 15,
           "minSpeed": 25,
           "avgSpeed": 35,
-          "maxSpeed": 60,
-          "minStopTime":1,
-          "avgStopTime":3,
-          "maxStopTime":8
+          "maxSpeed": 60
         },
         {
           "itineraryId": "it02",
@@ -920,10 +845,7 @@
           "maxTimeSpan": 12,
           "minSpeed": 20,
           "avgSpeed": 28,
-          "maxSpeed": 48,
-          "minStopTime":1,
-          "avgStopTime":3,
-          "maxStopTime":8
+          "maxSpeed": 48
         },
         {
           "itineraryId": "it02",
@@ -935,10 +857,7 @@
           "maxTimeSpan": 3,
           "minSpeed": 5,
           "avgSpeed": 7,
-          "maxSpeed": 12,
-          "minStopTime":1,
-          "avgStopTime":3,
-          "maxStopTime":8
+          "maxSpeed": 12
         },
         {
           "itineraryId": "it02",
@@ -950,10 +869,7 @@
           "maxTimeSpan": 27,
           "minSpeed": 45,
           "avgSpeed": 63,
-          "maxSpeed": 108,
-          "minStopTime":1,
-          "avgStopTime":3,
-          "maxStopTime":8
+          "maxSpeed": 108
         },
         {
           "itineraryId": "it02",
@@ -965,10 +881,7 @@
           "maxTimeSpan": 20,
           "minSpeed": 33,
           "avgSpeed": 46,
-          "maxSpeed": 80,
-          "minStopTime":1,
-          "avgStopTime":3,
-          "maxStopTime":8
+          "maxSpeed": 80
         },
         {
           "itineraryId": "it03",
@@ -980,10 +893,7 @@
           "maxTimeSpan": 0,
           "minSpeed": 0,
           "avgSpeed": 0,
-          "maxSpeed": 0,
-          "minStopTime":1,
-          "avgStopTime":3,
-          "maxStopTime":8
+          "maxSpeed": 0
         },
         {
           "itineraryId": "it03",
@@ -995,10 +905,7 @@
           "maxTimeSpan": 13,
           "minSpeed": 22,
           "avgSpeed": 31,
-          "maxSpeed": 54,
-          "minStopTime":1,
-          "avgStopTime":3,
-          "maxStopTime":8
+          "maxSpeed": 54
         },
         {
           "itineraryId": "it03",
@@ -1010,10 +917,7 @@
           "maxTimeSpan": 33,
           "minSpeed": 55,
           "avgSpeed": 77,
-          "maxSpeed": 132,
-          "minStopTime":1,
-          "avgStopTime":3,
-          "maxStopTime":8
+          "maxSpeed": 132
         },
         {
           "itineraryId": "it03",
@@ -1025,10 +929,7 @@
           "maxTimeSpan": 16,
           "minSpeed": 27,
           "avgSpeed": 38,
-          "maxSpeed": 66,
-          "minStopTime":1,
-          "avgStopTime":3,
-          "maxStopTime":8
+          "maxSpeed": 66
         },
         {
           "itineraryId": "it03",
@@ -1040,10 +941,7 @@
           "maxTimeSpan": 28,
           "minSpeed": 47,
           "avgSpeed": 66,
-          "maxSpeed": 114,
-          "minStopTime":1,
-          "avgStopTime":3,
-          "maxStopTime":8
+          "maxSpeed": 114
         },
         {
           "itineraryId": "it03",
@@ -1055,10 +953,7 @@
           "maxTimeSpan": 25,
           "minSpeed": 42,
           "avgSpeed": 59,
-          "maxSpeed": 102,
-          "minStopTime":1,
-          "avgStopTime":3,
-          "maxStopTime":8
+          "maxSpeed": 102
         },
         {
           "itineraryId": "it03",
@@ -1070,10 +965,7 @@
           "maxTimeSpan": 7,
           "minSpeed": 12,
           "avgSpeed": 17,
-          "maxSpeed": 30,
-          "minStopTime":1,
-          "avgStopTime":3,
-          "maxStopTime":8
+          "maxSpeed": 30
         },
         {
           "itineraryId": "it03",
@@ -1085,10 +977,7 @@
           "maxTimeSpan": 10,
           "minSpeed": 17,
           "avgSpeed": 24,
-          "maxSpeed": 42,
-          "minStopTime":1,
-          "avgStopTime":3,
-          "maxStopTime":8
+          "maxSpeed": 42
         },
         {
           "itineraryId": "it03",
@@ -1100,10 +989,7 @@
           "maxTimeSpan": 16,
           "minSpeed": 27,
           "avgSpeed": 38,
-          "maxSpeed": 66,
-          "minStopTime":1,
-          "avgStopTime":3,
-          "maxStopTime":8
+          "maxSpeed": 66
         },
         {
           "itineraryId": "it03",
@@ -1115,10 +1001,7 @@
           "maxTimeSpan": 28,
           "minSpeed": 47,
           "avgSpeed": 66,
-          "maxSpeed": 113,
-          "minStopTime":1,
-          "avgStopTime":3,
-          "maxStopTime":8
+          "maxSpeed": 113
         }
       ]
     }
@@ -3877,36 +3760,33 @@
           "dataType": "NUMBER",
           "name": "scheduledVehicleStopCount"
         },
-
-
-        {
-          "semantics": {
-            "isReaggregatable": true,
-            "conceptType": "METRIC",
-            "semanticType": "NUMBER"
-          },
-          "name": "minOnStop",
-          "dataType": "NUMBER"
-        },
-        {
-          "semantics": {
-            "conceptType": "METRIC",
-            "isReaggregatable": true,
-            "semanticType": "NUMBER"
-          },
-          "dataType": "NUMBER",
-          "name": "avgSpeed"
-        },
         {
           "semantics": {
             "isReaggregatable": true,
             "semanticType": "NUMBER",
             "conceptType": "METRIC"
           },
-          "name": "maxSpeed",
-          "dataType": "NUMBER"
+          "dataType": "NUMBER",
+          "name": "minStopTime"
+        },
+        {
+          "semantics": {
+            "conceptType": "METRIC",
+            "semanticType": "NUMBER",
+            "isReaggregatable": true
+          },
+          "dataType": "NUMBER",
+          "name": "avgStopTime"
+        },
+        {
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "dataType": "NUMBER",
+          "name": "maxStopTime"
         }
-
       ],
       "DATA": [
         {
@@ -3923,7 +3803,10 @@
           "maxSpeed": 0,
           "scheduledAvgSpeed":0,
           "vehicleStopCount":1050,
-          "scheduledVehicleStopCount":1050        
+          "scheduledVehicleStopCount":1050,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8
         },
         {
           "itineraryId": "it01",
@@ -3939,7 +3822,10 @@
           "maxSpeed": 30,
           "scheduledAvgSpeed":60,
           "vehicleStopCount":900,
-          "scheduledVehicleStopCount":1050   
+          "scheduledVehicleStopCount":1050,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8   
         },
         {
           "itineraryId": "it01",
@@ -3955,7 +3841,10 @@
           "maxSpeed": 120,
           "scheduledAvgSpeed":60,
           "vehicleStopCount":800,
-          "scheduledVehicleStopCount":1050   
+          "scheduledVehicleStopCount":1050,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8   
         },
         {
           "itineraryId": "it01",
@@ -3971,7 +3860,10 @@
           "maxSpeed": 108,
           "scheduledAvgSpeed":60,
           "vehicleStopCount":1000,
-          "scheduledVehicleStopCount":1050   
+          "scheduledVehicleStopCount":1050,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8   
         },
         {
           "itineraryId": "it01",
@@ -3987,7 +3879,10 @@
           "maxSpeed": 84,
           "scheduledAvgSpeed":60,
           "vehicleStopCount":1050,
-          "scheduledVehicleStopCount":1050   
+          "scheduledVehicleStopCount":1050,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8   
         },
         {
           "itineraryId": "it01",
@@ -4003,7 +3898,10 @@
           "maxSpeed": 66,
           "scheduledAvgSpeed":60,
           "vehicleStopCount":1050,
-          "scheduledVehicleStopCount":1050   
+          "scheduledVehicleStopCount":1050,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8   
         },
         {
           "itineraryId": "it01",
@@ -4019,7 +3917,10 @@
           "maxSpeed": 18,
           "scheduledAvgSpeed":60,
           "vehicleStopCount":900,
-          "scheduledVehicleStopCount":1050   
+          "scheduledVehicleStopCount":1050,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8   
         },
         {
           "itineraryId": "it01",
@@ -4035,7 +3936,10 @@
           "maxSpeed": 48,
           "scheduledAvgSpeed":60,
           "vehicleStopCount":800,
-          "scheduledVehicleStopCount":1050   
+          "scheduledVehicleStopCount":1050,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8   
         },
         {
           "itineraryId": "it01",
@@ -4051,7 +3955,10 @@
           "maxSpeed": 72,
           "scheduledAvgSpeed":60,
           "vehicleStopCount":500,
-          "scheduledVehicleStopCount":1050   
+          "scheduledVehicleStopCount":1050,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8   
         },
         {
           "itineraryId": "it01",
@@ -4067,7 +3974,10 @@
           "maxSpeed": 75,
           "scheduledAvgSpeed":60,
           "vehicleStopCount":1050,
-          "scheduledVehicleStopCount":1050   
+          "scheduledVehicleStopCount":1050,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8   
         },
         {
           "itineraryId": "it02",
@@ -4083,7 +3993,10 @@
           "maxSpeed": 0,
           "scheduledAvgSpeed":60,
           "vehicleStopCount":1050,
-          "scheduledVehicleStopCount":1050   
+          "scheduledVehicleStopCount":1050,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8   
         },
         {
           "itineraryId": "it02",
@@ -4099,7 +4012,10 @@
           "maxSpeed": 18,
           "scheduledAvgSpeed":60,
           "vehicleStopCount":1050,
-          "scheduledVehicleStopCount":1050   
+          "scheduledVehicleStopCount":1050,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8   
         },
         {
           "itineraryId": "it02",
@@ -4115,7 +4031,10 @@
           "maxSpeed": 300,
           "scheduledAvgSpeed":60,
           "vehicleStopCount":200,
-          "scheduledVehicleStopCount":1050   
+          "scheduledVehicleStopCount":1050,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8   
         },
         {
           "itineraryId": "it02",
@@ -4131,7 +4050,10 @@
           "maxSpeed": 72,
           "scheduledAvgSpeed":60,
           "vehicleStopCount":700,
-          "scheduledVehicleStopCount":1050   
+          "scheduledVehicleStopCount":1050,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8   
         },
         {
           "itineraryId": "it02",
@@ -4147,7 +4069,10 @@
           "maxSpeed": 102,
           "scheduledAvgSpeed":60,
           "vehicleStopCount":1050,
-          "scheduledVehicleStopCount":1050   
+          "scheduledVehicleStopCount":1050,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8   
         },
         {
           "itineraryId": "it02",
@@ -4163,7 +4088,10 @@
           "maxSpeed": 60,
           "scheduledAvgSpeed":60,
           "vehicleStopCount":1050,
-          "scheduledVehicleStopCount":1050   
+          "scheduledVehicleStopCount":1050 ,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8  
         },
         {
           "itineraryId": "it02",
@@ -4179,7 +4107,10 @@
           "maxSpeed": 48,
           "scheduledAvgSpeed":60,
           "vehicleStopCount":1050,
-          "scheduledVehicleStopCount":1050   
+          "scheduledVehicleStopCount":1050,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8  
         },
         {
           "itineraryId": "it02",
@@ -4195,7 +4126,10 @@
           "maxSpeed": 12,
           "scheduledAvgSpeed":60,
           "vehicleStopCount":1050,
-          "scheduledVehicleStopCount":1050   
+          "scheduledVehicleStopCount":1050 ,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8  
         },
         {
           "itineraryId": "it02",
@@ -4211,7 +4145,10 @@
           "maxSpeed": 108,
           "scheduledAvgSpeed":60,
           "vehicleStopCount":100,
-          "scheduledVehicleStopCount":1050   
+          "scheduledVehicleStopCount":1050 ,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8  
         },
         {
           "itineraryId": "it02",
@@ -4227,7 +4164,10 @@
           "maxSpeed": 80,
           "scheduledAvgSpeed":60,
           "vehicleStopCount":1050,
-          "scheduledVehicleStopCount":1050   
+          "scheduledVehicleStopCount":1050  ,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8 
         },
         {
           "itineraryId": "it03",
@@ -4243,7 +4183,10 @@
           "maxSpeed": 0,
           "scheduledAvgSpeed":0,
           "vehicleStopCount":1050,
-          "scheduledVehicleStopCount":1050   
+          "scheduledVehicleStopCount":1050  ,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8 
         },
         {
           "itineraryId": "it03",
@@ -4259,7 +4202,10 @@
           "maxSpeed": 54,
           "scheduledAvgSpeed":60,
           "vehicleStopCount":800,
-          "scheduledVehicleStopCount":1050   
+          "scheduledVehicleStopCount":1050 ,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8  
         },
         {
           "itineraryId": "it03",
@@ -4275,7 +4221,10 @@
           "maxSpeed": 132,
           "scheduledAvgSpeed":60,
           "vehicleStopCount":800,
-          "scheduledVehicleStopCount":1050   
+          "scheduledVehicleStopCount":1050 ,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8  
         },
         {
           "itineraryId": "it03",
@@ -4291,7 +4240,10 @@
           "maxSpeed": 66,
           "scheduledAvgSpeed":60,
           "vehicleStopCount":1050,
-          "scheduledVehicleStopCount":1050   
+          "scheduledVehicleStopCount":1050  ,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8 
         },
         {
           "itineraryId": "it03",
@@ -4307,7 +4259,10 @@
           "maxSpeed": 114,
           "scheduledAvgSpeed":60,
           "vehicleStopCount":1050,
-          "scheduledVehicleStopCount":1050   
+          "scheduledVehicleStopCount":1050,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8   
         },
         {
           "itineraryId": "it03",
@@ -4323,7 +4278,10 @@
           "maxSpeed": 102,
           "scheduledAvgSpeed":60,
           "vehicleStopCount":500,
-          "scheduledVehicleStopCount":1050   
+          "scheduledVehicleStopCount":1050 ,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8  
         },
         {
           "itineraryId": "it03",
@@ -4339,7 +4297,10 @@
           "maxSpeed": 30,
           "scheduledAvgSpeed":60,
           "vehicleStopCount":1050,
-          "scheduledVehicleStopCount":1050   
+          "scheduledVehicleStopCount":1050 ,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8  
         },
         {
           "itineraryId": "it03",
@@ -4355,7 +4316,10 @@
           "maxSpeed": 42,
           "scheduledAvgSpeed":60,
           "vehicleStopCount":100,
-          "scheduledVehicleStopCount":1050   
+          "scheduledVehicleStopCount":1050 ,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8  
         },
         {
           "itineraryId": "it03",
@@ -4371,7 +4335,10 @@
           "maxSpeed": 66,
           "scheduledAvgSpeed":60,
           "vehicleStopCount":1050,
-          "scheduledVehicleStopCount":1050   
+          "scheduledVehicleStopCount":1050 ,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8  
         },
         {
           "itineraryId": "it03",
@@ -4387,7 +4354,10 @@
           "maxSpeed": 113,
           "scheduledAvgSpeed":60,
           "vehicleStopCount":1050,
-          "scheduledVehicleStopCount":1050   
+          "scheduledVehicleStopCount":1050 ,
+          "minStopTime":1,
+          "avgStopTime":5,
+          "maxStopTime":8  
         }
       ]
     }
