@@ -640,6 +640,33 @@
           },
           "name": "maxSpeed",
           "dataType": "NUMBER"
+        },
+        {
+          "semantics": {
+            "isReaggregatable": true,
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC"
+          },
+          "dataType": "NUMBER",
+          "name": "minStopTime"
+        },
+        {
+          "semantics": {
+            "conceptType": "METRIC",
+            "semanticType": "NUMBER",
+            "isReaggregatable": true
+          },
+          "dataType": "NUMBER",
+          "name": "avgStopTime"
+        },
+        {
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "dataType": "NUMBER",
+          "name": "maxStopTime"
         }
       ],
       "DATA": [
@@ -653,7 +680,10 @@
           "maxTimeSpan": 0,
           "minSpeed": 0,
           "avgSpeed": 0,
-          "maxSpeed": 0
+          "maxSpeed": 0,
+          "minStopTime":1,
+          "avgStopTime":3,
+          "maxStopTime":8
         },
         {
           "itineraryId": "it01",
@@ -665,7 +695,10 @@
           "maxTimeSpan": 7,
           "minSpeed": 12,
           "avgSpeed": 17,
-          "maxSpeed": 30
+          "maxSpeed": 30,
+          "minStopTime":0,
+          "avgStopTime":2,
+          "maxStopTime":5
         },
         {
           "itineraryId": "it01",
@@ -677,7 +710,10 @@
           "maxTimeSpan": 30,
           "minSpeed": 50,
           "avgSpeed": 70,
-          "maxSpeed": 120
+          "maxSpeed": 120,
+          "minStopTime":1,
+          "avgStopTime":3,
+          "maxStopTime":8
         },
         {
           "itineraryId": "it01",
@@ -689,7 +725,10 @@
           "maxTimeSpan": 27,
           "minSpeed": 45,
           "avgSpeed": 63,
-          "maxSpeed": 108
+          "maxSpeed": 108,
+          "minStopTime":1,
+          "avgStopTime":3,
+          "maxStopTime":8
         },
         {
           "itineraryId": "it01",
@@ -701,7 +740,10 @@
           "maxTimeSpan": 21,
           "minSpeed": 35,
           "avgSpeed": 49,
-          "maxSpeed": 84
+          "maxSpeed": 84,
+          "minStopTime":1,
+          "avgStopTime":3,
+          "maxStopTime":8
         },
         {
           "itineraryId": "it01",
@@ -713,7 +755,10 @@
           "maxTimeSpan": 16,
           "minSpeed": 27,
           "avgSpeed": 38,
-          "maxSpeed": 66
+          "maxSpeed": 66,
+          "minStopTime":1,
+          "avgStopTime":3,
+          "maxStopTime":8
         },
         {
           "itineraryId": "it01",
@@ -725,7 +770,10 @@
           "maxTimeSpan": 4,
           "minSpeed": 7,
           "avgSpeed": 10,
-          "maxSpeed": 18
+          "maxSpeed": 18,
+          "minStopTime":1,
+          "avgStopTime":3,
+          "maxStopTime":8
         },
         {
           "itineraryId": "it01",
@@ -737,7 +785,10 @@
           "maxTimeSpan": 12,
           "minSpeed": 20,
           "avgSpeed": 28,
-          "maxSpeed": 48
+          "maxSpeed": 48,
+          "minStopTime":1,
+          "avgStopTime":3,
+          "maxStopTime":8
         },
         {
           "itineraryId": "it01",
@@ -749,7 +800,10 @@
           "maxTimeSpan": 18,
           "minSpeed": 30,
           "avgSpeed": 42,
-          "maxSpeed": 72
+          "maxSpeed": 72,
+          "minStopTime":1,
+          "avgStopTime":3,
+          "maxStopTime":8
         },
         {
           "itineraryId": "it01",
@@ -761,7 +815,10 @@
           "maxTimeSpan": 18,
           "minSpeed": 31,
           "avgSpeed": 43,
-          "maxSpeed": 75
+          "maxSpeed": 75,
+          "minStopTime":1,
+          "avgStopTime":3,
+          "maxStopTime":8
         },
         {
           "itineraryId": "it02",
@@ -773,7 +830,10 @@
           "maxTimeSpan": 0,
           "minSpeed": 0,
           "avgSpeed": 0,
-          "maxSpeed": 0
+          "maxSpeed": 0,
+          "minStopTime":1,
+          "avgStopTime":3,
+          "maxStopTime":8
         },
         {
           "itineraryId": "it02",
@@ -785,7 +845,10 @@
           "maxTimeSpan": 4,
           "minSpeed": 7,
           "avgSpeed": 10,
-          "maxSpeed": 18
+          "maxSpeed": 18,
+          "minStopTime":1,
+          "avgStopTime":3,
+          "maxStopTime":8
         },
         {
           "itineraryId": "it02",
@@ -797,7 +860,10 @@
           "maxTimeSpan": 75,
           "minSpeed": 125,
           "avgSpeed": 175,
-          "maxSpeed": 300
+          "maxSpeed": 300,
+          "minStopTime":1,
+          "avgStopTime":3,
+          "maxStopTime":8
         },
         {
           "itineraryId": "it02",
@@ -809,7 +875,10 @@
           "maxTimeSpan": 18,
           "minSpeed": 30,
           "avgSpeed": 42,
-          "maxSpeed": 72
+          "maxSpeed": 72,
+          "minStopTime":1,
+          "avgStopTime":3,
+          "maxStopTime":8
         },
         {
           "itineraryId": "it02",
@@ -821,7 +890,10 @@
           "maxTimeSpan": 25,
           "minSpeed": 42,
           "avgSpeed": 59,
-          "maxSpeed": 102
+          "maxSpeed": 102,
+          "minStopTime":1,
+          "avgStopTime":3,
+          "maxStopTime":8
         },
         {
           "itineraryId": "it02",
@@ -833,7 +905,10 @@
           "maxTimeSpan": 15,
           "minSpeed": 25,
           "avgSpeed": 35,
-          "maxSpeed": 60
+          "maxSpeed": 60,
+          "minStopTime":1,
+          "avgStopTime":3,
+          "maxStopTime":8
         },
         {
           "itineraryId": "it02",
@@ -845,7 +920,10 @@
           "maxTimeSpan": 12,
           "minSpeed": 20,
           "avgSpeed": 28,
-          "maxSpeed": 48
+          "maxSpeed": 48,
+          "minStopTime":1,
+          "avgStopTime":3,
+          "maxStopTime":8
         },
         {
           "itineraryId": "it02",
@@ -857,7 +935,10 @@
           "maxTimeSpan": 3,
           "minSpeed": 5,
           "avgSpeed": 7,
-          "maxSpeed": 12
+          "maxSpeed": 12,
+          "minStopTime":1,
+          "avgStopTime":3,
+          "maxStopTime":8
         },
         {
           "itineraryId": "it02",
@@ -869,7 +950,10 @@
           "maxTimeSpan": 27,
           "minSpeed": 45,
           "avgSpeed": 63,
-          "maxSpeed": 108
+          "maxSpeed": 108,
+          "minStopTime":1,
+          "avgStopTime":3,
+          "maxStopTime":8
         },
         {
           "itineraryId": "it02",
@@ -881,7 +965,10 @@
           "maxTimeSpan": 20,
           "minSpeed": 33,
           "avgSpeed": 46,
-          "maxSpeed": 80
+          "maxSpeed": 80,
+          "minStopTime":1,
+          "avgStopTime":3,
+          "maxStopTime":8
         },
         {
           "itineraryId": "it03",
@@ -893,7 +980,10 @@
           "maxTimeSpan": 0,
           "minSpeed": 0,
           "avgSpeed": 0,
-          "maxSpeed": 0
+          "maxSpeed": 0,
+          "minStopTime":1,
+          "avgStopTime":3,
+          "maxStopTime":8
         },
         {
           "itineraryId": "it03",
@@ -905,7 +995,10 @@
           "maxTimeSpan": 13,
           "minSpeed": 22,
           "avgSpeed": 31,
-          "maxSpeed": 54
+          "maxSpeed": 54,
+          "minStopTime":1,
+          "avgStopTime":3,
+          "maxStopTime":8
         },
         {
           "itineraryId": "it03",
@@ -917,7 +1010,10 @@
           "maxTimeSpan": 33,
           "minSpeed": 55,
           "avgSpeed": 77,
-          "maxSpeed": 132
+          "maxSpeed": 132,
+          "minStopTime":1,
+          "avgStopTime":3,
+          "maxStopTime":8
         },
         {
           "itineraryId": "it03",
@@ -929,7 +1025,10 @@
           "maxTimeSpan": 16,
           "minSpeed": 27,
           "avgSpeed": 38,
-          "maxSpeed": 66
+          "maxSpeed": 66,
+          "minStopTime":1,
+          "avgStopTime":3,
+          "maxStopTime":8
         },
         {
           "itineraryId": "it03",
@@ -941,7 +1040,10 @@
           "maxTimeSpan": 28,
           "minSpeed": 47,
           "avgSpeed": 66,
-          "maxSpeed": 114
+          "maxSpeed": 114,
+          "minStopTime":1,
+          "avgStopTime":3,
+          "maxStopTime":8
         },
         {
           "itineraryId": "it03",
@@ -953,7 +1055,10 @@
           "maxTimeSpan": 25,
           "minSpeed": 42,
           "avgSpeed": 59,
-          "maxSpeed": 102
+          "maxSpeed": 102,
+          "minStopTime":1,
+          "avgStopTime":3,
+          "maxStopTime":8
         },
         {
           "itineraryId": "it03",
@@ -965,7 +1070,10 @@
           "maxTimeSpan": 7,
           "minSpeed": 12,
           "avgSpeed": 17,
-          "maxSpeed": 30
+          "maxSpeed": 30,
+          "minStopTime":1,
+          "avgStopTime":3,
+          "maxStopTime":8
         },
         {
           "itineraryId": "it03",
@@ -977,7 +1085,10 @@
           "maxTimeSpan": 10,
           "minSpeed": 17,
           "avgSpeed": 24,
-          "maxSpeed": 42
+          "maxSpeed": 42,
+          "minStopTime":1,
+          "avgStopTime":3,
+          "maxStopTime":8
         },
         {
           "itineraryId": "it03",
@@ -989,7 +1100,10 @@
           "maxTimeSpan": 16,
           "minSpeed": 27,
           "avgSpeed": 38,
-          "maxSpeed": 66
+          "maxSpeed": 66,
+          "minStopTime":1,
+          "avgStopTime":3,
+          "maxStopTime":8
         },
         {
           "itineraryId": "it03",
@@ -1001,7 +1115,10 @@
           "maxTimeSpan": 28,
           "minSpeed": 47,
           "avgSpeed": 66,
-          "maxSpeed": 113
+          "maxSpeed": 113,
+          "minStopTime":1,
+          "avgStopTime":3,
+          "maxStopTime":8
         }
       ]
     }
@@ -3677,7 +3794,7 @@
             "conceptType": "METRIC"
           },
           "dataType": "NUMBER",
-          "name": "minTimeSpan"
+          "name": "minTimeBeetweenStops"
         },
         {
           "semantics": {
@@ -3686,7 +3803,7 @@
             "isReaggregatable": true
           },
           "dataType": "NUMBER",
-          "name": "avgTimeSpan"
+          "name": "avgTimeBeetweenStops"
         },
         {
           "semantics": {
@@ -3695,7 +3812,16 @@
             "isReaggregatable": true
           },
           "dataType": "NUMBER",
-          "name": "maxTimeSpan"
+          "name": "maxTimeBeetweenStops"
+        },
+        {
+          "semantics": {
+            "conceptType": "METRIC",
+            "semanticType": "NUMBER",
+            "isReaggregatable": true
+          },
+          "dataType": "NUMBER",
+          "name": "scheduledAvgTimeBeetweenStops"
         },
         {
           "semantics": {
@@ -3750,7 +3876,37 @@
           },
           "dataType": "NUMBER",
           "name": "scheduledVehicleStopCount"
+        },
+
+
+        {
+          "semantics": {
+            "isReaggregatable": true,
+            "conceptType": "METRIC",
+            "semanticType": "NUMBER"
+          },
+          "name": "minOnStop",
+          "dataType": "NUMBER"
+        },
+        {
+          "semantics": {
+            "conceptType": "METRIC",
+            "isReaggregatable": true,
+            "semanticType": "NUMBER"
+          },
+          "dataType": "NUMBER",
+          "name": "avgSpeed"
+        },
+        {
+          "semantics": {
+            "isReaggregatable": true,
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC"
+          },
+          "name": "maxSpeed",
+          "dataType": "NUMBER"
         }
+
       ],
       "DATA": [
         {
@@ -3758,9 +3914,10 @@
           "itineraryName": "Itinerary 01",
           "stopIndex": 0,
           "stop": "Paradero 01",
-          "minTimeSpan": 0,
-          "avgTimeSpan": 0,
-          "maxTimeSpan": 0,
+          "minTimeBeetweenStops": 0,
+          "avgTimeBeetweenStops": 0,
+          "maxTimeBeetweenStops": 0,
+          "scheduledAvgTimeBeetweenStops":0,
           "minSpeed": 0,
           "avgSpeed": 0,
           "maxSpeed": 0,
@@ -3773,9 +3930,10 @@
           "itineraryName": "Itinerary 01",
           "stopIndex": 1,
           "stop": "Paradero 02",
-          "minTimeSpan": 2,
-          "avgTimeSpan": 5,
-          "maxTimeSpan": 7,
+          "minTimeBeetweenStops": 2,
+          "avgTimeBeetweenStops": 5,
+          "maxTimeBeetweenStops": 7,
+          "scheduledAvgTimeBeetweenStops":15,
           "minSpeed": 12,
           "avgSpeed": 17,
           "maxSpeed": 30,
@@ -3788,9 +3946,10 @@
           "itineraryName": "Itinerary 01",
           "stopIndex": 2,
           "stop": "Paradero 03",
-          "minTimeSpan": 10,
-          "avgTimeSpan": 20,
-          "maxTimeSpan": 30,
+          "minTimeBeetweenStops": 10,
+          "avgTimeBeetweenStops": 20,
+          "maxTimeBeetweenStops": 30,
+          "scheduledAvgTimeBeetweenStops":15,
           "minSpeed": 50,
           "avgSpeed": 70,
           "maxSpeed": 120,
@@ -3803,9 +3962,10 @@
           "itineraryName": "Itinerary 01",
           "stopIndex": 3,
           "stop": "Paradero 04",
-          "minTimeSpan": 9,
-          "avgTimeSpan": 18,
-          "maxTimeSpan": 27,
+          "minTimeBeetweenStops": 9,
+          "avgTimeBeetweenStops": 18,
+          "maxTimeBeetweenStops": 27,
+          "scheduledAvgTimeBeetweenStops":15,
           "minSpeed": 45,
           "avgSpeed": 63,
           "maxSpeed": 108,
@@ -3818,9 +3978,10 @@
           "itineraryName": "Itinerary 01",
           "stopIndex": 4,
           "stop": "Paradero 05",
-          "minTimeSpan": 7,
-          "avgTimeSpan": 14,
-          "maxTimeSpan": 21,
+          "minTimeBeetweenStops": 7,
+          "avgTimeBeetweenStops": 14,
+          "maxTimeBeetweenStops": 21,
+          "scheduledAvgTimeBeetweenStops":15,
           "minSpeed": 35,
           "avgSpeed": 49,
           "maxSpeed": 84,
@@ -3833,9 +3994,10 @@
           "itineraryName": "Itinerary 01",
           "stopIndex": 5,
           "stop": "Paradero 06",
-          "minTimeSpan": 5,
-          "avgTimeSpan": 11,
-          "maxTimeSpan": 16,
+          "minTimeBeetweenStops": 5,
+          "avgTimeBeetweenStops": 11,
+          "maxTimeBeetweenStops": 16,
+          "scheduledAvgTimeBeetweenStops":15,
           "minSpeed": 27,
           "avgSpeed": 38,
           "maxSpeed": 66,
@@ -3848,9 +4010,10 @@
           "itineraryName": "Itinerary 01",
           "stopIndex": 6,
           "stop": "Paradero 07",
-          "minTimeSpan": 1,
-          "avgTimeSpan": 3,
-          "maxTimeSpan": 4,
+          "minTimeBeetweenStops": 1,
+          "avgTimeBeetweenStops": 3,
+          "maxTimeBeetweenStops": 4,
+          "scheduledAvgTimeBeetweenStops":15,
           "minSpeed": 7,
           "avgSpeed": 10,
           "maxSpeed": 18,
@@ -3863,9 +4026,10 @@
           "itineraryName": "Itinerary 01",
           "stopIndex": 7,
           "stop": "Paradero 08",
-          "minTimeSpan": 4,
-          "avgTimeSpan": 8,
-          "maxTimeSpan": 12,
+          "minTimeBeetweenStops": 4,
+          "avgTimeBeetweenStops": 8,
+          "maxTimeBeetweenStops": 12,
+          "scheduledAvgTimeBeetweenStops":15,
           "minSpeed": 20,
           "avgSpeed": 28,
           "maxSpeed": 48,
@@ -3878,9 +4042,10 @@
           "itineraryName": "Itinerary 01",
           "stopIndex": 8,
           "stop": "Paradero 09",
-          "minTimeSpan": 6,
-          "avgTimeSpan": 12,
-          "maxTimeSpan": 18,
+          "minTimeBeetweenStops": 6,
+          "avgTimeBeetweenStops": 12,
+          "maxTimeBeetweenStops": 18,
+          "scheduledAvgTimeBeetweenStops":15,
           "minSpeed": 30,
           "avgSpeed": 42,
           "maxSpeed": 72,
@@ -3893,9 +4058,10 @@
           "itineraryName": "Itinerary 01",
           "stopIndex": 9,
           "stop": "Paradero 10",
-          "minTimeSpan": 6,
-          "avgTimeSpan": 12,
-          "maxTimeSpan": 18,
+          "minTimeBeetweenStops": 6,
+          "avgTimeBeetweenStops": 12,
+          "maxTimeBeetweenStops": 18,
+          "scheduledAvgTimeBeetweenStops":15,
           "minSpeed": 31,
           "avgSpeed": 43,
           "maxSpeed": 75,
@@ -3908,9 +4074,10 @@
           "itineraryName": "Itinerary 02",
           "stopIndex": 10,
           "stop": "Paradero 01",
-          "minTimeSpan": 0,
-          "avgTimeSpan": 0,
-          "maxTimeSpan": 0,
+          "minTimeBeetweenStops": 0,
+          "avgTimeBeetweenStops": 0,
+          "maxTimeBeetweenStops": 0,
+          "scheduledAvgTimeBeetweenStops":15,
           "minSpeed": 0,
           "avgSpeed": 0,
           "maxSpeed": 0,
@@ -3923,9 +4090,10 @@
           "itineraryName": "Itinerary 02",
           "stopIndex": 11,
           "stop": "Paradero 02",
-          "minTimeSpan": 1,
-          "avgTimeSpan": 3,
-          "maxTimeSpan": 4,
+          "minTimeBeetweenStops": 1,
+          "avgTimeBeetweenStops": 3,
+          "maxTimeBeetweenStops": 4,
+          "scheduledAvgTimeBeetweenStops":15,
           "minSpeed": 7,
           "avgSpeed": 10,
           "maxSpeed": 18,
@@ -3938,9 +4106,10 @@
           "itineraryName": "Itinerary 02",
           "stopIndex": 12,
           "stop": "Paradero 03",
-          "minTimeSpan": 25,
-          "avgTimeSpan": 50,
-          "maxTimeSpan": 75,
+          "minTimeBeetweenStops": 25,
+          "avgTimeBeetweenStops": 50,
+          "maxTimeBeetweenStops": 75,
+          "scheduledAvgTimeBeetweenStops":15,
           "minSpeed": 125,
           "avgSpeed": 175,
           "maxSpeed": 300,
@@ -3953,9 +4122,10 @@
           "itineraryName": "Itinerary 02",
           "stopIndex": 13,
           "stop": "Paradero 04",
-          "minTimeSpan": 6,
-          "avgTimeSpan": 12,
-          "maxTimeSpan": 18,
+          "minTimeBeetweenStops": 6,
+          "avgTimeBeetweenStops": 12,
+          "maxTimeBeetweenStops": 18,
+          "scheduledAvgTimeBeetweenStops":15,
           "minSpeed": 30,
           "avgSpeed": 42,
           "maxSpeed": 72,
@@ -3968,9 +4138,10 @@
           "itineraryName": "Itinerary 02",
           "stopIndex": 14,
           "stop": "Paradero 05",
-          "minTimeSpan": 8,
-          "avgTimeSpan": 17,
-          "maxTimeSpan": 25,
+          "minTimeBeetweenStops": 8,
+          "avgTimeBeetweenStops": 17,
+          "maxTimeBeetweenStops": 25,
+          "scheduledAvgTimeBeetweenStops":15,
           "minSpeed": 42,
           "avgSpeed": 59,
           "maxSpeed": 102,
@@ -3983,9 +4154,10 @@
           "itineraryName": "Itinerary 02",
           "stopIndex": 15,
           "stop": "Paradero 06",
-          "minTimeSpan": 5,
-          "avgTimeSpan": 10,
-          "maxTimeSpan": 15,
+          "minTimeBeetweenStops": 5,
+          "avgTimeBeetweenStops": 10,
+          "maxTimeBeetweenStops": 15,
+          "scheduledAvgTimeBeetweenStops":15,
           "minSpeed": 25,
           "avgSpeed": 35,
           "maxSpeed": 60,
@@ -3998,9 +4170,10 @@
           "itineraryName": "Itinerary 02",
           "stopIndex": 16,
           "stop": "Paradero 07",
-          "minTimeSpan": 4,
-          "avgTimeSpan": 8,
-          "maxTimeSpan": 12,
+          "minTimeBeetweenStops": 4,
+          "avgTimeBeetweenStops": 8,
+          "maxTimeBeetweenStops": 12,
+          "scheduledAvgTimeBeetweenStops":15,
           "minSpeed": 20,
           "avgSpeed": 28,
           "maxSpeed": 48,
@@ -4013,9 +4186,10 @@
           "itineraryName": "Itinerary 02",
           "stopIndex": 17,
           "stop": "Paradero 08",
-          "minTimeSpan": 1,
-          "avgTimeSpan": 2,
-          "maxTimeSpan": 3,
+          "minTimeBeetweenStops": 1,
+          "avgTimeBeetweenStops": 2,
+          "maxTimeBeetweenStops": 3,
+          "scheduledAvgTimeBeetweenStops":15,
           "minSpeed": 5,
           "avgSpeed": 7,
           "maxSpeed": 12,
@@ -4028,9 +4202,10 @@
           "itineraryName": "Itinerary 02",
           "stopIndex": 18,
           "stop": "Paradero 09",
-          "minTimeSpan": 9,
-          "avgTimeSpan": 18,
-          "maxTimeSpan": 27,
+          "minTimeBeetweenStops": 9,
+          "avgTimeBeetweenStops": 18,
+          "maxTimeBeetweenStops": 27,
+          "scheduledAvgTimeBeetweenStops":15,
           "minSpeed": 45,
           "avgSpeed": 63,
           "maxSpeed": 108,
@@ -4043,9 +4218,10 @@
           "itineraryName": "Itinerary 02",
           "stopIndex": 19,
           "stop": "Paradero 10",
-          "minTimeSpan": 6,
-          "avgTimeSpan": 13,
-          "maxTimeSpan": 20,
+          "minTimeBeetweenStops": 6,
+          "avgTimeBeetweenStops": 13,
+          "maxTimeBeetweenStops": 20,
+          "scheduledAvgTimeBeetweenStops":15,
           "minSpeed": 33,
           "avgSpeed": 46,
           "maxSpeed": 80,
@@ -4058,9 +4234,10 @@
           "itineraryName": "Itinerary 03",
           "stopIndex": 20,
           "stop": "Paradero 01",
-          "minTimeSpan": 0,
-          "avgTimeSpan": 0,
-          "maxTimeSpan": 0,
+          "minTimeBeetweenStops": 0,
+          "avgTimeBeetweenStops": 0,
+          "maxTimeBeetweenStops": 0,
+          "scheduledAvgTimeBeetweenStops":0,
           "minSpeed": 0,
           "avgSpeed": 0,
           "maxSpeed": 0,
@@ -4073,9 +4250,10 @@
           "itineraryName": "Itinerary 03",
           "stopIndex": 21,
           "stop": "Paradero 02",
-          "minTimeSpan": 4,
-          "avgTimeSpan": 9,
-          "maxTimeSpan": 13,
+          "minTimeBeetweenStops": 4,
+          "avgTimeBeetweenStops": 9,
+          "maxTimeBeetweenStops": 13,
+          "scheduledAvgTimeBeetweenStops":15,
           "minSpeed": 22,
           "avgSpeed": 31,
           "maxSpeed": 54,
@@ -4088,9 +4266,10 @@
           "itineraryName": "Itinerary 03",
           "stopIndex": 22,
           "stop": "Paradero 03",
-          "minTimeSpan": 11,
-          "avgTimeSpan": 22,
-          "maxTimeSpan": 33,
+          "minTimeBeetweenStops": 11,
+          "avgTimeBeetweenStops": 22,
+          "maxTimeBeetweenStops": 33,
+          "scheduledAvgTimeBeetweenStops":15,
           "minSpeed": 55,
           "avgSpeed": 77,
           "maxSpeed": 132,
@@ -4103,9 +4282,10 @@
           "itineraryName": "Itinerary 03",
           "stopIndex": 23,
           "stop": "Paradero 04",
-          "minTimeSpan": 5,
-          "avgTimeSpan": 11,
-          "maxTimeSpan": 16,
+          "minTimeBeetweenStops": 5,
+          "avgTimeBeetweenStops": 11,
+          "maxTimeBeetweenStops": 16,
+          "scheduledAvgTimeBeetweenStops":15,
           "minSpeed": 27,
           "avgSpeed": 38,
           "maxSpeed": 66,
@@ -4118,9 +4298,10 @@
           "itineraryName": "Itinerary 03",
           "stopIndex": 24,
           "stop": "Paradero 05",
-          "minTimeSpan": 9,
-          "avgTimeSpan": 19,
-          "maxTimeSpan": 28,
+          "minTimeBeetweenStops": 9,
+          "avgTimeBeetweenStops": 19,
+          "maxTimeBeetweenStops": 28,
+          "scheduledAvgTimeBeetweenStops":15,
           "minSpeed": 47,
           "avgSpeed": 66,
           "maxSpeed": 114,
@@ -4133,9 +4314,10 @@
           "itineraryName": "Itinerary 03",
           "stopIndex": 25,
           "stop": "Paradero 06",
-          "minTimeSpan": 8,
-          "avgTimeSpan": 17,
-          "maxTimeSpan": 25,
+          "minTimeBeetweenStops": 8,
+          "avgTimeBeetweenStops": 17,
+          "maxTimeBeetweenStops": 25,
+          "scheduledAvgTimeBeetweenStops":15,
           "minSpeed": 42,
           "avgSpeed": 59,
           "maxSpeed": 102,
@@ -4148,9 +4330,10 @@
           "itineraryName": "Itinerary 03",
           "stopIndex": 26,
           "stop": "Paradero 07",
-          "minTimeSpan": 2,
-          "avgTimeSpan": 5,
-          "maxTimeSpan": 7,
+          "minTimeBeetweenStops": 2,
+          "avgTimeBeetweenStops": 5,
+          "maxTimeBeetweenStops": 7,
+          "scheduledAvgTimeBeetweenStops":15,
           "minSpeed": 12,
           "avgSpeed": 17,
           "maxSpeed": 30,
@@ -4163,9 +4346,10 @@
           "itineraryName": "Itinerary 03",
           "stopIndex": 27,
           "stop": "Paradero 08",
-          "minTimeSpan": 3,
-          "avgTimeSpan": 7,
-          "maxTimeSpan": 10,
+          "minTimeBeetweenStops": 3,
+          "avgTimeBeetweenStops": 7,
+          "maxTimeBeetweenStops": 10,
+          "scheduledAvgTimeBeetweenStops":15,
           "minSpeed": 17,
           "avgSpeed": 24,
           "maxSpeed": 42,
@@ -4178,9 +4362,10 @@
           "itineraryName": "Itinerary 03",
           "stopIndex": 28,
           "stop": "Paradero 09",
-          "minTimeSpan": 5,
-          "avgTimeSpan": 11,
-          "maxTimeSpan": 16,
+          "minTimeBeetweenStops": 5,
+          "avgTimeBeetweenStops": 11,
+          "maxTimeBeetweenStops": 16,
+          "scheduledAvgTimeBeetweenStops":15,
           "minSpeed": 27,
           "avgSpeed": 38,
           "maxSpeed": 66,
@@ -4193,9 +4378,10 @@
           "itineraryName": "Itinerary 03",
           "stopIndex": 29,
           "stop": "Paradero 10",
-          "minTimeSpan": 9,
-          "avgTimeSpan": 18,
-          "maxTimeSpan": 28,
+          "minTimeBeetweenStops": 9,
+          "avgTimeBeetweenStops": 18,
+          "maxTimeBeetweenStops": 28,
+          "scheduledAvgTimeBeetweenStops":15,
           "minSpeed": 47,
           "avgSpeed": 66,
           "maxSpeed": 113,
