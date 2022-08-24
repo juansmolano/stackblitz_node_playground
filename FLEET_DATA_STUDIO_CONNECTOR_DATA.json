@@ -9578,5 +9578,2520 @@
         }
       ]
     }
+  },
+  "DriverEventsReport":{
+    "EVENTS_TABLE": {
+      "SCHEMA": [
+        {
+          "name": "serviceIndex",
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "DIMENSION"
+          }
+        },
+        {
+          "semantics": {
+            "conceptType": "DIMENSION",
+            "semanticType": "TEXT"
+          },
+          "dataType": "STRING",
+          "name": "serviceId"
+        },
+        {
+          "semantics": {
+            "semanticType": "TEXT",
+            "conceptType": "DIMENSION"
+          },
+          "name": "service",
+          "dataType": "STRING"
+        },
+        {
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "name": "PAX_IN"
+        },
+        {
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "name": "PAX_OUT"
+        },
+        {
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "name": "TRANSPORT_FARE_COLLECTION_COUNT"
+        },
+        {
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "name": "TRANSPORT_FARE_COLLECTION_VALUE"
+        },
+        {
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "name": "ITINERARY_ABANDONED_AUTHORIZED"
+        },
+        {
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "name": "ITINERARY_ABANDONED_UNAUTHORIZED"
+        },
+        {
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "name": "ITINERARY_CONTINUED"
+        },
+        {
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "name": "STARTED_CHECKPOINT_DIFFERENT_FIRST_ONE"
+        },
+        {
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "name": "VEHICLE_ENTERED_GEOFENCE_ZONE"
+        },
+        {
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "name": "VEHICLE_DEPARTURE_GEOFENCE_ZONE"
+        },
+        {
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "name": "CHECK_POINT_ARRIVAL_AHEAD"
+        },
+        {
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "name": "CHECK_POINT_ARRIVAL_DELAYED"
+        },
+        {
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "name": "STANDSTILL"
+        },
+        {
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "name": "FRONT_DOOR_TAMPERING"
+        },
+        {
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "name": "BACK_DOOR_TAMPERING"
+        },
+        {
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "name": "TURNSTILE_OBSTRUCTION_REPORTED"
+        },
+        {
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "name": "TURNSTILE_BATTERY_CONECTION_REPORTED"
+        },
+        {
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "name": "TURNSTILE_ANOMALY_REPORTED"
+        },
+        {
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "name": "PAX_ANOMALY_REPORTED"
+        },
+        {
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "name": "FRONT_DOOR_CONNECTED"
+        },
+        {
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "name": "FRONT_DOOR_DISCONNECTED"
+        },
+        {
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "name": "BACK_DOOR_CONNECTED"
+        },
+        {
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "name": "BACK_DOOR_DISCONNECTED"
+        },
+        {
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "name": "CREATED"
+        },
+        {
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "name": "AUTOMATIC_STARTED"
+        },
+        {
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "name": "AUTOMATIC_ENDED"
+        },
+        {
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "name": "AUTOMATIC_ABORTED"
+        },
+        {
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "name": "FORCED_STARTED"
+        },
+        {
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "name": "FORCED_ABORTED"
+        },
+        {
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "name": "FORCED_CANCELLED"
+        },
+        {
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "name": "FORCED_ENDED"
+        },
+        {
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "name": "OVERTAKEN"
+        }
+      ],
+      "DATA": [
+        {
+          "serviceIndex": 0,
+          "serviceId": "0",
+          "service": "HH:MM:SS RCode ItName000 - 0000",
+          "PAX_IN": 82,
+          "PAX_OUT": 41,
+          "TRANSPORT_FARE_COLLECTION_COUNT": 90,
+          "TRANSPORT_FARE_COLLECTION_VALUE": 94,
+          "ITINERARY_ABANDONED_AUTHORIZED": 46,
+          "ITINERARY_ABANDONED_UNAUTHORIZED": 5,
+          "ITINERARY_CONTINUED": 66,
+          "STARTED_CHECKPOINT_DIFFERENT_FIRST_ONE": 94,
+          "VEHICLE_ENTERED_GEOFENCE_ZONE": 89,
+          "VEHICLE_DEPARTURE_GEOFENCE_ZONE": 91,
+          "CHECK_POINT_ARRIVAL_AHEAD": 59,
+          "CHECK_POINT_ARRIVAL_DELAYED": 84,
+          "STANDSTILL": 83,
+          "FRONT_DOOR_TAMPERING": 1,
+          "BACK_DOOR_TAMPERING": 19,
+          "TURNSTILE_OBSTRUCTION_REPORTED": 67,
+          "TURNSTILE_BATTERY_CONECTION_REPORTED": 46,
+          "TURNSTILE_ANOMALY_REPORTED": 32,
+          "PAX_ANOMALY_REPORTED": 86,
+          "FRONT_DOOR_CONNECTED": 80,
+          "FRONT_DOOR_DISCONNECTED": 10,
+          "BACK_DOOR_CONNECTED": 71,
+          "BACK_DOOR_DISCONNECTED": 39,
+          "CREATED": 17,
+          "AUTOMATIC_STARTED": 70,
+          "AUTOMATIC_ENDED": 74,
+          "AUTOMATIC_ABORTED": 21,
+          "FORCED_STARTED": 40,
+          "FORCED_ABORTED": 54,
+          "FORCED_CANCELLED": 57,
+          "FORCED_ENDED": 75,
+          "OVERTAKEN": 41
+        },
+        {
+          "serviceIndex": 1,
+          "serviceId": "1",
+          "service": "HH:MM:SS RCode ItName001 - 0001",
+          "PAX_IN": 53,
+          "PAX_OUT": 88,
+          "TRANSPORT_FARE_COLLECTION_COUNT": 10,
+          "TRANSPORT_FARE_COLLECTION_VALUE": 58,
+          "ITINERARY_ABANDONED_AUTHORIZED": 80,
+          "ITINERARY_ABANDONED_UNAUTHORIZED": 23,
+          "ITINERARY_CONTINUED": 44,
+          "STARTED_CHECKPOINT_DIFFERENT_FIRST_ONE": 74,
+          "VEHICLE_ENTERED_GEOFENCE_ZONE": 35,
+          "VEHICLE_DEPARTURE_GEOFENCE_ZONE": 69,
+          "CHECK_POINT_ARRIVAL_AHEAD": 31,
+          "CHECK_POINT_ARRIVAL_DELAYED": 43,
+          "STANDSTILL": 55,
+          "FRONT_DOOR_TAMPERING": 0,
+          "BACK_DOOR_TAMPERING": 70,
+          "TURNSTILE_OBSTRUCTION_REPORTED": 95,
+          "TURNSTILE_BATTERY_CONECTION_REPORTED": 29,
+          "TURNSTILE_ANOMALY_REPORTED": 5,
+          "PAX_ANOMALY_REPORTED": 97,
+          "FRONT_DOOR_CONNECTED": 0,
+          "FRONT_DOOR_DISCONNECTED": 12,
+          "BACK_DOOR_CONNECTED": 1,
+          "BACK_DOOR_DISCONNECTED": 61,
+          "CREATED": 10,
+          "AUTOMATIC_STARTED": 2,
+          "AUTOMATIC_ENDED": 19,
+          "AUTOMATIC_ABORTED": 72,
+          "FORCED_STARTED": 2,
+          "FORCED_ABORTED": 20,
+          "FORCED_CANCELLED": 0,
+          "FORCED_ENDED": 12,
+          "OVERTAKEN": 77
+        },
+        {
+          "serviceIndex": 2,
+          "serviceId": "2",
+          "service": "HH:MM:SS RCode ItName002 - 0002",
+          "PAX_IN": 18,
+          "PAX_OUT": 10,
+          "TRANSPORT_FARE_COLLECTION_COUNT": 9,
+          "TRANSPORT_FARE_COLLECTION_VALUE": 63,
+          "ITINERARY_ABANDONED_AUTHORIZED": 7,
+          "ITINERARY_ABANDONED_UNAUTHORIZED": 99,
+          "ITINERARY_CONTINUED": 79,
+          "STARTED_CHECKPOINT_DIFFERENT_FIRST_ONE": 42,
+          "VEHICLE_ENTERED_GEOFENCE_ZONE": 72,
+          "VEHICLE_DEPARTURE_GEOFENCE_ZONE": 91,
+          "CHECK_POINT_ARRIVAL_AHEAD": 80,
+          "CHECK_POINT_ARRIVAL_DELAYED": 10,
+          "STANDSTILL": 76,
+          "FRONT_DOOR_TAMPERING": 54,
+          "BACK_DOOR_TAMPERING": 41,
+          "TURNSTILE_OBSTRUCTION_REPORTED": 83,
+          "TURNSTILE_BATTERY_CONECTION_REPORTED": 54,
+          "TURNSTILE_ANOMALY_REPORTED": 66,
+          "PAX_ANOMALY_REPORTED": 39,
+          "FRONT_DOOR_CONNECTED": 65,
+          "FRONT_DOOR_DISCONNECTED": 20,
+          "BACK_DOOR_CONNECTED": 13,
+          "BACK_DOOR_DISCONNECTED": 80,
+          "CREATED": 92,
+          "AUTOMATIC_STARTED": 1,
+          "AUTOMATIC_ENDED": 39,
+          "AUTOMATIC_ABORTED": 89,
+          "FORCED_STARTED": 67,
+          "FORCED_ABORTED": 28,
+          "FORCED_CANCELLED": 33,
+          "FORCED_ENDED": 67,
+          "OVERTAKEN": 31
+        },
+        {
+          "serviceIndex": 3,
+          "serviceId": "3",
+          "service": "HH:MM:SS RCode ItName003 - 0003",
+          "PAX_IN": 91,
+          "PAX_OUT": 44,
+          "TRANSPORT_FARE_COLLECTION_COUNT": 46,
+          "TRANSPORT_FARE_COLLECTION_VALUE": 62,
+          "ITINERARY_ABANDONED_AUTHORIZED": 3,
+          "ITINERARY_ABANDONED_UNAUTHORIZED": 99,
+          "ITINERARY_CONTINUED": 76,
+          "STARTED_CHECKPOINT_DIFFERENT_FIRST_ONE": 37,
+          "VEHICLE_ENTERED_GEOFENCE_ZONE": 12,
+          "VEHICLE_DEPARTURE_GEOFENCE_ZONE": 74,
+          "CHECK_POINT_ARRIVAL_AHEAD": 45,
+          "CHECK_POINT_ARRIVAL_DELAYED": 51,
+          "STANDSTILL": 58,
+          "FRONT_DOOR_TAMPERING": 23,
+          "BACK_DOOR_TAMPERING": 12,
+          "TURNSTILE_OBSTRUCTION_REPORTED": 91,
+          "TURNSTILE_BATTERY_CONECTION_REPORTED": 30,
+          "TURNSTILE_ANOMALY_REPORTED": 41,
+          "PAX_ANOMALY_REPORTED": 84,
+          "FRONT_DOOR_CONNECTED": 83,
+          "FRONT_DOOR_DISCONNECTED": 17,
+          "BACK_DOOR_CONNECTED": 31,
+          "BACK_DOOR_DISCONNECTED": 89,
+          "CREATED": 48,
+          "AUTOMATIC_STARTED": 17,
+          "AUTOMATIC_ENDED": 24,
+          "AUTOMATIC_ABORTED": 37,
+          "FORCED_STARTED": 91,
+          "FORCED_ABORTED": 5,
+          "FORCED_CANCELLED": 2,
+          "FORCED_ENDED": 44,
+          "OVERTAKEN": 86
+        },
+        {
+          "serviceIndex": 4,
+          "serviceId": "4",
+          "service": "HH:MM:SS RCode ItName004 - 0004",
+          "PAX_IN": 79,
+          "PAX_OUT": 60,
+          "TRANSPORT_FARE_COLLECTION_COUNT": 65,
+          "TRANSPORT_FARE_COLLECTION_VALUE": 43,
+          "ITINERARY_ABANDONED_AUTHORIZED": 35,
+          "ITINERARY_ABANDONED_UNAUTHORIZED": 26,
+          "ITINERARY_CONTINUED": 92,
+          "STARTED_CHECKPOINT_DIFFERENT_FIRST_ONE": 57,
+          "VEHICLE_ENTERED_GEOFENCE_ZONE": 30,
+          "VEHICLE_DEPARTURE_GEOFENCE_ZONE": 27,
+          "CHECK_POINT_ARRIVAL_AHEAD": 78,
+          "CHECK_POINT_ARRIVAL_DELAYED": 69,
+          "STANDSTILL": 46,
+          "FRONT_DOOR_TAMPERING": 98,
+          "BACK_DOOR_TAMPERING": 39,
+          "TURNSTILE_OBSTRUCTION_REPORTED": 95,
+          "TURNSTILE_BATTERY_CONECTION_REPORTED": 3,
+          "TURNSTILE_ANOMALY_REPORTED": 70,
+          "PAX_ANOMALY_REPORTED": 62,
+          "FRONT_DOOR_CONNECTED": 39,
+          "FRONT_DOOR_DISCONNECTED": 59,
+          "BACK_DOOR_CONNECTED": 88,
+          "BACK_DOOR_DISCONNECTED": 68,
+          "CREATED": 47,
+          "AUTOMATIC_STARTED": 72,
+          "AUTOMATIC_ENDED": 88,
+          "AUTOMATIC_ABORTED": 22,
+          "FORCED_STARTED": 55,
+          "FORCED_ABORTED": 51,
+          "FORCED_CANCELLED": 22,
+          "FORCED_ENDED": 95,
+          "OVERTAKEN": 33
+        },
+        {
+          "serviceIndex": 5,
+          "serviceId": "5",
+          "service": "HH:MM:SS RCode ItName005 - 0005",
+          "PAX_IN": 22,
+          "PAX_OUT": 41,
+          "TRANSPORT_FARE_COLLECTION_COUNT": 90,
+          "TRANSPORT_FARE_COLLECTION_VALUE": 23,
+          "ITINERARY_ABANDONED_AUTHORIZED": 72,
+          "ITINERARY_ABANDONED_UNAUTHORIZED": 14,
+          "ITINERARY_CONTINUED": 7,
+          "STARTED_CHECKPOINT_DIFFERENT_FIRST_ONE": 3,
+          "VEHICLE_ENTERED_GEOFENCE_ZONE": 13,
+          "VEHICLE_DEPARTURE_GEOFENCE_ZONE": 70,
+          "CHECK_POINT_ARRIVAL_AHEAD": 63,
+          "CHECK_POINT_ARRIVAL_DELAYED": 22,
+          "STANDSTILL": 50,
+          "FRONT_DOOR_TAMPERING": 21,
+          "BACK_DOOR_TAMPERING": 65,
+          "TURNSTILE_OBSTRUCTION_REPORTED": 89,
+          "TURNSTILE_BATTERY_CONECTION_REPORTED": 24,
+          "TURNSTILE_ANOMALY_REPORTED": 40,
+          "PAX_ANOMALY_REPORTED": 78,
+          "FRONT_DOOR_CONNECTED": 93,
+          "FRONT_DOOR_DISCONNECTED": 72,
+          "BACK_DOOR_CONNECTED": 34,
+          "BACK_DOOR_DISCONNECTED": 45,
+          "CREATED": 88,
+          "AUTOMATIC_STARTED": 19,
+          "AUTOMATIC_ENDED": 12,
+          "AUTOMATIC_ABORTED": 3,
+          "FORCED_STARTED": 26,
+          "FORCED_ABORTED": 70,
+          "FORCED_CANCELLED": 93,
+          "FORCED_ENDED": 24,
+          "OVERTAKEN": 50
+        },
+        {
+          "serviceIndex": 6,
+          "serviceId": "6",
+          "service": "HH:MM:SS RCode ItName006 - 0006",
+          "PAX_IN": 92,
+          "PAX_OUT": 60,
+          "TRANSPORT_FARE_COLLECTION_COUNT": 81,
+          "TRANSPORT_FARE_COLLECTION_VALUE": 71,
+          "ITINERARY_ABANDONED_AUTHORIZED": 56,
+          "ITINERARY_ABANDONED_UNAUTHORIZED": 91,
+          "ITINERARY_CONTINUED": 5,
+          "STARTED_CHECKPOINT_DIFFERENT_FIRST_ONE": 42,
+          "VEHICLE_ENTERED_GEOFENCE_ZONE": 54,
+          "VEHICLE_DEPARTURE_GEOFENCE_ZONE": 53,
+          "CHECK_POINT_ARRIVAL_AHEAD": 27,
+          "CHECK_POINT_ARRIVAL_DELAYED": 20,
+          "STANDSTILL": 89,
+          "FRONT_DOOR_TAMPERING": 65,
+          "BACK_DOOR_TAMPERING": 17,
+          "TURNSTILE_OBSTRUCTION_REPORTED": 30,
+          "TURNSTILE_BATTERY_CONECTION_REPORTED": 79,
+          "TURNSTILE_ANOMALY_REPORTED": 94,
+          "PAX_ANOMALY_REPORTED": 49,
+          "FRONT_DOOR_CONNECTED": 53,
+          "FRONT_DOOR_DISCONNECTED": 72,
+          "BACK_DOOR_CONNECTED": 75,
+          "BACK_DOOR_DISCONNECTED": 58,
+          "CREATED": 54,
+          "AUTOMATIC_STARTED": 78,
+          "AUTOMATIC_ENDED": 84,
+          "AUTOMATIC_ABORTED": 67,
+          "FORCED_STARTED": 52,
+          "FORCED_ABORTED": 29,
+          "FORCED_CANCELLED": 40,
+          "FORCED_ENDED": 25,
+          "OVERTAKEN": 93
+        },
+        {
+          "serviceIndex": 7,
+          "serviceId": "7",
+          "service": "HH:MM:SS RCode ItName007 - 0007",
+          "PAX_IN": 31,
+          "PAX_OUT": 37,
+          "TRANSPORT_FARE_COLLECTION_COUNT": 34,
+          "TRANSPORT_FARE_COLLECTION_VALUE": 85,
+          "ITINERARY_ABANDONED_AUTHORIZED": 14,
+          "ITINERARY_ABANDONED_UNAUTHORIZED": 87,
+          "ITINERARY_CONTINUED": 14,
+          "STARTED_CHECKPOINT_DIFFERENT_FIRST_ONE": 98,
+          "VEHICLE_ENTERED_GEOFENCE_ZONE": 65,
+          "VEHICLE_DEPARTURE_GEOFENCE_ZONE": 21,
+          "CHECK_POINT_ARRIVAL_AHEAD": 14,
+          "CHECK_POINT_ARRIVAL_DELAYED": 96,
+          "STANDSTILL": 39,
+          "FRONT_DOOR_TAMPERING": 98,
+          "BACK_DOOR_TAMPERING": 7,
+          "TURNSTILE_OBSTRUCTION_REPORTED": 21,
+          "TURNSTILE_BATTERY_CONECTION_REPORTED": 37,
+          "TURNSTILE_ANOMALY_REPORTED": 1,
+          "PAX_ANOMALY_REPORTED": 50,
+          "FRONT_DOOR_CONNECTED": 52,
+          "FRONT_DOOR_DISCONNECTED": 21,
+          "BACK_DOOR_CONNECTED": 64,
+          "BACK_DOOR_DISCONNECTED": 5,
+          "CREATED": 75,
+          "AUTOMATIC_STARTED": 11,
+          "AUTOMATIC_ENDED": 56,
+          "AUTOMATIC_ABORTED": 56,
+          "FORCED_STARTED": 80,
+          "FORCED_ABORTED": 45,
+          "FORCED_CANCELLED": 4,
+          "FORCED_ENDED": 19,
+          "OVERTAKEN": 61
+        },
+        {
+          "serviceIndex": 8,
+          "serviceId": "8",
+          "service": "HH:MM:SS RCode ItName008 - 0008",
+          "PAX_IN": 69,
+          "PAX_OUT": 81,
+          "TRANSPORT_FARE_COLLECTION_COUNT": 19,
+          "TRANSPORT_FARE_COLLECTION_VALUE": 67,
+          "ITINERARY_ABANDONED_AUTHORIZED": 46,
+          "ITINERARY_ABANDONED_UNAUTHORIZED": 64,
+          "ITINERARY_CONTINUED": 46,
+          "STARTED_CHECKPOINT_DIFFERENT_FIRST_ONE": 13,
+          "VEHICLE_ENTERED_GEOFENCE_ZONE": 68,
+          "VEHICLE_DEPARTURE_GEOFENCE_ZONE": 84,
+          "CHECK_POINT_ARRIVAL_AHEAD": 65,
+          "CHECK_POINT_ARRIVAL_DELAYED": 31,
+          "STANDSTILL": 74,
+          "FRONT_DOOR_TAMPERING": 15,
+          "BACK_DOOR_TAMPERING": 82,
+          "TURNSTILE_OBSTRUCTION_REPORTED": 21,
+          "TURNSTILE_BATTERY_CONECTION_REPORTED": 82,
+          "TURNSTILE_ANOMALY_REPORTED": 47,
+          "PAX_ANOMALY_REPORTED": 63,
+          "FRONT_DOOR_CONNECTED": 58,
+          "FRONT_DOOR_DISCONNECTED": 55,
+          "BACK_DOOR_CONNECTED": 17,
+          "BACK_DOOR_DISCONNECTED": 70,
+          "CREATED": 90,
+          "AUTOMATIC_STARTED": 78,
+          "AUTOMATIC_ENDED": 61,
+          "AUTOMATIC_ABORTED": 64,
+          "FORCED_STARTED": 22,
+          "FORCED_ABORTED": 41,
+          "FORCED_CANCELLED": 73,
+          "FORCED_ENDED": 37,
+          "OVERTAKEN": 3
+        },
+        {
+          "serviceIndex": 9,
+          "serviceId": "9",
+          "service": "HH:MM:SS RCode ItName009 - 0009",
+          "PAX_IN": 88,
+          "PAX_OUT": 60,
+          "TRANSPORT_FARE_COLLECTION_COUNT": 8,
+          "TRANSPORT_FARE_COLLECTION_VALUE": 5,
+          "ITINERARY_ABANDONED_AUTHORIZED": 45,
+          "ITINERARY_ABANDONED_UNAUTHORIZED": 44,
+          "ITINERARY_CONTINUED": 7,
+          "STARTED_CHECKPOINT_DIFFERENT_FIRST_ONE": 87,
+          "VEHICLE_ENTERED_GEOFENCE_ZONE": 66,
+          "VEHICLE_DEPARTURE_GEOFENCE_ZONE": 24,
+          "CHECK_POINT_ARRIVAL_AHEAD": 98,
+          "CHECK_POINT_ARRIVAL_DELAYED": 52,
+          "STANDSTILL": 77,
+          "FRONT_DOOR_TAMPERING": 57,
+          "BACK_DOOR_TAMPERING": 99,
+          "TURNSTILE_OBSTRUCTION_REPORTED": 86,
+          "TURNSTILE_BATTERY_CONECTION_REPORTED": 45,
+          "TURNSTILE_ANOMALY_REPORTED": 6,
+          "PAX_ANOMALY_REPORTED": 73,
+          "FRONT_DOOR_CONNECTED": 22,
+          "FRONT_DOOR_DISCONNECTED": 81,
+          "BACK_DOOR_CONNECTED": 39,
+          "BACK_DOOR_DISCONNECTED": 76,
+          "CREATED": 82,
+          "AUTOMATIC_STARTED": 76,
+          "AUTOMATIC_ENDED": 93,
+          "AUTOMATIC_ABORTED": 84,
+          "FORCED_STARTED": 2,
+          "FORCED_ABORTED": 23,
+          "FORCED_CANCELLED": 63,
+          "FORCED_ENDED": 26,
+          "OVERTAKEN": 65
+        },
+        {
+          "serviceIndex": 10,
+          "serviceId": "10",
+          "service": "HH:MM:SS RCode ItName010 - 0010",
+          "PAX_IN": 21,
+          "PAX_OUT": 55,
+          "TRANSPORT_FARE_COLLECTION_COUNT": 75,
+          "TRANSPORT_FARE_COLLECTION_VALUE": 94,
+          "ITINERARY_ABANDONED_AUTHORIZED": 77,
+          "ITINERARY_ABANDONED_UNAUTHORIZED": 14,
+          "ITINERARY_CONTINUED": 3,
+          "STARTED_CHECKPOINT_DIFFERENT_FIRST_ONE": 87,
+          "VEHICLE_ENTERED_GEOFENCE_ZONE": 5,
+          "VEHICLE_DEPARTURE_GEOFENCE_ZONE": 25,
+          "CHECK_POINT_ARRIVAL_AHEAD": 79,
+          "CHECK_POINT_ARRIVAL_DELAYED": 90,
+          "STANDSTILL": 40,
+          "FRONT_DOOR_TAMPERING": 50,
+          "BACK_DOOR_TAMPERING": 2,
+          "TURNSTILE_OBSTRUCTION_REPORTED": 22,
+          "TURNSTILE_BATTERY_CONECTION_REPORTED": 69,
+          "TURNSTILE_ANOMALY_REPORTED": 17,
+          "PAX_ANOMALY_REPORTED": 80,
+          "FRONT_DOOR_CONNECTED": 35,
+          "FRONT_DOOR_DISCONNECTED": 37,
+          "BACK_DOOR_CONNECTED": 2,
+          "BACK_DOOR_DISCONNECTED": 80,
+          "CREATED": 31,
+          "AUTOMATIC_STARTED": 87,
+          "AUTOMATIC_ENDED": 87,
+          "AUTOMATIC_ABORTED": 11,
+          "FORCED_STARTED": 27,
+          "FORCED_ABORTED": 83,
+          "FORCED_CANCELLED": 5,
+          "FORCED_ENDED": 3,
+          "OVERTAKEN": 55
+        },
+        {
+          "serviceIndex": 11,
+          "serviceId": "11",
+          "service": "HH:MM:SS RCode ItName011 - 0011",
+          "PAX_IN": 11,
+          "PAX_OUT": 64,
+          "TRANSPORT_FARE_COLLECTION_COUNT": 20,
+          "TRANSPORT_FARE_COLLECTION_VALUE": 7,
+          "ITINERARY_ABANDONED_AUTHORIZED": 61,
+          "ITINERARY_ABANDONED_UNAUTHORIZED": 2,
+          "ITINERARY_CONTINUED": 78,
+          "STARTED_CHECKPOINT_DIFFERENT_FIRST_ONE": 13,
+          "VEHICLE_ENTERED_GEOFENCE_ZONE": 43,
+          "VEHICLE_DEPARTURE_GEOFENCE_ZONE": 98,
+          "CHECK_POINT_ARRIVAL_AHEAD": 58,
+          "CHECK_POINT_ARRIVAL_DELAYED": 66,
+          "STANDSTILL": 22,
+          "FRONT_DOOR_TAMPERING": 23,
+          "BACK_DOOR_TAMPERING": 3,
+          "TURNSTILE_OBSTRUCTION_REPORTED": 20,
+          "TURNSTILE_BATTERY_CONECTION_REPORTED": 3,
+          "TURNSTILE_ANOMALY_REPORTED": 20,
+          "PAX_ANOMALY_REPORTED": 1,
+          "FRONT_DOOR_CONNECTED": 70,
+          "FRONT_DOOR_DISCONNECTED": 8,
+          "BACK_DOOR_CONNECTED": 18,
+          "BACK_DOOR_DISCONNECTED": 67,
+          "CREATED": 3,
+          "AUTOMATIC_STARTED": 85,
+          "AUTOMATIC_ENDED": 38,
+          "AUTOMATIC_ABORTED": 51,
+          "FORCED_STARTED": 1,
+          "FORCED_ABORTED": 27,
+          "FORCED_CANCELLED": 97,
+          "FORCED_ENDED": 16,
+          "OVERTAKEN": 9
+        },
+        {
+          "serviceIndex": 12,
+          "serviceId": "12",
+          "service": "HH:MM:SS RCode ItName012 - 0012",
+          "PAX_IN": 25,
+          "PAX_OUT": 17,
+          "TRANSPORT_FARE_COLLECTION_COUNT": 43,
+          "TRANSPORT_FARE_COLLECTION_VALUE": 90,
+          "ITINERARY_ABANDONED_AUTHORIZED": 42,
+          "ITINERARY_ABANDONED_UNAUTHORIZED": 76,
+          "ITINERARY_CONTINUED": 46,
+          "STARTED_CHECKPOINT_DIFFERENT_FIRST_ONE": 81,
+          "VEHICLE_ENTERED_GEOFENCE_ZONE": 98,
+          "VEHICLE_DEPARTURE_GEOFENCE_ZONE": 95,
+          "CHECK_POINT_ARRIVAL_AHEAD": 85,
+          "CHECK_POINT_ARRIVAL_DELAYED": 44,
+          "STANDSTILL": 45,
+          "FRONT_DOOR_TAMPERING": 44,
+          "BACK_DOOR_TAMPERING": 10,
+          "TURNSTILE_OBSTRUCTION_REPORTED": 82,
+          "TURNSTILE_BATTERY_CONECTION_REPORTED": 96,
+          "TURNSTILE_ANOMALY_REPORTED": 43,
+          "PAX_ANOMALY_REPORTED": 92,
+          "FRONT_DOOR_CONNECTED": 47,
+          "FRONT_DOOR_DISCONNECTED": 26,
+          "BACK_DOOR_CONNECTED": 40,
+          "BACK_DOOR_DISCONNECTED": 73,
+          "CREATED": 26,
+          "AUTOMATIC_STARTED": 56,
+          "AUTOMATIC_ENDED": 84,
+          "AUTOMATIC_ABORTED": 9,
+          "FORCED_STARTED": 14,
+          "FORCED_ABORTED": 81,
+          "FORCED_CANCELLED": 21,
+          "FORCED_ENDED": 52,
+          "OVERTAKEN": 89
+        },
+        {
+          "serviceIndex": 13,
+          "serviceId": "13",
+          "service": "HH:MM:SS RCode ItName013 - 0013",
+          "PAX_IN": 24,
+          "PAX_OUT": 44,
+          "TRANSPORT_FARE_COLLECTION_COUNT": 7,
+          "TRANSPORT_FARE_COLLECTION_VALUE": 47,
+          "ITINERARY_ABANDONED_AUTHORIZED": 28,
+          "ITINERARY_ABANDONED_UNAUTHORIZED": 81,
+          "ITINERARY_CONTINUED": 43,
+          "STARTED_CHECKPOINT_DIFFERENT_FIRST_ONE": 86,
+          "VEHICLE_ENTERED_GEOFENCE_ZONE": 48,
+          "VEHICLE_DEPARTURE_GEOFENCE_ZONE": 78,
+          "CHECK_POINT_ARRIVAL_AHEAD": 17,
+          "CHECK_POINT_ARRIVAL_DELAYED": 41,
+          "STANDSTILL": 77,
+          "FRONT_DOOR_TAMPERING": 47,
+          "BACK_DOOR_TAMPERING": 44,
+          "TURNSTILE_OBSTRUCTION_REPORTED": 26,
+          "TURNSTILE_BATTERY_CONECTION_REPORTED": 68,
+          "TURNSTILE_ANOMALY_REPORTED": 23,
+          "PAX_ANOMALY_REPORTED": 93,
+          "FRONT_DOOR_CONNECTED": 63,
+          "FRONT_DOOR_DISCONNECTED": 65,
+          "BACK_DOOR_CONNECTED": 44,
+          "BACK_DOOR_DISCONNECTED": 98,
+          "CREATED": 64,
+          "AUTOMATIC_STARTED": 46,
+          "AUTOMATIC_ENDED": 62,
+          "AUTOMATIC_ABORTED": 8,
+          "FORCED_STARTED": 12,
+          "FORCED_ABORTED": 83,
+          "FORCED_CANCELLED": 35,
+          "FORCED_ENDED": 76,
+          "OVERTAKEN": 24
+        },
+        {
+          "serviceIndex": 14,
+          "serviceId": "14",
+          "service": "HH:MM:SS RCode ItName014 - 0014",
+          "PAX_IN": 31,
+          "PAX_OUT": 63,
+          "TRANSPORT_FARE_COLLECTION_COUNT": 53,
+          "TRANSPORT_FARE_COLLECTION_VALUE": 50,
+          "ITINERARY_ABANDONED_AUTHORIZED": 7,
+          "ITINERARY_ABANDONED_UNAUTHORIZED": 3,
+          "ITINERARY_CONTINUED": 24,
+          "STARTED_CHECKPOINT_DIFFERENT_FIRST_ONE": 47,
+          "VEHICLE_ENTERED_GEOFENCE_ZONE": 20,
+          "VEHICLE_DEPARTURE_GEOFENCE_ZONE": 39,
+          "CHECK_POINT_ARRIVAL_AHEAD": 92,
+          "CHECK_POINT_ARRIVAL_DELAYED": 50,
+          "STANDSTILL": 80,
+          "FRONT_DOOR_TAMPERING": 84,
+          "BACK_DOOR_TAMPERING": 75,
+          "TURNSTILE_OBSTRUCTION_REPORTED": 55,
+          "TURNSTILE_BATTERY_CONECTION_REPORTED": 33,
+          "TURNSTILE_ANOMALY_REPORTED": 37,
+          "PAX_ANOMALY_REPORTED": 9,
+          "FRONT_DOOR_CONNECTED": 82,
+          "FRONT_DOOR_DISCONNECTED": 18,
+          "BACK_DOOR_CONNECTED": 25,
+          "BACK_DOOR_DISCONNECTED": 80,
+          "CREATED": 26,
+          "AUTOMATIC_STARTED": 7,
+          "AUTOMATIC_ENDED": 50,
+          "AUTOMATIC_ABORTED": 56,
+          "FORCED_STARTED": 34,
+          "FORCED_ABORTED": 23,
+          "FORCED_CANCELLED": 39,
+          "FORCED_ENDED": 30,
+          "OVERTAKEN": 96
+        },
+        {
+          "serviceIndex": 15,
+          "serviceId": "15",
+          "service": "HH:MM:SS RCode ItName015 - 0015",
+          "PAX_IN": 61,
+          "PAX_OUT": 69,
+          "TRANSPORT_FARE_COLLECTION_COUNT": 87,
+          "TRANSPORT_FARE_COLLECTION_VALUE": 48,
+          "ITINERARY_ABANDONED_AUTHORIZED": 98,
+          "ITINERARY_ABANDONED_UNAUTHORIZED": 79,
+          "ITINERARY_CONTINUED": 54,
+          "STARTED_CHECKPOINT_DIFFERENT_FIRST_ONE": 27,
+          "VEHICLE_ENTERED_GEOFENCE_ZONE": 59,
+          "VEHICLE_DEPARTURE_GEOFENCE_ZONE": 84,
+          "CHECK_POINT_ARRIVAL_AHEAD": 86,
+          "CHECK_POINT_ARRIVAL_DELAYED": 9,
+          "STANDSTILL": 23,
+          "FRONT_DOOR_TAMPERING": 26,
+          "BACK_DOOR_TAMPERING": 36,
+          "TURNSTILE_OBSTRUCTION_REPORTED": 49,
+          "TURNSTILE_BATTERY_CONECTION_REPORTED": 89,
+          "TURNSTILE_ANOMALY_REPORTED": 80,
+          "PAX_ANOMALY_REPORTED": 16,
+          "FRONT_DOOR_CONNECTED": 53,
+          "FRONT_DOOR_DISCONNECTED": 33,
+          "BACK_DOOR_CONNECTED": 8,
+          "BACK_DOOR_DISCONNECTED": 70,
+          "CREATED": 56,
+          "AUTOMATIC_STARTED": 25,
+          "AUTOMATIC_ENDED": 79,
+          "AUTOMATIC_ABORTED": 24,
+          "FORCED_STARTED": 15,
+          "FORCED_ABORTED": 98,
+          "FORCED_CANCELLED": 95,
+          "FORCED_ENDED": 62,
+          "OVERTAKEN": 41
+        },
+        {
+          "serviceIndex": 16,
+          "serviceId": "16",
+          "service": "HH:MM:SS RCode ItName016 - 0016",
+          "PAX_IN": 35,
+          "PAX_OUT": 63,
+          "TRANSPORT_FARE_COLLECTION_COUNT": 96,
+          "TRANSPORT_FARE_COLLECTION_VALUE": 31,
+          "ITINERARY_ABANDONED_AUTHORIZED": 81,
+          "ITINERARY_ABANDONED_UNAUTHORIZED": 70,
+          "ITINERARY_CONTINUED": 75,
+          "STARTED_CHECKPOINT_DIFFERENT_FIRST_ONE": 22,
+          "VEHICLE_ENTERED_GEOFENCE_ZONE": 52,
+          "VEHICLE_DEPARTURE_GEOFENCE_ZONE": 0,
+          "CHECK_POINT_ARRIVAL_AHEAD": 96,
+          "CHECK_POINT_ARRIVAL_DELAYED": 89,
+          "STANDSTILL": 82,
+          "FRONT_DOOR_TAMPERING": 11,
+          "BACK_DOOR_TAMPERING": 63,
+          "TURNSTILE_OBSTRUCTION_REPORTED": 77,
+          "TURNSTILE_BATTERY_CONECTION_REPORTED": 33,
+          "TURNSTILE_ANOMALY_REPORTED": 22,
+          "PAX_ANOMALY_REPORTED": 26,
+          "FRONT_DOOR_CONNECTED": 51,
+          "FRONT_DOOR_DISCONNECTED": 92,
+          "BACK_DOOR_CONNECTED": 33,
+          "BACK_DOOR_DISCONNECTED": 74,
+          "CREATED": 98,
+          "AUTOMATIC_STARTED": 92,
+          "AUTOMATIC_ENDED": 99,
+          "AUTOMATIC_ABORTED": 65,
+          "FORCED_STARTED": 59,
+          "FORCED_ABORTED": 97,
+          "FORCED_CANCELLED": 62,
+          "FORCED_ENDED": 3,
+          "OVERTAKEN": 43
+        },
+        {
+          "serviceIndex": 17,
+          "serviceId": "17",
+          "service": "HH:MM:SS RCode ItName017 - 0017",
+          "PAX_IN": 41,
+          "PAX_OUT": 94,
+          "TRANSPORT_FARE_COLLECTION_COUNT": 3,
+          "TRANSPORT_FARE_COLLECTION_VALUE": 33,
+          "ITINERARY_ABANDONED_AUTHORIZED": 80,
+          "ITINERARY_ABANDONED_UNAUTHORIZED": 13,
+          "ITINERARY_CONTINUED": 52,
+          "STARTED_CHECKPOINT_DIFFERENT_FIRST_ONE": 34,
+          "VEHICLE_ENTERED_GEOFENCE_ZONE": 36,
+          "VEHICLE_DEPARTURE_GEOFENCE_ZONE": 93,
+          "CHECK_POINT_ARRIVAL_AHEAD": 75,
+          "CHECK_POINT_ARRIVAL_DELAYED": 78,
+          "STANDSTILL": 80,
+          "FRONT_DOOR_TAMPERING": 14,
+          "BACK_DOOR_TAMPERING": 9,
+          "TURNSTILE_OBSTRUCTION_REPORTED": 52,
+          "TURNSTILE_BATTERY_CONECTION_REPORTED": 74,
+          "TURNSTILE_ANOMALY_REPORTED": 8,
+          "PAX_ANOMALY_REPORTED": 88,
+          "FRONT_DOOR_CONNECTED": 30,
+          "FRONT_DOOR_DISCONNECTED": 95,
+          "BACK_DOOR_CONNECTED": 43,
+          "BACK_DOOR_DISCONNECTED": 96,
+          "CREATED": 45,
+          "AUTOMATIC_STARTED": 19,
+          "AUTOMATIC_ENDED": 24,
+          "AUTOMATIC_ABORTED": 6,
+          "FORCED_STARTED": 10,
+          "FORCED_ABORTED": 63,
+          "FORCED_CANCELLED": 3,
+          "FORCED_ENDED": 28,
+          "OVERTAKEN": 15
+        },
+        {
+          "serviceIndex": 18,
+          "serviceId": "18",
+          "service": "HH:MM:SS RCode ItName018 - 0018",
+          "PAX_IN": 46,
+          "PAX_OUT": 28,
+          "TRANSPORT_FARE_COLLECTION_COUNT": 6,
+          "TRANSPORT_FARE_COLLECTION_VALUE": 48,
+          "ITINERARY_ABANDONED_AUTHORIZED": 65,
+          "ITINERARY_ABANDONED_UNAUTHORIZED": 77,
+          "ITINERARY_CONTINUED": 69,
+          "STARTED_CHECKPOINT_DIFFERENT_FIRST_ONE": 50,
+          "VEHICLE_ENTERED_GEOFENCE_ZONE": 20,
+          "VEHICLE_DEPARTURE_GEOFENCE_ZONE": 52,
+          "CHECK_POINT_ARRIVAL_AHEAD": 83,
+          "CHECK_POINT_ARRIVAL_DELAYED": 63,
+          "STANDSTILL": 39,
+          "FRONT_DOOR_TAMPERING": 78,
+          "BACK_DOOR_TAMPERING": 82,
+          "TURNSTILE_OBSTRUCTION_REPORTED": 51,
+          "TURNSTILE_BATTERY_CONECTION_REPORTED": 25,
+          "TURNSTILE_ANOMALY_REPORTED": 78,
+          "PAX_ANOMALY_REPORTED": 19,
+          "FRONT_DOOR_CONNECTED": 85,
+          "FRONT_DOOR_DISCONNECTED": 35,
+          "BACK_DOOR_CONNECTED": 50,
+          "BACK_DOOR_DISCONNECTED": 46,
+          "CREATED": 49,
+          "AUTOMATIC_STARTED": 33,
+          "AUTOMATIC_ENDED": 16,
+          "AUTOMATIC_ABORTED": 95,
+          "FORCED_STARTED": 69,
+          "FORCED_ABORTED": 60,
+          "FORCED_CANCELLED": 67,
+          "FORCED_ENDED": 85,
+          "OVERTAKEN": 95
+        },
+        {
+          "serviceIndex": 19,
+          "serviceId": "19",
+          "service": "HH:MM:SS RCode ItName019 - 0019",
+          "PAX_IN": 93,
+          "PAX_OUT": 6,
+          "TRANSPORT_FARE_COLLECTION_COUNT": 85,
+          "TRANSPORT_FARE_COLLECTION_VALUE": 6,
+          "ITINERARY_ABANDONED_AUTHORIZED": 85,
+          "ITINERARY_ABANDONED_UNAUTHORIZED": 53,
+          "ITINERARY_CONTINUED": 50,
+          "STARTED_CHECKPOINT_DIFFERENT_FIRST_ONE": 41,
+          "VEHICLE_ENTERED_GEOFENCE_ZONE": 56,
+          "VEHICLE_DEPARTURE_GEOFENCE_ZONE": 63,
+          "CHECK_POINT_ARRIVAL_AHEAD": 55,
+          "CHECK_POINT_ARRIVAL_DELAYED": 45,
+          "STANDSTILL": 96,
+          "FRONT_DOOR_TAMPERING": 22,
+          "BACK_DOOR_TAMPERING": 49,
+          "TURNSTILE_OBSTRUCTION_REPORTED": 19,
+          "TURNSTILE_BATTERY_CONECTION_REPORTED": 91,
+          "TURNSTILE_ANOMALY_REPORTED": 84,
+          "PAX_ANOMALY_REPORTED": 83,
+          "FRONT_DOOR_CONNECTED": 53,
+          "FRONT_DOOR_DISCONNECTED": 97,
+          "BACK_DOOR_CONNECTED": 54,
+          "BACK_DOOR_DISCONNECTED": 12,
+          "CREATED": 5,
+          "AUTOMATIC_STARTED": 73,
+          "AUTOMATIC_ENDED": 20,
+          "AUTOMATIC_ABORTED": 49,
+          "FORCED_STARTED": 23,
+          "FORCED_ABORTED": 1,
+          "FORCED_CANCELLED": 0,
+          "FORCED_ENDED": 13,
+          "OVERTAKEN": 2
+        },
+        {
+          "serviceIndex": 20,
+          "serviceId": "20",
+          "service": "HH:MM:SS RCode ItName020 - 0020",
+          "PAX_IN": 79,
+          "PAX_OUT": 13,
+          "TRANSPORT_FARE_COLLECTION_COUNT": 53,
+          "TRANSPORT_FARE_COLLECTION_VALUE": 57,
+          "ITINERARY_ABANDONED_AUTHORIZED": 20,
+          "ITINERARY_ABANDONED_UNAUTHORIZED": 18,
+          "ITINERARY_CONTINUED": 13,
+          "STARTED_CHECKPOINT_DIFFERENT_FIRST_ONE": 22,
+          "VEHICLE_ENTERED_GEOFENCE_ZONE": 94,
+          "VEHICLE_DEPARTURE_GEOFENCE_ZONE": 13,
+          "CHECK_POINT_ARRIVAL_AHEAD": 55,
+          "CHECK_POINT_ARRIVAL_DELAYED": 24,
+          "STANDSTILL": 74,
+          "FRONT_DOOR_TAMPERING": 76,
+          "BACK_DOOR_TAMPERING": 99,
+          "TURNSTILE_OBSTRUCTION_REPORTED": 77,
+          "TURNSTILE_BATTERY_CONECTION_REPORTED": 37,
+          "TURNSTILE_ANOMALY_REPORTED": 99,
+          "PAX_ANOMALY_REPORTED": 47,
+          "FRONT_DOOR_CONNECTED": 90,
+          "FRONT_DOOR_DISCONNECTED": 93,
+          "BACK_DOOR_CONNECTED": 87,
+          "BACK_DOOR_DISCONNECTED": 14,
+          "CREATED": 84,
+          "AUTOMATIC_STARTED": 43,
+          "AUTOMATIC_ENDED": 89,
+          "AUTOMATIC_ABORTED": 6,
+          "FORCED_STARTED": 65,
+          "FORCED_ABORTED": 51,
+          "FORCED_CANCELLED": 33,
+          "FORCED_ENDED": 87,
+          "OVERTAKEN": 10
+        },
+        {
+          "serviceIndex": 21,
+          "serviceId": "21",
+          "service": "HH:MM:SS RCode ItName021 - 0021",
+          "PAX_IN": 8,
+          "PAX_OUT": 12,
+          "TRANSPORT_FARE_COLLECTION_COUNT": 6,
+          "TRANSPORT_FARE_COLLECTION_VALUE": 85,
+          "ITINERARY_ABANDONED_AUTHORIZED": 25,
+          "ITINERARY_ABANDONED_UNAUTHORIZED": 14,
+          "ITINERARY_CONTINUED": 66,
+          "STARTED_CHECKPOINT_DIFFERENT_FIRST_ONE": 16,
+          "VEHICLE_ENTERED_GEOFENCE_ZONE": 59,
+          "VEHICLE_DEPARTURE_GEOFENCE_ZONE": 66,
+          "CHECK_POINT_ARRIVAL_AHEAD": 49,
+          "CHECK_POINT_ARRIVAL_DELAYED": 21,
+          "STANDSTILL": 99,
+          "FRONT_DOOR_TAMPERING": 45,
+          "BACK_DOOR_TAMPERING": 80,
+          "TURNSTILE_OBSTRUCTION_REPORTED": 72,
+          "TURNSTILE_BATTERY_CONECTION_REPORTED": 35,
+          "TURNSTILE_ANOMALY_REPORTED": 32,
+          "PAX_ANOMALY_REPORTED": 64,
+          "FRONT_DOOR_CONNECTED": 9,
+          "FRONT_DOOR_DISCONNECTED": 56,
+          "BACK_DOOR_CONNECTED": 33,
+          "BACK_DOOR_DISCONNECTED": 90,
+          "CREATED": 50,
+          "AUTOMATIC_STARTED": 89,
+          "AUTOMATIC_ENDED": 18,
+          "AUTOMATIC_ABORTED": 79,
+          "FORCED_STARTED": 22,
+          "FORCED_ABORTED": 14,
+          "FORCED_CANCELLED": 5,
+          "FORCED_ENDED": 9,
+          "OVERTAKEN": 69
+        },
+        {
+          "serviceIndex": 22,
+          "serviceId": "22",
+          "service": "HH:MM:SS RCode ItName022 - 0022",
+          "PAX_IN": 45,
+          "PAX_OUT": 55,
+          "TRANSPORT_FARE_COLLECTION_COUNT": 47,
+          "TRANSPORT_FARE_COLLECTION_VALUE": 0,
+          "ITINERARY_ABANDONED_AUTHORIZED": 62,
+          "ITINERARY_ABANDONED_UNAUTHORIZED": 9,
+          "ITINERARY_CONTINUED": 32,
+          "STARTED_CHECKPOINT_DIFFERENT_FIRST_ONE": 14,
+          "VEHICLE_ENTERED_GEOFENCE_ZONE": 7,
+          "VEHICLE_DEPARTURE_GEOFENCE_ZONE": 73,
+          "CHECK_POINT_ARRIVAL_AHEAD": 69,
+          "CHECK_POINT_ARRIVAL_DELAYED": 55,
+          "STANDSTILL": 29,
+          "FRONT_DOOR_TAMPERING": 44,
+          "BACK_DOOR_TAMPERING": 96,
+          "TURNSTILE_OBSTRUCTION_REPORTED": 67,
+          "TURNSTILE_BATTERY_CONECTION_REPORTED": 91,
+          "TURNSTILE_ANOMALY_REPORTED": 39,
+          "PAX_ANOMALY_REPORTED": 2,
+          "FRONT_DOOR_CONNECTED": 49,
+          "FRONT_DOOR_DISCONNECTED": 8,
+          "BACK_DOOR_CONNECTED": 71,
+          "BACK_DOOR_DISCONNECTED": 4,
+          "CREATED": 78,
+          "AUTOMATIC_STARTED": 78,
+          "AUTOMATIC_ENDED": 27,
+          "AUTOMATIC_ABORTED": 80,
+          "FORCED_STARTED": 45,
+          "FORCED_ABORTED": 92,
+          "FORCED_CANCELLED": 55,
+          "FORCED_ENDED": 93,
+          "OVERTAKEN": 89
+        },
+        {
+          "serviceIndex": 23,
+          "serviceId": "23",
+          "service": "HH:MM:SS RCode ItName023 - 0023",
+          "PAX_IN": 46,
+          "PAX_OUT": 8,
+          "TRANSPORT_FARE_COLLECTION_COUNT": 71,
+          "TRANSPORT_FARE_COLLECTION_VALUE": 35,
+          "ITINERARY_ABANDONED_AUTHORIZED": 60,
+          "ITINERARY_ABANDONED_UNAUTHORIZED": 65,
+          "ITINERARY_CONTINUED": 17,
+          "STARTED_CHECKPOINT_DIFFERENT_FIRST_ONE": 49,
+          "VEHICLE_ENTERED_GEOFENCE_ZONE": 34,
+          "VEHICLE_DEPARTURE_GEOFENCE_ZONE": 67,
+          "CHECK_POINT_ARRIVAL_AHEAD": 67,
+          "CHECK_POINT_ARRIVAL_DELAYED": 36,
+          "STANDSTILL": 24,
+          "FRONT_DOOR_TAMPERING": 97,
+          "BACK_DOOR_TAMPERING": 54,
+          "TURNSTILE_OBSTRUCTION_REPORTED": 16,
+          "TURNSTILE_BATTERY_CONECTION_REPORTED": 71,
+          "TURNSTILE_ANOMALY_REPORTED": 68,
+          "PAX_ANOMALY_REPORTED": 71,
+          "FRONT_DOOR_CONNECTED": 3,
+          "FRONT_DOOR_DISCONNECTED": 61,
+          "BACK_DOOR_CONNECTED": 10,
+          "BACK_DOOR_DISCONNECTED": 84,
+          "CREATED": 55,
+          "AUTOMATIC_STARTED": 93,
+          "AUTOMATIC_ENDED": 41,
+          "AUTOMATIC_ABORTED": 97,
+          "FORCED_STARTED": 5,
+          "FORCED_ABORTED": 85,
+          "FORCED_CANCELLED": 35,
+          "FORCED_ENDED": 29,
+          "OVERTAKEN": 41
+        },
+        {
+          "serviceIndex": 24,
+          "serviceId": "24",
+          "service": "HH:MM:SS RCode ItName024 - 0024",
+          "PAX_IN": 39,
+          "PAX_OUT": 65,
+          "TRANSPORT_FARE_COLLECTION_COUNT": 41,
+          "TRANSPORT_FARE_COLLECTION_VALUE": 75,
+          "ITINERARY_ABANDONED_AUTHORIZED": 67,
+          "ITINERARY_ABANDONED_UNAUTHORIZED": 89,
+          "ITINERARY_CONTINUED": 41,
+          "STARTED_CHECKPOINT_DIFFERENT_FIRST_ONE": 83,
+          "VEHICLE_ENTERED_GEOFENCE_ZONE": 6,
+          "VEHICLE_DEPARTURE_GEOFENCE_ZONE": 52,
+          "CHECK_POINT_ARRIVAL_AHEAD": 41,
+          "CHECK_POINT_ARRIVAL_DELAYED": 0,
+          "STANDSTILL": 26,
+          "FRONT_DOOR_TAMPERING": 69,
+          "BACK_DOOR_TAMPERING": 22,
+          "TURNSTILE_OBSTRUCTION_REPORTED": 7,
+          "TURNSTILE_BATTERY_CONECTION_REPORTED": 76,
+          "TURNSTILE_ANOMALY_REPORTED": 74,
+          "PAX_ANOMALY_REPORTED": 68,
+          "FRONT_DOOR_CONNECTED": 32,
+          "FRONT_DOOR_DISCONNECTED": 67,
+          "BACK_DOOR_CONNECTED": 15,
+          "BACK_DOOR_DISCONNECTED": 66,
+          "CREATED": 69,
+          "AUTOMATIC_STARTED": 28,
+          "AUTOMATIC_ENDED": 71,
+          "AUTOMATIC_ABORTED": 37,
+          "FORCED_STARTED": 10,
+          "FORCED_ABORTED": 45,
+          "FORCED_CANCELLED": 92,
+          "FORCED_ENDED": 6,
+          "OVERTAKEN": 26
+        },
+        {
+          "serviceIndex": 25,
+          "serviceId": "25",
+          "service": "HH:MM:SS RCode ItName025 - 0025",
+          "PAX_IN": 78,
+          "PAX_OUT": 81,
+          "TRANSPORT_FARE_COLLECTION_COUNT": 61,
+          "TRANSPORT_FARE_COLLECTION_VALUE": 83,
+          "ITINERARY_ABANDONED_AUTHORIZED": 90,
+          "ITINERARY_ABANDONED_UNAUTHORIZED": 67,
+          "ITINERARY_CONTINUED": 72,
+          "STARTED_CHECKPOINT_DIFFERENT_FIRST_ONE": 96,
+          "VEHICLE_ENTERED_GEOFENCE_ZONE": 1,
+          "VEHICLE_DEPARTURE_GEOFENCE_ZONE": 56,
+          "CHECK_POINT_ARRIVAL_AHEAD": 58,
+          "CHECK_POINT_ARRIVAL_DELAYED": 85,
+          "STANDSTILL": 97,
+          "FRONT_DOOR_TAMPERING": 16,
+          "BACK_DOOR_TAMPERING": 85,
+          "TURNSTILE_OBSTRUCTION_REPORTED": 51,
+          "TURNSTILE_BATTERY_CONECTION_REPORTED": 17,
+          "TURNSTILE_ANOMALY_REPORTED": 5,
+          "PAX_ANOMALY_REPORTED": 13,
+          "FRONT_DOOR_CONNECTED": 28,
+          "FRONT_DOOR_DISCONNECTED": 90,
+          "BACK_DOOR_CONNECTED": 11,
+          "BACK_DOOR_DISCONNECTED": 23,
+          "CREATED": 98,
+          "AUTOMATIC_STARTED": 60,
+          "AUTOMATIC_ENDED": 83,
+          "AUTOMATIC_ABORTED": 36,
+          "FORCED_STARTED": 49,
+          "FORCED_ABORTED": 30,
+          "FORCED_CANCELLED": 71,
+          "FORCED_ENDED": 67,
+          "OVERTAKEN": 42
+        },
+        {
+          "serviceIndex": 26,
+          "serviceId": "26",
+          "service": "HH:MM:SS RCode ItName026 - 0026",
+          "PAX_IN": 3,
+          "PAX_OUT": 33,
+          "TRANSPORT_FARE_COLLECTION_COUNT": 99,
+          "TRANSPORT_FARE_COLLECTION_VALUE": 67,
+          "ITINERARY_ABANDONED_AUTHORIZED": 7,
+          "ITINERARY_ABANDONED_UNAUTHORIZED": 90,
+          "ITINERARY_CONTINUED": 44,
+          "STARTED_CHECKPOINT_DIFFERENT_FIRST_ONE": 15,
+          "VEHICLE_ENTERED_GEOFENCE_ZONE": 41,
+          "VEHICLE_DEPARTURE_GEOFENCE_ZONE": 83,
+          "CHECK_POINT_ARRIVAL_AHEAD": 80,
+          "CHECK_POINT_ARRIVAL_DELAYED": 65,
+          "STANDSTILL": 28,
+          "FRONT_DOOR_TAMPERING": 41,
+          "BACK_DOOR_TAMPERING": 63,
+          "TURNSTILE_OBSTRUCTION_REPORTED": 30,
+          "TURNSTILE_BATTERY_CONECTION_REPORTED": 86,
+          "TURNSTILE_ANOMALY_REPORTED": 35,
+          "PAX_ANOMALY_REPORTED": 45,
+          "FRONT_DOOR_CONNECTED": 34,
+          "FRONT_DOOR_DISCONNECTED": 34,
+          "BACK_DOOR_CONNECTED": 51,
+          "BACK_DOOR_DISCONNECTED": 47,
+          "CREATED": 25,
+          "AUTOMATIC_STARTED": 2,
+          "AUTOMATIC_ENDED": 89,
+          "AUTOMATIC_ABORTED": 99,
+          "FORCED_STARTED": 14,
+          "FORCED_ABORTED": 64,
+          "FORCED_CANCELLED": 92,
+          "FORCED_ENDED": 5,
+          "OVERTAKEN": 48
+        },
+        {
+          "serviceIndex": 27,
+          "serviceId": "27",
+          "service": "HH:MM:SS RCode ItName027 - 0027",
+          "PAX_IN": 69,
+          "PAX_OUT": 25,
+          "TRANSPORT_FARE_COLLECTION_COUNT": 23,
+          "TRANSPORT_FARE_COLLECTION_VALUE": 44,
+          "ITINERARY_ABANDONED_AUTHORIZED": 94,
+          "ITINERARY_ABANDONED_UNAUTHORIZED": 38,
+          "ITINERARY_CONTINUED": 84,
+          "STARTED_CHECKPOINT_DIFFERENT_FIRST_ONE": 72,
+          "VEHICLE_ENTERED_GEOFENCE_ZONE": 22,
+          "VEHICLE_DEPARTURE_GEOFENCE_ZONE": 70,
+          "CHECK_POINT_ARRIVAL_AHEAD": 58,
+          "CHECK_POINT_ARRIVAL_DELAYED": 45,
+          "STANDSTILL": 59,
+          "FRONT_DOOR_TAMPERING": 21,
+          "BACK_DOOR_TAMPERING": 10,
+          "TURNSTILE_OBSTRUCTION_REPORTED": 87,
+          "TURNSTILE_BATTERY_CONECTION_REPORTED": 77,
+          "TURNSTILE_ANOMALY_REPORTED": 45,
+          "PAX_ANOMALY_REPORTED": 79,
+          "FRONT_DOOR_CONNECTED": 9,
+          "FRONT_DOOR_DISCONNECTED": 5,
+          "BACK_DOOR_CONNECTED": 71,
+          "BACK_DOOR_DISCONNECTED": 99,
+          "CREATED": 72,
+          "AUTOMATIC_STARTED": 89,
+          "AUTOMATIC_ENDED": 90,
+          "AUTOMATIC_ABORTED": 34,
+          "FORCED_STARTED": 4,
+          "FORCED_ABORTED": 57,
+          "FORCED_CANCELLED": 64,
+          "FORCED_ENDED": 84,
+          "OVERTAKEN": 47
+        },
+        {
+          "serviceIndex": 28,
+          "serviceId": "28",
+          "service": "HH:MM:SS RCode ItName028 - 0028",
+          "PAX_IN": 7,
+          "PAX_OUT": 90,
+          "TRANSPORT_FARE_COLLECTION_COUNT": 28,
+          "TRANSPORT_FARE_COLLECTION_VALUE": 69,
+          "ITINERARY_ABANDONED_AUTHORIZED": 69,
+          "ITINERARY_ABANDONED_UNAUTHORIZED": 32,
+          "ITINERARY_CONTINUED": 88,
+          "STARTED_CHECKPOINT_DIFFERENT_FIRST_ONE": 84,
+          "VEHICLE_ENTERED_GEOFENCE_ZONE": 23,
+          "VEHICLE_DEPARTURE_GEOFENCE_ZONE": 49,
+          "CHECK_POINT_ARRIVAL_AHEAD": 83,
+          "CHECK_POINT_ARRIVAL_DELAYED": 72,
+          "STANDSTILL": 46,
+          "FRONT_DOOR_TAMPERING": 30,
+          "BACK_DOOR_TAMPERING": 39,
+          "TURNSTILE_OBSTRUCTION_REPORTED": 5,
+          "TURNSTILE_BATTERY_CONECTION_REPORTED": 24,
+          "TURNSTILE_ANOMALY_REPORTED": 30,
+          "PAX_ANOMALY_REPORTED": 38,
+          "FRONT_DOOR_CONNECTED": 86,
+          "FRONT_DOOR_DISCONNECTED": 92,
+          "BACK_DOOR_CONNECTED": 85,
+          "BACK_DOOR_DISCONNECTED": 86,
+          "CREATED": 30,
+          "AUTOMATIC_STARTED": 16,
+          "AUTOMATIC_ENDED": 72,
+          "AUTOMATIC_ABORTED": 6,
+          "FORCED_STARTED": 87,
+          "FORCED_ABORTED": 60,
+          "FORCED_CANCELLED": 20,
+          "FORCED_ENDED": 9,
+          "OVERTAKEN": 90
+        },
+        {
+          "serviceIndex": 29,
+          "serviceId": "29",
+          "service": "HH:MM:SS RCode ItName029 - 0029",
+          "PAX_IN": 59,
+          "PAX_OUT": 59,
+          "TRANSPORT_FARE_COLLECTION_COUNT": 55,
+          "TRANSPORT_FARE_COLLECTION_VALUE": 97,
+          "ITINERARY_ABANDONED_AUTHORIZED": 43,
+          "ITINERARY_ABANDONED_UNAUTHORIZED": 53,
+          "ITINERARY_CONTINUED": 85,
+          "STARTED_CHECKPOINT_DIFFERENT_FIRST_ONE": 86,
+          "VEHICLE_ENTERED_GEOFENCE_ZONE": 54,
+          "VEHICLE_DEPARTURE_GEOFENCE_ZONE": 54,
+          "CHECK_POINT_ARRIVAL_AHEAD": 93,
+          "CHECK_POINT_ARRIVAL_DELAYED": 66,
+          "STANDSTILL": 34,
+          "FRONT_DOOR_TAMPERING": 5,
+          "BACK_DOOR_TAMPERING": 54,
+          "TURNSTILE_OBSTRUCTION_REPORTED": 81,
+          "TURNSTILE_BATTERY_CONECTION_REPORTED": 15,
+          "TURNSTILE_ANOMALY_REPORTED": 0,
+          "PAX_ANOMALY_REPORTED": 9,
+          "FRONT_DOOR_CONNECTED": 30,
+          "FRONT_DOOR_DISCONNECTED": 49,
+          "BACK_DOOR_CONNECTED": 2,
+          "BACK_DOOR_DISCONNECTED": 39,
+          "CREATED": 87,
+          "AUTOMATIC_STARTED": 37,
+          "AUTOMATIC_ENDED": 73,
+          "AUTOMATIC_ABORTED": 97,
+          "FORCED_STARTED": 97,
+          "FORCED_ABORTED": 73,
+          "FORCED_CANCELLED": 13,
+          "FORCED_ENDED": 62,
+          "OVERTAKEN": 31
+        }
+      ]
+    },
+    "EVENTS_STATS": {
+      "SCHEMA": [
+        {
+          "name": "type",
+          "dataType": "STRING",
+          "semantics": {
+            "semanticType": "TEXT",
+            "conceptType": "DIMENSION"
+          }
+        },
+        {
+          "name": "name",
+          "dataType": "STRING",
+          "semantics": {
+            "semanticType": "TEXT",
+            "conceptType": "DIMENSION"
+          }
+        },
+        {
+          "name": "range",
+          "dataType": "STRING",
+          "semantics": {
+            "semanticType": "TEXT",
+            "conceptType": "DIMENSION"
+          }
+        },
+        {
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "name": "value"
+        }
+      ],
+      "DATA": [
+        {
+          "type": "PAX_IN",
+          "name": "name for PAX_IN",
+          "range": "00:00-04:00",
+          "value": 77
+        },
+        {
+          "type": "PAX_IN",
+          "name": "name for PAX_IN",
+          "range": "04:00-10:00",
+          "value": 49
+        },
+        {
+          "type": "PAX_IN",
+          "name": "name for PAX_IN",
+          "range": "10:00-15:00",
+          "value": 18
+        },
+        {
+          "type": "PAX_IN",
+          "name": "name for PAX_IN",
+          "range": "15:00-20:00",
+          "value": 5
+        },
+        {
+          "type": "PAX_IN",
+          "name": "name for PAX_IN",
+          "range": "20:00-24:00",
+          "value": 61
+        },
+        {
+          "type": "PAX_OUT",
+          "name": "name for PAX_OUT",
+          "range": "00:00-04:00",
+          "value": 34
+        },
+        {
+          "type": "PAX_OUT",
+          "name": "name for PAX_OUT",
+          "range": "04:00-10:00",
+          "value": 52
+        },
+        {
+          "type": "PAX_OUT",
+          "name": "name for PAX_OUT",
+          "range": "10:00-15:00",
+          "value": 43
+        },
+        {
+          "type": "PAX_OUT",
+          "name": "name for PAX_OUT",
+          "range": "15:00-20:00",
+          "value": 78
+        },
+        {
+          "type": "PAX_OUT",
+          "name": "name for PAX_OUT",
+          "range": "20:00-24:00",
+          "value": 45
+        },
+        {
+          "type": "TRANSPORT_FARE_COLLECTION_COUNT",
+          "name": "name for TRANSPORT_FARE_COLLECTION_COUNT",
+          "range": "00:00-04:00",
+          "value": 71
+        },
+        {
+          "type": "TRANSPORT_FARE_COLLECTION_COUNT",
+          "name": "name for TRANSPORT_FARE_COLLECTION_COUNT",
+          "range": "04:00-10:00",
+          "value": 73
+        },
+        {
+          "type": "TRANSPORT_FARE_COLLECTION_COUNT",
+          "name": "name for TRANSPORT_FARE_COLLECTION_COUNT",
+          "range": "10:00-15:00",
+          "value": 68
+        },
+        {
+          "type": "TRANSPORT_FARE_COLLECTION_COUNT",
+          "name": "name for TRANSPORT_FARE_COLLECTION_COUNT",
+          "range": "15:00-20:00",
+          "value": 18
+        },
+        {
+          "type": "TRANSPORT_FARE_COLLECTION_COUNT",
+          "name": "name for TRANSPORT_FARE_COLLECTION_COUNT",
+          "range": "20:00-24:00",
+          "value": 67
+        },
+        {
+          "type": "TRANSPORT_FARE_COLLECTION_VALUE",
+          "name": "name for TRANSPORT_FARE_COLLECTION_VALUE",
+          "range": "00:00-04:00",
+          "value": 17347
+        },
+        {
+          "type": "TRANSPORT_FARE_COLLECTION_VALUE",
+          "name": "name for TRANSPORT_FARE_COLLECTION_VALUE",
+          "range": "04:00-10:00",
+          "value": 303339
+        },
+        {
+          "type": "TRANSPORT_FARE_COLLECTION_VALUE",
+          "name": "name for TRANSPORT_FARE_COLLECTION_VALUE",
+          "range": "10:00-15:00",
+          "value": 285164
+        },
+        {
+          "type": "TRANSPORT_FARE_COLLECTION_VALUE",
+          "name": "name for TRANSPORT_FARE_COLLECTION_VALUE",
+          "range": "15:00-20:00",
+          "value": 961355
+        },
+        {
+          "type": "TRANSPORT_FARE_COLLECTION_VALUE",
+          "name": "name for TRANSPORT_FARE_COLLECTION_VALUE",
+          "range": "20:00-24:00",
+          "value": 445853
+        },
+        {
+          "type": "ITINERARY_ABANDONED_AUTHORIZED",
+          "name": "name for ITINERARY_ABANDONED_AUTHORIZED",
+          "range": "00:00-04:00",
+          "value": 65
+        },
+        {
+          "type": "ITINERARY_ABANDONED_AUTHORIZED",
+          "name": "name for ITINERARY_ABANDONED_AUTHORIZED",
+          "range": "04:00-10:00",
+          "value": 53
+        },
+        {
+          "type": "ITINERARY_ABANDONED_AUTHORIZED",
+          "name": "name for ITINERARY_ABANDONED_AUTHORIZED",
+          "range": "10:00-15:00",
+          "value": 22
+        },
+        {
+          "type": "ITINERARY_ABANDONED_AUTHORIZED",
+          "name": "name for ITINERARY_ABANDONED_AUTHORIZED",
+          "range": "15:00-20:00",
+          "value": 58
+        },
+        {
+          "type": "ITINERARY_ABANDONED_AUTHORIZED",
+          "name": "name for ITINERARY_ABANDONED_AUTHORIZED",
+          "range": "20:00-24:00",
+          "value": 99
+        },
+        {
+          "type": "ITINERARY_ABANDONED_UNAUTHORIZED",
+          "name": "name for ITINERARY_ABANDONED_UNAUTHORIZED",
+          "range": "00:00-04:00",
+          "value": 18
+        },
+        {
+          "type": "ITINERARY_ABANDONED_UNAUTHORIZED",
+          "name": "name for ITINERARY_ABANDONED_UNAUTHORIZED",
+          "range": "04:00-10:00",
+          "value": 34
+        },
+        {
+          "type": "ITINERARY_ABANDONED_UNAUTHORIZED",
+          "name": "name for ITINERARY_ABANDONED_UNAUTHORIZED",
+          "range": "10:00-15:00",
+          "value": 74
+        },
+        {
+          "type": "ITINERARY_ABANDONED_UNAUTHORIZED",
+          "name": "name for ITINERARY_ABANDONED_UNAUTHORIZED",
+          "range": "15:00-20:00",
+          "value": 27
+        },
+        {
+          "type": "ITINERARY_ABANDONED_UNAUTHORIZED",
+          "name": "name for ITINERARY_ABANDONED_UNAUTHORIZED",
+          "range": "20:00-24:00",
+          "value": 66
+        },
+        {
+          "type": "ITINERARY_CONTINUED",
+          "name": "name for ITINERARY_CONTINUED",
+          "range": "00:00-04:00",
+          "value": 10
+        },
+        {
+          "type": "ITINERARY_CONTINUED",
+          "name": "name for ITINERARY_CONTINUED",
+          "range": "04:00-10:00",
+          "value": 48
+        },
+        {
+          "type": "ITINERARY_CONTINUED",
+          "name": "name for ITINERARY_CONTINUED",
+          "range": "10:00-15:00",
+          "value": 12
+        },
+        {
+          "type": "ITINERARY_CONTINUED",
+          "name": "name for ITINERARY_CONTINUED",
+          "range": "15:00-20:00",
+          "value": 25
+        },
+        {
+          "type": "ITINERARY_CONTINUED",
+          "name": "name for ITINERARY_CONTINUED",
+          "range": "20:00-24:00",
+          "value": 7
+        },
+        {
+          "type": "STARTED_CHECKPOINT_DIFFERENT_FIRST_ONE",
+          "name": "name for STARTED_CHECKPOINT_DIFFERENT_FIRST_ONE",
+          "range": "00:00-04:00",
+          "value": 26
+        },
+        {
+          "type": "STARTED_CHECKPOINT_DIFFERENT_FIRST_ONE",
+          "name": "name for STARTED_CHECKPOINT_DIFFERENT_FIRST_ONE",
+          "range": "04:00-10:00",
+          "value": 92
+        },
+        {
+          "type": "STARTED_CHECKPOINT_DIFFERENT_FIRST_ONE",
+          "name": "name for STARTED_CHECKPOINT_DIFFERENT_FIRST_ONE",
+          "range": "10:00-15:00",
+          "value": 58
+        },
+        {
+          "type": "STARTED_CHECKPOINT_DIFFERENT_FIRST_ONE",
+          "name": "name for STARTED_CHECKPOINT_DIFFERENT_FIRST_ONE",
+          "range": "15:00-20:00",
+          "value": 82
+        },
+        {
+          "type": "STARTED_CHECKPOINT_DIFFERENT_FIRST_ONE",
+          "name": "name for STARTED_CHECKPOINT_DIFFERENT_FIRST_ONE",
+          "range": "20:00-24:00",
+          "value": 82
+        },
+        {
+          "type": "VEHICLE_ENTERED_GEOFENCE_ZONE",
+          "name": "name for VEHICLE_ENTERED_GEOFENCE_ZONE",
+          "range": "00:00-04:00",
+          "value": 55
+        },
+        {
+          "type": "VEHICLE_ENTERED_GEOFENCE_ZONE",
+          "name": "name for VEHICLE_ENTERED_GEOFENCE_ZONE",
+          "range": "04:00-10:00",
+          "value": 48
+        },
+        {
+          "type": "VEHICLE_ENTERED_GEOFENCE_ZONE",
+          "name": "name for VEHICLE_ENTERED_GEOFENCE_ZONE",
+          "range": "10:00-15:00",
+          "value": 3
+        },
+        {
+          "type": "VEHICLE_ENTERED_GEOFENCE_ZONE",
+          "name": "name for VEHICLE_ENTERED_GEOFENCE_ZONE",
+          "range": "15:00-20:00",
+          "value": 75
+        },
+        {
+          "type": "VEHICLE_ENTERED_GEOFENCE_ZONE",
+          "name": "name for VEHICLE_ENTERED_GEOFENCE_ZONE",
+          "range": "20:00-24:00",
+          "value": 75
+        },
+        {
+          "type": "VEHICLE_DEPARTURE_GEOFENCE_ZONE",
+          "name": "name for VEHICLE_DEPARTURE_GEOFENCE_ZONE",
+          "range": "00:00-04:00",
+          "value": 60
+        },
+        {
+          "type": "VEHICLE_DEPARTURE_GEOFENCE_ZONE",
+          "name": "name for VEHICLE_DEPARTURE_GEOFENCE_ZONE",
+          "range": "04:00-10:00",
+          "value": 29
+        },
+        {
+          "type": "VEHICLE_DEPARTURE_GEOFENCE_ZONE",
+          "name": "name for VEHICLE_DEPARTURE_GEOFENCE_ZONE",
+          "range": "10:00-15:00",
+          "value": 28
+        },
+        {
+          "type": "VEHICLE_DEPARTURE_GEOFENCE_ZONE",
+          "name": "name for VEHICLE_DEPARTURE_GEOFENCE_ZONE",
+          "range": "15:00-20:00",
+          "value": 25
+        },
+        {
+          "type": "VEHICLE_DEPARTURE_GEOFENCE_ZONE",
+          "name": "name for VEHICLE_DEPARTURE_GEOFENCE_ZONE",
+          "range": "20:00-24:00",
+          "value": 90
+        },
+        {
+          "type": "CHECK_POINT_ARRIVAL_AHEAD",
+          "name": "name for CHECK_POINT_ARRIVAL_AHEAD",
+          "range": "00:00-04:00",
+          "value": 46
+        },
+        {
+          "type": "CHECK_POINT_ARRIVAL_AHEAD",
+          "name": "name for CHECK_POINT_ARRIVAL_AHEAD",
+          "range": "04:00-10:00",
+          "value": 61
+        },
+        {
+          "type": "CHECK_POINT_ARRIVAL_AHEAD",
+          "name": "name for CHECK_POINT_ARRIVAL_AHEAD",
+          "range": "10:00-15:00",
+          "value": 24
+        },
+        {
+          "type": "CHECK_POINT_ARRIVAL_AHEAD",
+          "name": "name for CHECK_POINT_ARRIVAL_AHEAD",
+          "range": "15:00-20:00",
+          "value": 52
+        },
+        {
+          "type": "CHECK_POINT_ARRIVAL_AHEAD",
+          "name": "name for CHECK_POINT_ARRIVAL_AHEAD",
+          "range": "20:00-24:00",
+          "value": 46
+        },
+        {
+          "type": "CHECK_POINT_ARRIVAL_DELAYED",
+          "name": "name for CHECK_POINT_ARRIVAL_DELAYED",
+          "range": "00:00-04:00",
+          "value": 52
+        },
+        {
+          "type": "CHECK_POINT_ARRIVAL_DELAYED",
+          "name": "name for CHECK_POINT_ARRIVAL_DELAYED",
+          "range": "04:00-10:00",
+          "value": 77
+        },
+        {
+          "type": "CHECK_POINT_ARRIVAL_DELAYED",
+          "name": "name for CHECK_POINT_ARRIVAL_DELAYED",
+          "range": "10:00-15:00",
+          "value": 32
+        },
+        {
+          "type": "CHECK_POINT_ARRIVAL_DELAYED",
+          "name": "name for CHECK_POINT_ARRIVAL_DELAYED",
+          "range": "15:00-20:00",
+          "value": 42
+        },
+        {
+          "type": "CHECK_POINT_ARRIVAL_DELAYED",
+          "name": "name for CHECK_POINT_ARRIVAL_DELAYED",
+          "range": "20:00-24:00",
+          "value": 80
+        },
+        {
+          "type": "STANDSTILL",
+          "name": "name for STANDSTILL",
+          "range": "00:00-04:00",
+          "value": 63
+        },
+        {
+          "type": "STANDSTILL",
+          "name": "name for STANDSTILL",
+          "range": "04:00-10:00",
+          "value": 96
+        },
+        {
+          "type": "STANDSTILL",
+          "name": "name for STANDSTILL",
+          "range": "10:00-15:00",
+          "value": 94
+        },
+        {
+          "type": "STANDSTILL",
+          "name": "name for STANDSTILL",
+          "range": "15:00-20:00",
+          "value": 75
+        },
+        {
+          "type": "STANDSTILL",
+          "name": "name for STANDSTILL",
+          "range": "20:00-24:00",
+          "value": 51
+        },
+        {
+          "type": "FRONT_DOOR_TAMPERING",
+          "name": "name for FRONT_DOOR_TAMPERING",
+          "range": "00:00-04:00",
+          "value": 34
+        },
+        {
+          "type": "FRONT_DOOR_TAMPERING",
+          "name": "name for FRONT_DOOR_TAMPERING",
+          "range": "04:00-10:00",
+          "value": 96
+        },
+        {
+          "type": "FRONT_DOOR_TAMPERING",
+          "name": "name for FRONT_DOOR_TAMPERING",
+          "range": "10:00-15:00",
+          "value": 13
+        },
+        {
+          "type": "FRONT_DOOR_TAMPERING",
+          "name": "name for FRONT_DOOR_TAMPERING",
+          "range": "15:00-20:00",
+          "value": 20
+        },
+        {
+          "type": "FRONT_DOOR_TAMPERING",
+          "name": "name for FRONT_DOOR_TAMPERING",
+          "range": "20:00-24:00",
+          "value": 61
+        },
+        {
+          "type": "BACK_DOOR_TAMPERING",
+          "name": "name for BACK_DOOR_TAMPERING",
+          "range": "00:00-04:00",
+          "value": 44
+        },
+        {
+          "type": "BACK_DOOR_TAMPERING",
+          "name": "name for BACK_DOOR_TAMPERING",
+          "range": "04:00-10:00",
+          "value": 58
+        },
+        {
+          "type": "BACK_DOOR_TAMPERING",
+          "name": "name for BACK_DOOR_TAMPERING",
+          "range": "10:00-15:00",
+          "value": 17
+        },
+        {
+          "type": "BACK_DOOR_TAMPERING",
+          "name": "name for BACK_DOOR_TAMPERING",
+          "range": "15:00-20:00",
+          "value": 22
+        },
+        {
+          "type": "BACK_DOOR_TAMPERING",
+          "name": "name for BACK_DOOR_TAMPERING",
+          "range": "20:00-24:00",
+          "value": 50
+        },
+        {
+          "type": "TURNSTILE_OBSTRUCTION_REPORTED",
+          "name": "name for TURNSTILE_OBSTRUCTION_REPORTED",
+          "range": "00:00-04:00",
+          "value": 15
+        },
+        {
+          "type": "TURNSTILE_OBSTRUCTION_REPORTED",
+          "name": "name for TURNSTILE_OBSTRUCTION_REPORTED",
+          "range": "04:00-10:00",
+          "value": 67
+        },
+        {
+          "type": "TURNSTILE_OBSTRUCTION_REPORTED",
+          "name": "name for TURNSTILE_OBSTRUCTION_REPORTED",
+          "range": "10:00-15:00",
+          "value": 69
+        },
+        {
+          "type": "TURNSTILE_OBSTRUCTION_REPORTED",
+          "name": "name for TURNSTILE_OBSTRUCTION_REPORTED",
+          "range": "15:00-20:00",
+          "value": 3
+        },
+        {
+          "type": "TURNSTILE_OBSTRUCTION_REPORTED",
+          "name": "name for TURNSTILE_OBSTRUCTION_REPORTED",
+          "range": "20:00-24:00",
+          "value": 90
+        },
+        {
+          "type": "TURNSTILE_BATTERY_CONECTION_REPORTED",
+          "name": "name for TURNSTILE_BATTERY_CONECTION_REPORTED",
+          "range": "00:00-04:00",
+          "value": 26
+        },
+        {
+          "type": "TURNSTILE_BATTERY_CONECTION_REPORTED",
+          "name": "name for TURNSTILE_BATTERY_CONECTION_REPORTED",
+          "range": "04:00-10:00",
+          "value": 31
+        },
+        {
+          "type": "TURNSTILE_BATTERY_CONECTION_REPORTED",
+          "name": "name for TURNSTILE_BATTERY_CONECTION_REPORTED",
+          "range": "10:00-15:00",
+          "value": 64
+        },
+        {
+          "type": "TURNSTILE_BATTERY_CONECTION_REPORTED",
+          "name": "name for TURNSTILE_BATTERY_CONECTION_REPORTED",
+          "range": "15:00-20:00",
+          "value": 64
+        },
+        {
+          "type": "TURNSTILE_BATTERY_CONECTION_REPORTED",
+          "name": "name for TURNSTILE_BATTERY_CONECTION_REPORTED",
+          "range": "20:00-24:00",
+          "value": 40
+        },
+        {
+          "type": "TURNSTILE_ANOMALY_REPORTED",
+          "name": "name for TURNSTILE_ANOMALY_REPORTED",
+          "range": "00:00-04:00",
+          "value": 15
+        },
+        {
+          "type": "TURNSTILE_ANOMALY_REPORTED",
+          "name": "name for TURNSTILE_ANOMALY_REPORTED",
+          "range": "04:00-10:00",
+          "value": 21
+        },
+        {
+          "type": "TURNSTILE_ANOMALY_REPORTED",
+          "name": "name for TURNSTILE_ANOMALY_REPORTED",
+          "range": "10:00-15:00",
+          "value": 44
+        },
+        {
+          "type": "TURNSTILE_ANOMALY_REPORTED",
+          "name": "name for TURNSTILE_ANOMALY_REPORTED",
+          "range": "15:00-20:00",
+          "value": 43
+        },
+        {
+          "type": "TURNSTILE_ANOMALY_REPORTED",
+          "name": "name for TURNSTILE_ANOMALY_REPORTED",
+          "range": "20:00-24:00",
+          "value": 82
+        },
+        {
+          "type": "PAX_ANOMALY_REPORTED",
+          "name": "name for PAX_ANOMALY_REPORTED",
+          "range": "00:00-04:00",
+          "value": 39
+        },
+        {
+          "type": "PAX_ANOMALY_REPORTED",
+          "name": "name for PAX_ANOMALY_REPORTED",
+          "range": "04:00-10:00",
+          "value": 51
+        },
+        {
+          "type": "PAX_ANOMALY_REPORTED",
+          "name": "name for PAX_ANOMALY_REPORTED",
+          "range": "10:00-15:00",
+          "value": 91
+        },
+        {
+          "type": "PAX_ANOMALY_REPORTED",
+          "name": "name for PAX_ANOMALY_REPORTED",
+          "range": "15:00-20:00",
+          "value": 27
+        },
+        {
+          "type": "PAX_ANOMALY_REPORTED",
+          "name": "name for PAX_ANOMALY_REPORTED",
+          "range": "20:00-24:00",
+          "value": 33
+        },
+        {
+          "type": "FRONT_DOOR_CONNECTED",
+          "name": "name for FRONT_DOOR_CONNECTED",
+          "range": "00:00-04:00",
+          "value": 25
+        },
+        {
+          "type": "FRONT_DOOR_CONNECTED",
+          "name": "name for FRONT_DOOR_CONNECTED",
+          "range": "04:00-10:00",
+          "value": 94
+        },
+        {
+          "type": "FRONT_DOOR_CONNECTED",
+          "name": "name for FRONT_DOOR_CONNECTED",
+          "range": "10:00-15:00",
+          "value": 27
+        },
+        {
+          "type": "FRONT_DOOR_CONNECTED",
+          "name": "name for FRONT_DOOR_CONNECTED",
+          "range": "15:00-20:00",
+          "value": 65
+        },
+        {
+          "type": "FRONT_DOOR_CONNECTED",
+          "name": "name for FRONT_DOOR_CONNECTED",
+          "range": "20:00-24:00",
+          "value": 50
+        },
+        {
+          "type": "FRONT_DOOR_DISCONNECTED",
+          "name": "name for FRONT_DOOR_DISCONNECTED",
+          "range": "00:00-04:00",
+          "value": 29
+        },
+        {
+          "type": "FRONT_DOOR_DISCONNECTED",
+          "name": "name for FRONT_DOOR_DISCONNECTED",
+          "range": "04:00-10:00",
+          "value": 99
+        },
+        {
+          "type": "FRONT_DOOR_DISCONNECTED",
+          "name": "name for FRONT_DOOR_DISCONNECTED",
+          "range": "10:00-15:00",
+          "value": 39
+        },
+        {
+          "type": "FRONT_DOOR_DISCONNECTED",
+          "name": "name for FRONT_DOOR_DISCONNECTED",
+          "range": "15:00-20:00",
+          "value": 64
+        },
+        {
+          "type": "FRONT_DOOR_DISCONNECTED",
+          "name": "name for FRONT_DOOR_DISCONNECTED",
+          "range": "20:00-24:00",
+          "value": 63
+        },
+        {
+          "type": "BACK_DOOR_CONNECTED",
+          "name": "name for BACK_DOOR_CONNECTED",
+          "range": "00:00-04:00",
+          "value": 66
+        },
+        {
+          "type": "BACK_DOOR_CONNECTED",
+          "name": "name for BACK_DOOR_CONNECTED",
+          "range": "04:00-10:00",
+          "value": 24
+        },
+        {
+          "type": "BACK_DOOR_CONNECTED",
+          "name": "name for BACK_DOOR_CONNECTED",
+          "range": "10:00-15:00",
+          "value": 51
+        },
+        {
+          "type": "BACK_DOOR_CONNECTED",
+          "name": "name for BACK_DOOR_CONNECTED",
+          "range": "15:00-20:00",
+          "value": 32
+        },
+        {
+          "type": "BACK_DOOR_CONNECTED",
+          "name": "name for BACK_DOOR_CONNECTED",
+          "range": "20:00-24:00",
+          "value": 25
+        },
+        {
+          "type": "BACK_DOOR_DISCONNECTED",
+          "name": "name for BACK_DOOR_DISCONNECTED",
+          "range": "00:00-04:00",
+          "value": 44
+        },
+        {
+          "type": "BACK_DOOR_DISCONNECTED",
+          "name": "name for BACK_DOOR_DISCONNECTED",
+          "range": "04:00-10:00",
+          "value": 46
+        },
+        {
+          "type": "BACK_DOOR_DISCONNECTED",
+          "name": "name for BACK_DOOR_DISCONNECTED",
+          "range": "10:00-15:00",
+          "value": 46
+        },
+        {
+          "type": "BACK_DOOR_DISCONNECTED",
+          "name": "name for BACK_DOOR_DISCONNECTED",
+          "range": "15:00-20:00",
+          "value": 45
+        },
+        {
+          "type": "BACK_DOOR_DISCONNECTED",
+          "name": "name for BACK_DOOR_DISCONNECTED",
+          "range": "20:00-24:00",
+          "value": 79
+        },
+        {
+          "type": "CREATED",
+          "name": "name for CREATED",
+          "range": "00:00-04:00",
+          "value": 66
+        },
+        {
+          "type": "CREATED",
+          "name": "name for CREATED",
+          "range": "04:00-10:00",
+          "value": 36
+        },
+        {
+          "type": "CREATED",
+          "name": "name for CREATED",
+          "range": "10:00-15:00",
+          "value": 92
+        },
+        {
+          "type": "CREATED",
+          "name": "name for CREATED",
+          "range": "15:00-20:00",
+          "value": 93
+        },
+        {
+          "type": "CREATED",
+          "name": "name for CREATED",
+          "range": "20:00-24:00",
+          "value": 69
+        },
+        {
+          "type": "AUTOMATIC_STARTED",
+          "name": "name for AUTOMATIC_STARTED",
+          "range": "00:00-04:00",
+          "value": 74
+        },
+        {
+          "type": "AUTOMATIC_STARTED",
+          "name": "name for AUTOMATIC_STARTED",
+          "range": "04:00-10:00",
+          "value": 61
+        },
+        {
+          "type": "AUTOMATIC_STARTED",
+          "name": "name for AUTOMATIC_STARTED",
+          "range": "10:00-15:00",
+          "value": 2
+        },
+        {
+          "type": "AUTOMATIC_STARTED",
+          "name": "name for AUTOMATIC_STARTED",
+          "range": "15:00-20:00",
+          "value": 45
+        },
+        {
+          "type": "AUTOMATIC_STARTED",
+          "name": "name for AUTOMATIC_STARTED",
+          "range": "20:00-24:00",
+          "value": 4
+        },
+        {
+          "type": "AUTOMATIC_ENDED",
+          "name": "name for AUTOMATIC_ENDED",
+          "range": "00:00-04:00",
+          "value": 64
+        },
+        {
+          "type": "AUTOMATIC_ENDED",
+          "name": "name for AUTOMATIC_ENDED",
+          "range": "04:00-10:00",
+          "value": 38
+        },
+        {
+          "type": "AUTOMATIC_ENDED",
+          "name": "name for AUTOMATIC_ENDED",
+          "range": "10:00-15:00",
+          "value": 61
+        },
+        {
+          "type": "AUTOMATIC_ENDED",
+          "name": "name for AUTOMATIC_ENDED",
+          "range": "15:00-20:00",
+          "value": 27
+        },
+        {
+          "type": "AUTOMATIC_ENDED",
+          "name": "name for AUTOMATIC_ENDED",
+          "range": "20:00-24:00",
+          "value": 21
+        },
+        {
+          "type": "AUTOMATIC_ABORTED",
+          "name": "name for AUTOMATIC_ABORTED",
+          "range": "00:00-04:00",
+          "value": 65
+        },
+        {
+          "type": "AUTOMATIC_ABORTED",
+          "name": "name for AUTOMATIC_ABORTED",
+          "range": "04:00-10:00",
+          "value": 11
+        },
+        {
+          "type": "AUTOMATIC_ABORTED",
+          "name": "name for AUTOMATIC_ABORTED",
+          "range": "10:00-15:00",
+          "value": 12
+        },
+        {
+          "type": "AUTOMATIC_ABORTED",
+          "name": "name for AUTOMATIC_ABORTED",
+          "range": "15:00-20:00",
+          "value": 72
+        },
+        {
+          "type": "AUTOMATIC_ABORTED",
+          "name": "name for AUTOMATIC_ABORTED",
+          "range": "20:00-24:00",
+          "value": 23
+        },
+        {
+          "type": "FORCED_STARTED",
+          "name": "name for FORCED_STARTED",
+          "range": "00:00-04:00",
+          "value": 76
+        },
+        {
+          "type": "FORCED_STARTED",
+          "name": "name for FORCED_STARTED",
+          "range": "04:00-10:00",
+          "value": 67
+        },
+        {
+          "type": "FORCED_STARTED",
+          "name": "name for FORCED_STARTED",
+          "range": "10:00-15:00",
+          "value": 27
+        },
+        {
+          "type": "FORCED_STARTED",
+          "name": "name for FORCED_STARTED",
+          "range": "15:00-20:00",
+          "value": 18
+        },
+        {
+          "type": "FORCED_STARTED",
+          "name": "name for FORCED_STARTED",
+          "range": "20:00-24:00",
+          "value": 94
+        },
+        {
+          "type": "FORCED_ABORTED",
+          "name": "name for FORCED_ABORTED",
+          "range": "00:00-04:00",
+          "value": 12
+        },
+        {
+          "type": "FORCED_ABORTED",
+          "name": "name for FORCED_ABORTED",
+          "range": "04:00-10:00",
+          "value": 53
+        },
+        {
+          "type": "FORCED_ABORTED",
+          "name": "name for FORCED_ABORTED",
+          "range": "10:00-15:00",
+          "value": 45
+        },
+        {
+          "type": "FORCED_ABORTED",
+          "name": "name for FORCED_ABORTED",
+          "range": "15:00-20:00",
+          "value": 87
+        },
+        {
+          "type": "FORCED_ABORTED",
+          "name": "name for FORCED_ABORTED",
+          "range": "20:00-24:00",
+          "value": 79
+        },
+        {
+          "type": "FORCED_CANCELLED",
+          "name": "name for FORCED_CANCELLED",
+          "range": "00:00-04:00",
+          "value": 81
+        },
+        {
+          "type": "FORCED_CANCELLED",
+          "name": "name for FORCED_CANCELLED",
+          "range": "04:00-10:00",
+          "value": 86
+        },
+        {
+          "type": "FORCED_CANCELLED",
+          "name": "name for FORCED_CANCELLED",
+          "range": "10:00-15:00",
+          "value": 34
+        },
+        {
+          "type": "FORCED_CANCELLED",
+          "name": "name for FORCED_CANCELLED",
+          "range": "15:00-20:00",
+          "value": 94
+        },
+        {
+          "type": "FORCED_CANCELLED",
+          "name": "name for FORCED_CANCELLED",
+          "range": "20:00-24:00",
+          "value": 22
+        },
+        {
+          "type": "FORCED_ENDED",
+          "name": "name for FORCED_ENDED",
+          "range": "00:00-04:00",
+          "value": 78
+        },
+        {
+          "type": "FORCED_ENDED",
+          "name": "name for FORCED_ENDED",
+          "range": "04:00-10:00",
+          "value": 58
+        },
+        {
+          "type": "FORCED_ENDED",
+          "name": "name for FORCED_ENDED",
+          "range": "10:00-15:00",
+          "value": 61
+        },
+        {
+          "type": "FORCED_ENDED",
+          "name": "name for FORCED_ENDED",
+          "range": "15:00-20:00",
+          "value": 40
+        },
+        {
+          "type": "FORCED_ENDED",
+          "name": "name for FORCED_ENDED",
+          "range": "20:00-24:00",
+          "value": 60
+        },
+        {
+          "type": "OVERTAKEN",
+          "name": "name for OVERTAKEN",
+          "range": "00:00-04:00",
+          "value": 99
+        },
+        {
+          "type": "OVERTAKEN",
+          "name": "name for OVERTAKEN",
+          "range": "04:00-10:00",
+          "value": 83
+        },
+        {
+          "type": "OVERTAKEN",
+          "name": "name for OVERTAKEN",
+          "range": "10:00-15:00",
+          "value": 66
+        },
+        {
+          "type": "OVERTAKEN",
+          "name": "name for OVERTAKEN",
+          "range": "15:00-20:00",
+          "value": 14
+        },
+        {
+          "type": "OVERTAKEN",
+          "name": "name for OVERTAKEN",
+          "range": "20:00-24:00",
+          "value": 5
+        }
+      ]
+    },
+    "SUMMARY": {
+      "SCHEMA": [
+        {
+          "name": "driverName",
+          "semantics": {
+            "conceptType": "DIMENSION",
+            "semanticType": "TEXT"
+          },
+          "dataType": "STRING"
+        },
+        {
+          "dataType": "STRING",
+          "semantics": {
+            "isReaggregatable": true,
+            "conceptType": "METRIC",
+            "semanticType": "YEAR_MONTH_DAY"
+          },
+          "name": "fromDate"
+        },
+        {
+          "dataType": "STRING",
+          "semantics": {
+            "conceptType": "METRIC",
+            "semanticType": "YEAR_MONTH_DAY",
+            "isReaggregatable": true
+          },
+          "name": "toDate"
+        },
+        {
+          "semantics": {
+            "conceptType": "DIMENSION",
+            "semanticType": "TEXT"
+          },
+          "name": "userFullName",
+          "dataType": "STRING"
+        },
+        {
+          "name": "reportDateTime",
+          "dataType": "STRING",
+          "semantics": {
+            "conceptType": "METRIC",
+            "semanticType": "YEAR_MONTH_DAY_MINUTE",
+            "isReaggregatable": true
+          }
+        },
+        {
+          "semantics": {
+            "isReaggregatable": true,
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC"
+          },
+          "name": "totalScheduledServicesCount",
+          "dataType": "NUMBER"
+        },
+        {
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "dataType": "NUMBER",
+          "name": "totalExecutedServicesCount"
+        },
+        {
+          "semantics": {
+            "isReaggregatable": true,
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC"
+          },
+          "dataType": "NUMBER",
+          "name": "totalManualExecutedServicesCount"
+        }
+      ],
+      "DATA": [
+        {
+          "driverName": "Jhon Doe Jaramillo",
+          "fromDate": "20220718",
+          "toDate": "20220718",
+          "userFullName": "Jhon Doe",
+          "reportDateTime": "202207181430",
+          "totalScheduledServicesCount": 1200,
+          "totalExecutedServicesCount": 1000,
+          "totalManualExecutedServicesCount": 50
+        }
+      ]
+    }
   }
 }
