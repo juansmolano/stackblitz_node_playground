@@ -7121,7 +7121,7 @@
         {
           "dataType": "NUMBER",
           "semantics": {
-            "semanticType": "NUMBER",
+            "semanticType": "CURRENCY",
             "conceptType": "METRIC",
             "isReaggregatable": true
           },
