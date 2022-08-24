@@ -8497,7 +8497,7 @@
       "SCHEMA": [
         {
           "name": "type",
-          "dataType": "NUMBER",
+          "dataType": "STRING",
           "semantics": {
             "semanticType": "TEXT",
             "conceptType": "DIMENSION"
@@ -8505,7 +8505,7 @@
         },
         {
           "name": "name",
-          "dataType": "NUMBER",
+          "dataType": "STRING",
           "semantics": {
             "semanticType": "TEXT",
             "conceptType": "DIMENSION"
@@ -8513,7 +8513,7 @@
         },
         {
           "name": "range",
-          "dataType": "NUMBER",
+          "dataType": "STRING",
           "semantics": {
             "semanticType": "TEXT",
             "conceptType": "DIMENSION"
@@ -8534,961 +8534,961 @@
           "type": "PAX_IN",
           "name": "name for PAX_IN",
           "range": "00:00-04:00",
-          "value": 72
+          "value": 77
         },
         {
           "type": "PAX_IN",
           "name": "name for PAX_IN",
+          "range": "04:00-10:00",
+          "value": 49
+        },
+        {
+          "type": "PAX_IN",
+          "name": "name for PAX_IN",
+          "range": "10:00-15:00",
+          "value": 18
+        },
+        {
+          "type": "PAX_IN",
+          "name": "name for PAX_IN",
+          "range": "15:00-20:00",
+          "value": 5
+        },
+        {
+          "type": "PAX_IN",
+          "name": "name for PAX_IN",
+          "range": "20:00-24:00",
+          "value": 61
+        },
+        {
+          "type": "PAX_OUT",
+          "name": "name for PAX_OUT",
+          "range": "00:00-04:00",
+          "value": 34
+        },
+        {
+          "type": "PAX_OUT",
+          "name": "name for PAX_OUT",
+          "range": "04:00-10:00",
+          "value": 52
+        },
+        {
+          "type": "PAX_OUT",
+          "name": "name for PAX_OUT",
+          "range": "10:00-15:00",
+          "value": 43
+        },
+        {
+          "type": "PAX_OUT",
+          "name": "name for PAX_OUT",
+          "range": "15:00-20:00",
+          "value": 78
+        },
+        {
+          "type": "PAX_OUT",
+          "name": "name for PAX_OUT",
+          "range": "20:00-24:00",
+          "value": 45
+        },
+        {
+          "type": "TRANSPORT_FARE_COLLECTION_COUNT",
+          "name": "name for TRANSPORT_FARE_COLLECTION_COUNT",
+          "range": "00:00-04:00",
+          "value": 71
+        },
+        {
+          "type": "TRANSPORT_FARE_COLLECTION_COUNT",
+          "name": "name for TRANSPORT_FARE_COLLECTION_COUNT",
+          "range": "04:00-10:00",
+          "value": 73
+        },
+        {
+          "type": "TRANSPORT_FARE_COLLECTION_COUNT",
+          "name": "name for TRANSPORT_FARE_COLLECTION_COUNT",
+          "range": "10:00-15:00",
+          "value": 68
+        },
+        {
+          "type": "TRANSPORT_FARE_COLLECTION_COUNT",
+          "name": "name for TRANSPORT_FARE_COLLECTION_COUNT",
+          "range": "15:00-20:00",
+          "value": 18
+        },
+        {
+          "type": "TRANSPORT_FARE_COLLECTION_COUNT",
+          "name": "name for TRANSPORT_FARE_COLLECTION_COUNT",
+          "range": "20:00-24:00",
+          "value": 67
+        },
+        {
+          "type": "TRANSPORT_FARE_COLLECTION_VALUE",
+          "name": "name for TRANSPORT_FARE_COLLECTION_VALUE",
+          "range": "00:00-04:00",
+          "value": 17347
+        },
+        {
+          "type": "TRANSPORT_FARE_COLLECTION_VALUE",
+          "name": "name for TRANSPORT_FARE_COLLECTION_VALUE",
+          "range": "04:00-10:00",
+          "value": 303339
+        },
+        {
+          "type": "TRANSPORT_FARE_COLLECTION_VALUE",
+          "name": "name for TRANSPORT_FARE_COLLECTION_VALUE",
+          "range": "10:00-15:00",
+          "value": 285164
+        },
+        {
+          "type": "TRANSPORT_FARE_COLLECTION_VALUE",
+          "name": "name for TRANSPORT_FARE_COLLECTION_VALUE",
+          "range": "15:00-20:00",
+          "value": 961355
+        },
+        {
+          "type": "TRANSPORT_FARE_COLLECTION_VALUE",
+          "name": "name for TRANSPORT_FARE_COLLECTION_VALUE",
+          "range": "20:00-24:00",
+          "value": 445853
+        },
+        {
+          "type": "ITINERARY_ABANDONED_AUTHORIZED",
+          "name": "name for ITINERARY_ABANDONED_AUTHORIZED",
+          "range": "00:00-04:00",
+          "value": 65
+        },
+        {
+          "type": "ITINERARY_ABANDONED_AUTHORIZED",
+          "name": "name for ITINERARY_ABANDONED_AUTHORIZED",
           "range": "04:00-10:00",
           "value": 53
         },
         {
-          "type": "PAX_IN",
-          "name": "name for PAX_IN",
+          "type": "ITINERARY_ABANDONED_AUTHORIZED",
+          "name": "name for ITINERARY_ABANDONED_AUTHORIZED",
           "range": "10:00-15:00",
-          "value": 30
-        },
-        {
-          "type": "PAX_IN",
-          "name": "name for PAX_IN",
-          "range": "15:00-20:00",
-          "value": 4
-        },
-        {
-          "type": "PAX_IN",
-          "name": "name for PAX_IN",
-          "range": "20:00-24:00",
-          "value": 98
-        },
-        {
-          "type": "PAX_OUT",
-          "name": "name for PAX_OUT",
-          "range": "00:00-04:00",
-          "value": 27
-        },
-        {
-          "type": "PAX_OUT",
-          "name": "name for PAX_OUT",
-          "range": "04:00-10:00",
-          "value": 26
-        },
-        {
-          "type": "PAX_OUT",
-          "name": "name for PAX_OUT",
-          "range": "10:00-15:00",
-          "value": 44
-        },
-        {
-          "type": "PAX_OUT",
-          "name": "name for PAX_OUT",
-          "range": "15:00-20:00",
-          "value": 30
-        },
-        {
-          "type": "PAX_OUT",
-          "name": "name for PAX_OUT",
-          "range": "20:00-24:00",
-          "value": 20
-        },
-        {
-          "type": "TRANSPORT_FARE_COLLECTION_COUNT",
-          "name": "name for TRANSPORT_FARE_COLLECTION_COUNT",
-          "range": "00:00-04:00",
-          "value": 16
-        },
-        {
-          "type": "TRANSPORT_FARE_COLLECTION_COUNT",
-          "name": "name for TRANSPORT_FARE_COLLECTION_COUNT",
-          "range": "04:00-10:00",
-          "value": 26
-        },
-        {
-          "type": "TRANSPORT_FARE_COLLECTION_COUNT",
-          "name": "name for TRANSPORT_FARE_COLLECTION_COUNT",
-          "range": "10:00-15:00",
-          "value": 4
-        },
-        {
-          "type": "TRANSPORT_FARE_COLLECTION_COUNT",
-          "name": "name for TRANSPORT_FARE_COLLECTION_COUNT",
-          "range": "15:00-20:00",
-          "value": 55
-        },
-        {
-          "type": "TRANSPORT_FARE_COLLECTION_COUNT",
-          "name": "name for TRANSPORT_FARE_COLLECTION_COUNT",
-          "range": "20:00-24:00",
-          "value": 92
-        },
-        {
-          "type": "TRANSPORT_FARE_COLLECTION_VALUE",
-          "name": "name for TRANSPORT_FARE_COLLECTION_VALUE",
-          "range": "00:00-04:00",
-          "value": 880198
-        },
-        {
-          "type": "TRANSPORT_FARE_COLLECTION_VALUE",
-          "name": "name for TRANSPORT_FARE_COLLECTION_VALUE",
-          "range": "04:00-10:00",
-          "value": 728237
-        },
-        {
-          "type": "TRANSPORT_FARE_COLLECTION_VALUE",
-          "name": "name for TRANSPORT_FARE_COLLECTION_VALUE",
-          "range": "10:00-15:00",
-          "value": 367733
-        },
-        {
-          "type": "TRANSPORT_FARE_COLLECTION_VALUE",
-          "name": "name for TRANSPORT_FARE_COLLECTION_VALUE",
-          "range": "15:00-20:00",
-          "value": 918223
-        },
-        {
-          "type": "TRANSPORT_FARE_COLLECTION_VALUE",
-          "name": "name for TRANSPORT_FARE_COLLECTION_VALUE",
-          "range": "20:00-24:00",
-          "value": 494737
+          "value": 22
         },
         {
           "type": "ITINERARY_ABANDONED_AUTHORIZED",
           "name": "name for ITINERARY_ABANDONED_AUTHORIZED",
+          "range": "15:00-20:00",
+          "value": 58
+        },
+        {
+          "type": "ITINERARY_ABANDONED_AUTHORIZED",
+          "name": "name for ITINERARY_ABANDONED_AUTHORIZED",
+          "range": "20:00-24:00",
+          "value": 99
+        },
+        {
+          "type": "ITINERARY_ABANDONED_UNAUTHORIZED",
+          "name": "name for ITINERARY_ABANDONED_UNAUTHORIZED",
           "range": "00:00-04:00",
+          "value": 18
+        },
+        {
+          "type": "ITINERARY_ABANDONED_UNAUTHORIZED",
+          "name": "name for ITINERARY_ABANDONED_UNAUTHORIZED",
+          "range": "04:00-10:00",
+          "value": 34
+        },
+        {
+          "type": "ITINERARY_ABANDONED_UNAUTHORIZED",
+          "name": "name for ITINERARY_ABANDONED_UNAUTHORIZED",
+          "range": "10:00-15:00",
+          "value": 74
+        },
+        {
+          "type": "ITINERARY_ABANDONED_UNAUTHORIZED",
+          "name": "name for ITINERARY_ABANDONED_UNAUTHORIZED",
+          "range": "15:00-20:00",
+          "value": 27
+        },
+        {
+          "type": "ITINERARY_ABANDONED_UNAUTHORIZED",
+          "name": "name for ITINERARY_ABANDONED_UNAUTHORIZED",
+          "range": "20:00-24:00",
+          "value": 66
+        },
+        {
+          "type": "ITINERARY_CONTINUED",
+          "name": "name for ITINERARY_CONTINUED",
+          "range": "00:00-04:00",
+          "value": 10
+        },
+        {
+          "type": "ITINERARY_CONTINUED",
+          "name": "name for ITINERARY_CONTINUED",
+          "range": "04:00-10:00",
+          "value": 48
+        },
+        {
+          "type": "ITINERARY_CONTINUED",
+          "name": "name for ITINERARY_CONTINUED",
+          "range": "10:00-15:00",
           "value": 12
         },
         {
-          "type": "ITINERARY_ABANDONED_AUTHORIZED",
-          "name": "name for ITINERARY_ABANDONED_AUTHORIZED",
-          "range": "04:00-10:00",
-          "value": 36
-        },
-        {
-          "type": "ITINERARY_ABANDONED_AUTHORIZED",
-          "name": "name for ITINERARY_ABANDONED_AUTHORIZED",
-          "range": "10:00-15:00",
-          "value": 2
-        },
-        {
-          "type": "ITINERARY_ABANDONED_AUTHORIZED",
-          "name": "name for ITINERARY_ABANDONED_AUTHORIZED",
-          "range": "15:00-20:00",
-          "value": 37
-        },
-        {
-          "type": "ITINERARY_ABANDONED_AUTHORIZED",
-          "name": "name for ITINERARY_ABANDONED_AUTHORIZED",
-          "range": "20:00-24:00",
-          "value": 73
-        },
-        {
-          "type": "ITINERARY_ABANDONED_UNAUTHORIZED",
-          "name": "name for ITINERARY_ABANDONED_UNAUTHORIZED",
-          "range": "00:00-04:00",
-          "value": 64
-        },
-        {
-          "type": "ITINERARY_ABANDONED_UNAUTHORIZED",
-          "name": "name for ITINERARY_ABANDONED_UNAUTHORIZED",
-          "range": "04:00-10:00",
-          "value": 88
-        },
-        {
-          "type": "ITINERARY_ABANDONED_UNAUTHORIZED",
-          "name": "name for ITINERARY_ABANDONED_UNAUTHORIZED",
-          "range": "10:00-15:00",
-          "value": 32
-        },
-        {
-          "type": "ITINERARY_ABANDONED_UNAUTHORIZED",
-          "name": "name for ITINERARY_ABANDONED_UNAUTHORIZED",
-          "range": "15:00-20:00",
-          "value": 32
-        },
-        {
-          "type": "ITINERARY_ABANDONED_UNAUTHORIZED",
-          "name": "name for ITINERARY_ABANDONED_UNAUTHORIZED",
-          "range": "20:00-24:00",
-          "value": 94
-        },
-        {
-          "type": "ITINERARY_CONTINUED",
-          "name": "name for ITINERARY_CONTINUED",
-          "range": "00:00-04:00",
-          "value": 97
-        },
-        {
-          "type": "ITINERARY_CONTINUED",
-          "name": "name for ITINERARY_CONTINUED",
-          "range": "04:00-10:00",
-          "value": 87
-        },
-        {
-          "type": "ITINERARY_CONTINUED",
-          "name": "name for ITINERARY_CONTINUED",
-          "range": "10:00-15:00",
-          "value": 41
-        },
-        {
           "type": "ITINERARY_CONTINUED",
           "name": "name for ITINERARY_CONTINUED",
           "range": "15:00-20:00",
-          "value": 27
+          "value": 25
         },
         {
           "type": "ITINERARY_CONTINUED",
           "name": "name for ITINERARY_CONTINUED",
           "range": "20:00-24:00",
-          "value": 59
+          "value": 7
         },
         {
           "type": "STARTED_CHECKPOINT_DIFFERENT_FIRST_ONE",
           "name": "name for STARTED_CHECKPOINT_DIFFERENT_FIRST_ONE",
           "range": "00:00-04:00",
-          "value": 11
+          "value": 26
         },
         {
           "type": "STARTED_CHECKPOINT_DIFFERENT_FIRST_ONE",
           "name": "name for STARTED_CHECKPOINT_DIFFERENT_FIRST_ONE",
           "range": "04:00-10:00",
+          "value": 92
+        },
+        {
+          "type": "STARTED_CHECKPOINT_DIFFERENT_FIRST_ONE",
+          "name": "name for STARTED_CHECKPOINT_DIFFERENT_FIRST_ONE",
+          "range": "10:00-15:00",
+          "value": 58
+        },
+        {
+          "type": "STARTED_CHECKPOINT_DIFFERENT_FIRST_ONE",
+          "name": "name for STARTED_CHECKPOINT_DIFFERENT_FIRST_ONE",
+          "range": "15:00-20:00",
           "value": 82
         },
         {
           "type": "STARTED_CHECKPOINT_DIFFERENT_FIRST_ONE",
           "name": "name for STARTED_CHECKPOINT_DIFFERENT_FIRST_ONE",
-          "range": "10:00-15:00",
-          "value": 83
-        },
-        {
-          "type": "STARTED_CHECKPOINT_DIFFERENT_FIRST_ONE",
-          "name": "name for STARTED_CHECKPOINT_DIFFERENT_FIRST_ONE",
-          "range": "15:00-20:00",
-          "value": 42
-        },
-        {
-          "type": "STARTED_CHECKPOINT_DIFFERENT_FIRST_ONE",
-          "name": "name for STARTED_CHECKPOINT_DIFFERENT_FIRST_ONE",
           "range": "20:00-24:00",
+          "value": 82
+        },
+        {
+          "type": "VEHICLE_ENTERED_GEOFENCE_ZONE",
+          "name": "name for VEHICLE_ENTERED_GEOFENCE_ZONE",
+          "range": "00:00-04:00",
+          "value": 55
+        },
+        {
+          "type": "VEHICLE_ENTERED_GEOFENCE_ZONE",
+          "name": "name for VEHICLE_ENTERED_GEOFENCE_ZONE",
+          "range": "04:00-10:00",
+          "value": 48
+        },
+        {
+          "type": "VEHICLE_ENTERED_GEOFENCE_ZONE",
+          "name": "name for VEHICLE_ENTERED_GEOFENCE_ZONE",
+          "range": "10:00-15:00",
+          "value": 3
+        },
+        {
+          "type": "VEHICLE_ENTERED_GEOFENCE_ZONE",
+          "name": "name for VEHICLE_ENTERED_GEOFENCE_ZONE",
+          "range": "15:00-20:00",
           "value": 75
         },
         {
           "type": "VEHICLE_ENTERED_GEOFENCE_ZONE",
           "name": "name for VEHICLE_ENTERED_GEOFENCE_ZONE",
+          "range": "20:00-24:00",
+          "value": 75
+        },
+        {
+          "type": "VEHICLE_DEPARTURE_GEOFENCE_ZONE",
+          "name": "name for VEHICLE_DEPARTURE_GEOFENCE_ZONE",
+          "range": "00:00-04:00",
+          "value": 60
+        },
+        {
+          "type": "VEHICLE_DEPARTURE_GEOFENCE_ZONE",
+          "name": "name for VEHICLE_DEPARTURE_GEOFENCE_ZONE",
+          "range": "04:00-10:00",
+          "value": 29
+        },
+        {
+          "type": "VEHICLE_DEPARTURE_GEOFENCE_ZONE",
+          "name": "name for VEHICLE_DEPARTURE_GEOFENCE_ZONE",
+          "range": "10:00-15:00",
+          "value": 28
+        },
+        {
+          "type": "VEHICLE_DEPARTURE_GEOFENCE_ZONE",
+          "name": "name for VEHICLE_DEPARTURE_GEOFENCE_ZONE",
+          "range": "15:00-20:00",
+          "value": 25
+        },
+        {
+          "type": "VEHICLE_DEPARTURE_GEOFENCE_ZONE",
+          "name": "name for VEHICLE_DEPARTURE_GEOFENCE_ZONE",
+          "range": "20:00-24:00",
+          "value": 90
+        },
+        {
+          "type": "CHECK_POINT_ARRIVAL_AHEAD",
+          "name": "name for CHECK_POINT_ARRIVAL_AHEAD",
+          "range": "00:00-04:00",
+          "value": 46
+        },
+        {
+          "type": "CHECK_POINT_ARRIVAL_AHEAD",
+          "name": "name for CHECK_POINT_ARRIVAL_AHEAD",
+          "range": "04:00-10:00",
+          "value": 61
+        },
+        {
+          "type": "CHECK_POINT_ARRIVAL_AHEAD",
+          "name": "name for CHECK_POINT_ARRIVAL_AHEAD",
+          "range": "10:00-15:00",
+          "value": 24
+        },
+        {
+          "type": "CHECK_POINT_ARRIVAL_AHEAD",
+          "name": "name for CHECK_POINT_ARRIVAL_AHEAD",
+          "range": "15:00-20:00",
+          "value": 52
+        },
+        {
+          "type": "CHECK_POINT_ARRIVAL_AHEAD",
+          "name": "name for CHECK_POINT_ARRIVAL_AHEAD",
+          "range": "20:00-24:00",
+          "value": 46
+        },
+        {
+          "type": "CHECK_POINT_ARRIVAL_DELAYED",
+          "name": "name for CHECK_POINT_ARRIVAL_DELAYED",
+          "range": "00:00-04:00",
+          "value": 52
+        },
+        {
+          "type": "CHECK_POINT_ARRIVAL_DELAYED",
+          "name": "name for CHECK_POINT_ARRIVAL_DELAYED",
+          "range": "04:00-10:00",
+          "value": 77
+        },
+        {
+          "type": "CHECK_POINT_ARRIVAL_DELAYED",
+          "name": "name for CHECK_POINT_ARRIVAL_DELAYED",
+          "range": "10:00-15:00",
+          "value": 32
+        },
+        {
+          "type": "CHECK_POINT_ARRIVAL_DELAYED",
+          "name": "name for CHECK_POINT_ARRIVAL_DELAYED",
+          "range": "15:00-20:00",
+          "value": 42
+        },
+        {
+          "type": "CHECK_POINT_ARRIVAL_DELAYED",
+          "name": "name for CHECK_POINT_ARRIVAL_DELAYED",
+          "range": "20:00-24:00",
+          "value": 80
+        },
+        {
+          "type": "STANDSTILL",
+          "name": "name for STANDSTILL",
+          "range": "00:00-04:00",
+          "value": 63
+        },
+        {
+          "type": "STANDSTILL",
+          "name": "name for STANDSTILL",
+          "range": "04:00-10:00",
+          "value": 96
+        },
+        {
+          "type": "STANDSTILL",
+          "name": "name for STANDSTILL",
+          "range": "10:00-15:00",
+          "value": 94
+        },
+        {
+          "type": "STANDSTILL",
+          "name": "name for STANDSTILL",
+          "range": "15:00-20:00",
+          "value": 75
+        },
+        {
+          "type": "STANDSTILL",
+          "name": "name for STANDSTILL",
+          "range": "20:00-24:00",
+          "value": 51
+        },
+        {
+          "type": "FRONT_DOOR_TAMPERING",
+          "name": "name for FRONT_DOOR_TAMPERING",
+          "range": "00:00-04:00",
+          "value": 34
+        },
+        {
+          "type": "FRONT_DOOR_TAMPERING",
+          "name": "name for FRONT_DOOR_TAMPERING",
+          "range": "04:00-10:00",
+          "value": 96
+        },
+        {
+          "type": "FRONT_DOOR_TAMPERING",
+          "name": "name for FRONT_DOOR_TAMPERING",
+          "range": "10:00-15:00",
+          "value": 13
+        },
+        {
+          "type": "FRONT_DOOR_TAMPERING",
+          "name": "name for FRONT_DOOR_TAMPERING",
+          "range": "15:00-20:00",
+          "value": 20
+        },
+        {
+          "type": "FRONT_DOOR_TAMPERING",
+          "name": "name for FRONT_DOOR_TAMPERING",
+          "range": "20:00-24:00",
+          "value": 61
+        },
+        {
+          "type": "BACK_DOOR_TAMPERING",
+          "name": "name for BACK_DOOR_TAMPERING",
+          "range": "00:00-04:00",
+          "value": 44
+        },
+        {
+          "type": "BACK_DOOR_TAMPERING",
+          "name": "name for BACK_DOOR_TAMPERING",
+          "range": "04:00-10:00",
+          "value": 58
+        },
+        {
+          "type": "BACK_DOOR_TAMPERING",
+          "name": "name for BACK_DOOR_TAMPERING",
+          "range": "10:00-15:00",
+          "value": 17
+        },
+        {
+          "type": "BACK_DOOR_TAMPERING",
+          "name": "name for BACK_DOOR_TAMPERING",
+          "range": "15:00-20:00",
+          "value": 22
+        },
+        {
+          "type": "BACK_DOOR_TAMPERING",
+          "name": "name for BACK_DOOR_TAMPERING",
+          "range": "20:00-24:00",
+          "value": 50
+        },
+        {
+          "type": "TURNSTILE_OBSTRUCTION_REPORTED",
+          "name": "name for TURNSTILE_OBSTRUCTION_REPORTED",
+          "range": "00:00-04:00",
+          "value": 15
+        },
+        {
+          "type": "TURNSTILE_OBSTRUCTION_REPORTED",
+          "name": "name for TURNSTILE_OBSTRUCTION_REPORTED",
+          "range": "04:00-10:00",
+          "value": 67
+        },
+        {
+          "type": "TURNSTILE_OBSTRUCTION_REPORTED",
+          "name": "name for TURNSTILE_OBSTRUCTION_REPORTED",
+          "range": "10:00-15:00",
+          "value": 69
+        },
+        {
+          "type": "TURNSTILE_OBSTRUCTION_REPORTED",
+          "name": "name for TURNSTILE_OBSTRUCTION_REPORTED",
+          "range": "15:00-20:00",
+          "value": 3
+        },
+        {
+          "type": "TURNSTILE_OBSTRUCTION_REPORTED",
+          "name": "name for TURNSTILE_OBSTRUCTION_REPORTED",
+          "range": "20:00-24:00",
+          "value": 90
+        },
+        {
+          "type": "TURNSTILE_BATTERY_CONECTION_REPORTED",
+          "name": "name for TURNSTILE_BATTERY_CONECTION_REPORTED",
+          "range": "00:00-04:00",
+          "value": 26
+        },
+        {
+          "type": "TURNSTILE_BATTERY_CONECTION_REPORTED",
+          "name": "name for TURNSTILE_BATTERY_CONECTION_REPORTED",
+          "range": "04:00-10:00",
+          "value": 31
+        },
+        {
+          "type": "TURNSTILE_BATTERY_CONECTION_REPORTED",
+          "name": "name for TURNSTILE_BATTERY_CONECTION_REPORTED",
+          "range": "10:00-15:00",
+          "value": 64
+        },
+        {
+          "type": "TURNSTILE_BATTERY_CONECTION_REPORTED",
+          "name": "name for TURNSTILE_BATTERY_CONECTION_REPORTED",
+          "range": "15:00-20:00",
+          "value": 64
+        },
+        {
+          "type": "TURNSTILE_BATTERY_CONECTION_REPORTED",
+          "name": "name for TURNSTILE_BATTERY_CONECTION_REPORTED",
+          "range": "20:00-24:00",
+          "value": 40
+        },
+        {
+          "type": "TURNSTILE_ANOMALY_REPORTED",
+          "name": "name for TURNSTILE_ANOMALY_REPORTED",
+          "range": "00:00-04:00",
+          "value": 15
+        },
+        {
+          "type": "TURNSTILE_ANOMALY_REPORTED",
+          "name": "name for TURNSTILE_ANOMALY_REPORTED",
+          "range": "04:00-10:00",
+          "value": 21
+        },
+        {
+          "type": "TURNSTILE_ANOMALY_REPORTED",
+          "name": "name for TURNSTILE_ANOMALY_REPORTED",
+          "range": "10:00-15:00",
+          "value": 44
+        },
+        {
+          "type": "TURNSTILE_ANOMALY_REPORTED",
+          "name": "name for TURNSTILE_ANOMALY_REPORTED",
+          "range": "15:00-20:00",
+          "value": 43
+        },
+        {
+          "type": "TURNSTILE_ANOMALY_REPORTED",
+          "name": "name for TURNSTILE_ANOMALY_REPORTED",
+          "range": "20:00-24:00",
+          "value": 82
+        },
+        {
+          "type": "PAX_ANOMALY_REPORTED",
+          "name": "name for PAX_ANOMALY_REPORTED",
+          "range": "00:00-04:00",
+          "value": 39
+        },
+        {
+          "type": "PAX_ANOMALY_REPORTED",
+          "name": "name for PAX_ANOMALY_REPORTED",
+          "range": "04:00-10:00",
+          "value": 51
+        },
+        {
+          "type": "PAX_ANOMALY_REPORTED",
+          "name": "name for PAX_ANOMALY_REPORTED",
+          "range": "10:00-15:00",
+          "value": 91
+        },
+        {
+          "type": "PAX_ANOMALY_REPORTED",
+          "name": "name for PAX_ANOMALY_REPORTED",
+          "range": "15:00-20:00",
+          "value": 27
+        },
+        {
+          "type": "PAX_ANOMALY_REPORTED",
+          "name": "name for PAX_ANOMALY_REPORTED",
+          "range": "20:00-24:00",
+          "value": 33
+        },
+        {
+          "type": "FRONT_DOOR_CONNECTED",
+          "name": "name for FRONT_DOOR_CONNECTED",
+          "range": "00:00-04:00",
+          "value": 25
+        },
+        {
+          "type": "FRONT_DOOR_CONNECTED",
+          "name": "name for FRONT_DOOR_CONNECTED",
+          "range": "04:00-10:00",
+          "value": 94
+        },
+        {
+          "type": "FRONT_DOOR_CONNECTED",
+          "name": "name for FRONT_DOOR_CONNECTED",
+          "range": "10:00-15:00",
+          "value": 27
+        },
+        {
+          "type": "FRONT_DOOR_CONNECTED",
+          "name": "name for FRONT_DOOR_CONNECTED",
+          "range": "15:00-20:00",
+          "value": 65
+        },
+        {
+          "type": "FRONT_DOOR_CONNECTED",
+          "name": "name for FRONT_DOOR_CONNECTED",
+          "range": "20:00-24:00",
+          "value": 50
+        },
+        {
+          "type": "FRONT_DOOR_DISCONNECTED",
+          "name": "name for FRONT_DOOR_DISCONNECTED",
+          "range": "00:00-04:00",
+          "value": 29
+        },
+        {
+          "type": "FRONT_DOOR_DISCONNECTED",
+          "name": "name for FRONT_DOOR_DISCONNECTED",
+          "range": "04:00-10:00",
+          "value": 99
+        },
+        {
+          "type": "FRONT_DOOR_DISCONNECTED",
+          "name": "name for FRONT_DOOR_DISCONNECTED",
+          "range": "10:00-15:00",
+          "value": 39
+        },
+        {
+          "type": "FRONT_DOOR_DISCONNECTED",
+          "name": "name for FRONT_DOOR_DISCONNECTED",
+          "range": "15:00-20:00",
+          "value": 64
+        },
+        {
+          "type": "FRONT_DOOR_DISCONNECTED",
+          "name": "name for FRONT_DOOR_DISCONNECTED",
+          "range": "20:00-24:00",
+          "value": 63
+        },
+        {
+          "type": "BACK_DOOR_CONNECTED",
+          "name": "name for BACK_DOOR_CONNECTED",
+          "range": "00:00-04:00",
+          "value": 66
+        },
+        {
+          "type": "BACK_DOOR_CONNECTED",
+          "name": "name for BACK_DOOR_CONNECTED",
+          "range": "04:00-10:00",
+          "value": 24
+        },
+        {
+          "type": "BACK_DOOR_CONNECTED",
+          "name": "name for BACK_DOOR_CONNECTED",
+          "range": "10:00-15:00",
+          "value": 51
+        },
+        {
+          "type": "BACK_DOOR_CONNECTED",
+          "name": "name for BACK_DOOR_CONNECTED",
+          "range": "15:00-20:00",
+          "value": 32
+        },
+        {
+          "type": "BACK_DOOR_CONNECTED",
+          "name": "name for BACK_DOOR_CONNECTED",
+          "range": "20:00-24:00",
+          "value": 25
+        },
+        {
+          "type": "BACK_DOOR_DISCONNECTED",
+          "name": "name for BACK_DOOR_DISCONNECTED",
+          "range": "00:00-04:00",
+          "value": 44
+        },
+        {
+          "type": "BACK_DOOR_DISCONNECTED",
+          "name": "name for BACK_DOOR_DISCONNECTED",
+          "range": "04:00-10:00",
+          "value": 46
+        },
+        {
+          "type": "BACK_DOOR_DISCONNECTED",
+          "name": "name for BACK_DOOR_DISCONNECTED",
+          "range": "10:00-15:00",
+          "value": 46
+        },
+        {
+          "type": "BACK_DOOR_DISCONNECTED",
+          "name": "name for BACK_DOOR_DISCONNECTED",
+          "range": "15:00-20:00",
+          "value": 45
+        },
+        {
+          "type": "BACK_DOOR_DISCONNECTED",
+          "name": "name for BACK_DOOR_DISCONNECTED",
+          "range": "20:00-24:00",
+          "value": 79
+        },
+        {
+          "type": "CREATED",
+          "name": "name for CREATED",
+          "range": "00:00-04:00",
+          "value": 66
+        },
+        {
+          "type": "CREATED",
+          "name": "name for CREATED",
+          "range": "04:00-10:00",
+          "value": 36
+        },
+        {
+          "type": "CREATED",
+          "name": "name for CREATED",
+          "range": "10:00-15:00",
+          "value": 92
+        },
+        {
+          "type": "CREATED",
+          "name": "name for CREATED",
+          "range": "15:00-20:00",
+          "value": 93
+        },
+        {
+          "type": "CREATED",
+          "name": "name for CREATED",
+          "range": "20:00-24:00",
+          "value": 69
+        },
+        {
+          "type": "AUTOMATIC_STARTED",
+          "name": "name for AUTOMATIC_STARTED",
+          "range": "00:00-04:00",
+          "value": 74
+        },
+        {
+          "type": "AUTOMATIC_STARTED",
+          "name": "name for AUTOMATIC_STARTED",
+          "range": "04:00-10:00",
+          "value": 61
+        },
+        {
+          "type": "AUTOMATIC_STARTED",
+          "name": "name for AUTOMATIC_STARTED",
+          "range": "10:00-15:00",
+          "value": 2
+        },
+        {
+          "type": "AUTOMATIC_STARTED",
+          "name": "name for AUTOMATIC_STARTED",
+          "range": "15:00-20:00",
+          "value": 45
+        },
+        {
+          "type": "AUTOMATIC_STARTED",
+          "name": "name for AUTOMATIC_STARTED",
+          "range": "20:00-24:00",
+          "value": 4
+        },
+        {
+          "type": "AUTOMATIC_ENDED",
+          "name": "name for AUTOMATIC_ENDED",
+          "range": "00:00-04:00",
+          "value": 64
+        },
+        {
+          "type": "AUTOMATIC_ENDED",
+          "name": "name for AUTOMATIC_ENDED",
+          "range": "04:00-10:00",
+          "value": 38
+        },
+        {
+          "type": "AUTOMATIC_ENDED",
+          "name": "name for AUTOMATIC_ENDED",
+          "range": "10:00-15:00",
+          "value": 61
+        },
+        {
+          "type": "AUTOMATIC_ENDED",
+          "name": "name for AUTOMATIC_ENDED",
+          "range": "15:00-20:00",
+          "value": 27
+        },
+        {
+          "type": "AUTOMATIC_ENDED",
+          "name": "name for AUTOMATIC_ENDED",
+          "range": "20:00-24:00",
+          "value": 21
+        },
+        {
+          "type": "AUTOMATIC_ABORTED",
+          "name": "name for AUTOMATIC_ABORTED",
+          "range": "00:00-04:00",
+          "value": 65
+        },
+        {
+          "type": "AUTOMATIC_ABORTED",
+          "name": "name for AUTOMATIC_ABORTED",
+          "range": "04:00-10:00",
+          "value": 11
+        },
+        {
+          "type": "AUTOMATIC_ABORTED",
+          "name": "name for AUTOMATIC_ABORTED",
+          "range": "10:00-15:00",
+          "value": 12
+        },
+        {
+          "type": "AUTOMATIC_ABORTED",
+          "name": "name for AUTOMATIC_ABORTED",
+          "range": "15:00-20:00",
+          "value": 72
+        },
+        {
+          "type": "AUTOMATIC_ABORTED",
+          "name": "name for AUTOMATIC_ABORTED",
+          "range": "20:00-24:00",
+          "value": 23
+        },
+        {
+          "type": "FORCED_STARTED",
+          "name": "name for FORCED_STARTED",
+          "range": "00:00-04:00",
+          "value": 76
+        },
+        {
+          "type": "FORCED_STARTED",
+          "name": "name for FORCED_STARTED",
+          "range": "04:00-10:00",
+          "value": 67
+        },
+        {
+          "type": "FORCED_STARTED",
+          "name": "name for FORCED_STARTED",
+          "range": "10:00-15:00",
+          "value": 27
+        },
+        {
+          "type": "FORCED_STARTED",
+          "name": "name for FORCED_STARTED",
+          "range": "15:00-20:00",
+          "value": 18
+        },
+        {
+          "type": "FORCED_STARTED",
+          "name": "name for FORCED_STARTED",
+          "range": "20:00-24:00",
+          "value": 94
+        },
+        {
+          "type": "FORCED_ABORTED",
+          "name": "name for FORCED_ABORTED",
+          "range": "00:00-04:00",
+          "value": 12
+        },
+        {
+          "type": "FORCED_ABORTED",
+          "name": "name for FORCED_ABORTED",
+          "range": "04:00-10:00",
+          "value": 53
+        },
+        {
+          "type": "FORCED_ABORTED",
+          "name": "name for FORCED_ABORTED",
+          "range": "10:00-15:00",
+          "value": 45
+        },
+        {
+          "type": "FORCED_ABORTED",
+          "name": "name for FORCED_ABORTED",
+          "range": "15:00-20:00",
+          "value": 87
+        },
+        {
+          "type": "FORCED_ABORTED",
+          "name": "name for FORCED_ABORTED",
+          "range": "20:00-24:00",
+          "value": 79
+        },
+        {
+          "type": "FORCED_CANCELLED",
+          "name": "name for FORCED_CANCELLED",
           "range": "00:00-04:00",
           "value": 81
         },
         {
-          "type": "VEHICLE_ENTERED_GEOFENCE_ZONE",
-          "name": "name for VEHICLE_ENTERED_GEOFENCE_ZONE",
+          "type": "FORCED_CANCELLED",
+          "name": "name for FORCED_CANCELLED",
           "range": "04:00-10:00",
-          "value": 38
-        },
-        {
-          "type": "VEHICLE_ENTERED_GEOFENCE_ZONE",
-          "name": "name for VEHICLE_ENTERED_GEOFENCE_ZONE",
-          "range": "10:00-15:00",
-          "value": 25
-        },
-        {
-          "type": "VEHICLE_ENTERED_GEOFENCE_ZONE",
-          "name": "name for VEHICLE_ENTERED_GEOFENCE_ZONE",
-          "range": "15:00-20:00",
-          "value": 38
-        },
-        {
-          "type": "VEHICLE_ENTERED_GEOFENCE_ZONE",
-          "name": "name for VEHICLE_ENTERED_GEOFENCE_ZONE",
-          "range": "20:00-24:00",
-          "value": 29
-        },
-        {
-          "type": "VEHICLE_DEPARTURE_GEOFENCE_ZONE",
-          "name": "name for VEHICLE_DEPARTURE_GEOFENCE_ZONE",
-          "range": "00:00-04:00",
-          "value": 58
-        },
-        {
-          "type": "VEHICLE_DEPARTURE_GEOFENCE_ZONE",
-          "name": "name for VEHICLE_DEPARTURE_GEOFENCE_ZONE",
-          "range": "04:00-10:00",
-          "value": 97
-        },
-        {
-          "type": "VEHICLE_DEPARTURE_GEOFENCE_ZONE",
-          "name": "name for VEHICLE_DEPARTURE_GEOFENCE_ZONE",
-          "range": "10:00-15:00",
-          "value": 57
-        },
-        {
-          "type": "VEHICLE_DEPARTURE_GEOFENCE_ZONE",
-          "name": "name for VEHICLE_DEPARTURE_GEOFENCE_ZONE",
-          "range": "15:00-20:00",
           "value": 86
         },
         {
-          "type": "VEHICLE_DEPARTURE_GEOFENCE_ZONE",
-          "name": "name for VEHICLE_DEPARTURE_GEOFENCE_ZONE",
-          "range": "20:00-24:00",
-          "value": 85
-        },
-        {
-          "type": "CHECK_POINT_ARRIVAL_AHEAD",
-          "name": "name for CHECK_POINT_ARRIVAL_AHEAD",
-          "range": "00:00-04:00",
-          "value": 29
-        },
-        {
-          "type": "CHECK_POINT_ARRIVAL_AHEAD",
-          "name": "name for CHECK_POINT_ARRIVAL_AHEAD",
-          "range": "04:00-10:00",
-          "value": 57
-        },
-        {
-          "type": "CHECK_POINT_ARRIVAL_AHEAD",
-          "name": "name for CHECK_POINT_ARRIVAL_AHEAD",
-          "range": "10:00-15:00",
-          "value": 3
-        },
-        {
-          "type": "CHECK_POINT_ARRIVAL_AHEAD",
-          "name": "name for CHECK_POINT_ARRIVAL_AHEAD",
-          "range": "15:00-20:00",
-          "value": 96
-        },
-        {
-          "type": "CHECK_POINT_ARRIVAL_AHEAD",
-          "name": "name for CHECK_POINT_ARRIVAL_AHEAD",
-          "range": "20:00-24:00",
-          "value": 55
-        },
-        {
-          "type": "CHECK_POINT_ARRIVAL_DELAYED",
-          "name": "name for CHECK_POINT_ARRIVAL_DELAYED",
-          "range": "00:00-04:00",
-          "value": 9
-        },
-        {
-          "type": "CHECK_POINT_ARRIVAL_DELAYED",
-          "name": "name for CHECK_POINT_ARRIVAL_DELAYED",
-          "range": "04:00-10:00",
-          "value": 85
-        },
-        {
-          "type": "CHECK_POINT_ARRIVAL_DELAYED",
-          "name": "name for CHECK_POINT_ARRIVAL_DELAYED",
-          "range": "10:00-15:00",
-          "value": 78
-        },
-        {
-          "type": "CHECK_POINT_ARRIVAL_DELAYED",
-          "name": "name for CHECK_POINT_ARRIVAL_DELAYED",
-          "range": "15:00-20:00",
-          "value": 44
-        },
-        {
-          "type": "CHECK_POINT_ARRIVAL_DELAYED",
-          "name": "name for CHECK_POINT_ARRIVAL_DELAYED",
-          "range": "20:00-24:00",
-          "value": 56
-        },
-        {
-          "type": "STANDSTILL",
-          "name": "name for STANDSTILL",
-          "range": "00:00-04:00",
-          "value": 18
-        },
-        {
-          "type": "STANDSTILL",
-          "name": "name for STANDSTILL",
-          "range": "04:00-10:00",
-          "value": 27
-        },
-        {
-          "type": "STANDSTILL",
-          "name": "name for STANDSTILL",
-          "range": "10:00-15:00",
-          "value": 42
-        },
-        {
-          "type": "STANDSTILL",
-          "name": "name for STANDSTILL",
-          "range": "15:00-20:00",
-          "value": 79
-        },
-        {
-          "type": "STANDSTILL",
-          "name": "name for STANDSTILL",
-          "range": "20:00-24:00",
-          "value": 70
-        },
-        {
-          "type": "FRONT_DOOR_TAMPERING",
-          "name": "name for FRONT_DOOR_TAMPERING",
-          "range": "00:00-04:00",
-          "value": 72
-        },
-        {
-          "type": "FRONT_DOOR_TAMPERING",
-          "name": "name for FRONT_DOOR_TAMPERING",
-          "range": "04:00-10:00",
-          "value": 36
-        },
-        {
-          "type": "FRONT_DOOR_TAMPERING",
-          "name": "name for FRONT_DOOR_TAMPERING",
-          "range": "10:00-15:00",
-          "value": 31
-        },
-        {
-          "type": "FRONT_DOOR_TAMPERING",
-          "name": "name for FRONT_DOOR_TAMPERING",
-          "range": "15:00-20:00",
-          "value": 37
-        },
-        {
-          "type": "FRONT_DOOR_TAMPERING",
-          "name": "name for FRONT_DOOR_TAMPERING",
-          "range": "20:00-24:00",
-          "value": 59
-        },
-        {
-          "type": "BACK_DOOR_TAMPERING",
-          "name": "name for BACK_DOOR_TAMPERING",
-          "range": "00:00-04:00",
-          "value": 11
-        },
-        {
-          "type": "BACK_DOOR_TAMPERING",
-          "name": "name for BACK_DOOR_TAMPERING",
-          "range": "04:00-10:00",
-          "value": 46
-        },
-        {
-          "type": "BACK_DOOR_TAMPERING",
-          "name": "name for BACK_DOOR_TAMPERING",
-          "range": "10:00-15:00",
-          "value": 13
-        },
-        {
-          "type": "BACK_DOOR_TAMPERING",
-          "name": "name for BACK_DOOR_TAMPERING",
-          "range": "15:00-20:00",
-          "value": 57
-        },
-        {
-          "type": "BACK_DOOR_TAMPERING",
-          "name": "name for BACK_DOOR_TAMPERING",
-          "range": "20:00-24:00",
-          "value": 10
-        },
-        {
-          "type": "TURNSTILE_OBSTRUCTION_REPORTED",
-          "name": "name for TURNSTILE_OBSTRUCTION_REPORTED",
-          "range": "00:00-04:00",
-          "value": 36
-        },
-        {
-          "type": "TURNSTILE_OBSTRUCTION_REPORTED",
-          "name": "name for TURNSTILE_OBSTRUCTION_REPORTED",
-          "range": "04:00-10:00",
-          "value": 25
-        },
-        {
-          "type": "TURNSTILE_OBSTRUCTION_REPORTED",
-          "name": "name for TURNSTILE_OBSTRUCTION_REPORTED",
-          "range": "10:00-15:00",
-          "value": 18
-        },
-        {
-          "type": "TURNSTILE_OBSTRUCTION_REPORTED",
-          "name": "name for TURNSTILE_OBSTRUCTION_REPORTED",
-          "range": "15:00-20:00",
-          "value": 90
-        },
-        {
-          "type": "TURNSTILE_OBSTRUCTION_REPORTED",
-          "name": "name for TURNSTILE_OBSTRUCTION_REPORTED",
-          "range": "20:00-24:00",
-          "value": 66
-        },
-        {
-          "type": "TURNSTILE_BATTERY_CONECTION_REPORTED",
-          "name": "name for TURNSTILE_BATTERY_CONECTION_REPORTED",
-          "range": "00:00-04:00",
-          "value": 95
-        },
-        {
-          "type": "TURNSTILE_BATTERY_CONECTION_REPORTED",
-          "name": "name for TURNSTILE_BATTERY_CONECTION_REPORTED",
-          "range": "04:00-10:00",
-          "value": 69
-        },
-        {
-          "type": "TURNSTILE_BATTERY_CONECTION_REPORTED",
-          "name": "name for TURNSTILE_BATTERY_CONECTION_REPORTED",
-          "range": "10:00-15:00",
-          "value": 9
-        },
-        {
-          "type": "TURNSTILE_BATTERY_CONECTION_REPORTED",
-          "name": "name for TURNSTILE_BATTERY_CONECTION_REPORTED",
-          "range": "15:00-20:00",
-          "value": 86
-        },
-        {
-          "type": "TURNSTILE_BATTERY_CONECTION_REPORTED",
-          "name": "name for TURNSTILE_BATTERY_CONECTION_REPORTED",
-          "range": "20:00-24:00",
-          "value": 68
-        },
-        {
-          "type": "TURNSTILE_ANOMALY_REPORTED",
-          "name": "name for TURNSTILE_ANOMALY_REPORTED",
-          "range": "00:00-04:00",
-          "value": 73
-        },
-        {
-          "type": "TURNSTILE_ANOMALY_REPORTED",
-          "name": "name for TURNSTILE_ANOMALY_REPORTED",
-          "range": "04:00-10:00",
-          "value": 63
-        },
-        {
-          "type": "TURNSTILE_ANOMALY_REPORTED",
-          "name": "name for TURNSTILE_ANOMALY_REPORTED",
-          "range": "10:00-15:00",
-          "value": 83
-        },
-        {
-          "type": "TURNSTILE_ANOMALY_REPORTED",
-          "name": "name for TURNSTILE_ANOMALY_REPORTED",
-          "range": "15:00-20:00",
-          "value": 47
-        },
-        {
-          "type": "TURNSTILE_ANOMALY_REPORTED",
-          "name": "name for TURNSTILE_ANOMALY_REPORTED",
-          "range": "20:00-24:00",
-          "value": 36
-        },
-        {
-          "type": "PAX_ANOMALY_REPORTED",
-          "name": "name for PAX_ANOMALY_REPORTED",
-          "range": "00:00-04:00",
-          "value": 36
-        },
-        {
-          "type": "PAX_ANOMALY_REPORTED",
-          "name": "name for PAX_ANOMALY_REPORTED",
-          "range": "04:00-10:00",
-          "value": 27
-        },
-        {
-          "type": "PAX_ANOMALY_REPORTED",
-          "name": "name for PAX_ANOMALY_REPORTED",
-          "range": "10:00-15:00",
-          "value": 47
-        },
-        {
-          "type": "PAX_ANOMALY_REPORTED",
-          "name": "name for PAX_ANOMALY_REPORTED",
-          "range": "15:00-20:00",
-          "value": 85
-        },
-        {
-          "type": "PAX_ANOMALY_REPORTED",
-          "name": "name for PAX_ANOMALY_REPORTED",
-          "range": "20:00-24:00",
-          "value": 82
-        },
-        {
-          "type": "FRONT_DOOR_CONNECTED",
-          "name": "name for FRONT_DOOR_CONNECTED",
-          "range": "00:00-04:00",
-          "value": 50
-        },
-        {
-          "type": "FRONT_DOOR_CONNECTED",
-          "name": "name for FRONT_DOOR_CONNECTED",
-          "range": "04:00-10:00",
-          "value": 32
-        },
-        {
-          "type": "FRONT_DOOR_CONNECTED",
-          "name": "name for FRONT_DOOR_CONNECTED",
-          "range": "10:00-15:00",
-          "value": 19
-        },
-        {
-          "type": "FRONT_DOOR_CONNECTED",
-          "name": "name for FRONT_DOOR_CONNECTED",
-          "range": "15:00-20:00",
-          "value": 79
-        },
-        {
-          "type": "FRONT_DOOR_CONNECTED",
-          "name": "name for FRONT_DOOR_CONNECTED",
-          "range": "20:00-24:00",
-          "value": 35
-        },
-        {
-          "type": "FRONT_DOOR_DISCONNECTED",
-          "name": "name for FRONT_DOOR_DISCONNECTED",
-          "range": "00:00-04:00",
-          "value": 63
-        },
-        {
-          "type": "FRONT_DOOR_DISCONNECTED",
-          "name": "name for FRONT_DOOR_DISCONNECTED",
-          "range": "04:00-10:00",
-          "value": 84
-        },
-        {
-          "type": "FRONT_DOOR_DISCONNECTED",
-          "name": "name for FRONT_DOOR_DISCONNECTED",
-          "range": "10:00-15:00",
-          "value": 59
-        },
-        {
-          "type": "FRONT_DOOR_DISCONNECTED",
-          "name": "name for FRONT_DOOR_DISCONNECTED",
-          "range": "15:00-20:00",
-          "value": 93
-        },
-        {
-          "type": "FRONT_DOOR_DISCONNECTED",
-          "name": "name for FRONT_DOOR_DISCONNECTED",
-          "range": "20:00-24:00",
-          "value": 56
-        },
-        {
-          "type": "BACK_DOOR_CONNECTED",
-          "name": "name for BACK_DOOR_CONNECTED",
-          "range": "00:00-04:00",
-          "value": 1
-        },
-        {
-          "type": "BACK_DOOR_CONNECTED",
-          "name": "name for BACK_DOOR_CONNECTED",
-          "range": "04:00-10:00",
-          "value": 80
-        },
-        {
-          "type": "BACK_DOOR_CONNECTED",
-          "name": "name for BACK_DOOR_CONNECTED",
-          "range": "10:00-15:00",
-          "value": 66
-        },
-        {
-          "type": "BACK_DOOR_CONNECTED",
-          "name": "name for BACK_DOOR_CONNECTED",
-          "range": "15:00-20:00",
-          "value": 23
-        },
-        {
-          "type": "BACK_DOOR_CONNECTED",
-          "name": "name for BACK_DOOR_CONNECTED",
-          "range": "20:00-24:00",
-          "value": 98
-        },
-        {
-          "type": "BACK_DOOR_DISCONNECTED",
-          "name": "name for BACK_DOOR_DISCONNECTED",
-          "range": "00:00-04:00",
-          "value": 14
-        },
-        {
-          "type": "BACK_DOOR_DISCONNECTED",
-          "name": "name for BACK_DOOR_DISCONNECTED",
-          "range": "04:00-10:00",
-          "value": 39
-        },
-        {
-          "type": "BACK_DOOR_DISCONNECTED",
-          "name": "name for BACK_DOOR_DISCONNECTED",
-          "range": "10:00-15:00",
-          "value": 79
-        },
-        {
-          "type": "BACK_DOOR_DISCONNECTED",
-          "name": "name for BACK_DOOR_DISCONNECTED",
-          "range": "15:00-20:00",
-          "value": 30
-        },
-        {
-          "type": "BACK_DOOR_DISCONNECTED",
-          "name": "name for BACK_DOOR_DISCONNECTED",
-          "range": "20:00-24:00",
-          "value": 56
-        },
-        {
-          "type": "CREATED",
-          "name": "name for CREATED",
-          "range": "00:00-04:00",
-          "value": 30
-        },
-        {
-          "type": "CREATED",
-          "name": "name for CREATED",
-          "range": "04:00-10:00",
-          "value": 27
-        },
-        {
-          "type": "CREATED",
-          "name": "name for CREATED",
-          "range": "10:00-15:00",
-          "value": 48
-        },
-        {
-          "type": "CREATED",
-          "name": "name for CREATED",
-          "range": "15:00-20:00",
-          "value": 58
-        },
-        {
-          "type": "CREATED",
-          "name": "name for CREATED",
-          "range": "20:00-24:00",
-          "value": 48
-        },
-        {
-          "type": "AUTOMATIC_STARTED",
-          "name": "name for AUTOMATIC_STARTED",
-          "range": "00:00-04:00",
-          "value": 7
-        },
-        {
-          "type": "AUTOMATIC_STARTED",
-          "name": "name for AUTOMATIC_STARTED",
-          "range": "04:00-10:00",
-          "value": 57
-        },
-        {
-          "type": "AUTOMATIC_STARTED",
-          "name": "name for AUTOMATIC_STARTED",
-          "range": "10:00-15:00",
-          "value": 52
-        },
-        {
-          "type": "AUTOMATIC_STARTED",
-          "name": "name for AUTOMATIC_STARTED",
-          "range": "15:00-20:00",
-          "value": 33
-        },
-        {
-          "type": "AUTOMATIC_STARTED",
-          "name": "name for AUTOMATIC_STARTED",
-          "range": "20:00-24:00",
-          "value": 33
-        },
-        {
-          "type": "AUTOMATIC_ENDED",
-          "name": "name for AUTOMATIC_ENDED",
-          "range": "00:00-04:00",
-          "value": 92
-        },
-        {
-          "type": "AUTOMATIC_ENDED",
-          "name": "name for AUTOMATIC_ENDED",
-          "range": "04:00-10:00",
-          "value": 23
-        },
-        {
-          "type": "AUTOMATIC_ENDED",
-          "name": "name for AUTOMATIC_ENDED",
-          "range": "10:00-15:00",
-          "value": 77
-        },
-        {
-          "type": "AUTOMATIC_ENDED",
-          "name": "name for AUTOMATIC_ENDED",
-          "range": "15:00-20:00",
-          "value": 70
-        },
-        {
-          "type": "AUTOMATIC_ENDED",
-          "name": "name for AUTOMATIC_ENDED",
-          "range": "20:00-24:00",
-          "value": 47
-        },
-        {
-          "type": "AUTOMATIC_ABORTED",
-          "name": "name for AUTOMATIC_ABORTED",
-          "range": "00:00-04:00",
-          "value": 92
-        },
-        {
-          "type": "AUTOMATIC_ABORTED",
-          "name": "name for AUTOMATIC_ABORTED",
-          "range": "04:00-10:00",
-          "value": 78
-        },
-        {
-          "type": "AUTOMATIC_ABORTED",
-          "name": "name for AUTOMATIC_ABORTED",
-          "range": "10:00-15:00",
-          "value": 26
-        },
-        {
-          "type": "AUTOMATIC_ABORTED",
-          "name": "name for AUTOMATIC_ABORTED",
-          "range": "15:00-20:00",
-          "value": 46
-        },
-        {
-          "type": "AUTOMATIC_ABORTED",
-          "name": "name for AUTOMATIC_ABORTED",
-          "range": "20:00-24:00",
-          "value": 63
-        },
-        {
-          "type": "FORCED_STARTED",
-          "name": "name for FORCED_STARTED",
-          "range": "00:00-04:00",
-          "value": 69
-        },
-        {
-          "type": "FORCED_STARTED",
-          "name": "name for FORCED_STARTED",
-          "range": "04:00-10:00",
-          "value": 50
-        },
-        {
-          "type": "FORCED_STARTED",
-          "name": "name for FORCED_STARTED",
-          "range": "10:00-15:00",
-          "value": 10
-        },
-        {
-          "type": "FORCED_STARTED",
-          "name": "name for FORCED_STARTED",
-          "range": "15:00-20:00",
-          "value": 53
-        },
-        {
-          "type": "FORCED_STARTED",
-          "name": "name for FORCED_STARTED",
-          "range": "20:00-24:00",
-          "value": 95
-        },
-        {
-          "type": "FORCED_ABORTED",
-          "name": "name for FORCED_ABORTED",
-          "range": "00:00-04:00",
-          "value": 63
-        },
-        {
-          "type": "FORCED_ABORTED",
-          "name": "name for FORCED_ABORTED",
-          "range": "04:00-10:00",
-          "value": 88
-        },
-        {
-          "type": "FORCED_ABORTED",
-          "name": "name for FORCED_ABORTED",
-          "range": "10:00-15:00",
-          "value": 14
-        },
-        {
-          "type": "FORCED_ABORTED",
-          "name": "name for FORCED_ABORTED",
-          "range": "15:00-20:00",
-          "value": 82
-        },
-        {
-          "type": "FORCED_ABORTED",
-          "name": "name for FORCED_ABORTED",
-          "range": "20:00-24:00",
-          "value": 25
-        },
-        {
-          "type": "FORCED_CANCELLED",
-          "name": "name for FORCED_CANCELLED",
-          "range": "00:00-04:00",
-          "value": 17
-        },
-        {
-          "type": "FORCED_CANCELLED",
-          "name": "name for FORCED_CANCELLED",
-          "range": "04:00-10:00",
-          "value": 90
-        },
-        {
           "type": "FORCED_CANCELLED",
           "name": "name for FORCED_CANCELLED",
           "range": "10:00-15:00",
-          "value": 98
-        },
-        {
-          "type": "FORCED_CANCELLED",
-          "name": "name for FORCED_CANCELLED",
-          "range": "15:00-20:00",
-          "value": 24
-        },
-        {
-          "type": "FORCED_CANCELLED",
-          "name": "name for FORCED_CANCELLED",
-          "range": "20:00-24:00",
           "value": 34
         },
         {
+          "type": "FORCED_CANCELLED",
+          "name": "name for FORCED_CANCELLED",
+          "range": "15:00-20:00",
+          "value": 94
+        },
+        {
+          "type": "FORCED_CANCELLED",
+          "name": "name for FORCED_CANCELLED",
+          "range": "20:00-24:00",
+          "value": 22
+        },
+        {
           "type": "FORCED_ENDED",
           "name": "name for FORCED_ENDED",
           "range": "00:00-04:00",
-          "value": 7
+          "value": 78
         },
         {
           "type": "FORCED_ENDED",
           "name": "name for FORCED_ENDED",
           "range": "04:00-10:00",
-          "value": 93
+          "value": 58
         },
         {
           "type": "FORCED_ENDED",
           "name": "name for FORCED_ENDED",
           "range": "10:00-15:00",
-          "value": 13
+          "value": 61
         },
         {
           "type": "FORCED_ENDED",
           "name": "name for FORCED_ENDED",
           "range": "15:00-20:00",
-          "value": 67
+          "value": 40
         },
         {
           "type": "FORCED_ENDED",
           "name": "name for FORCED_ENDED",
           "range": "20:00-24:00",
-          "value": 17
+          "value": 60
         },
         {
           "type": "OVERTAKEN",
           "name": "name for OVERTAKEN",
           "range": "00:00-04:00",
-          "value": 70
+          "value": 99
         },
         {
           "type": "OVERTAKEN",
           "name": "name for OVERTAKEN",
           "range": "04:00-10:00",
-          "value": 84
+          "value": 83
         },
         {
           "type": "OVERTAKEN",
           "name": "name for OVERTAKEN",
           "range": "10:00-15:00",
-          "value": 25
+          "value": 66
         },
         {
           "type": "OVERTAKEN",
           "name": "name for OVERTAKEN",
           "range": "15:00-20:00",
-          "value": 27
+          "value": 14
         },
         {
           "type": "OVERTAKEN",
           "name": "name for OVERTAKEN",
           "range": "20:00-24:00",
-          "value": 21
+          "value": 5
         }
       ]
     },
