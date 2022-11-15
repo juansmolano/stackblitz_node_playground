@@ -447,6 +447,33 @@
             "conceptType": "METRIC"
           },
           "dataType": "NUMBER"
+        },
+        {
+          "name": "avgExecutedServicesHours",
+          "semantics": {
+              "isReaggregatable": true,
+              "semanticType": "NUMBER",
+              "conceptType": "METRIC"
+          },
+          "dataType": "NUMBER"
+        },
+        {
+            "name": "maxExecutedServicesHours",
+            "semantics": {
+                "isReaggregatable": true,
+                "semanticType": "NUMBER",
+                "conceptType": "METRIC"
+            },
+            "dataType": "NUMBER"
+        },
+        {
+            "name": "minExecutedServicesHours",
+            "semantics": {
+                "isReaggregatable": true,
+                "semanticType": "NUMBER",
+                "conceptType": "METRIC"
+            },
+            "dataType": "NUMBER"
         }
       ],
       "DATA": [
@@ -471,7 +498,10 @@
           "serviceAccomplishmentPercentage": 0.9045,
           "serviceForcedStartCount": 58,
           "serviceAbortedCount": 70,
-          "serviceCancelledCount": 88
+          "serviceCancelledCount": 88,
+          "avgExecutedServicesHours": 1500,
+          "minExecutedServicesHours": 1,
+          "maxExecutedServicesHours": 3500
         }
       ]
     },
