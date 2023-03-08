@@ -7096,7 +7096,7 @@
   },
   "RouteEventsReport": {
     "EVENTS_TABLE": {
-      "schema": [
+      "SCHEMA": [
         {
           "name": "vehicleIndex",
           "dataType": "NUMBER",
@@ -7468,7 +7468,7 @@
       ]
     },
     "EVENTS_STATS": {
-      "schema": [
+      "SCHEMA": [
         {
           "name": "type",
           "dataType": "STRING",
@@ -7505,7 +7505,7 @@
       ]
     },
     "SUMMARY": {
-      "schema": [
+      "SCHEMA": [
         {
           "name": "routeName",
           "semantics": {
@@ -7581,7 +7581,7 @@
   },
   "DriverEventsReport": {
     "EVENTS_TABLE": {
-      "schema": [
+      "SCHEMA": [
         {
           "name": "serviceIndex",
           "dataType": "NUMBER",
@@ -7951,7 +7951,7 @@
       ]
     },
     "EVENTS_STATS": {
-      "schema": [
+      "SCHEMA": [
         {
           "name": "type",
           "dataType": "STRING",
@@ -7988,7 +7988,7 @@
       ]
     },
     "SUMMARY": {
-      "schema": [
+      "SCHEMA": [
         {
           "name": "driverName",
           "semantics": {
@@ -8064,7 +8064,7 @@
   },
   "VehicleEventsReport": {
     "EVENTS_TABLE": {
-      "schema": [
+      "SCHEMA": [
         {
           "name": "serviceIndex",
           "dataType": "NUMBER",
@@ -8434,7 +8434,7 @@
       ]
     },
     "EVENTS_STATS": {
-      "schema": [
+      "SCHEMA": [
         {
           "name": "type",
           "dataType": "STRING",
@@ -8471,7 +8471,7 @@
       ]
     },
     "SUMMARY": {
-      "schema": [
+      "SCHEMA": [
         {
           "name": "vehicle",
           "semantics": {
