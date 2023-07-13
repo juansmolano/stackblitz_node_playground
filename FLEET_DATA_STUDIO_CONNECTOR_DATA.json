@@ -358,6 +358,10 @@
             "isReaggregatable": true
           },
           "name": "minimumTransmission"
+        },
+        {
+          "dataType": "BOOLEAN",
+          "name": "complyWithTransmission"
         }
       ],
       "DATA": [
@@ -366,7 +370,8 @@
           "fleetSizeWithTMD": "WITH_TMD",
           "fleetSizeWithTMDPercentage": "name for WITH_TMD",
           "compliancePercentage": 18,
-          "minimumTransmission": 18
+          "minimumTransmission": 18,
+          "complyWithTransmission": true
         }
       ]
     },
