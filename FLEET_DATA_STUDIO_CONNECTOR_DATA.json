@@ -360,18 +360,22 @@
           "name": "minimumTransmission"
         },
         {
-          "dataType": "BOOLEAN",
+          "dataType": "STRING",
+          "semantics": {
+            "semanticType": "TEXT",
+            "conceptType": "DIMENSION"
+          },
           "name": "complyWithTransmission"
         }
       ],
       "DATA": [
         {
-          "fleetSize": "WITH_TMD",
-          "fleetSizeWithTMD": "WITH_TMD",
-          "fleetSizeWithTMDPercentage": "name for WITH_TMD",
+          "fleetSize": 5,
+          "fleetSizeWithTMD": 3,
+          "fleetSizeWithTMDPercentage": 85,
           "compliancePercentage": 18,
           "minimumTransmission": 18,
-          "complyWithTransmission": true
+          "complyWithTransmission": "SI"
         }
       ]
     },
