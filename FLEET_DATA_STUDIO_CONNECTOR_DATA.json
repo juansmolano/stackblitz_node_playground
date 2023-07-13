@@ -1,5 +1,432 @@
 {
-  
+  "CompanyAuthorityReport": {
+    "TRANSMISSION_TABLE_PAGE_1": {
+      "SCHEMA": [
+        {
+          "name": "vehicleIndex",
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "DIMENSION"
+          }
+        },
+        {
+          "semantics": {
+            "conceptType": "DIMENSION",
+            "semanticType": "TEXT"
+          },
+          "dataType": "STRING",
+          "name": "vehicleId"
+        },
+        {
+          "semantics": {
+            "semanticType": "TEXT",
+            "conceptType": "DIMENSION"
+          },
+          "name": "vehicle",
+          "dataType": "STRING"
+        },
+        {
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "name": "LOCATION"
+        },
+        {
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "name": "DOOR_STATE"
+        },
+        {
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "name": "PASSENGER_COUNTER"
+        },
+        {
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "name": "SPEED_ZERO"
+        }
+      ],
+      "DATA": [
+        {
+          "vehicleIndex": 0,
+          "vehicleId": "0",
+          "vehicle": "ABC000 - 0000",
+          "LOCATION": 82,
+          "DOOR_STATE": 41,
+          "PASSENGER_COUNTER": 90,
+          "SPEED_ZERO": 94
+        },
+        {
+          "vehicleIndex": 1,
+          "vehicleId": "1",
+          "vehicle": "ABC001 - 0001",
+          "LOCATION": 82,
+          "DOOR_STATE": 41,
+          "PASSENGER_COUNTER": 90,
+          "SPEED_ZERO": 94
+        }
+      ]
+    },
+    "TRANSMISSION_TABLE_PAGE_2": {
+      "SCHEMA": [
+        {
+          "name": "vehicleIndex",
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "DIMENSION"
+          }
+        },
+        {
+          "semantics": {
+            "conceptType": "DIMENSION",
+            "semanticType": "TEXT"
+          },
+          "dataType": "STRING",
+          "name": "vehicleId"
+        },
+        {
+          "semantics": {
+            "semanticType": "TEXT",
+            "conceptType": "DIMENSION"
+          },
+          "name": "vehicle",
+          "dataType": "STRING"
+        },
+        {
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "name": "LOCATION"
+        },
+        {
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "name": "DOOR_STATE"
+        },
+        {
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "name": "PASSENGER_COUNTER"
+        },
+        {
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "name": "SPEED_ZERO"
+        }
+      ],
+      "DATA": [
+        {
+          "vehicleIndex": 2,
+          "vehicleId": "2",
+          "vehicle": "ABC002 - 0002",
+          "LOCATION": 82,
+          "DOOR_STATE": 41,
+          "PASSENGER_COUNTER": 90,
+          "SPEED_ZERO": 94
+        },
+        {
+          "vehicleIndex": 3,
+          "vehicleId": "3",
+          "vehicle": "ABC003 - 0003",
+          "LOCATION": 82,
+          "DOOR_STATE": 41,
+          "PASSENGER_COUNTER": 90,
+          "SPEED_ZERO": 94
+        }
+      ]
+    },
+    "TRANSMISSION_STATS": {
+      "SCHEMA": [
+        {
+          "name": "tag",
+          "dataType": "STRING",
+          "semantics": {
+            "semanticType": "TEXT",
+            "conceptType": "DIMENSION"
+          }
+        },
+        {
+          "name": "type",
+          "dataType": "STRING",
+          "semantics": {
+            "semanticType": "TEXT",
+            "conceptType": "DIMENSION"
+          }
+        },
+        {
+          "name": "name",
+          "dataType": "STRING",
+          "semantics": {
+            "semanticType": "TEXT",
+            "conceptType": "DIMENSION"
+          }
+        },
+        {
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "name": "value"
+        }
+      ],
+      "DATA": [
+        {
+          "tag": "LOCATION",
+          "type": "LOCATION",
+          "name": "name for LOCATION",
+          "value": 18
+        },
+        {
+          "tag": "LOCATION_REGULATION",
+          "type": "LOCATION",
+          "name": "name for LOCATION REGULATION",
+          "value": 27
+        },
+        {
+          "tag": "TRAVELED_DISTANCE",
+          "type": "TRAVELED_DISTANCE",
+          "name": "name for TRAVELED_DISTANCE",
+          "value": 21
+        },
+        {
+          "tag": "TRAVELED_DISTANCE_REGULATION",
+          "type": "TRAVELED_DISTANCE",
+          "name": "name for TRAVELED_DISTANCE_REGULATION",
+          "value": 27
+        },
+        {
+          "tag": "DOOR_STATE",
+          "type": "DOOR_STATE",
+          "name": "name for DOOR_STATE",
+          "value": 21
+        },
+        {
+          "tag": "DOOR_STATE_REGULATION",
+          "type": "DOOR_STATE",
+          "name": "name for DOOR_STATE_REGULATION",
+          "value": 15
+        },
+        {
+          "tag": "PASSENGER_COUNTER",
+          "type": "PASSENGER_COUNTER",
+          "name": "name for PASSENGER_COUNTER",
+          "value": 32
+        },
+        {
+          "tag": "SPEED_ZERO",
+          "type": "SPEED_ZERO",
+          "name": "name for SPEED_ZERO",
+          "value": 18
+        },
+        {
+          "tag": "SPEED_ZERO_REGULATION",
+          "type": "SPEED_ZERO",
+          "name": "name for SPEED_ZERO_REGULATION",
+          "value": 21
+        }
+      ]
+    },
+    "TRANSMISSION_SUMMARY_STATS": {
+      "SCHEMA": [
+        {
+          "name": "tag",
+          "dataType": "STRING",
+          "semantics": {
+            "semanticType": "TEXT",
+            "conceptType": "DIMENSION"
+          }
+        },
+        {
+          "name": "type",
+          "dataType": "STRING",
+          "semantics": {
+            "semanticType": "TEXT",
+            "conceptType": "DIMENSION"
+          }
+        },
+        {
+          "name": "name",
+          "dataType": "STRING",
+          "semantics": {
+            "semanticType": "TEXT",
+            "conceptType": "DIMENSION"
+          }
+        },
+        {
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "name": "value"
+        }
+      ],
+      "DATA": [
+        {
+          "tag": "WITH_TMD",
+          "type": "WITH_TMD",
+          "name": "name for WITH_TMD",
+          "value": 18
+        },
+        {
+          "tag": "WITHOUT_TMD",
+          "type": "WITH_TMD",
+          "name": "name for WITH_TMD",
+          "value": 27
+        }
+      ]
+    },
+    "TRANSMISSION_INFO": {
+      "SCHEMA": [
+        {
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "name": "fleetSize"
+        },
+        {
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "name": "fleetSizeWithTMD"
+        },
+        {
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "name": "fleetSizeWithTMDPercentage"
+        },
+        {
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "name": "compliancePercentage"
+        },
+        {
+          "dataType": "NUMBER",
+          "semantics": {
+            "semanticType": "NUMBER",
+            "conceptType": "METRIC",
+            "isReaggregatable": true
+          },
+          "name": "minimumTransmission"
+        }
+      ],
+      "DATA": [
+        {
+          "fleetSize": "WITH_TMD",
+          "fleetSizeWithTMD": "WITH_TMD",
+          "fleetSizeWithTMDPercentage": "name for WITH_TMD",
+          "compliancePercentage": 18,
+          "minimumTransmission": 18
+        }
+      ]
+    },
+    "SUMMARY": {
+      "SCHEMA": [
+        {
+          "name": "companyName",
+          "semantics": {
+            "conceptType": "DIMENSION",
+            "semanticType": "TEXT"
+          },
+          "dataType": "STRING"
+        },
+        {
+          "dataType": "STRING",
+          "semantics": {
+            "isReaggregatable": true,
+            "conceptType": "METRIC",
+            "semanticType": "YEAR_MONTH_DAY"
+          },
+          "name": "fromDate"
+        },
+        {
+          "dataType": "STRING",
+          "semantics": {
+            "conceptType": "METRIC",
+            "semanticType": "YEAR_MONTH_DAY",
+            "isReaggregatable": true
+          },
+          "name": "toDate"
+        },
+        {
+          "semantics": {
+            "conceptType": "DIMENSION",
+            "semanticType": "TEXT"
+          },
+          "name": "userFullName",
+          "dataType": "STRING"
+        },
+        {
+          "name": "reportDateTime",
+          "dataType": "STRING",
+          "semantics": {
+            "conceptType": "METRIC",
+            "semanticType": "YEAR_MONTH_DAY_MINUTE",
+            "isReaggregatable": true
+          }
+        }
+      ],
+      "DATA": [
+        {
+          "companyName": "TRANSPORTES CHACHAFRUTO",
+          "fromDate": "20230713",
+          "toDate": "20230713",
+          "userFullName": "Jhon Doe",
+          "reportDateTime": "202207130719"
+        }
+      ]
+    }
+  },
   "RouteOperationReport": {
     "SERVICE_TABLE": {
       "SCHEMA": [
