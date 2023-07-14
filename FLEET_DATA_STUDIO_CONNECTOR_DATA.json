@@ -214,7 +214,7 @@
         {
           "tag": "LOCATION_REGULATION",
           "type": "LOCATION",
-          "name": "name for LOCATION REGULATION",
+          "name": "name for LOCATION",
           "value": 27
         },
         {
@@ -226,7 +226,7 @@
         {
           "tag": "TRAVELED_DISTANCE_REGULATION",
           "type": "TRAVELED_DISTANCE",
-          "name": "name for TRAVELED_DISTANCE_REGULATION",
+          "name": "name for TRAVELED_DISTANCE",
           "value": 27
         },
         {
@@ -238,7 +238,7 @@
         {
           "tag": "DOOR_STATE_REGULATION",
           "type": "DOOR_STATE",
-          "name": "name for DOOR_STATE_REGULATION",
+          "name": "name for DOOR_STATE",
           "value": 15
         },
         {
@@ -256,7 +256,7 @@
         {
           "tag": "SPEED_ZERO_REGULATION",
           "type": "SPEED_ZERO",
-          "name": "name for SPEED_ZERO_REGULATION",
+          "name": "name for SPEED_ZERO",
           "value": 21
         }
       ]
