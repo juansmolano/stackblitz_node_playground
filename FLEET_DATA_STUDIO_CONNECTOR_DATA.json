@@ -370,11 +370,11 @@
       ],
       "DATA": [
         {
-          "fleetSize": 5,
-          "fleetSizeWithTMD": 3,
-          "fleetSizeWithTMDPercentage": 85,
-          "compliancePercentage": 18,
-          "minimumTransmission": 18,
+          "fleetSize": 999,
+          "fleetSizeWithTMD": 999,
+          "fleetSizeWithTMDPercentage": 100,
+          "compliancePercentage": 100,
+          "minimumTransmission": 20000,
           "complyWithTransmission": "SI"
         }
       ]
