@@ -67,7 +67,7 @@
         {
           "vehicleIndex": 0,
           "vehicleId": "0",
-          "vehicle": "ABC000 - 0000",
+          "vehicle": "ABC000",
           "LOCATION": 82,
           "DOOR_STATE": 41,
           "PASSENGER_COUNTER": 90,
@@ -76,7 +76,7 @@
         {
           "vehicleIndex": 1,
           "vehicleId": "1",
-          "vehicle": "ABC001 - 0001",
+          "vehicle": "ABC001",
           "LOCATION": 82,
           "DOOR_STATE": 41,
           "PASSENGER_COUNTER": 90,
@@ -151,7 +151,7 @@
         {
           "vehicleIndex": 2,
           "vehicleId": "2",
-          "vehicle": "ABC002 - 0002",
+          "vehicle": "ABC002",
           "LOCATION": 82,
           "DOOR_STATE": 41,
           "PASSENGER_COUNTER": 90,
@@ -160,7 +160,7 @@
         {
           "vehicleIndex": 3,
           "vehicleId": "3",
-          "vehicle": "ABC003 - 0003",
+          "vehicle": "ABC003",
           "LOCATION": 82,
           "DOOR_STATE": 41,
           "PASSENGER_COUNTER": 90,
