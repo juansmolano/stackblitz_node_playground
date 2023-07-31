@@ -206,55 +206,55 @@
       ],
       "DATA": [
         {
-          "tag": "LOCATION",
+          "tag": "Localización",
           "type": "LOCATION",
           "name": "name for LOCATION",
           "value": 18
         },
         {
-          "tag": "LOCATION_REGULATION",
+          "tag": "Regulación Localización",
           "type": "LOCATION",
           "name": "name for LOCATION",
           "value": 27
         },
         {
-          "tag": "TRAVELED_DISTANCE",
+          "tag": "Distancia Recorrida",
           "type": "TRAVELED_DISTANCE",
           "name": "name for TRAVELED_DISTANCE",
           "value": 21
         },
         {
-          "tag": "TRAVELED_DISTANCE_REGULATION",
+          "tag": "Regulación Distancia Recorrida",
           "type": "TRAVELED_DISTANCE",
           "name": "name for TRAVELED_DISTANCE",
           "value": 27
         },
         {
-          "tag": "DOOR_STATE",
+          "tag": "Estado de Puertas",
           "type": "DOOR_STATE",
           "name": "name for DOOR_STATE",
           "value": 21
         },
         {
-          "tag": "DOOR_STATE_REGULATION",
+          "tag": "Regulación Estado de Puertas",
           "type": "DOOR_STATE",
           "name": "name for DOOR_STATE",
           "value": 15
         },
         {
-          "tag": "PASSENGER_COUNTER",
+          "tag": "Contador de Pasajeros",
           "type": "PASSENGER_COUNTER",
           "name": "name for PASSENGER_COUNTER",
           "value": 32
         },
         {
-          "tag": "SPEED_ZERO",
+          "tag": "Velocidad Cero",
           "type": "SPEED_ZERO",
           "name": "name for SPEED_ZERO",
           "value": 18
         },
         {
-          "tag": "SPEED_ZERO_REGULATION",
+          "tag": "Regulación Velocidad Cero",
           "type": "SPEED_ZERO",
           "name": "name for SPEED_ZERO",
           "value": 21
